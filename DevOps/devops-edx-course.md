@@ -113,6 +113,16 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 
 ### A Value Stream Example
 
+| STEP | LEAD TIME | CYCLE TIME |
+| ----- | ----- | ----- |
+| Create an idea  | Design | |
+| Add work to the backlog | Design | |
+| Create a user story | Design | |
+| Implement as code | Design | |
+| Check into version control | Deployment | X |
+| Deploy into production | Deployment  | X |
+| Validate the customer experience | Deployment | X |
+
  - Create an idea *Design Lead Time*
  - Add work to the backlog *Design Lead Time*
  - Create a user story *Design Lead Time*
