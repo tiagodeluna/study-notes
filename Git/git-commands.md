@@ -48,5 +48,47 @@ Git commands that I frequently use.
 | Command | Description |
 | ----- | ----- |
 | git add `filename` | Add file |
-| git add . -A | Add all untracked files to the Staging Area |
-| git add -u :/ | Update or remove previously tracked files but not add new files |
+| git add . -A | Add all untracked files in the working tree to the staging area |
+| git add -u :/ | Update or remove previously tracked files from the entire working tree but not add new files |
+| git commit -m `mensagem` | Perform a commit with a message associated |
+| git commit --amend | Edit the last commit to include new added files and/or change the commit message |
+
+## Pushing changes remotely
+
+| Command | Description |
+| ----- | ----- |
+| git push `repo` `branch` | Send commited changes to a remove *branch* of a *repository* |
+
+## Merging files
+
+This is a three-step operation:
+
+| Step | Command | Description |
+| ----- | ----- | ----- |
+| 1 | git checkout `branch` | Change to *branch* that will be updated. In case of code promotion, it is *master* |
+| 2 | git merge `repo or branch` | Perform merge with the remote *branch* containing the changes |
+| 3 | git push `repo` `branch` | Push changes to remote *branch* |
+
+In case of conflicts after step 2, you'll need to perform the merge manually:
+
+| Command | Description |
+| ----- | ----- |
+| git mergetool | Open the configured merge tool. Obs: use `:wq` to confirm the defult message in a automatic merge |
+
+## Reverting changes
+
+| Command | Description |
+| ----- | ----- |
+| git fetch \\\\ git reset --hard `repo or branch` | Fetch from the default remote (origin) \\\\ Reset your current branch to remote branch |
+| git reset HEAD~`number` | Reset a *number* of commits (but it doesn't delete the commits, they still continue to exist) |
+| git reset HEAD `filename` | Remove a *file* from the staging area |
+| git checkout -- `filename` | Discard changes in a *file* in working directory |
+| git merge --abort | Undo a merge, reverting the branch to its previous situation (usually after a merge the generated conflicts) |
+	
+# Using tags
+
+| Command | Description |
+| ----- | ----- |
+| git tag | List the existing tags by alphabetical order |
+| git tag `tagname` | Create a simple *tag* |
+| git tag -a `tagname` -m `message` | Create an annotated, complete *tag* |
