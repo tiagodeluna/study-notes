@@ -2,6 +2,13 @@
 
 Notes about **Introduction to DevOps: Transforming and Improving Operations** edX course, by John Willis, *The Linux Foundation*
 
+ ## Summary
+  
+  * [Concepts](#concepts)
+    - [Resources](#resources-1)
+  * [Understanding the Value Stream](#understanding-the-value-stream)
+    - [Resources](#resources-2)
+
 ## Concepts:
 
 ### Japan's influence (Toyota Production Systems - Lean)
@@ -74,6 +81,36 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 > The collaboration of humans is probably the most important aspect of DevOps
 ----------------------------
 
+## Resources 1
+
+### Articles
+
+  * [Knight Capital](https://en.wikipedia.org/wiki/Knight_Capital_Group)
+  * [Knight Capital Accident](http://www.kitchensoap.com/2013/10/29/counterfactuals-knight-capital/)
+  * [Continuous Delivery](https://continuousdelivery.com/)
+  * [Lean software development](https://en.wikipedia.org/wiki/Lean_software_development)
+  * [What Devops Means to Me (CAMS)](https://blog.chef.io/2010/07/16/what-devops-means-to-me/)
+  * [IT Revolution - The Convergence of DevOps](http://itrevolution.com/the-convergence-of-devops/)
+  * [IT Revolution - The And on Chord](http://itrevolution.com/kata/)
+  * [The History Of DevOps](http://itrevolution.com/the-history-of-devops/)
+  * [What is DevOps? (Wall of Confusion)](http://dev2ops.org/2010/02/what-is-devops/)
+
+### Books
+
+  * The Machine that changed the world
+  * The Lean Startup
+  * The Phoenix Project
+  * Devops Handbook
+
+### Presentations
+
+  * [DevOps Connect cdSummit: John Willis Kata Presentation](https://www.youtube.com/watch?v=0N0SBcp0mjY)
+  * [Velocity 09: John Allspaw and Paul Hammond, "10+ Deploys Per Day"](https://www.youtube.com/watch?v=LdOe18KhtT4)
+  * [The DevOps Transformation](https://www.youtube.com/watch?v=3KpPBnEtRj4)
+  * [Netflix: Culture and Responsibility](http://www.slideshare.net/reed2001/culture-1798664/)
+  * [Spotify engineering culture (part 1)](https://puppet.com/resources/white-paper/2015-state-of-devops-report)
+  * [Leading A DevOps Transformation: Lessons Learned](http://www.slideshare.net/realgenekim/leading-a-devops-transformation-lessons-learned)
+
 ## Understanding the Value Stream
 
 ---------------------------------------
@@ -113,7 +150,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 
 ### A Value Stream Example
 
-| STEP | LEAD TIME | CYCLE TIME |
+| | LEAD TIME | CYCLE TIME |
 | ----- | ----- | ----- |
 | Create an idea  | Design | |
 | Add work to the backlog | Design | |
@@ -123,38 +160,20 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 | Deploy into production | Deployment  | X |
 | Validate the customer experience | Deployment | X |
 
- - Create an idea *Design Lead Time*
- - Add work to the backlog *Design Lead Time*
- - Create a user story *Design Lead Time*
- - Implement as code *Design Lead Time*
- - Check into version control *Deployment Lead Time* *Cycle Time*
- - Deploy into production *Deployment Lead Time* *Cycle Time*
- - Validate the customer experience *Deployment Lead Time* *Cycle Time*
-
 ### Understanding The Value Stream
 
 ---------------------
 > Watch the baton not the runner. (a metaphor about a 40 meter relay race team)
 ---------------------
 
- - The Value Stream of how things work (runners)
- - The Value Stream of the work (baton)
+ - The Value Stream of how things work (*runners*)
+ - The Value Stream of the work (*baton*)
 
 ### How to Reduce Deployment Lead Time in the Workflow
 
-- Small batches
-- Recude work in process (WIP)
-- 1x1 Flow
-- Reduce Bottlenecks (TOC)
-- Optimize Globally
-
-
-
-
-
-
-
-
-
-
+ - Small batches
+ - Recude work in process (WIP)
+ - 1x1 Flow
+ - Reduce Bottlenecks (TOC)
+ - Optimize Globally
 
