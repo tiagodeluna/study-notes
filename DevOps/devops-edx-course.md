@@ -4,20 +4,20 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 
  ## Summary
   
-  * [Concepts](#concepts)
-    - [Resources](#resources-1)
-  * [Understanding the Value Stream](#understanding-the-value-stream)
-    - [Resources](#resources-2)
+  * [Chapter 1 - Concepts](#chapter-1-concepts)
+    - [Resources](#resources-chapter-1)
+  * [Chapter 2 - Understanding the Value Stream](#chapter-2-understanding-the-value-stream)
+    - [Resources](#resources-chapter-2)
 
-## Concepts:
+## Chapter 1 *Concepts*
 
 ### Japan's influence (Toyota Production Systems - Lean)
 
- - Muda (Waste): eliminate waste wherever possible.
- - Mura (Flow): It's about evenness. Getting the pipeline flow consistent.
- - Muri (Stress): reduce stress on the system.
- - Kaizen (Improvement): continuous improvement.
- - Kata (Form): repetitive actions become memory muscle. It's about integrate Muda, Mura, Muri and Kaizen to become a natural behavior.
+ - *Muda* (Waste): eliminate waste wherever possible.
+ - *Mura* (Flow): It's about evenness. Getting the pipeline flow consistent.
+ - *Muri* (Stress): reduce stress on the system.
+ - *Kaizen* (Improvement): continuous improvement.
+ - *Kata* (Form): repetitive actions become memory muscle. It's about integrate Muda, Mura, Muri and Kaizen to become a natural behavior.
 
 --------------------------
 > Faster and more reliable
@@ -81,9 +81,9 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 > The collaboration of humans is probably the most important aspect of DevOps
 ----------------------------
 
-## Resources 1
+### Resources Chapter 1
 
-### Articles
+#### Articles
 
   * [Knight Capital](https://en.wikipedia.org/wiki/Knight_Capital_Group)
   * [Knight Capital Accident](http://www.kitchensoap.com/2013/10/29/counterfactuals-knight-capital/)
@@ -95,14 +95,14 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
   * [The History Of DevOps](http://itrevolution.com/the-history-of-devops/)
   * [What is DevOps? (Wall of Confusion)](http://dev2ops.org/2010/02/what-is-devops/)
 
-### Books
+#### Books
 
-  * The Machine that changed the world
+  * The Machine that Changed The World
   * The Lean Startup
   * The Phoenix Project
   * Devops Handbook
 
-### Presentations
+#### Presentations
 
   * [DevOps Connect cdSummit: John Willis Kata Presentation](https://www.youtube.com/watch?v=0N0SBcp0mjY)
   * [Velocity 09: John Allspaw and Paul Hammond, "10+ Deploys Per Day"](https://www.youtube.com/watch?v=LdOe18KhtT4)
@@ -111,7 +111,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
   * [Spotify engineering culture (part 1)](https://puppet.com/resources/white-paper/2015-state-of-devops-report)
   * [Leading A DevOps Transformation: Lessons Learned](http://www.slideshare.net/realgenekim/leading-a-devops-transformation-lessons-learned)
 
-## Understanding the Value Stream
+## Chapter 2 *Understanding the Value Stream*
 
 ---------------------------------------
 > "If you can't describe what you're doing as a process, you don't know what you're doing." – Dr. W. Edwards Deming
@@ -176,4 +176,25 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
  - 1x1 Flow
  - Reduce Bottlenecks (TOC)
  - Optimize Globally
+
+### The Three Ways of DevOps
+
+ + The First Way: Accelerate Flow
+   - Left to Right
+   - System Thinking (global optimization over local optimization)
+   - Increased Visibility
+   - Just in Time
+   - Shorten Lead Time
+ + The Second Way: Amplify Feedback
+   - Right to Left
+   - Shorten Feedback Loops
+   - Learn Faster
+   - Fix Defects Faster
+   - Embedding Knowledge
+ + The Third Way: Continuous Learning
+   - Full Cycle
+   - Continual Experimentation (act like scientists / PDCA method)
+   - Learning from Failure
+   - Repetition and Practice
+   - Increase Resilience
 
