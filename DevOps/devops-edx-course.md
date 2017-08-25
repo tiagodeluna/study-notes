@@ -88,15 +88,15 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 ---------------
 
  + Workflow (Flow)
-  - The waste (Muda) of the work
-  - The evenness (Mura) of the work
+   - The waste (Muda) of the work
+   - The evenness (Mura) of the work
  + Lead Time
-  - The time it takes one piece to move all the way through a process of the e stream from start to finish.
-  - Lead time clock starts when the request is made and ends at delivery.
-  - Lead time is what the customer sees.
+   - The time it takes one piece to move all the way through a process of the e stream from start to finish.
+   - Lead time clock starts when the request is made and ends at delivery.
+   - Lead time is what the customer sees.
  + Cycle Time
-  - How often a part or product actually is completed by a process, as timed   bservation.
-  - Cycle time clock starts when the work begins on the request and ends when the item is ready for delivery.
+   - How often a part or product actually is completed by a process, as timed   bservation.
+   - Cycle time clock starts when the work begins on the request and ends when the item is ready for delivery.
     
 -------------------------
 > **Lead Time** is the overall time and the **Cycle Time** is the time we actually start processing the request.
