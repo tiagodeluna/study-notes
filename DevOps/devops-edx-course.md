@@ -198,3 +198,42 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
    - Repetition and Practice
    - Increase Resilience
 
+### The First Way
+
+#### Make work visible
+
+  + Using storyboards:
+    - Use Scrum, Kanban, etc.
+    - Putting WIP limits
+  + With metrics and management reporting:
+    - Use the board as a tool for measurement and metrics
+    - Track the WIP, Lead Time, Throughput, Flow Efficiency and Failure Load
+
+#### Reduce Batch Sizes
+
+  - Faster Feedback
+  - Faster Mean Time to detect and resolve
+  - Reduces risk
+  - Less overhead
+
+#### Single Piece Flow (1x1)
+
+  - No inventory reduces Cycle Time
+  - Create smoother workflow
+  - Catch errors earlier
+  - Creates learning opportunities
+
+#### Small Batch and Single Piece Flow in Software
+
+  - Small piece of code (e.g. feature)
+  - Checkin to source control
+  - Merge into trunk
+  - Testing
+  - Deployment
+
+### Resources Chapter 2
+
+#### Presentations
+
+  * [One Piece Flow vs. Mass Production: Envelope Stuffing Lean Thinking Simulation](https://www.youtube.com/watch?v=Dr67i5SdXiM)
+  * 
