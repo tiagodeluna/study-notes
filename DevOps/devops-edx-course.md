@@ -266,11 +266,50 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 
 ### The Second Way - Feedback
 
-...
+ - Telemetry
+ - Fault Injection
+ - Safety Culture
+ - Fast Feedback
+
+#### Telemetry
+
+ - Monitoring
+     + Legacy: HP Overview, IBM Tivoli, BMC Patrol
+     + Open Source: Nagios, Sensu, Zenoss
+     + SaaS: Datadog, NewRelic, SignalFX
+ - Logging
+     + Splunk, ELK (Elastic Search, Logstash, Kibana), Loggly
+ - Analytics
+     + Graphite, Riemann, Hadoop/Spark
+
+#### Fault Injection
+
+-----------------------------
+> This is the mindset of where we purposely create faults in production, in order to learn faster and become more resilient by understanding those failures.
+-----------------------------
+
+ - Motivations:
+     + Reduce MTBF (Mean Time Between Failures)
+     + Reduce MTTR (Mean Time To Resolve)
+ - Exercises:
+     + Game Day
+     + Netflix Simian Army
+     + Netflix FIT
 
 ### Resources Chapter 2
 
+#### Articles
+
+ * [The Satir Change Model](http://stevenmsmith.com/ar-satir-change-model/)
+ * [Kanbans and DevOps: Resource Guide for “The Phoenix Project” (Part 2)](http://itrevolution.com/resource-guide-for-the-phoenix-project-kanbans-part-2)
+ * [The Small Batches Principle](http://queue.acm.org/detail.cfm?id=2945077)
+ * [Theory of constraints](https://en.wikipedia.org/wiki/Theory_of_constraints)
+ * [Resilience Engineering: Learning to Embrace Failure](http://queue.acm.org/detail.cfm?id=2371297)
+ * [The Netflix Simian Army](http://techblog.netflix.com/2011/07/netflix-simian-army.html)
+ * [FIT : Failure Injection Testing](http://techblog.netflix.com/2014/10/fit-failure-injection-testing.html)
+ * [Fault Injection in Production - Making the case for resilience testing](http://queue.acm.org/detail.cfm?id=2353017)
+
 #### Presentations
 
-  * [One Piece Flow vs. Mass Production: Envelope Stuffing Lean Thinking Simulation](https://www.youtube.com/watch?v=Dr67i5SdXiM)
-  * 
+ * [One Piece Flow vs. Mass Production: Envelope Stuffing Lean Thinking Simulation](https://www.youtube.com/watch?v=Dr67i5SdXiM)
+
