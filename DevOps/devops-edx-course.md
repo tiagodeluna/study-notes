@@ -198,7 +198,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
    - Repetition and Practice
    - Increase Resilience
 
-### The First Way
+### The First Way - Flow
 
 #### Make work visible
 
@@ -233,10 +233,40 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 
 #### Limiting WIP
 
-  - Understanding knowledge work
+  - Understanding knowledge (cognitive) work
     + *Interruptions* and *Context Switching* in *Cognitive Work* is very expensive
     + *Multitasking* is not a good idea, because it degrades performance
     + We want to *Reduce Handoffs* in knowledge work whenever possible
+
+#### Eliminating Waste
+
+  - Lean Software Development Wastes:
+    + Unnecessary code or functionality
+    + Starting more than can be completed
+    + Delay in the software development process
+    + Unclear or constantly changing requirements
+    + Bureaucracy
+    + Slow or ineffective communication (e.g. email-based communication)
+    + partially done work
+    + Defects and quality issues
+    + Task switching
+
+#### Reducing Bottlenecks
+
+---------------------------
+> "In any value stream, there is always a direction of flow, and there is always one and only one constraint; any improvement not made at that constraint is an illusion." – Eliyahu Goldratt
+---------------------------
+
+  - Theory of Constraints - The 5 focusing steps:
+    + Identify the system's constraint(s)
+    + Decide how to exploit the system's constraint(s)
+    + Subordinate everything else to the above decision(s)
+    + Elevate the system's constraint(s)
+    + Warning! If in the previous steps a constraint has been broken, go back to step 1
+
+### The Second Way - Feedback
+
+...
 
 ### Resources Chapter 2
 
