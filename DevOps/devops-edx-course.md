@@ -231,6 +231,13 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
   - Testing
   - Deployment
 
+#### Limiting WIP
+
+  - Understanding knowledge work
+    + *Interruptions* and *Context Switching* in *Cognitive Work* is very expensive
+    + *Multitasking* is not a good idea, because it degrades performance
+    + We want to *Reduce Handoffs* in knowledge work whenever possible
+
 ### Resources Chapter 2
 
 #### Presentations
