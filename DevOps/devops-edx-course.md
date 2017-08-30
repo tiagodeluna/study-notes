@@ -9,6 +9,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
   * [Chapter 2 - Understanding the Value Stream](#chapter-2-understanding-the-value-stream)
     - [Resources](#resources-chapter-2)
 
+---
 ## Chapter 1 *Concepts*
 
 ### Japan's influence (Toyota Production Systems - Lean)
@@ -111,6 +112,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
   * [Spotify engineering culture (part 1)](https://puppet.com/resources/white-paper/2015-state-of-devops-report)
   * [Leading A DevOps Transformation: Lessons Learned](http://www.slideshare.net/realgenekim/leading-a-devops-transformation-lessons-learned)
 
+---
 ## Chapter 2 *Understanding the Value Stream*
 
 ---------------------------------------
@@ -148,7 +150,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
    - Test and Operations
    - Measures how good we are at our automation
 
-### A Value Stream Example
+### DevOps Value Stream
 
 | | LEAD TIME | CYCLE TIME |
 | ----- | ----- | ----- |
@@ -233,10 +235,9 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 
 #### Limiting WIP
 
-  - Understanding knowledge (cognitive) work
-    + *Interruptions* and *Context Switching* in *Cognitive Work* is very expensive
-    + *Multitasking* is not a good idea, because it degrades performance
-    + We want to *Reduce Handoffs* in knowledge work whenever possible
+  - In *Cognitive Work* (or knowledge work), Interruptions* and *Context Switching* are very expensive
+  - *Multitasking* is not a good idea, because it degrades performance
+  - We want to *Reduce Handoffs* whenever possible
 
 #### Eliminating Waste
 
@@ -294,7 +295,71 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
  - Exercises:
      + Game Day
      + Netflix Simian Army
-     + Netflix FIT
+     + Netflix FIT (Fault Injection Testing)
+
+#### Safety Culture
+
+ - ICE:
+    + Inclusivity
+    + Complexity
+    + Empathy
+- Diversity
+- Collaboration
+
+#### Fast Feedback
+
+  - A/B Testing
+  - Dark Deploys
+  - Inject Deployment Metrics in Monitoring
+  - Developers Wear Pagers
+  - Pair Programming
+  - Peer Reviews
+
+### The Third Way - Culture of Continual Experimentation and Learning
+
+-------------------------
+> "We are what we repeatedly do. Excellence, then, is not an act, but a habit." – Aristotle
+-------------------------
+-------------------------
+> "Toyota is not a story about techniques. It's an organization defined primarily by the unique behavior routines it continually teaches to all it's members." – Mike Rother
+-------------------------
+
+ - Ivisible (Memory muscle):
+     + Culture
+     + Behavior
+     + Habit
+     + Autonomic
+ - Visible (Learning culture):
+     + Scientific Method
+     + Depersonalized
+     + Non.Blameful
+     + Non Deterministic
+
+------------------------
+> "94% of problems in business are systems driven and only 6% are people driven." – W. Edwards Deming
+------------------------
+
+#### Toyota Kata
+
+ - Improvement
+     + Single-Piece Flow
+     + Small J's
+     + PDCA Cycle
+ - Coaching
+     + Mentee Relationship / Mentoring
+
+------------------------
+> "A production line that never stopped was either extermely good or extremely bad." – Taiichi Ohno
+> "Culture eats strategy for breakfast" – Peter Drucker
+> "I don't fear the man who has practiced 10,000 kicks. I fear the man who practiced one kick 10,00 times" – Bruce Lee
+> "Learning is not compulsory... neither is survival" – W. Edwards Deming
+------------------------
+
+#### The Andon Cord
+
+ - **Anybody** on the production line see the cord
+ - If someone saw a **defect**, he could pull that cord and **stop the line**
+ - Each pull on the cord is a **Opportunity to Learn**
 
 ### Resources Chapter 2
 
@@ -308,8 +373,39 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
  * [The Netflix Simian Army](http://techblog.netflix.com/2011/07/netflix-simian-army.html)
  * [FIT : Failure Injection Testing](http://techblog.netflix.com/2014/10/fit-failure-injection-testing.html)
  * [Fault Injection in Production - Making the case for resilience testing](http://queue.acm.org/detail.cfm?id=2353017)
+ * [DevOps keeps it cool with ICE](http://radar.oreilly.com/2015/01/devops-keeps-it-cool-with-ice.html)
+ * [Empathy: The Essence of DevOps][http://blog.ingineering.it/post/72964480807/empathy-the-essence-of-devops]
+ * [Karōjisatsu (Burnout)](http://itrevolution.com/karojisatsu/)
+ * [Feature flags, dark launches, and canary releases for all: LaunchDarkly first year in review](http://blog.launchdarkly.com/feature-flags-dark-launches-and-canary-releases-for-all-launchdarkly-first-year-in-review/)
+ * [Feature flags and canary, dark, and A/B releases](http://www.pragmaticdevops.com/2014/05/continuous-delivery/feature-flags-and-canary-dark-and-ab-releases/)
+ * [How does Etsy manage development and operations?](https://codeascraft.com/2011/02/04/how-does-etsy-manage-development-and-operations/)
+ * [Introduction to the Improvement Kata](http://www.slideshare.net/mike734/introduction-to-the-improvement-kata)
+ * [How Many Times Do You Pull the Andon Cord Each Day?](http://gembapantarei.com/2008/04/how_many_times_do_you_pull_the_andon_cord_each_day.html)
+ * [The Three Ways: The Principles Underpinning DevOps](http://itrevolution.com/the-three-ways-principles-underpinning-devops/)
+ * [Docker and the Three Ways of DevOps Part 1: The First Way – Systems Thinking](https://blog.docker.com/2015/05/docker-three-ways-devops/)
+ [Improving Flow: Fix the Handoffs to Remove Your Worst Bottlenecks](http://dev2ops.org/2012/11/improving-flow-fix-the-handoffs-to-remove-your-worst-bottlenecks/)
+ * [Use DevOps to Turn IT into a Strategic Weapon](http://dev2ops.org/2012/09/use-devops-to-turn-it-into-a-strategic-weapon/)
+
+#### Books
+
+* Learning to See - Mike Rother
+* Personal Kanban - Jim Benson
+* The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses - Eric Ries
+* Lean Software Development: An Agile Toolkit by Mary Poppendieck (Author), Tom Poppendieck (Author)
+* Beyond the Goal: Eliyahu Goldratt Speaks on the Theory of Constraints (Your Coach in a Box) Audio CD – Audiobook, CD, Unabridged by Eliyahu Goldratt
+* The Art of Monitoring - James Turnbull
+* Effective DevOps by Katherine Daniels, Jennifer Davis
+* The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Volume 2 1st Edition by Thomas A. Limoncelli
+* Toyota Kata: Managing People for Improvement, Adaptiveness and Superior Results 1st Edition by Mike Rother
+* The High-Velocity Edge: How Market Leaders Leverage Operational Excellence to Beat the Competition Hardcover – May 3, 2010 by Steven J. Spear
 
 #### Presentations
 
  * [One Piece Flow vs. Mass Production: Envelope Stuffing Lean Thinking Simulation](https://www.youtube.com/watch?v=Dr67i5SdXiM)
-
+* [How to initiate a DevOps Transformation (Video)](http://dev2ops.org/2013/12/how-to-initiate-a-devops-transformation-video/)
+* [DevOps Kaizen: Practical Steps to Start & Sustain a Transformation](http://www.slideshare.net/dev2ops/devops-kaizen-practical-steps-to-start-sustain-a-transformation)
+* [Support and Initiate a DevOps Transformation](http://www.slideshare.net/dev2ops/support-and-initiate-a-devops-transformation)
+* [A Kanban System for Software Engineering](https://www.infoq.com/presentations/kanban-for-software)
+* [DOES15 - Dominica DeGrandis - The Shape of Uncertainty](https://www.youtube.com/watch?v=Gp05i0d34gg)
+* [GameDay: Creating Resiliency Through Destruction](https://www.youtube.com/watch?v=zoz0ZjfrQ9s)
+* [Morgue: Helping Better Understand Events by Building a Post Mortem Tool - Bethany Macri](https://vimeo.com/77206751#t=27m40s)
