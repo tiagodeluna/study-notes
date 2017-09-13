@@ -350,7 +350,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 
 #### Legacy
 
- - SOR ans SOE
+ - SOR and SOE
    + System of Record (Mode 1)
    + System of Engagement (Mode 2)
  - The 3 R's
@@ -382,3 +382,21 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
  - Rework is generated
  - Percentage of change and accurate (Backwash)
 
+#### Brownfield
+
+------------------------
+> Brownfield development is the process of develop new features in a legacy application, trying to treat it as a greenfield.
+------------------------
+> The strangler vine wraps itself around the host tree, kills it, and then becomes the host tree itself.
+------------------------
+
+ - Process:
+     + Addind a new (greenfield like) featore to legacy
+     + Altering functionality of a service
+     + Upgrading a core service of a legacy application
+ - Model "Strangler Application":
+     + Event interception
+         * You build an abstraction about any inbound-outbound events in order to break up the interface and implementation, so you are able to work on the inner part, because the outer boundaries are protected
+     + Asset Capture
+         * Similar to an event. but in this case you look at a particular asset and you basically encapsulate that asset
+     + Legacy Test Automation
