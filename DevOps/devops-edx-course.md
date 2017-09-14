@@ -394,9 +394,13 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
      + Addind a new (greenfield like) featore to legacy
      + Altering functionality of a service
      + Upgrading a core service of a legacy application
- - Model "Strangler Application":
-     + Event interception
-         * You build an abstraction about any inbound-outbound events in order to break up the interface and implementation, so you are able to work on the inner part, because the outer boundaries are protected
-     + Asset Capture
-         * Similar to an event. but in this case you look at a particular asset and you basically encapsulate that asset
+ - "Strangler Application" pattern (Martin Fowler):
+     + Event interception: You build an abstraction about any inbound-outbound events in order to break up the interface and implementation, so you are able to work on the inner part, because the outer boundaries are protected
+     + Asset Capture: Similar to an event. but in this case you look at a particular asset and you basically encapsulate that asset
      + Legacy Test Automation
+
+#### Greenfield
+
+------------------------
+> A Greenfield project is the process of develop a system for a totally new environment, without concern for integrating with other systems. Such projects are deemed as higher risk, as they are often for new infrastructure, new customers, and even new owners.
+------------------------
