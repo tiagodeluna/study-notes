@@ -358,7 +358,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
    + Risk
    + Resistance
 
-#### The 3 R's for Legacy
+##### The 3 R's for Legacy
 
  - Leadership suppert is critical
  - Look for innovators and early adopters
@@ -366,7 +366,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
  - System of Engagements is better then System of Records
  - Build on success
 
-#### The ETTO Principle - Efficiency-Thoroughness Trade-Off (Erik Hollnagel)
+##### The ETTO Principle - Efficiency-Thoroughness Trade-Off (Erik Hollnagel)
 
  - Efficiency
      + Low investment
@@ -375,7 +375,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
      + Achieve the objective without any unwanted side-effects
      + Outcomes will be the intended one
 
-#### Focus Areas to Look For
+##### Focus Areas to Look For
 
  - Long wait times for work
  - Change approval bottlenecks
@@ -404,3 +404,57 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 ------------------------
 > A Greenfield project is the process of develop a system for a totally new environment, without concern for integrating with other systems. Such projects are deemed as higher risk, as they are often for new infrastructure, new customers, and even new owners.
 ------------------------
+
+### Understanding Organizational Change
+
+#### Organizational Goals
+
+ - The pipeline is everyone's responsibility
+ - Focus on making more generalists: less focus on specialists
+ - Fund services, not projects: projects tend to end. A service never ends, it just continues.
+ - Encourage loose coupling
+ - Smaller teams (and smaller services)
+ - High trust and low blame
+ - Make work visible
+
+#### Individual Level
+
+Four areas arount the individual level:
+ - I/T/E-Shaped Individuals
+ - Mindsets
+ - Motivation
+ - Intent
+
+##### I-Shaped
+
+- Specialists (linear skilled)
+- Deep expertise in one area
+- Very few skills in other areas
+- Can create bottlenecks
+- Can create downstream waste
+
+##### T-Shaped
+
+ - Generalists (horizontally skilled)
+ - Broad skills in many areas
+ - Helps with bottlenecks
+ - Can remove downstream waste
+
+##### E-Shaped
+
+- Deep in a few areas
+- Typically an innovator
+- General expertise in many areas
+- High impact individual
+
+##### Fixed Mindset
+
+- Fixed belief
+- Outcome-based
+- Belief that intelligence and talent are fixed traits
+
+##### Growth Mindset
+ - Alternative Belief
+ - Effort-based
+ - Belief that abilities can be developed through dedication and hard work
+ 
