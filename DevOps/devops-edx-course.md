@@ -425,6 +425,8 @@ Four areas arount the individual level:
  - Motivation
  - Intent
 
+#### I/T/E-Shaped Individuals
+
 ##### I-Shaped
 
 - Specialists (linear skilled)
@@ -447,6 +449,8 @@ Four areas arount the individual level:
 - General expertise in many areas
 - High impact individual
 
+#### Mindsets
+
 ##### Fixed Mindset
 
 - Fixed belief
@@ -458,3 +462,21 @@ Four areas arount the individual level:
  - Effort-based
  - Belief that abilities can be developed through dedication and hard work
  
+#### Motivation
+
+ - Intrinsic Motivation
+   + Engaging in a behavior because it is personally rewarding.
+   + Examples of rewards: Autonomy, Sense of achievement, Passion
+ - Extrinsic Motivation
+   + Motivated behavior or engage in an activity to earn a reward or avoid punishment.
+   + Examples of rewards: Pay increase, Promotion, Bonuses
+ - There is no good or bad here: The important thing is to understand what motivates people for change
+
+##### Overjustification Effect
+
+ - Extrinsic rewards can decrease an individuals intrinsic motivation
+ - Individuals may pay more attention to the extrinsic rewards instead of their intrinsic motivations
+ - Reinforce extrinsic motivation mindsets
+ - Efforts over outcome based extrinsic rewards (effort-based rewards) are less influenced by the Overjustification Effect
+
+
