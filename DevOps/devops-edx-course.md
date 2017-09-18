@@ -462,14 +462,18 @@ Four areas arount the individual level:
  - Effort-based
  - Belief that abilities can be developed through dedication and hard work
  
+----------------
+ > "A variation of the Growth Mindset is the Challenge Mindset - a very powerful tool, under-explored in our industry" - John Willis
+ ---------------
+ 
 #### Motivation
 
  - Intrinsic Motivation
    + Engaging in a behavior because it is personally rewarding.
-   + Examples of rewards: Autonomy, Sense of achievement, Passion
+   + Rewards: Autonomy, Sense of achievement, Passion
  - Extrinsic Motivation
    + Motivated behavior or engage in an activity to earn a reward or avoid punishment.
-   + Examples of rewards: Pay increase, Promotion, Bonuses
+   + Rewards: Pay increase, Promotion, Bonuses
  - There is no good or bad here: The important thing is to understand what motivates people for change
 
 ##### Overjustification Effect
