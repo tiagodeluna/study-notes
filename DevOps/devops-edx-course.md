@@ -462,10 +462,6 @@ Four areas arount the individual level:
  - Effort-based
  - Belief that abilities can be developed through dedication and hard work
  
-----------------
- > "A variation of the Growth Mindset is the Challenge Mindset - a very powerful tool, under-explored in our industry" - John Willis
- ---------------
- 
 #### Motivation
 
  - Intrinsic Motivation
@@ -483,4 +479,10 @@ Four areas arount the individual level:
  - Reinforce extrinsic motivation mindsets
  - Efforts over outcome based extrinsic rewards (effort-based rewards) are less influenced by the Overjustification Effect
 
+##### Individuals Motivation
 
+ - Use incentives approprietely
+ - Challenge mindsets: A variation of the Growth Mindset. It's a very powerful tool, under-explored in our industry
+ - Visualise the effort, not the success
+ - Intent-based motivation (individual control)
+ - Focus on the effort, not the outcome
