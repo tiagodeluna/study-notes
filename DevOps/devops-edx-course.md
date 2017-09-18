@@ -486,3 +486,79 @@ Four areas arount the individual level:
  - Visualise the effort, not the success
  - Intent-based motivation (individual control)
  - Focus on the effort, not the outcome
+
+#### Technology Adoption Curve
+
+##### Innovators
+
+ - Typically risk takers
+ - Have financial or social capital to take risks
+ - They have higher failure tolerance
+ - Tend to be good internal champions
+
+-----------------
+> In general, you wanna look for innovators when you are looking for transformation of new ideas. And DevOps would be one of those.
+-----------------
+
+##### Early Adopters
+
+- Similtar characteristics of innovators
+- Opinion leadership: they have higher credibility
+- More discreet in adoption choices
+- Tend to be more centralized than innovators
+
+------------------
+> They're a little more connected to the overall infrastructure of the company than innovators.
+------------------
+
+##### (Technology Adoption Curve) Strategies
+
+ - Look for gate keepers: innovators of early adopters that might own a certain area
+ - Identify champions: people that can be a internal advocate for change
+ - Identify and manage resistors
+ - Defuse cynicism
+
+##### Leaders
+
+ - Opinion leaders:
+     + People that have high **Credibility**
+ - Network leaders:
+     + People with great **Influence** that are really good at spreading their ideas/opinions
+ - Hierarchical leaders
+     + People that **Control** a certain area to give you direct leadership **Support**
+
+#### Organizational Structures
+
+##### Functional-Oriented
+
+ - Optimized for cost
+     + The classic organizational structures
+ - Designed around expertise
+ - Hierarchical in structure
+ - Different teams for systems, networking, database and security
+ - More handoffs and longer lead times
+ - Leads to local optimization (instead of global optimization)
+ - Leads to bottlenecks
+
+##### Matrix-Oriented
+
+ - Hybrid structure
+     + Tries to bridge expertise and speed
+ - Dotted line cross functional alignment
+     + Have a functional hierarchical structure, but puts somebody in a dotted-line responsibility to another team
+ - Complicated structures
+ - Can lead to a lack of ownership
+     + People are really not clear who has the authority or not
+
+##### Market-Oriented
+
+ - Optimized for speed
+     + In general, it's what we find in high-performance organizations, DevOps-based organizations
+ - Flat structure
+ - Small teams
+     + Microservices, bounded context...
+ - Highly coordinated and collaborative
+ - Tight coordination
+ - Less handoffs and shorter lead times
+ - Globally optimized
+ - Cross functional with less bottlenecks
