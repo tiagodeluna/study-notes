@@ -562,3 +562,112 @@ Four areas arount the individual level:
  - Less handoffs and shorter lead times
  - Globally optimized
  - Cross functional with less bottlenecks
+
+#### How do you do transformation?
+
+----------------
+> "Don't fight stupid, make more awesome" - Jessie Robbins
+----------------
+
+ - Start small, build trust and safety
+ - Create champions
+ - Use metrics to gain confidence: build a narrative around your metrics
+ - Celebrate successes
+ - Exploit compelling events
+
+----------------
+> "Most of the time when people are saying no what they are really saying is they don't know how to say yes. Sometimes we have to hack the 'yes' out of people." - Jessie Robbins
+----------------
+
+### Enabling Transformation
+
+#### Best Practices
+
+ - Alignment around the transformartion
+     + Create an army around the transformation, starting small, growing, learning how to fight off the dissenters
+ - Creae a shared goal
+ - Create non-functional buffers (20% time)
+     + For just creative thought
+ - Build generalist strategies
+ - Build team with credibility and influence leaders
+ - Create a physical workspace for the transformation team
+     + The idea of getting the team away from the bureaucracy and inercia is a good idea
+ - Give the transformation team some freedom
+     + You do need to allow this team to break some rules
+
+#### Planning
+
+ - Shorter planning cycles
+ - Outcomes not budget related
+ - Re-planning
+ - MVP's (Minimal Viable Products) and pivots
+ - Enforce learning as core objective
+ - Quick start initiatives
+
+#### General Hacks
+
+ - Self service
+     + Allow teams to create fast implementations
+ - Embed Ops
+     + Embed ops into dev team or dev into ops team
+ - Liaisons
+     + Internal consultants (designated ops)
+ - Retrospective and Standups
+     + Invite all related
+
+#### Four Pillars of Effective DevOps
+
+##### Collaboration
+
+ - Micro-aggression and non-violent communication
+     + These are ways that you communicate as part of the transformation team, of how you can say something
+     + Avoid using "you" and "they" (blameless postmortem)
+ - Asynchronous code reviews (*Pull Requests*)
+ - Pair programming
+ - Chatops
+     + Chat tools like Slack, where teams can communicate, have war rooms, log error messages, do deployments, etc.
+ - Standups
+
+##### Affinity
+
+ - Relationships
+     + Embedded Ops, bootcamps, rotations, blameless postmortems
+ - Empathy and trust
+ - Inter-team relationships
+ - Team culture and culture fit
+ - Blamelessness
+ - Respectful of individual differences and backgrounds
+ - Team diversity
+
+##### Tools
+
+ - Use tools as an accelerator to enforce culture
+ - Do the tools shorten lead time
+ - Version control
+ - Artifact management
+ - Automation, monitoring, logging, alerting
+ - Continuous integration and delivery (CI/CD)
+ - Open source can help scale
+ - In-House vs Open Source vs Commercial
+
+##### Scaling
+
+ - Grow and mature the transformation
+ - Expand to other organizations and service groups
+ - Managing zombie projects
+     + Look out for projects that really just go nowhere and start eating resources
+ - The service is never done
+
+#### John Kotter's 8-Step Change Model
+
+ 1. Establishing a Sense of Urgency
+ 2. Creating the Guiding Coalition
+     + Find the right leaders
+ 3. Developing a Vision and Strategy
+ 4. Communicating the Change Vision
+ 5. Empowering Employees for Broad-Based Action
+ 6. Generating Short-Term Wins
+    + Let the wins be known
+ 7. Consolidating Gains and Producting More Change
+ 8. Anchoring New Approaches in the Culture
+    + You have to have a model for sustainability
