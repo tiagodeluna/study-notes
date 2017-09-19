@@ -1,11 +1,13 @@
 # DevOps - Resources
 
+Reference material from the DevOps edX course **Introduction to Devops**. These resources are a subset of [John Willis' Introduction to Devops Resource List on Gist](https://gist.github.com/tiagodeluna/772a784e2f6a28ec72c5779f58555c01).
+
 ## Summary
   
  - [Chapter 1 - Concepts](#chapter-1-concepts)
  - [Chapter 2 - Understanding the Value Stream](#chapter-2-understanding-the-value-stream)
  - [Chapter 3 - Getting Started with DevOps](#chapter-3-getting-started-with-devops)
-
+ - [Chapter 4 - The First Way - Accelerate Flow](#chapter-4-the-first-way---accelerate-flow)
 
 ## Chapter 1 - *Concepts*
 
