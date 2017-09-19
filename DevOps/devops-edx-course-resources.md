@@ -106,8 +106,6 @@ Reference material from the DevOps edX course **Introduction to Devops**. These 
 * [Netflix Techblog: Building with Legos](http://techblog.netflix.com/2011/08/building-with-legos.html)
 * [Facebook Chat](https://www.facebook.com/notes/facebook-engineering/facebook-chat/14218138919/)
 
-### Books
-
 ### Presentations
 
 * [DevOpsDays Minneapolis 2014 -- Dan Slimmon, Conway's Law: The Skeleton of DevOps](https://www.youtube.com/watch?v=dYvNwPkfmCw)
