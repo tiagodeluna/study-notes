@@ -10,6 +10,8 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
     - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-2-understanding-the-value-stream)
   * [Chapter 3 - Getting Started with DevOps](#chapter-3-getting-started-with-devops)
     - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-3-getting-started-with-devops)
+  * [Chapter 4 - The First Way - Accelerate Flow](#chapter-4-the-first-way-accelerate-flow)
+    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-4-the-first-way-accelerate-flow)
 
 ## Chapter 1 *Concepts*
 
@@ -342,8 +344,15 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
  - Typically small enough in scope with a high probability of success and safe to fail
  - Large enough to have impact with possibility of future improvements while not appearing as a trivial experiment
 
+### Value Stream Mapping
+
+------------------
+> Value Stream Mapping is the main tool used to map out Value Streams.
+------------------
+
 ### Pick a Value Stream
 
+There are basically three types of value stream:
  - Legacy
  - Greenfield
  - Brownfield
@@ -361,7 +370,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 ##### The 3 R's for Legacy
 
  - Leadership suppert is critical
- - Look for innovators and early adopters
+ - Look for **Innovators** and **Early Adopters**
  - Prior knowledge of DevOps helps
  - System of Engagements is better then System of Records
  - Build on success
@@ -529,6 +538,10 @@ Four areas arount the individual level:
 
 #### Organizational Structures
 
+-------------------
+> Conway's Law: Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations
+-------------------
+
 ##### Functional-Oriented
 
  - Optimized for cost
@@ -585,7 +598,7 @@ Four areas arount the individual level:
 
  - Alignment around the transformartion
      + Create an army around the transformation, starting small, growing, learning how to fight off the dissenters
- - Creae a shared goal
+ - Create a shared goal
  - Create non-functional buffers (20% time)
      + For just creative thought
  - Build generalist strategies
@@ -671,3 +684,17 @@ Four areas arount the individual level:
  7. Consolidating Gains and Producting More Change
  8. Anchoring New Approaches in the Culture
     + You have to have a model for sustainability
+
+## Chapter 4 *The First Way - Accelerate Flow*
+
+By the end of this chapter, you should be able to:
+
+ - Discuss the concept and goals of the First Way.
+ - Explain the difference between shortening lead time and reducing bottlenecks.
+ - Explain the difference between continuous integration, continuous delivery, and continuous deployments.
+ - Discuss the eight principles of continuous delivery.
+ - Explain the importance of everything being managed and controlled by source control.
+ - Discuss the concepts of Infrastructure as Code and immutable infrastructure.
+ - Discuss automated testing.
+ - Explain the patterns for live deployments, otherwise called "zero downtime deployments".
+

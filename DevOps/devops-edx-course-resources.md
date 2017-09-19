@@ -92,7 +92,38 @@
 
 ### Articles
 
+* [The ETTO Principle - Efficiency-Thoroughness Trade-Off](http://erikhollnagel.com/ideas/etto-principle/index.html)
+* [Acceptance Test–driven Development](https://en.wikipedia.org/wiki/Acceptance_test%E2%80%93driven_development)
+* [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development)
+* [Conway's law](https://en.wikipedia.org/wiki/Conway%27s_law)
+* [Martin Fowler Strangler Application](http://www.martinfowler.com/bliki/StranglerApplication.html)
+* [Lean-Agile Mindset](http://www.scaledagileframework.com/lean-agile-mindset/)
+* [5 Surprising Ways to Get Motivated](https://www.verywell.com/surprising-ways-to-get-motivated-2795388)
+* [DEALING WITH CREAKY LEGACY PLATFORMS](http://jonnyleroy.com/2011/02/03/dealing-with-creaky-legacy-platforms/)
+* [The Second Toyota Paradox: How Delaying Decisions Can Make Better Cars Faster](http://sloanreview.mit.edu/article/the-second-toyota-paradox-how-delaying-decisions-can-make-better-cars-faster/)
+* [Netflix Techblog: Building with Legos](http://techblog.netflix.com/2011/08/building-with-legos.html)
+* [Facebook Chat](https://www.facebook.com/notes/facebook-engineering/facebook-chat/14218138919/)
+
 ### Books
 
 ### Presentations
 
+* [DevOpsDays Minneapolis 2014 -- Dan Slimmon, Conway's Law: The Skeleton of DevOps](https://www.youtube.com/watch?v=dYvNwPkfmCw)
+* [DOES15 - DOES15 - Paula Thrasher - Three Steps to Change: Lessons from Battling Bureaucracy](https://www.youtube.com/watch?v=Hen6lk3J_ss)
+* [DOES15 - Jody Mulkey - DevOps in the Enterprise: A Transformation Journey](https://www.youtube.com/watch?v=USYrDaPEFtM)
+* [DOES15 - Heather Mickman & Ross Clanton - (Re)building an Engineering Culture: DevOps at Target](https://www.youtube.com/watch?v=7s-VbB1fG5o)
+* [DOES15 - Scott Prugh & Erica Morrison - Conway & Taylor Meet the Strangler (v2.0)](https://www.youtube.com/watch?v=tKdIHCL0DUg)
+* [DOES15 - Carmen DeArdo - How DevOps is Enabling Lean Application Development](https://www.youtube.com/watch?v=sL7wHJj25DA)
+* [DOES14 - Scott Prugh - CSG - DevOps and Lean in Legacy Environments](https://www.youtube.com/watch?v=f4et0EGvKXA)
+* [Change your mindset, change the game | Dr. Alia Crum | TEDxTraverseCity](https://www.youtube.com/watch?v=0tqq66zwa7g)
+* [Turn the Ship Around! How to Create Leaders at Every Level](https://www.youtube.com/watch?v=iiwUqnvY1l0)
+* [Simon Sinek: How great leaders inspire action](https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action?language=en)
+* [Growing from the Few to the Many: Scaling the Operations Organization at Facebook](https://www.infoq.com/presentations/scaling-operations-facebook)
+
+## Chapter 4 *The First Way - Accelerate Flow*
+
+### Articles
+
+### Books
+
+### Presentations
