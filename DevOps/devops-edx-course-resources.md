@@ -67,16 +67,16 @@ Reference material from the DevOps edX course **Introduction to Devops**. These 
 
 ### Books
 
- * Learning to See - Mike Rother
- * Personal Kanban - Jim Benson
- * The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses - Eric Ries
- * Lean Software Development: An Agile Toolkit by Mary Poppendieck (Author), Tom Poppendieck (Author)
- * Beyond the Goal: Eliyahu Goldratt Speaks on the Theory of Constraints (Your Coach in a Box) Audio CD – Audiobook, CD, Unabridged by Eliyahu Goldratt
- * The Art of Monitoring - James Turnbull
- * Effective DevOps by Katherine Daniels, Jennifer Davis
- * The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Volume 2 1st Edition by Thomas A. Limoncelli
- * Toyota Kata: Managing People for Improvement, Adaptiveness and Superior Results 1st Edition by Mike Rother
- * The High-Velocity Edge: How Market Leaders Leverage Operational Excellence to Beat the Competition Hardcover – May 3, 2010 by Steven J. Spear
+ * Learning to See (*Mike Rother*)
+ * Personal Kanban (*Jim Benson*)
+ * The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses (*Eric Ries*)
+ * Lean Software Development: An Agile Toolkit (*Mary Poppendieck, Tom Poppendieck*)
+ * Beyond the Goal: Eliyahu Goldratt Speaks on the Theory of Constraints (Your Coach in a Box) Audio CD – Audiobook, CD, Unabridged (*Eliyahu Goldratt*)
+ * The Art of Monitoring *(James Turnbull*)
+ * Effective DevOps (*Katherine Daniels, Jennifer Davis*)
+ * The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Volume 2 1st Edition (*Thomas A. Limoncelli*)
+ * Toyota Kata: Managing People for Improvement, Adaptiveness and Superior Results 1st Edition (*Mike Rother*)
+ * The High-Velocity Edge: How Market Leaders Leverage Operational Excellence to Beat the Competition Hardcover – May 3, 2010 (*Steven J. Spear*)
 
 ### Presentations
 
