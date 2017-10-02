@@ -58,6 +58,7 @@ Git commands that I frequently use.
 | Command | Description |
 | ----- | ----- |
 | git push `repo` `branch` | Send commited changes to a remove *branch* of a *repository* |
+| git push --set-upstream `repo` `branch` | Push the current local branch and set the remote new *branch* as upstream |
 
 ## Merging files
 
