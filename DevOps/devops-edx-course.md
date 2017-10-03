@@ -687,6 +687,52 @@ Four areas arount the individual level:
 
 ## Chapter 4 *The First Way - Accelerate Flow*
 
+### Continuous delivery patterns and practices
+...
+
+### The Deployment Pipeline
+
+#### Concepts
+
+ - Visibility
+   + All stages of the pipeline are visible to everyone responsible for the delivery of the service
+ - Feedback
+   + Each stage in the pipeline has designed "gates" created to eliminate downstream defects
+ - Continually Deploy
+   + The design of the pipeline is such that any patch, update or new feature can be automated for delivery, deploy and release
+
+#### The Deployment Pipeline (Service Delivery Platform Design Patterns)
+
+ - Build Phase
+   + Source Repository
+   + Build Console
+ - Package Repository
+   + Build Artifacts
+   + Store and retrieve
+ - Deployment Phase
+   + Pre-Production
+   + Production
+
+#### Most Popular Tools
+
+Source Control:
+ - Git, Team Foundation Server, Perforce, **Github**, Bitbucket, GitLab
+Build Console:
+ - on-prem: **Jenkins**, Bamboo, Team City
+ - SaaS-based: **Travis CI**, Circle CI, Shippable
+Repository Managers:
+ - Nexus, Artifactory, Docker Trusted Registry, Docker Hub, Google Container Registry
+Operations Console:
+ - **Rundeck**, Marathon, Asgard, Spinaker, Weave Scope
+Automation:
+ - CFEngine, Chef, Puppet, Ansible, Docker Compose, Cloud Formation, Terraform
+Infrastructure Management:
+ - VMWare
+ - Cloud (AWS, GCE, Azure, Google Cloud)
+ - Cloud (Openstack, Cloudstack)
+ - Containers (Docker, LXC, Rocket)
+ - Orchestration (Swarm, Mesos, Kubernetes)
+
 By the end of this chapter, you should be able to:
 
  - Discuss the concept and goals of the First Way.
