@@ -717,15 +717,20 @@ Four areas arount the individual level:
 
 Source Control:
  - Git, Team Foundation Server, Perforce, **Github**, Bitbucket, GitLab
+
 Build Console:
  - on-prem: **Jenkins**, Bamboo, Team City
  - SaaS-based: **Travis CI**, Circle CI, Shippable
+
 Repository Managers:
  - Nexus, Artifactory, Docker Trusted Registry, Docker Hub, Google Container Registry
+
 Operations Console:
  - **Rundeck**, Marathon, Asgard, Spinaker, Weave Scope
+
 Automation:
  - CFEngine, Chef, Puppet, Ansible, Docker Compose, Cloud Formation, Terraform
+
 Infrastructure Management:
  - VMWare
  - Cloud (AWS, GCE, Azure, Google Cloud)
