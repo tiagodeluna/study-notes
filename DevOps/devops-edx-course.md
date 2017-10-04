@@ -687,8 +687,55 @@ Four areas arount the individual level:
 
 ## Chapter 4 *The First Way - Accelerate Flow*
 
-### Continuous delivery patterns and practices
-...
+### Continuous Delivery Patterns and Practices
+
+-------------
+> "There is nothing so useless as doing efficiently that which should not be done at all" - Peter Drucker
+-------------
+
+#### First Way Principles
+
+ - Create automated and repeatable environments at each stage of the pipeline
+ - Apply automated testing at every stage of the pipeline
+ - Increase flow and shorten lead times
+ - Global optimization over local optimization
+
+#### Five Steps to Increase Value and Flow
+
+ 1. Define value precisely from the perspective of the end customer in terms of a specific product with specific capabilities offered at a specific price and time (**Separate business value from waste**)
+ 2. Identify the entire value stream for each product or product family and eliminate waste (**Value Stream Mapping**)
+ 3. Make the remaining value-creating steps flow (**Kaizen events, continuous improvement**)
+ 4. Design and provide what the customer wants only when the customer wants it (**the concept of pull model**)
+ 5. Pursue perfection (**the process is never done, it's virtuous cycle**)
+
+#### CI/CD
+
+ - Continuous Integration
+     + The process of integrating componentes of a feature, application or service
+ - Continuous Delivery
+     + Uses continuous integration to create installable artifacts (packages) that can be deployed
+ - Continuous Deployment
+     + The process of deploying a feature, application or service to production
+
+#### Continuous Integration
+
+ - The build phase
+ - Typically triggered by a code commit
+ - Typically builds are done from trunk
+ - The process happens every time someone commits code
+ - Code is compiled and libraries are built
+ - Build trigger package, artifact and image creation
+
+#### 8 Principles of Continuous Delivery
+
+ 1. Create a repeatable, reliable process for releasing software
+ 2. Automate almost everything
+ 3. Keep everything in version control
+ 4. If it hurts, do it more frequently, and bring the pain forward
+ 5. Build quality in
+ 6. Done means released
+ 7. Everybody is responsible for the delivery process
+ 8. Continuous improvement
 
 ### The Deployment Pipeline
 
@@ -737,6 +784,12 @@ Infrastructure Management:
  - Cloud (Openstack, Cloudstack)
  - Containers (Docker, LXC, Rocket)
  - Orchestration (Swarm, Mesos, Kubernetes)
+
+### Creating consistency in the pipeline
+
+### Automated Testing
+
+### Deployment Strategies (Zero Downtime Release)
 
 By the end of this chapter, you should be able to:
 
