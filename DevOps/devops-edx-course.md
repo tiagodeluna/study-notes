@@ -785,6 +785,36 @@ Infrastructure Management:
  - Containers (Docker, LXC, Rocket)
  - Orchestration (Swarm, Mesos, Kubernetes)
 
+#### Vagrant
+
+- Originally provided as a wrapper for Virtual Desktop
+- Also wraps configuration management tools
+- Very popular tool for developers
+- Creates consistent environments
+
+##### Vagrant Concepts
+
+- Host and Guest
+  + e.g. The Host environment is your laptop, and the Guest is the VM that gets provisioned
+- Provider and Provisioner
+- Boxes
+  + It's an abstraction for the VM images
+- Vagrantfile
+  + The default source. A Ruby file that controls the provisioning and the provider
+- Synced Folder
+  + A nice interface for syncing folders between the host and the guests
+
+##### Vagrant Commands
+
+- up
+  + Take a vagrantfile and fire up the VM, invoke any provisining scripts
+- reload
+- suspend
+- resume
+- destroy
+- hakt
+- ssh
+
 ### Creating consistency in the pipeline
 
 ### Automated Testing
