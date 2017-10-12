@@ -815,6 +815,66 @@ Infrastructure Management:
 - hakt
 - ssh
 
+#### Build Phase
+
+- Update your code from source control (if existing)
+- Service is coded (if new)
+- Run a local build in your dev environment
+- Service code is commited to the source repository
+- Service is built (binaries, libraries, artifacts...)
+- Artifacts are tagged (version controlled) and packaged
+- Packages are registered in a repository
+
+##### Commit
+
+- Files are uploaded to the source repository
+- All source should be working code
+- Code should have full coverage unit tests (TDD)
+- Committed source should not break the build
+- Pre-submit checks (bugs, lint, code styles)
+- Automated trigger of the build stage
+
+##### Build
+
+- Compiling code
+- Invokes build tools (ANT, Maven, Mercury, IVY, Make)
+- Build time dependencies
+- Creating and/or converting images
+- Building container images
+- Running functional/unit tests
+- Automated trigger of integration and acceptance testing
+
+##### Packages/Artifacts
+
+- Compiled executables
+- Components
+- Libraries
+- Container Images
+- TAR'd and/or compressed binaries
+
+##### Package/Artifact Repository
+
+- Manages the distribution of packages and artifacts
+- All packages/artifacts must be reproduccible from source
+- Cryptographically hashed or digitally signed
+- Manages security access management
+- Invokes vulnerability scanning
+- Provides usage reporting
+
+##### Packages and Artifacts Repository Examples
+
+All things that you can find in the artifact or package repository:
+- JAR, WAR, and EAR packages (Java)
+- Gems (Ruby)
+- Python packages
+- Perl modules
+- DLLs (Windows)
+- ZIP or TAR files
+- Container images
+- RPM or DEB packages (Linux)
+- Metadata or Reports
+- Documentation
+
 ### Creating consistency in the pipeline
 
 ### Automated Testing
