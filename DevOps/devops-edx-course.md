@@ -875,6 +875,48 @@ All things that you can find in the artifact or package repository:
 - Metadata or Reports
 - Documentation
 
+#### Deploy Phase
+
+- Promotion: moving between the different stages of the pipeline / versioning the packages and artifacts in a deploy
+- Provisioning
+- Installation
+- Configuration
+- Orchestration: if you're doing cloud provisioning and/or containers
+
+##### Promotion
+
+- Candidate releases are selected
+- Versions are selected and marked
+- Tagging strategies
+  + Marked "Production"
+  + Marked "Latest"
+  + Pinning: even if there's a newer version, we pin the most stable version to be the one used
+- Multiple repositories strategies
+  + Development
+  + Testing
+  + Production
+
+##### Provisioning
+
+- Bare metal provisioning (PXE)
+- Virtual image provisioning (VMware ESX, XenServer, KVM...)
+- Cloud provisioning (Amazon, Google, Azure, Digital Ocean...)
+- Container provisioning
+
+##### Installation
+
+- Internally written installers
+- Before and after scrips
+- System level strategies (RPM/YUM, DEB/APT)
+
+##### Configuration Management (Not Immutable)
+
+- Install the service
+- Infrastructure as Code
+- Desired state configuration
+- Convergence
+- CFEngine, Chef, Puppet, Ansible
+
 ### Creating consistency in the pipeline
 
 ### Automated Testing
