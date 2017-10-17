@@ -43,6 +43,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
  - Long lead times
  - High technical dept
  - Slow and hard to change
+ - High MTTR (Mean Time to Recover)
 
 ### Continuous Delivery Patterns
 
@@ -918,6 +919,54 @@ All things that you can find in the artifact or package repository:
 - CFEngine, Chef, Puppet, Ansible
 
 ### Creating consistency in the pipeline
+
+-------------------
+> "A butterfly flaps its wings in the Amazonian jungle, and subsequently a storm ravages half of Europe" – Neil Gaiman and Terry Pratchett
+-------------------
+
+#### Pets vs Cattle (concept)
+
+- Servers as pets
+  + You name them and when they get sick, you nurse them back to health
+- Servers as cattle
+  + You number them and when they get sick, you shoot them
+
+-------------------
+> Most high-performing organizations would describe their model as "service as cattle"
+-------------------
+
+#### Consistent Environments in all Stages
+
+- Goal is to create consistent environments
+- All elements of the pipeline should be disposable and reproducible
+- All environments should look like production
+- Decrease variability between elements in the pipeline
+- Repeatability increases speed rebuilding environments
+- Reduced errors related to inconsistencies
+- Increases security related to inconsistencies
+
+#### Version Control everything!
+
+- Keeps a history of all changes
+- Can easy check differences between versions
+- Can restore and rebuild all elements
+- Everything can be versioned and tagged
+- All changes are visible and audited for everyone
+- Changes can be automated
+
+##### What should be in version control (everything)
+
+- All application code
+- All configuration scripts
+- All configuration management DSL code
+- All image build scripts (VM's, Containers)
+- All meta definitions (JSON, YAML, TOML)
+- All automated tests, test scripts and test DSL code
+- All documentation, procedures, release notes
+- All templates (Cloudformation, Terraform, Heat)
+- All database schema abstractions, DNS, and Firewall definitions
+- Network definitions (Switch configurations)
+- Basically everything
 
 ### Automated Testing
 
