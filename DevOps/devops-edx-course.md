@@ -968,6 +968,21 @@ All things that you can find in the artifact or package repository:
 - Network definitions (Switch configurations)
 - Basically everything
 
+#### Why Order Matters
+
+To avoid the following issues:
+- Circular Dependancies
+- Right Command Wrong Order
+- Right Package Wrong Order
+
+##### The Difference a Byte Makes
+
+- Lean Enterprise story (from the Humble-Farley book)
+  + A dependent library with only a couple of byte difference created a bug that could not be recreated in test
+  + It is because there was just an out-of-sync
+- Large Financial institution
+  + Applied 5 seconds desired state configuration monitoring and saw 1 billion unplanned changes per day
+
 ### Automated Testing
 
 ### Deployment Strategies (Zero Downtime Release)
