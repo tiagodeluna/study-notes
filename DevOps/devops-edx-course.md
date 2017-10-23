@@ -977,11 +977,59 @@ To avoid the following issues:
 
 ##### The Difference a Byte Makes
 
-- Lean Enterprise story (from the Humble-Farley book)
+- Lean Enterprise story (from the Humble-Farley book):
   + A dependent library with only a couple of byte difference created a bug that could not be recreated in test
   + It is because there was just an out-of-sync
 - Large Financial institution
   + Applied 5 seconds desired state configuration monitoring and saw 1 billion unplanned changes per day
+
+#### Consistent Infrastructure (Providers)
+
+##### Provisioning: Bare Metal (BM)
+
+- All BM scripts or DSL should also be kept in version control.
+- BM scripts typically kick of configuration management processes when they complete.
+- Some BM and CM (Configuration Management) tools "Devops" integrate together.
+
+Tools:
+- Kickstart, Cobbler, FAI (Fully Automatic Installation), Foreman, Razor, MAAS (Machine As A Service), Ironic, RackN - Digital Rebar (formerly Crowbar)
+
+##### Provisioning: Virtualization (VM)
+
+- VM image build scripts, meta and templates should be kept in version control
+- All VM images should be reproductible from source (version control)
+- Most configuration management tools can automate VM provisioning then kickoff the CM process
+- Image strategies (Bake vs Fry)
+  + The bake image is bigger, but is faster in deploy.
+  + The fry image is smaller, but it takes longer to deploy, because you are literally installing, instead of having all the installed components in the backed image
+
+Tools of Type 1 Hypervisors:
+- VMWare ESX/vSphere, XEN, HyperV
+
+Tools of Type 2 Hypervisors:
+- KVM, VMWare Workstation, Oracle VirtualBox, Xhyve (Hyperkit - Docker)
+
+##### Provisioning: Desktop Virtualization (VM)
+
+Tools:
+  + Vagrant, Docker Toolbox, Docker for Mac, Docker for Windows
+
+##### Provisioning: Cloud (IaaS)
+
+- Cloud image build scripts, meta and templates should be kept in version control
+- All Cloud images should be reproductible from source (version control)
+- Most configuration management tools can automate Cloud provisioning then kickoff the CM process
+- Cloud-init/user-data/cloud-config file formats
+- Image strategies (Bake vs Fry)
+
+Public Cloud Tools (IaaS):
+- Amazon (AWS), Google (GCE), Microsoft Azure, Rackspave, Digital Ocean
+
+Public Cloud Tools (PaaS):
+- Heroku, EngineYard, CloudFoundry (also private)
+
+Private Cloud Tools (IaaS):
+- OpenStack, CloudStack, VMWare vCloud, Microsoft Azure
 
 ### Automated Testing
 
