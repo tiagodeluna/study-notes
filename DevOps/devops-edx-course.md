@@ -1031,6 +1031,36 @@ Public Cloud Tools (PaaS):
 Private Cloud Tools (IaaS):
 - OpenStack, CloudStack, VMWare vCloud, Microsoft Azure
 
+##### Provisioning: Containers
+
+- Container image build scripts, meta and templates should be kept in version control
+- All container images should be reproducible from source (version control)
+- Typically CM tools are not used inside of a running container
+- Configuration files and meta are typically shared by the container host
+- Containers work well with Immutable Delivery models
+
+Tools:
+- Docker, Rocket, LXD, LXC (Native Linux Containers), Amazon (ECS), Microsoft (ACS), Google (GCS)
+  + Obs: Amazon ECS and Microsoft ACS are Docker implementations
+
+#### Infrastructure Image Portability
+
+- Conversions between different infrastructures
+- Conversions between different stages in the pipeline
+- Directory structures and shared files
+
+Example:
+- Desktop
+  + Vagrant BOX format
+- Build
+  + QCOW2
+- QA (testing and quality assurance)
+  + AMI
+- Production
+  + VMDK
+
+> You have to automate all that process of conversion and deal with the operational cost of the different platforms and potential inconsistencies
+
 ### Automated Testing
 
 ### Deployment Strategies (Zero Downtime Release)
@@ -1045,4 +1075,3 @@ By the end of this chapter, you should be able to:
  - Discuss the concepts of Infrastructure as Code and immutable infrastructure.
  - Discuss automated testing.
  - Explain the patterns for live deployments, otherwise called "zero downtime deployments".
-
