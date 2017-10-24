@@ -124,9 +124,7 @@ Reference material from the DevOps edX course **Introduction to Devops**. These 
 
 ### Articles
 
-* Continuous Delivery: From Bot to Drone (Stylight Blog):
-   - [Part 1](https://tech.stylight.com/continuous-delivery-from-bot-to-drone-part1/)
-   - [Part 2](https://tech.stylight.com/from-bot-to-drone-part-2/)
+* Continuous Delivery: From Bot to Drone [Part 1](https://tech.stylight.com/continuous-delivery-from-bot-to-drone-part1/) and [Part 2](https://tech.stylight.com/from-bot-to-drone-part-2/)
 
 ### Books
 
