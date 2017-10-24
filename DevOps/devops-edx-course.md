@@ -13,7 +13,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
   * [Chapter 4 - The First Way - Accelerate Flow](#chapter-4-the-first-way---accelerate-flow)
     - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-4-the-first-way---accelerate-flow)
 
-## Chapter 1 *Concepts*
+# Chapter 1 *Concepts*
 
 ### Japan's influence (Toyota Production Systems - Lean)
 
@@ -87,7 +87,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 ----------------------------
 
 
-## Chapter 2 *Understanding the Value Stream*
+# Chapter 2 *Understanding the Value Stream*
 
 ---------------------------------------
 > "If you can't describe what you're doing as a process, you don't know what you're doing." – Dr. W. Edwards Deming
@@ -338,7 +338,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
  - Each pull on the cord is a **Opportunity to Learn**
 
 
-## Chapter 3 *Getting Started with DevOps*
+# Chapter 3 *Getting Started with DevOps*
 
 ### Improvement Paradox (Balancing Risk/Reward)
 
@@ -351,14 +351,14 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 > Value Stream Mapping is the main tool used to map out Value Streams.
 ------------------
 
-### Pick a Value Stream
+## Pick a Value Stream
 
 There are basically three types of value stream:
  - Legacy
  - Greenfield
  - Brownfield
 
-#### Legacy
+### Legacy
 
  - SOR and SOE
    + System of Record (Mode 1)
@@ -368,7 +368,7 @@ There are basically three types of value stream:
    + Risk
    + Resistance
 
-##### The 3 R's for Legacy
+#### The 3 R's for Legacy
 
  - Leadership suppert is critical
  - Look for **Innovators** and **Early Adopters**
@@ -376,7 +376,7 @@ There are basically three types of value stream:
  - System of Engagements is better then System of Records
  - Build on success
 
-##### The ETTO Principle - Efficiency-Thoroughness Trade-Off (Erik Hollnagel)
+#### The ETTO Principle - Efficiency-Thoroughness Trade-Off (Erik Hollnagel)
 
  - Efficiency
      + Low investment
@@ -385,14 +385,14 @@ There are basically three types of value stream:
      + Achieve the objective without any unwanted side-effects
      + Outcomes will be the intended one
 
-##### Focus Areas to Look For
+#### Focus Areas to Look For
 
  - Long wait times for work
  - Change approval bottlenecks
  - Rework is generated
  - Percentage of change and accurate (Backwash)
 
-#### Brownfield
+### Brownfield
 
 ------------------------
 > Brownfield development is the process of develop new features in a legacy application, trying to treat it as a greenfield.
@@ -409,15 +409,15 @@ There are basically three types of value stream:
      + Asset Capture: Similar to an event. but in this case you look at a particular asset and you basically encapsulate that asset
      + Legacy Test Automation
 
-#### Greenfield
+### Greenfield
 
 ------------------------
 > A Greenfield project is the process of develop a system for a totally new environment, without concern for integrating with other systems. Such projects are deemed as higher risk, as they are often for new infrastructure, new customers, and even new owners.
 ------------------------
 
-### Understanding Organizational Change
+## Understanding Organizational Change
 
-#### Organizational Goals
+### Organizational Goals
 
  - The pipeline is everyone's responsibility
  - Focus on making more generalists: less focus on specialists
@@ -427,7 +427,7 @@ There are basically three types of value stream:
  - High trust and low blame
  - Make work visible
 
-#### Individual Level
+### Individual Level
 
 Four areas arount the individual level:
  - I/T/E-Shaped Individuals
@@ -435,9 +435,9 @@ Four areas arount the individual level:
  - Motivation
  - Intent
 
-#### I/T/E-Shaped Individuals
+### I/T/E-Shaped Individuals
 
-##### I-Shaped
+#### I-Shaped
 
 - Specialists (linear skilled)
 - Deep expertise in one area
@@ -445,34 +445,34 @@ Four areas arount the individual level:
 - Can create bottlenecks
 - Can create downstream waste
 
-##### T-Shaped
+#### T-Shaped
 
  - Generalists (horizontally skilled)
  - Broad skills in many areas
  - Helps with bottlenecks
  - Can remove downstream waste
 
-##### E-Shaped
+#### E-Shaped
 
 - Deep in a few areas
 - Typically an innovator
 - General expertise in many areas
 - High impact individual
 
-#### Mindsets
+### Mindsets
 
-##### Fixed Mindset
+#### Fixed Mindset
 
 - Fixed belief
 - Outcome-based
 - Belief that intelligence and talent are fixed traits
 
-##### Growth Mindset
+#### Growth Mindset
  - Alternative Belief
  - Effort-based
  - Belief that abilities can be developed through dedication and hard work
  
-#### Motivation
+### Motivation
 
  - Intrinsic Motivation
    + Engaging in a behavior because it is personally rewarding.
@@ -482,14 +482,14 @@ Four areas arount the individual level:
    + Rewards: Pay increase, Promotion, Bonuses
  - There is no good or bad here: The important thing is to understand what motivates people for change
 
-##### Overjustification Effect
+#### Overjustification Effect
 
  - Extrinsic rewards can decrease an individuals intrinsic motivation
  - Individuals may pay more attention to the extrinsic rewards instead of their intrinsic motivations
  - Reinforce extrinsic motivation mindsets
  - Efforts over outcome based extrinsic rewards (effort-based rewards) are less influenced by the Overjustification Effect
 
-##### Individuals Motivation
+#### Individuals Motivation
 
  - Use incentives approprietely
  - Challenge mindsets: A variation of the Growth Mindset. It's a very powerful tool, under-explored in our industry
@@ -497,9 +497,9 @@ Four areas arount the individual level:
  - Intent-based motivation (individual control)
  - Focus on the effort, not the outcome
 
-#### Technology Adoption Curve
+### Technology Adoption Curve
 
-##### Innovators
+#### Innovators
 
  - Typically risk takers
  - Have financial or social capital to take risks
@@ -510,7 +510,7 @@ Four areas arount the individual level:
 > In general, you wanna look for innovators when you are looking for transformation of new ideas. And DevOps would be one of those.
 -----------------
 
-##### Early Adopters
+#### Early Adopters
 
 - Similtar characteristics of innovators
 - Opinion leadership: they have higher credibility
@@ -521,14 +521,14 @@ Four areas arount the individual level:
 > They're a little more connected to the overall infrastructure of the company than innovators.
 ------------------
 
-##### (Technology Adoption Curve) Strategies
+#### (Technology Adoption Curve) Strategies
 
  - Look for gate keepers: innovators of early adopters that might own a certain area
  - Identify champions: people that can be a internal advocate for change
  - Identify and manage resistors
  - Defuse cynicism
 
-##### Leaders
+#### Leaders
 
  - Opinion leaders:
      + People that have high **Credibility**
@@ -537,13 +537,13 @@ Four areas arount the individual level:
  - Hierarchical leaders
      + People that **Control** a certain area to give you direct leadership **Support**
 
-#### Organizational Structures
+### Organizational Structures
 
 -------------------
 > Conway's Law: Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations
 -------------------
 
-##### Functional-Oriented
+#### Functional-Oriented
 
  - Optimized for cost
      + The classic organizational structures
@@ -554,7 +554,7 @@ Four areas arount the individual level:
  - Leads to local optimization (instead of global optimization)
  - Leads to bottlenecks
 
-##### Matrix-Oriented
+#### Matrix-Oriented
 
  - Hybrid structure
      + Tries to bridge expertise and speed
@@ -564,7 +564,7 @@ Four areas arount the individual level:
  - Can lead to a lack of ownership
      + People are really not clear who has the authority or not
 
-##### Market-Oriented
+#### Market-Oriented
 
  - Optimized for speed
      + In general, it's what we find in high-performance organizations, DevOps-based organizations
@@ -577,7 +577,7 @@ Four areas arount the individual level:
  - Globally optimized
  - Cross functional with less bottlenecks
 
-#### How do you do transformation?
+### How do you do transformation?
 
 ----------------
 > "Don't fight stupid, make more awesome" - Jessie Robbins
@@ -593,9 +593,9 @@ Four areas arount the individual level:
 > "Most of the time when people are saying no what they are really saying is they don't know how to say yes. Sometimes we have to hack the 'yes' out of people." - Jessie Robbins
 ----------------
 
-### Enabling Transformation
+## Enabling Transformation
 
-#### Best Practices
+### Best Practices
 
  - Alignment around the transformartion
      + Create an army around the transformation, starting small, growing, learning how to fight off the dissenters
@@ -609,7 +609,7 @@ Four areas arount the individual level:
  - Give the transformation team some freedom
      + You do need to allow this team to break some rules
 
-#### Planning
+### Planning
 
  - Shorter planning cycles
  - Outcomes not budget related
@@ -618,7 +618,7 @@ Four areas arount the individual level:
  - Enforce learning as core objective
  - Quick start initiatives
 
-#### General Hacks
+### General Hacks
 
  - Self service
      + Allow teams to create fast implementations
@@ -629,9 +629,9 @@ Four areas arount the individual level:
  - Retrospective and Standups
      + Invite all related
 
-#### Four Pillars of Effective DevOps
+### Four Pillars of Effective DevOps
 
-##### Collaboration
+#### Collaboration
 
  - Micro-aggression and non-violent communication
      + These are ways that you communicate as part of the transformation team, of how you can say something
@@ -642,7 +642,7 @@ Four areas arount the individual level:
      + Chat tools like Slack, where teams can communicate, have war rooms, log error messages, do deployments, etc.
  - Standups
 
-##### Affinity
+#### Affinity
 
  - Relationships
      + Embedded Ops, bootcamps, rotations, blameless postmortems
@@ -653,7 +653,7 @@ Four areas arount the individual level:
  - Respectful of individual differences and backgrounds
  - Team diversity
 
-##### Tools
+#### Tools
 
  - Use tools as an accelerator to enforce culture
  - Do the tools shorten lead time
@@ -664,7 +664,7 @@ Four areas arount the individual level:
  - Open source can help scale
  - In-House vs Open Source vs Commercial
 
-##### Scaling
+#### Scaling
 
  - Grow and mature the transformation
  - Expand to other organizations and service groups
@@ -672,7 +672,7 @@ Four areas arount the individual level:
      + Look out for projects that really just go nowhere and start eating resources
  - The service is never done
 
-#### John Kotter's 8-Step Change Model
+### John Kotter's 8-Step Change Model
 
  1. Establishing a Sense of Urgency
  2. Creating the Guiding Coalition
@@ -686,22 +686,22 @@ Four areas arount the individual level:
  8. Anchoring New Approaches in the Culture
     + You have to have a model for sustainability
 
-## Chapter 4 *The First Way - Accelerate Flow*
+# Chapter 4 *The First Way - Accelerate Flow*
 
-### Continuous Delivery Patterns and Practices
+## Continuous Delivery Patterns and Practices
 
 -------------
 > "There is nothing so useless as doing efficiently that which should not be done at all" - Peter Drucker
 -------------
 
-#### First Way Principles
+### First Way Principles
 
  - Create automated and repeatable environments at each stage of the pipeline
  - Apply automated testing at every stage of the pipeline
  - Increase flow and shorten lead times
  - Global optimization over local optimization
 
-#### Five Steps to Increase Value and Flow
+### Five Steps to Increase Value and Flow
 
  1. Define value precisely from the perspective of the end customer in terms of a specific product with specific capabilities offered at a specific price and time (**Separate business value from waste**)
  2. Identify the entire value stream for each product or product family and eliminate waste (**Value Stream Mapping**)
@@ -709,16 +709,16 @@ Four areas arount the individual level:
  4. Design and provide what the customer wants only when the customer wants it (**the concept of pull model**)
  5. Pursue perfection (**the process is never done, it's virtuous cycle**)
 
-#### CI/CD
+### CI/CD
 
  - Continuous Integration
-     + The process of integrating componentes of a feature, application or service
+     + The process of integrating components of a feature, application or service
  - Continuous Delivery
      + Uses continuous integration to create installable artifacts (packages) that can be deployed
  - Continuous Deployment
      + The process of deploying a feature, application or service to production
 
-#### Continuous Integration
+### Continuous Integration
 
  - The build phase
  - Typically triggered by a code commit
@@ -727,7 +727,7 @@ Four areas arount the individual level:
  - Code is compiled and libraries are built
  - Build trigger package, artifact and image creation
 
-#### 8 Principles of Continuous Delivery
+### 8 Principles of Continuous Delivery
 
  1. Create a repeatable, reliable process for releasing software
  2. Automate almost everything
@@ -738,9 +738,9 @@ Four areas arount the individual level:
  7. Everybody is responsible for the delivery process
  8. Continuous improvement
 
-### The Deployment Pipeline
+## The Deployment Pipeline
 
-#### Concepts
+### Concepts
 
  - Visibility
    + All stages of the pipeline are visible to everyone responsible for the delivery of the service
@@ -749,7 +749,7 @@ Four areas arount the individual level:
  - Continually Deploy
    + The design of the pipeline is such that any patch, update or new feature can be automated for delivery, deploy and release
 
-#### The Deployment Pipeline (Service Delivery Platform Design Patterns)
+### The Deployment Pipeline (Service Delivery Platform Design Patterns)
 
  - Build Phase
    + Source Repository
@@ -761,7 +761,7 @@ Four areas arount the individual level:
    + Pre-Production
    + Production
 
-#### Most Popular Tools
+### Most Popular Tools
 
 Source Control:
  - Git, Team Foundation Server, Perforce, **Github**, Bitbucket, GitLab
@@ -786,14 +786,14 @@ Infrastructure Management:
  - Containers (Docker, LXC, Rocket)
  - Orchestration (Swarm, Mesos, Kubernetes)
 
-#### Vagrant
+### Vagrant
 
 - Originally provided as a wrapper for Virtual Desktop
 - Also wraps configuration management tools
 - Very popular tool for developers
 - Creates consistent environments
 
-##### Vagrant Concepts
+#### Vagrant Concepts
 
 - Host and Guest
   + e.g. The Host environment is your laptop, and the Guest is the VM that gets provisioned
@@ -805,7 +805,7 @@ Infrastructure Management:
 - Synced Folder
   + A nice interface for syncing folders between the host and the guests
 
-##### Vagrant Commands
+#### Vagrant Commands
 
 - up
   + Take a vagrantfile and fire up the VM, invoke any provisining scripts
@@ -816,7 +816,7 @@ Infrastructure Management:
 - hakt
 - ssh
 
-#### Build Phase
+### Build Phase
 
 - Update your code from source control (if existing)
 - Service is coded (if new)
@@ -826,7 +826,7 @@ Infrastructure Management:
 - Artifacts are tagged (version controlled) and packaged
 - Packages are registered in a repository
 
-##### Commit
+#### Commit
 
 - Files are uploaded to the source repository
 - All source should be working code
@@ -835,7 +835,7 @@ Infrastructure Management:
 - Pre-submit checks (bugs, lint, code styles)
 - Automated trigger of the build stage
 
-##### Build
+#### Build
 
 - Compiling code
 - Invokes build tools (ANT, Maven, Mercury, IVY, Make)
@@ -845,7 +845,7 @@ Infrastructure Management:
 - Running functional/unit tests
 - Automated trigger of integration and acceptance testing
 
-##### Packages/Artifacts
+#### Packages/Artifacts
 
 - Compiled executables
 - Components
@@ -853,7 +853,7 @@ Infrastructure Management:
 - Container Images
 - TAR'd and/or compressed binaries
 
-##### Package/Artifact Repository
+#### Package/Artifact Repository
 
 - Manages the distribution of packages and artifacts
 - All packages/artifacts must be reproduccible from source
@@ -862,7 +862,7 @@ Infrastructure Management:
 - Invokes vulnerability scanning
 - Provides usage reporting
 
-##### Packages and Artifacts Repository Examples
+#### Packages and Artifacts Repository Examples
 
 All things that you can find in the artifact or package repository:
 - JAR, WAR, and EAR packages (Java)
@@ -876,7 +876,7 @@ All things that you can find in the artifact or package repository:
 - Metadata or Reports
 - Documentation
 
-#### Deploy Phase
+### Deploy Phase
 
 - Promotion: moving between the different stages of the pipeline / versioning the packages and artifacts in a deploy
 - Provisioning
@@ -884,7 +884,7 @@ All things that you can find in the artifact or package repository:
 - Configuration
 - Orchestration: if you're doing cloud provisioning and/or containers
 
-##### Promotion
+#### Promotion
 
 - Candidate releases are selected
 - Versions are selected and marked
@@ -897,20 +897,20 @@ All things that you can find in the artifact or package repository:
   + Testing
   + Production
 
-##### Provisioning
+#### Provisioning
 
 - Bare metal provisioning (PXE)
 - Virtual image provisioning (VMware ESX, XenServer, KVM...)
 - Cloud provisioning (Amazon, Google, Azure, Digital Ocean...)
 - Container provisioning
 
-##### Installation
+#### Installation
 
 - Internally written installers
 - Before and after scrips
 - System level strategies (RPM/YUM, DEB/APT)
 
-##### Configuration Management (Not Immutable)
+#### Configuration Management (Not Immutable)
 
 - Install the service
 - Infrastructure as Code
@@ -918,13 +918,13 @@ All things that you can find in the artifact or package repository:
 - Convergence
 - CFEngine, Chef, Puppet, Ansible
 
-### Creating consistency in the pipeline
+## Creating consistency in the pipeline
 
 -------------------
 > "A butterfly flaps its wings in the Amazonian jungle, and subsequently a storm ravages half of Europe" – Neil Gaiman and Terry Pratchett
 -------------------
 
-#### Pets vs Cattle (concept)
+### Pets vs Cattle (concept)
 
 - Servers as pets
   + You name them and when they get sick, you nurse them back to health
@@ -935,7 +935,7 @@ All things that you can find in the artifact or package repository:
 > Most high-performing organizations would describe their model as "service as cattle"
 -------------------
 
-#### Consistent Environments in all Stages
+### Consistent Environments in all Stages
 
 - Goal is to create consistent environments
 - All elements of the pipeline should be disposable and reproducible
@@ -945,7 +945,7 @@ All things that you can find in the artifact or package repository:
 - Reduced errors related to inconsistencies
 - Increases security related to inconsistencies
 
-#### Version Control everything!
+### Version Control everything!
 
 - Keeps a history of all changes
 - Can easy check differences between versions
@@ -954,7 +954,7 @@ All things that you can find in the artifact or package repository:
 - All changes are visible and audited for everyone
 - Changes can be automated
 
-##### What should be in version control (everything)
+#### What should be in version control (everything)
 
 - All application code
 - All configuration scripts
@@ -968,14 +968,14 @@ All things that you can find in the artifact or package repository:
 - Network definitions (Switch configurations)
 - Basically everything
 
-#### Why Order Matters
+### Why Order Matters
 
 To avoid the following issues:
 - Circular Dependancies
 - Right Command Wrong Order
 - Right Package Wrong Order
 
-##### The Difference a Byte Makes
+#### The Difference a Byte Makes
 
 - Lean Enterprise story (from the Humble-Farley book):
   + A dependent library with only a couple of byte difference created a bug that could not be recreated in test
@@ -983,9 +983,9 @@ To avoid the following issues:
 - Large Financial institution
   + Applied 5 seconds desired state configuration monitoring and saw 1 billion unplanned changes per day
 
-#### Consistent Infrastructure (Providers)
+### Consistent Infrastructure (Providers)
 
-##### Provisioning: Bare Metal (BM)
+#### Provisioning: Bare Metal (BM)
 
 - All BM scripts or DSL should also be kept in version control.
 - BM scripts typically kick of configuration management processes when they complete.
@@ -994,7 +994,7 @@ To avoid the following issues:
 Tools:
 - Kickstart, Cobbler, FAI (Fully Automatic Installation), Foreman, Razor, MAAS (Machine As A Service), Ironic, RackN - Digital Rebar (formerly Crowbar)
 
-##### Provisioning: Virtualization (VM)
+#### Provisioning: Virtualization (VM)
 
 - VM image build scripts, meta and templates should be kept in version control
 - All VM images should be reproductible from source (version control)
@@ -1009,12 +1009,12 @@ Tools of Type 1 Hypervisors:
 Tools of Type 2 Hypervisors:
 - KVM, VMWare Workstation, Oracle VirtualBox, Xhyve (Hyperkit - Docker)
 
-##### Provisioning: Desktop Virtualization (VM)
+#### Provisioning: Desktop Virtualization (VM)
 
 Tools:
   + Vagrant, Docker Toolbox, Docker for Mac, Docker for Windows
 
-##### Provisioning: Cloud (IaaS)
+#### Provisioning: Cloud (IaaS)
 
 - Cloud image build scripts, meta and templates should be kept in version control
 - All Cloud images should be reproductible from source (version control)
@@ -1031,7 +1031,7 @@ Public Cloud Tools (PaaS):
 Private Cloud Tools (IaaS):
 - OpenStack, CloudStack, VMWare vCloud, Microsoft Azure
 
-##### Provisioning: Containers
+#### Provisioning: Containers
 
 - Container image build scripts, meta and templates should be kept in version control
 - All container images should be reproducible from source (version control)
@@ -1043,13 +1043,14 @@ Tools:
 - Docker, Rocket, LXD, LXC (Native Linux Containers), Amazon (ECS), Microsoft (ACS), Google (GCS)
   + Obs: Amazon ECS and Microsoft ACS are Docker implementations
 
-#### Infrastructure Image Portability
+### Infrastructure Image Portability
 
 - Conversions between different infrastructures
 - Conversions between different stages in the pipeline
 - Directory structures and shared files
 
-Example:
+#### Example:
+
 - Desktop
   + Vagrant BOX format
 - Build
@@ -1061,9 +1062,9 @@ Example:
 
 > You have to automate all that process of conversion and deal with the operational cost of the different platforms and potential inconsistencies
 
-### Automated Testing
+## Automated Testing
 
-### Deployment Strategies (Zero Downtime Release)
+## Deployment Strategies (Zero Downtime Release)
 
 By the end of this chapter, you should be able to:
 
@@ -1075,3 +1076,4 @@ By the end of this chapter, you should be able to:
  - Discuss the concepts of Infrastructure as Code and immutable infrastructure.
  - Discuss automated testing.
  - Explain the patterns for live deployments, otherwise called "zero downtime deployments".
+
