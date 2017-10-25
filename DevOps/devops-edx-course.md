@@ -1049,7 +1049,9 @@ Tools:
 - Conversions between different stages in the pipeline
 - Directory structures and shared files
 
+------
 > You have to automate all that process of conversion and deal with the operational cost of the different platforms and potential inconsistencies
+------
 
 #### Example:
 
@@ -1064,7 +1066,9 @@ Tools:
 
 ### Consistent Operating System Environments
 
+-----
 > Even if you have to use different infrastructure frameworks, at least have your operating system be the same
+-----
 
 #### Consistent Operating System Environment Patterns
 
@@ -1093,15 +1097,32 @@ Con's:
 
 #### Infrastructure as Code
 
-Pro's:
 - Infrastructure primitives defined as DSL
-  + The abstractions are well-defined
 - Highly parameterized
 - Desired state-based model
 - Principles:
   + Modularity, Composability, Extensibility, Flexibility, Repeatability (DSL), Declaration, Abstraction, Idempotence, Convergence
+- Solutions:
+  + CFEngine, Puppet, Chef, Ansible, Salt
+
+Pro's:
+- Abstraction DSL's are very powerful
+- Self documenting
+- High reusability code/modules
+- Easy to provide data driven models
+- Generally more consistent than scripted patterns
+- Most major CM's have good testing abstractions
 
 Con's:
+- Abstractions DSL's have a higher learning curve
+  + You need to learn the DSL language (Ruby for Chef, Puppet language for Puppet)
+- Complex edge case scenarios/failures
+- Script/Shell primitives are used often
+- Point and time divergent
+- Integration interfaces are more complex
+- Infrastructure is built Just in Time (JIT)
+- Slower to provision
+- Builds are convergent not congruent
 
 
 ## Automated Testing
