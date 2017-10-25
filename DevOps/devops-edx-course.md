@@ -1049,6 +1049,8 @@ Tools:
 - Conversions between different stages in the pipeline
 - Directory structures and shared files
 
+> You have to automate all that process of conversion and deal with the operational cost of the different platforms and potential inconsistencies
+
 #### Example:
 
 - Desktop
@@ -1060,7 +1062,47 @@ Tools:
 - Production
   + VMDK
 
-> You have to automate all that process of conversion and deal with the operational cost of the different platforms and potential inconsistencies
+### Consistent Operating System Environments
+
+> Even if you have to use different infrastructure frameworks, at least have your operating system be the same
+
+#### Consistent Operating System Environment Patterns
+
+- Scripted environments
+- Infrastructure as Code
+- Immutable Infrastructure
+- Immutable Delivery
+
+#### Scripted Environments
+
+Pro's:
+- Easier to build
+- Lower learning curve
+  + Don't need to learn any complex language, like Chef and Puppet
+- Language consistency (SHELL and bash)
+- Easy to change
+
+Con's:
+- Environment abstractions are harder to code
+- Typically lower reusability
+- Harder to provide data driven models
+- Could cause inconsistent environment builds
+- Not really self documenting
+- Could lead to local improvements and not global
+- No real good testing interfaces
+
+#### Infrastructure as Code
+
+Pro's:
+- Infrastructure primitives defined as DSL
+  + The abstractions are well-defined
+- Highly parameterized
+- Desired state-based model
+- Principles:
+  + Modularity, Composability, Extensibility, Flexibility, Repeatability (DSL), Declaration, Abstraction, Idempotence, Convergence
+
+Con's:
+
 
 ## Automated Testing
 
