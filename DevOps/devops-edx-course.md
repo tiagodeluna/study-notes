@@ -1124,6 +1124,49 @@ Con's:
 - Slower to provision
 - Builds are convergent not congruent
 
+#### Immutable Infrastructure
+
+**Configuration Management (Immutable):**
+- Deploy the immutable image from an artifact repository
+- Uses metadata layering tool to coverge a service or cluster
+
+**Configuration Management (Netflix example):**
+- Used Java, Scala and Groovy
+- Created packages from artifacts
+- Turned packages into immutable AMI's
+- Used a meta layer for convergence
+
+Pro's:
+- Less variation than Infrastructure as Code
+- Faster to provision then Infrastructure as Code
+- Typically use Infrastructure as Code to build
+- Built into the CI process
+
+Con's:
+- More variation than Immutable Delivery model
+- Need a good model for image management
+- Slower to provision than Immutable Delivery model
+- Might still need Infrastructure as Code abstractions
+- Not immutable from the developers perspective
+
+#### Immutable Delivery
+
+**The Four Vs**
+- Variety *(raise)*
+  + Determine your variety of offerings based on operational efficiency and market demand
+- Velocity *(raise)*
+  + Maintain a steady flor through all processes of the supply chain
+- Variability *(reduce)*
+  + Manage inconsistencies carefully to reduce cost and improve quality
+- Visibility *(raise)*
+  + Ensure the transparency of all processes to enable continuous learning and improvement
+
+**No CRUD allowed fo...**
+- Packages
+- Configuration files
+- Application software
+- Data (RUD)
+
 
 ## Automated Testing
 
