@@ -1161,12 +1161,46 @@ Con's:
 - Visibility *(raise)*
   + Ensure the transparency of all processes to enable continuous learning and improvement
 
-**No CRUD allowed fo...**
+**No CRUD allowed for...**
 - Packages
 - Configuration files
 - Application software
 - Data (RUD)
 
+**Configuration Management - Container Model:**
+- Immutable Delivery model
+- Use **orchestration** for provisioning
+- Add meta layer similar to the Netflix model (however, much faster)
+
+**Orchestration Tools for Containers:**
+- Docker Swarm
+- Mesos
+- Kubernetes
+
+Pro's:
+- Least variation pattern
+  + It's the most congruent
+- Fastest provision model
+  + You can provision thousand node clusters in seconds
+- Fits well with Microservices architerctures
+- Really no need for Infrastructure as Code
+- Binary consistency from desktop to production
+- Built into CI process
+
+Con's:
+- DSL abstraction not as mature as Infrastructure as Code
+  + A Dockerfile is very scripty, it's not self-documenting as Chef and Puppet
+- Small changes are harder to manage
+  + Doesn't have a strong idempotent model
+- Debugging is harder
+- Need a good model for image management
+- Not all delivery models fit well
+
+#### Consistency Summary
+
+- Infrastructure as Code is in general better than scripted environment builds
+- Hybrid environments where immutability doesn't make sense still need Infrastructure as Code
+- In environments where immutability makes sense Immutable Infrastructure and/or Immutable Delivery is the most consistent way to build a delivery pipeline
 
 ## Automated Testing
 

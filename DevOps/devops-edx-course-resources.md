@@ -125,7 +125,32 @@ Reference material from the DevOps edX course **Introduction to Devops**. These 
 ### Articles
 
 * Continuous Delivery: From Bot to Drone [Part 1](https://tech.stylight.com/continuous-delivery-from-bot-to-drone-part1/) and [Part 2](https://tech.stylight.com/from-bot-to-drone-part-2/)
+* [The Deployment Production Line](https://continuousdelivery.com/wp-content/uploads/2011/04/deployment_production_line.pdf)
+* [Turing Equivalence in Automated Systems Administration](http://www.infrastructures.org/papers/turing/turing.html)
+* [Cloudinit](http://cloudinit.readthedocs.io/en/latest/)
+* [Assessing Docker and Containers for Five Software Delivery Use Cases (Gartner)](https://www.gartner.com/doc/3038125/assessing-docker-containers-software-delivery)
+* [Rugged Software](https://www.ruggedsoftware.org/)
 
 ### Books
 
+* Extreme Programming Explained: Embrace Change, 2nd Edition (The XP Series) (*by Kent Beck*)
+* Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation (*by Jen Humble and David Farley*)
+* The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Volume 2 (*by Thomas A. Limoncelli*)
+* Effective DevOps: Building a Culture of Collaboration, Affinity, and Tooling at Scale (*by Jennifer Davis and Katherine Daniels*)
+* Vagrant: Up and Running 1st Edition (*by Mitchell Hashimoto*)
+* Lean Enterprise: How High Performance Organizations Innovate at Scale (Lean) (*by Jez Humble*)
+* Toyota Supply Chain Management: A Strategic Approach to Toyota's Renowned (*by Ananth Iyer*)
+
 ### Presentations
+
+* [DOES16 London - Damon Edwards and John Willis - Better, Faster, and Cheaper. How?](https://www.youtube.com/watch?v=j9fC4raB-bA)
+* [What is a Service Delivery Platform?](https://vimeo.com/46125904)
+* [Architectures for open and scalable clouds](http://www.slideshare.net/randybias/architectures-for-open-and-scalable-clouds)
+* [Rack N Google K8s FAST Demo](https://www.youtube.com/watch?v=TPUfJsMv-YE)
+* [Realizing Linux Containers (LXC)](http://www.slideshare.net/BodenRussell/realizing-linux-containerslxc)
+* [Immutable infrastructure with Docker and containers (GlueCon 2015)](http://www.slideshare.net/jpetazzo/immutable-infrastructure-with-docker-and-containers-gluecon-2015)
+* [Immutable Infrastructure with Docker and EC2 by Michael Bryzek (Gilt)](https://www.youtube.com/watch?v=GaHzdqFithc)
+* [GTAC 2014: Move Fast & Don't Break Things - Google](https://www.youtube.com/watch?v=j_JviA5nvS0)
+* [Stephen Ritchie - Agile Testing Best Practices](https://www.youtube.com/watch?v=47YBqsXDEzY)
+* [Velocity 2011: Jon Jenkins, "Velocity Culture”](https://www.youtube.com/watch?v=dxk8b9rSKOo)
+
