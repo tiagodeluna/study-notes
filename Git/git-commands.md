@@ -103,6 +103,7 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 
 | Command | Description |
 | ----- | ----- |
+| git reset --hard | Reset the local branch to its original state |
 | git fetch \\\\ git reset --hard `repo or branch` | Fetch from the default remote (origin) \\\\ Reset your current branch to remote branch |
 | git reset HEAD~`number` | Reset a *number* of commits (but it doesn't delete the commits, they still continue to exist) |
 | git reset HEAD `filename` | Remove a *file* from the staging area |
