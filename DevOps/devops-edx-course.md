@@ -17,14 +17,14 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 
 ### Japan's influence (Toyota Production Systems - Lean)
 
- - *Muda* (Waste): eliminate waste wherever possible.
- - *Mura* (Flow): It's about evenness. Getting the pipeline flow consistent.
- - *Muri* (Stress): reduce stress on the system.
- - *Kaizen* (Improvement): continuous improvement.
- - *Kata* (Form): repetitive actions become memory muscle. It's about integrate Muda, Mura, Muri and Kaizen to become a natural behavior.
+ - *Muda* (Waste): eliminate waste wherever possible
+ - *Mura* (Flow): It's about evenness. Getting the pipeline flow consistent
+ - *Muri* (Stress): reduce stress on the system
+ - *Kaizen* (Improvement): continuous improvement
+ - *Kata* (Form): repetitive actions become memory muscle. It's about integrate Muda, Mura, Muri and Kaizen to become a natural behavior
 
 --------------------------
-> Faster and more reliable
+> Lean is about being faster and more reliable
 --------------------------
 
 ### Continuous Delivery Principle
@@ -55,6 +55,12 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
  - Stop the line: if your code breaks the build, then it needs to get fixed right away.
 
 ### DevOps Values
+
+--------------------------
+> "A lot about DevOps is culture" - John Willis
+--------------------------
+> "DevOps is continuously looking for new ways to break down silos, eliminate inefficiencies, and remove the risks that prevent the **rapid and reliable** delivery of software-based services" - Damon Edwards
+--------------------------
 
  - No rock star mentality
  - Shared contributions
