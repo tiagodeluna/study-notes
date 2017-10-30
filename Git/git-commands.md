@@ -14,6 +14,29 @@ Git commands that I frequently use.
 | git remote add origin `repo` | Set a remote *repository* as the default origin |
 | git remote set-url `branch` `repo` | Change the *repository* URL of a *branch* or *tag* |
 
+**Setting merge and diff tool:**
+In the .gitconfig file at <user folder>, add properties:
+```
+[merge]
+     tool = meld
+[mergetool "meld"]
+     cmd = \"C:/Program Files (x86)/Meld/meld.exe\" $LOCAL $MERGED $REMOTE
+[diff]
+     tool = meld
+[difftool "meld"]
+     cmd = \"C:/Program Files (x86)/Meld/meld.exe\" $REMOTE $LOCAL
+[mergetool]
+     keepBackup = false
+```
+
+**Setting aliases to commands:**
+Add aliases in the .gitconfig file at <user folder> as the following examples:
+```
+[alias]
+     diff-meld = difftool --tool=meld -y 
+     merge-meld = mergetool --tool=meld -y
+```
+
 ## SSH Public Key
 
 | Command | Description |
