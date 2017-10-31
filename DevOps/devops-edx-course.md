@@ -1210,6 +1210,74 @@ Con's:
 
 ## Automated Testing
 
+------------
+> Continuous testing ensures continuous improvement
+------------
+
+### The 9 Principles of Testing (by Elisabeth Hendrickson)
+
+1. Change the adversarial mindset to a collaboration mindset
+2. Change the *dev then test* mindset to *test and dev* mindset (TDD)
+3. Instead of having a *test team* you have an *everyone tests team*
+4. Test early, test often and shorten the feedback loop
+5. Tests should have reasonable expectations
+6. Fix bugs when you find them
+   - "Stop the line" (the andon cord)
+7. Reduce test documentation, automate the expectation
+8. *Done* means *released* (and tested)
+9. Test implement vs Implement test
+
+### Test-Driven Development (TDD)
+
+#### Concept: Red, Green, Refactor (loop)
+
+- Write a test based on the requirements. Make it fail
+- Write a small piece of code to make it pass
+- Refactor the code by improving it without changing the behavior and Repeat
+
+#### Benefits
+
+- Prevents scope creep
+- Catches desings issues early
+- Creates cleaner code
+- Builds trust with other service owners
+- Creates a consistent rhythm
+
+### Acceptance Test-Driven Development (ATDD)
+
+ATDD is very similar to TDD, but it has a business focus. Here is the ATDD loop:
+- Discuss
+  + With the business stakeholders to get a general idea of what are the intentions, and what makes a good acceptance
+- Distill
+  + Collaborate with the business stakeholders - define/refine *Done* in terms of the tests
+- Develop
+  + TDD
+- Demonstrate
+  + Show the new feature to the business stakeholders, get feedback
+
+### Behavior-Driven Development (BDD)
+
+- Tests whether the software fulfills the business need
+- Instead of *how it works*, it tests *how it behaves*
+- Based on Domain Driven Design (Eric Evans)
+- Typically DSL-based
+- Tests are typically conversational
+  + Uses human-readable questions and answers
+
+#### Example:
+
+**Feature:** Hello World
+As a service manager
+I want our customers to be greeted when they visit our site
+So that they have a better experience
+
+**Scenario:** Customers sees the welcome message
+When I go to the homepage
+The I should see the welcome message
+
+### Automated Tests (Build and Deploy)
+### Tools
+
 ## Deployment Strategies (Zero Downtime Release)
 
 By the end of this chapter, you should be able to:
