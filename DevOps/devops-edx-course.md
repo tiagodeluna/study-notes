@@ -1266,6 +1266,7 @@ ATDD is very similar to TDD, but it has a business focus. Here is the ATDD loop:
 
 #### Example:
 
+```
 **Feature:** Hello World
 As a service manager
 I want our customers to be greeted when they visit our site
@@ -1274,6 +1275,7 @@ So that they have a better experience
 **Scenario:** Customers sees the welcome message
 When I go to the homepage
 The I should see the welcome message
+```
 
 ### Automated Tests (Build and Deploy)
 ### Tools
