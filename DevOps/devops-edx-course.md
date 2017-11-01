@@ -1277,7 +1277,69 @@ When I go to the homepage
 The I should see the welcome message
 ```
 
-### Automated Tests (Build and Deploy)
+### Agile Testing Pyramid
+
+- Developer Level (Basis):
+  + Automated Unit Tests
+- System Level (Middle):
+  + Integration Tests
+- UI (Top):
+  + UI/UX tests (Manual tests)
+
+### Automated Testing: Build Phase
+
+- Unit tests
+- Acceptance Tests
+- Integration Tests
+- User Acceptance Tests
+
+#### Always Be Automating the tests
+
+- Automated tests are always running
+- Every commit
+- Nightly functional testing
+- Smoke testing
+- Stability testing
+- Performance testing
+- Zero configuration
+
+#### Unit Tests
+
+- Testing the source code by class or function
+- Typically done at commit or before commit
+- Typically "mocks" are created for interface calls
+- Typically created by the developer
+- Develop intention checking
+- Should be run on every change
+- Unit tests should be fast
+- Clear results
+- TDD based
+
+#### Acceptance Tests
+
+ - Testing multiple classes or functions
+ - Should verify a user story
+ - Should be written vefore code
+ - Checks for regressions
+ - Tests what the customer expects
+ - Specification is written in a domain-specific language
+ - Run after the build and all unit tests have passed
+
+#### Integration Tests
+
+- Testing integratino with other applications and services
+- All code and modules are tested as a group
+- Tests are a system wide view of the service
+- Tests real interfaces not "mocks"
+- Integratino tests are typically more expensive (more time-consuming)
+- Run after the build, all unit tests and acceptance tests
+
+#### User Acceptance Tests (Manual)
+
+- Testing done by customers
+- Ensure the applicatinos or service meets the requirements
+- Catch defects from a customer's perspective
+
 ### Tools
 
 ## Deployment Strategies (Zero Downtime Release)
