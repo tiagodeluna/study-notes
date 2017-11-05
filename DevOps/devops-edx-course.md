@@ -1388,9 +1388,128 @@ The I should see the welcome message
 
 ### Tools
 
+#### Unit Testing
+
+- JUnit, JTest (Java)
+- CUnit (C)
+- RSpec (Ruby)
+- Google Test
+- Parasoft
+- Visual Studio
+
+#### Load and Performance Testing
+
+- Apache Bench
+- Apache JMeter
+- LoadRunner, WinRunner (HP)
+- Rational Performance Tester (IBM)
+- Selenium
+- Neoload
+- SOASTA
+
+#### BDD Testing
+
+- Cucumber (Ruby-based)
+- JBehave (Java)
+- SpecFlow (.net)
+
+#### Security Testing
+
+- Brakeman
+- Gauntlt
+- Nmap
+- OWASP
+
+#### Configuration Management Testing
+
+-------------
+> The configuration management tools have, over the years, built up really robust automated testing themselves
+------------
+
+- Chef
+  + ChefSpec (Unit)
+  + Test Kitchen (Integration)
+  + Cucumber-chef (BDD)
+  + Food Critic (Lint)
+- Puppet
+  + rspec-puppet (Unit)
+  + Test Kitchen (Integration)
+  + Beaker (Integration)
+  + Puppet-lint (Lint)
+
 ## Deployment Strategies (Zero Downtime Release)
 
-By the end of this chapter, you should be able to:
+-------------
+> "Pushing code into production can be tricky because we are modifying a system while it is running. This is like changing the tires of a car while it is speeding down the highway at 90 km/h: you can do it, but it requires a lot of care and planning." - Thomas A. Limoncelli
+-------------
+
+### General Patterns and Constraints
+
+- Changing **data or schemas** in the release can be more difficult
+- Orchestrated release rollbacks can be difficult
+- Best time to reply is during production (not at 3am)
+- Log all deployment activities
+- Don't delete old files
+- Use warmup methodologies
+  + Strategies that you can implement to let things run in a warm mode for a while, before you turn them on
+
+### Upgrading Live Services
+
+#### Rolling Upgrades
+
+- Servers are removed from service and upgraded one at a time
+- The process is complete when all the servers are updated
+- During the upgrade there is a temporary reduction in capacity
+- Server is first drained by removing from the load balancer
+
+#### Canary
+
+- Similar to rolling upgrade but to a subset of servers
+- Apply smoke, performance and load test
+  + To make sure that you are not having any bed regression reactions
+- If no problems arise add more subsets
+- Server is first drained by removing from the load balancer
+- Can also be done by percentage of servers
+- Canary'ing can be combined with other rollout strategies
+  + e.g. Canary and A/B testing is a good combination
+- Designed to find a defective release
+
+#### Phased Roll-Outs
+
+- Roll-outs partitioned by subsets based on users or groups
+- Groups are categorized ny risk tolerance
+  + You start off with a very low risk profile group, and then you increase by some risk categorization
+- If no problems arise add more subsets
+- Sometimes internal employees can be first roll-out group
+- Power user or meta communities roll-outs
+
+#### Proportional Shedding
+
+- A new service is built on new machines
+- The load balancers shed small percentages of traffic to the new service
+- The percentage is increased if no issue are found
+- The old service is turned off when all traffic is moved to the new service with no erros
+- With bare metal this can be expensive. Cloud makes this more economical
+
+#### Blue-Green Deployment
+
+- Similar to proportional shedding except you duplicate the application not the servers
+  + You have the new and the old applications running on the same server
+- Green is the live service
+- Blue is dormant and requires limited resources
+- When the release goes live the two are swapped
+- Rolling back is easier to do
+- Very popular technique
+
+#### Toggling Features
+
+- Also known as feature flags
+- Flags are set in the code that can turn on or off a feature
+- Allows developers to continuously deploy new code decoupled from a release
+- Distrusted key value stores like Zookeeper, Etcd and Consul can be used for feature toggling
+- Features can be gradually introduced or be point and time released
+
+## By the end of this chapter, you should be able to:
 
  - Discuss the concept and goals of the First Way.
  - Explain the difference between shortening lead time and reducing bottlenecks.
