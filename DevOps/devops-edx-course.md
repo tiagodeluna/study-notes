@@ -92,7 +92,6 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 > The collaboration of humans is probably the most important aspect of DevOps
 ----------------------------
 
-
 # Chapter 2 *Understanding the Value Stream*
 
 ---------------------------------------
@@ -1339,6 +1338,53 @@ The I should see the welcome message
 - Testing done by customers
 - Ensure the applicatinos or service meets the requirements
 - Catch defects from a customer's perspective
+
+### Automated Testing: Deploy Phase
+
+- System Testing
+- Performance Testing
+- Load Testing
+- Security Testing
+- COnfiguration Management Testing
+
+#### System Testing
+
+- Precondition for release being turned on in production
+- Testing of external interfaces (make a purchase, checking stock quote)
+- Synthetic testing, emulation of user interactions
+- Tests can be emulated from API's, consoles, web, devices, mobile and even from laser printers
+
+#### Performance Testing
+
+- Tests the speed and latency of a service
+- Can test against customer SLA's (Service-Level Agreements)
+- Performance regression tests (previous results)
+
+#### Load Testing
+
+- Tests how much load a service can handle
+- Tests involve increasing traffic to find max load (the breakpoint)
+- Performance regression load tests (previous results)
+
+#### Security Testing
+
+- SQL Injection
+- Cross Site Scripting
+- Unprotected Redirects
+- Unsafe File Access
+- Version-Specific Inssues (CVEs)
+- Symbol Dos
+- Remote Code Execution
+
+--------------
+> I recognize that my code will be attacked by talented and persistent adversaries who threaten our physical, economic, and national security – **The Rugged Manifesto**
+--------------
+
+**Security Testing process:**
+- Create security related stories
+- Add security unit tests
+- Create a library of reusable test cases patterns
+- Add vulnerability scans into the pipeline
 
 ### Tools
 
