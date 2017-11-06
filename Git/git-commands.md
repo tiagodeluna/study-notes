@@ -30,7 +30,7 @@ In the .gitconfig file at <user folder>, add properties:
 ```
 
 **Setting aliases to commands:**
-Add aliases in the .gitconfig file at <user folder> as the following examples:
+Add aliases in the .gitconfig file at `<user folder>` as the following examples:
 ```
 [alias]
      diff-meld = difftool --tool=meld -y 
@@ -110,10 +110,19 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 | git checkout -- `filename` | Discard changes in a *file* in working directory |
 | git merge --abort | Undo a merge, reverting the branch to its previous situation (usually after a merge the generated conflicts) |
 	
-# Using tags
+## Using tags
 
 | Command | Description |
 | ----- | ----- |
 | git tag | List the existing tags by alphabetical order |
 | git tag `tagname` | Create a simple *tag* |
 | git tag -a `tagname` -m `message` | Create an annotated, complete *tag* |
+
+## Integrating branches
+
+1. git checkout `target branch`
+2. git merge `source branch`
+   1. git diff `filename` //Just in case of conflicts occurring, to check it
+   2. git mergetool //Just in case of conflicts occurring, to solve them
+   3. git commit //idem
+3. git push
