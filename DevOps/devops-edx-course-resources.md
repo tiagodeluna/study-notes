@@ -8,6 +8,7 @@ Reference material from the DevOps edX course **Introduction to Devops**. These 
  - [Chapter 2 - Understanding the Value Stream](#chapter-2-understanding-the-value-stream)
  - [Chapter 3 - Getting Started with DevOps](#chapter-3-getting-started-with-devops)
  - [Chapter 4 - The First Way - Accelerate Flow](#chapter-4-the-first-way---accelerate-flow)
+ - [Chapter 5 - The Second Way - Amplify Feedback Loops](#chapter-5-the-second-way---amplify-feedback-loops)
 
 ## Chapter 1 - *Concepts*
 
@@ -154,3 +155,4 @@ Reference material from the DevOps edX course **Introduction to Devops**. These 
 * [Stephen Ritchie - Agile Testing Best Practices](https://www.youtube.com/watch?v=47YBqsXDEzY)
 * [Velocity 2011: Jon Jenkins, "Velocity Culture”](https://www.youtube.com/watch?v=dxk8b9rSKOo)
 
+## Chapter 5 *The Second Way - Amplify Feedback Loops*

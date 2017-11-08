@@ -12,6 +12,8 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
     - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-3-getting-started-with-devops)
   * [Chapter 4 - The First Way - Accelerate Flow](#chapter-4-the-first-way---accelerate-flow)
     - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-4-the-first-way---accelerate-flow)
+  * [Chapter 5 - The Second Way - Amplify Feedback Loops](#chapter-5-the-second-way---amplify-feedback-loops)
+    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-5-the-second-way---amplify-feedback-loops)
 
 # Chapter 1 *Concepts*
 
@@ -1509,14 +1511,28 @@ The I should see the welcome message
 - Distrusted key value stores like Zookeeper, Etcd and Consul can be used for feature toggling
 - Features can be gradually introduced or be point and time released
 
+#### A Case Study: Dark Launch at Facebook (Facebook Chat)
+
+--------------------
+> The secret for going from zero to seventy million users overnight is to avoid doing it all in one fell swoop. We chose to simulate the impact of many real users hitting many machines by means of a "dark launch" period in which Facebook pages would make connections to the chat servers, query for presence information and simulate message sends without a single UI element drawn on the page. With the "dark launch" bugs fixed, we hope that you enjoy Facebook Chat now that the UI lights have been turned on.
+--------------------
+
+- In the backend, they were actually invoking a Javascript that would invoke the new feature of chat, to do things like, make connections, query chat servers, and simulate message sends.
+- It was a real production testing, but the users didn't know it was happening
+
+# Chapter 5 *The Second Way - Amplify Feedback Loops*
+
+## Creating a Service Reliability Culture
+
 ## By the end of this chapter, you should be able to:
 
- - Discuss the concept and goals of the First Way.
- - Explain the difference between shortening lead time and reducing bottlenecks.
- - Explain the difference between continuous integration, continuous delivery, and continuous deployments.
- - Discuss the eight principles of continuous delivery.
- - Explain the importance of everything being managed and controlled by source control.
- - Discuss the concepts of Infrastructure as Code and immutable infrastructure.
- - Discuss automated testing.
- - Explain the patterns for live deployments, otherwise called "zero downtime deployments".
-
+- Discuss the concept and goals of the Second Way.
+- Explain the meaning of creating a service reliability culture.
+- Decouple the definitions of service and their implications both for the external customers and internal objectives.
+- Discuss the balance between reliability and risk.
+- Discuss the origin and practice of Google’s Service Reliability Engineering team structure.
+- Explain the origins, definitions and aspects of feedback loops.
+- Discuss the meta-principles of monitoring via alerting, trending, and anomaly detection.
+- Monitor a service from all aspects of the service delivery.
+- Discuss complexity as it relates to the Second Way.
+- Outline how the use of ChatOps can help provide fast and effective feedback
