@@ -1524,6 +1524,76 @@ The I should see the welcome message
 
 ## Creating a Service Reliability Culture
 
+----------------
+> "3% of the problems have figures, 97% of the problems do not." – Dr. Deming
+----------------
+
+### Second Way Principles
+
+- Right to Left flow
+- Find and Fix Fast
+- Shorten and Amplify Feedback
+
+### Core Conflict "Dev vs Ops"
+
+- Operations don't really know the code base
+- The team that knows least about the code typically has the responsibility of it's launch
+
+### Understanding Service Levels
+
+#### Service Level Agreements (SLA)
+
+- Between the business and the customer
+- Typically a financial contract
+- Can be MTTR or MTBF based
+- Not all services have an explicit SLA
+
+------------------
+> High-performing organizations don't set the SLAs. They tend to have their own SLA in the form of a SLO
+------------------
+
+#### Service Level Objectives (Targets)
+
+- Typically the basis for SLA's
+- Between the service and the system
+- Typically target based
+- All services should have an SLO
+- Determine actions to take on missed SLO's
+- SLO's should be tracked historically
+
+**Picking Targets:**
+- Try and keep them simple
+- Don't over-design
+- Let them evolve
+- Will learn over time
+
+#### Service Level Indicators
+
+- Quantitative measure of a service
+- Used as indicators for the SLO's
+- Monitor SLI's and compare to SLO's
+
+**Examples:**
+- Latency
+- Errors
+- Availability
+- Throughput
+
+**Generalized Indicators:**
+- Management By Objectives
+- Key Performance Indicators
+- Objective and Key Results
+
+---------------
+> "Management is about doing the things right; leadership is about doing the right things" – Peter F. Drucker
+---------------
+
+## Fast Feedback
+
+## Understanding Monitoring
+
+## Understanding Complexity
+
 ## By the end of this chapter, you should be able to:
 
 - Discuss the concept and goals of the Second Way.
