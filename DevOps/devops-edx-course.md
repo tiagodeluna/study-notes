@@ -329,7 +329,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
      + Mentee Relationship / Mentoring
 
 ------------------------
-> "A production line that never stopped was either extermely good or extremely bad." – Taiichi Ohno
+> "A production line that never stopped was either extremely good or extremely bad." – Taiichi Ohno
 ------------------------
 > "Culture eats strategy for breakfast" – Peter Drucker
 ------------------------
@@ -1586,6 +1586,60 @@ The I should see the welcome message
 
 ---------------
 > "Management is about doing the things right; leadership is about doing the right things" – Peter F. Drucker
+---------------
+
+### Understanding Risk and Failure
+
+------------------------
+> "A production line that never stopped was either extremely good or extremely bad." – Taiichi Ohno
+------------------------
+
+- 100% reliability is a myth
+- All systems go down
+- Not all services are equal
+- Manage risk and failure by service
+- Managing reliability is about managing risk
+- Managing risk is about cost
+
+### Understanding the Cost of Reliability
+
+- High availability systems
+- Opportunity costs
+- Is it a free service or a revenue-based service?
+
+#### How Many 9's
+
+The level of reliability/availability based on how many nines we want.
+
+**Example:** A company that generates one million dollars per day in revenue...
+
+| # 9's | % | Downtime | Lost Revenue |
+| ----- | ----- | ----- | ----- |
+| One | 90% | 36.5 days per year | $36.5M |
+| Two | 99% | 3.65 days per year | $3.65M |
+| Three | 99.9% | 8.76 hours per year | $365k |
+| Four | 99.99% | 52.56 minutes per year | $36.5k |
+| Five | 99.999% | 5.26 minutes per year | $3.65k |
+| Six | 99.9999% | 31..5 seconds per year | $365 |
+
+-------------
+> The difference from two nines to three nines is significant, like three million dollars in savings. So, the cost might be worth it. But to go from three nines to four nines, and from four to five nines, the amount saved becomes less significant... so do you really have to be *five nines*?
+-------------
+> The cost to get an extra nine could be a hundred, and in some cases, 2-300x higher
+-------------
+
+#### Google Site Reliability Engineers (SRE)
+
+- Google defined this job title
+- Google SRE was created in 2003
+- No NOC
+- A team that focuses on reliability
+  + Focus on service
+  + Focus on engineering
+- To be a Google SRE you had to pass a coding test very similar to the coders's test
+
+----------------
+> "The number one feature for a product is that it works. The second most important feature for a product is that it works. The third most important feature for a product is that it works". - Benjamin Treynor Sloss from Google
 ---------------
 
 ## Fast Feedback
