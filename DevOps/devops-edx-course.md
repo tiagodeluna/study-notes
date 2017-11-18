@@ -1642,6 +1642,70 @@ The level of reliability/availability based on how many nines we want.
 > "The number one feature for a product is that it works. The second most important feature for a product is that it works. The third most important feature for a product is that it works". - Benjamin Treynor Sloss from Google
 ---------------
 
+#### Google Site Reliability Practices
+
+- Hire only coders
+- Have an SLA for your service
+- Measure and report performance against the SLA
+- Use Error Budgets and gate launches on them
+- Have a common staffing pool for SRE and Developers
+- Have excess Ops work overflow to the Dev team
+- Cap SRE operational load at 50 percent
+- Share 5 percent of Ops work with the Dev team
+- Oncall teams should have at least eight people at one location, or six people at each of multiple locations
+- Aim for a maximum of two events per oncall shift
+- Do a postmortem for every event
+- Postmortems are blameless and focus on process and technology, not people
+
+#### Google SRE Case Study: Error Budget
+
+- Theory is that 100% is the wrong reliability target for everything
+- **Service objective minus 1 is the unavailability service's error budget**
+- This resolves the Dev (*create new*) Ops (*protect the infrastructure*) conflict
+- It's a math problem not an opinion or power
+- Devs teams self police
+- The service team gets to take SLA-1 feature/risk velocity
+
+---------------
+> Until you hit your **error budget**, you can do whatever you want... you can take risky deploys, you can keep experimenting.
+---------------
+
+SRE at Google don't:
+- Access launches
+- Avoid outages
+- Set release policy
+
+#### Google SRE Case Study: LRR/HRR
+
+- Lauch Readiness Review
+  + Sign-off before any service goes live at Google
+  + Developer managed state
+- Handoff Readiness Review
+  + Signed-off for a service at higher acceptance
+  + Operations managed state
+- The Service Handback
+  + Process to put a service back to developer managed status
+
+#### Google and Operational Work (Types of Work)
+
+- Software Engineering
+  + Developing and designing code
+- Systems Engineering
+  + Configuration system (Sysadmin work)
+- Toil
+  + Manual not repeatable work
+- Overhead
+  + Administration, HR and training
+  
+#### Google and Operational Work (Goals)
+
+- Creates good moral
+- Creates positive career (growth)
+- Creates clearer communication
+- Creates velocity
+- Unsets precedents
+- Keeps good faith
+
 ## Fast Feedback
 
 ## Understanding Monitoring
