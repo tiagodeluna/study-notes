@@ -1706,6 +1706,44 @@ SRE at Google don't:
 - Unsets precedents
 - Keeps good faith
 
+### Anomaly Response
+
+- Computers do not resolve outages...people do
+- Trade-off's under pressure
+- Cognition in the wild
+- An outage is not a detective story
+- With each step the story changes (it's the nature of a dynamic fault system)
+- Need to see what's happening with incomplete information
+- Tools don't always make thing better
+
+#### Anomaly Response - Challenges
+
+- Teamwork
+- Communication
+- Diagnosis
+- Decision Making
+- Coordination
+- Improvisation
+- Tooling
+
+#### Dynamic Fault Management
+
+- Cascading effects
+- Tempo changes and time pressure
+- Multiple interleaved tasks
+- Multiple interacting goals
+- Need to revise assessments as new evidence comes in
+
+-----------
+> In dynamic fault management, intervention precedes or is interwoven with diagnosis. – Woods (1994)
+-----------
+
+#### The *Thematic Vagabonding* Concept
+
+-----------
+> People in anomaly response tend to jump from one topic to the next, treating all superficially, in certain cases picking up topics dealt with earlier at a later time; they don't go beyond the surface with any topic and seldom finish with any. – Dietrich Dörner, 1980
+-----------
+
 ## Fast Feedback
 
 ## Understanding Monitoring
