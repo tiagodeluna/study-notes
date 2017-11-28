@@ -5,15 +5,15 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 ## Summary
   
   * [Chapter 1 - Concepts](#chapter-1-concepts)
-    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-1-concepts)
+    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources/README.md#chapter-1-concepts)
   * [Chapter 2 - Understanding the Value Stream](#chapter-2-understanding-the-value-stream)
-    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-2-understanding-the-value-stream)
+    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources/README.md#chapter-2-understanding-the-value-stream)
   * [Chapter 3 - Getting Started with DevOps](#chapter-3-getting-started-with-devops)
-    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-3-getting-started-with-devops)
+    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources/README.md#chapter-3-getting-started-with-devops)
   * [Chapter 4 - The First Way - Accelerate Flow](#chapter-4-the-first-way---accelerate-flow)
-    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-4-the-first-way---accelerate-flow)
+    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources/README.md#chapter-4-the-first-way---accelerate-flow)
   * [Chapter 5 - The Second Way - Amplify Feedback Loops](#chapter-5-the-second-way---amplify-feedback-loops)
-    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources.md#chapter-5-the-second-way---amplify-feedback-loops)
+    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources/README.md#chapter-5-the-second-way---amplify-feedback-loops)
 
 # Chapter 1 *Concepts*
 
