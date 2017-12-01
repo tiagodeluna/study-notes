@@ -1744,6 +1744,21 @@ SRE at Google don't:
 > People in anomaly response tend to jump from one topic to the next, treating all superficially, in certain cases picking up topics dealt with earlier at a later time; they don't go beyond the surface with any topic and seldom finish with any. – Dietrich Dörner, 1980
 -----------
 
+#### Anomaly Response - Heuristic
+
+------------
+> An approach to problem solving, learning, or discovery that employs a practical methodology not guaranteed to be optimal or perfect, but sufficient for the immediate goals. Where finding an optimal solution is impossible or impractical, heuristic methods can be used to speed up the process of finding a satisfatory solution. Examples of heuristics are 'rules of thumb', educated guesses, and intuitive judgements. – John Allspaw
+------------
+
+**First Heuristic**
+* Look for correlation between the behavior and any recent changes made in the software
+**Second Heuristic**
+* Widen the search to any potencial contributors imagined
+**Third Heuristic**
+* Validate hypothesis that most easily come to mind
+**Fourth Heuristic**
+* Rely on peer review of the changes more than automated testing
+
 ## Fast Feedback
 
 ## Understanding Monitoring
