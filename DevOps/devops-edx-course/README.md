@@ -83,7 +83,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
  - Deploy more frequently
  - Have shorter lead times
  - Less failures related to change
- - They recover gaster: their MTTR (Mean Time to Recovery) is much lower
+ - They recover faster: their MTTR (Mean Time to Recovery) is much lower
  - Make work visible
  - Manage WIP (work-in-progress) and Flow
  - Create high trust work environments
@@ -277,6 +277,17 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
      + Game Day
      + Netflix Simian Army
      + Netflix FIT (Fault Injection Testing)
+
+**Netflix Simian Army**
+- Chaos Monkey (hosts)
+  + Basically kills a host (a virtual instance running on Amazon)
+- Chaos Gorilla (Data Center)
+  + Takes down a whole data center
+- Latency Monkey (Inject Latency)
+- Comformity Monkey (Best Practice)
+  + Anything that shows up on a system that doesn't have certain tags or hashes, it doesn't conform
+- Security Monkey (Security Violations)
+  + Anything that violates security practices
 
 #### Safety Culture
 
@@ -1752,14 +1763,88 @@ SRE at Google don't:
 
 **First Heuristic**
 * Look for correlation between the behavior and any recent changes made in the software
+
 **Second Heuristic**
 * Widen the search to any potencial contributors imagined
+
 **Third Heuristic**
 * Validate hypothesis that most easily come to mind
+
 **Fourth Heuristic**
 * Rely on peer review of the changes more than automated testing
 
 ## Fast Feedback
+
+------------
+> "You built it, you run it" – Werner Vogels, CTO of Amazon
+------------
+
+### Design for Failure
+
+- Software resiliency typically is better than hardware-based
+  + More cost-effective
+  + Easier to change (fix, upgrade, replace)
+  + Faster to fix
+  + Easier to experiment
+- MTTR over MTBF
+  + High-performing organizations adopt the assumption that all systems fail
+  + They think about how to get a system up (fast) when something breaks
+- Reduce MTBF and MTTR
+  + Game Days
+  + Chaos Monkey(s)
+  + Fault Injection
+- Fasten feedback
+  + A/B testing
+  + Dark Deploys
+  + Inject Deployment Metrics in Monitoring
+
+### Systems Thinking
+
+- Looks at the system as a whole
+- Global efficiency vs local efficiency
+- Feedback loops vs cause-and-efect
+- Trends not targets
+- The system is greater than the sum of the parts
+
+#### Feedback Originates from Systems Theory
+
+- A system is made up of inputs and outputs
+- The feedbacks are based on the output of a system being fed back into the input
+- These are dynamic systems, systems that are constantly changing
+- Delay in feedback:
+  + Increases drift: the quicker you get feedback, the quicker you can accelerate
+  + Limits options
+  + Increases processing effort
+
+**Different feedback loops:**
+- Accelerating Loop
+  + Amplifies behavior (negative or positive)
+- Diminishing Loop
+  + Supresses behavior (learned helplessness)
+- Balancing Loop
+  + Towards a stable goal (cooperation)
+- Thrashing Loop
+  + Oscillating between states
+
+#### Developer Managed Services 
+
+**Designing Delivery**:
+- Design for failure
+- Designing for service, not just software
+- Minimizing latency and maximizing feedback
+- Designing for failure and operating to learn
+- Using operations as input to design
+- Seeking empathy
+
+**Developers Wear Pagers:**
+- First on call is the dev rotation team
+- Second call is the VP of Engineering
+- Third call is CTO
+
+**Developers Operate the Service:**
+- Launch
+- Monitor
+- Guidance from operations
 
 ## Understanding Monitoring
 
