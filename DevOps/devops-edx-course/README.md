@@ -1887,6 +1887,52 @@ The idea of taking Operations people and embedding them into the Development tea
 - Operations in development
 - Development in operations
 
+### ChatOps
+
+ChatOps is a collaboration model that connects people, tools, process, and automation into a transparent workflow. This flow connects the work needed, the work happening, and the work done in a persistent location staffed by the people, bots, and related tools.
+
+#### Origins
+
+- Originally based on chat bots
+- Github's use of Hubot
+  + A kind of an automated robot in chat rooms
+- Jesse Newland - ChatOps at Github
+  + *Putting tools in the middle of the conversation*
+
+**ChatOps Engines**
+- Hubot: Node-based, you can use *coffee-scripts* with it
+- Lita: Ruby-based
+- Err: Python-based
+
+**ChatOps Chat Tools**
+- Slack: Hubot on Slack is a very popular combination for ChatOps
+- Campfile
+- Hipchat
+
+#### ChatOps Benefits
+
+- It's like a multiuser terminal where everyone can see the conversation and the commands interwoven
+- There is a historical record of the commands and the conversation
+- Provide a great training tools - teaching by doing
+  + People can watch in the channel and see what you're doing, see the results, interject a comment, etc.
+- Great for tactical incident resolution - everyone gets to see the conversation and commands
+  + It can be used for postmortems
+- Dynamically manage the on call rotation
+- Can manage all aspects of the "devops" practices from one central place
+- Mobile operations tool for free
+
+#### ChatOps Examples
+
+- Run a command
+- Deploy code
+- Check logs
+- Check status from Github or Jenkins
+- Change the on call rotation
+- Check Nagios alert
+- Graph monitoring or alert data
+- Take a system online or offline
+- Kill a job or process
+
 ## Understanding Monitoring
 
 ## Understanding Complexity
