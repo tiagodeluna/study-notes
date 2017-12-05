@@ -1846,6 +1846,47 @@ SRE at Google don't:
 - Monitor
 - Guidance from operations
 
+### Contingency
+
+- Some releases need contingency reviews
+  + Some types of services need to have some human factor in the delivery
+- *Go/No Go* of major releases
+- Universal agreement for the launch
+
+#### Contingency - 10 Minutes Review
+
+- When will it be launched
+- Who is launching it
+- Has it been in production yet
+- Can it be dark, feature or percentage launched
+- Is it new infrastructure (is it monitored)
+- Has an on/off switch
+- All parties available at launch time
+- Contingency checklist
+
+### Peer Reviews - Guidelines
+
+- All changes are peer reviewed
+- Everyone monitors the commit logs
+- High risk changes should include an SME
+- Break up larger changes into smaller ones
+
+### Pairing
+
+- Pair programming for everything
+- Pair programming is slower but decreases bugs up to 70% to 80%
+- Spreads knowledge
+- Great for training
+- Setup pair times
+- Need a culture that values pair programming
+  + It can'f be forced
+
+### Embedded Engineers
+
+The idea of taking Operations people and embedding them into the Development team (or vice versa).
+- Operations in development
+- Development in operations
+
 ## Understanding Monitoring
 
 ## Understanding Complexity
