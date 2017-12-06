@@ -1982,6 +1982,67 @@ Concept coined in The Visible Ops Handbook (Kim, Behr, Spafford).
 - Lead time
 - Forum posts
 
+### Components of a monitoring system
+
+- Sensing/Measuring
+- Collecting
+- Analysis/Computation
+- Alerting
+- Escalation
+- Visualization
+
+### Black Box vs White Box
+
+- Black Box Monitoring
+  + Symptom based
+  + Active Problems
+  + User's experience
+  
+- White Box Monitoring
+  + Agent based
+  + Log based
+  + Instrumentation
+
+### Types of Metrics
+
+**Raw**
+- Gauges
+  + Basically numbers that measure speed, percentage or some data point
+- Counters
+  + Ever-increasing or resetting numbers, constantly going up until, at some point, resets to zero
+- Timers
+  + How long it took to do something (time-related)
+
+**Derived**
+- Delta
+  + Variation of a number/variable/function
+- Rates
+  + A comparison between two values of different types. e.g. trasactions per minute
+- Ratios
+  + A comparison between two values of the same type
+
+------------
+> Even if you're working with summarized/derived data it's interesting to keep the raw data and always calculate the derived data *post hoc*, because if you don't have that calculation or that source data, you'll cannot be able to recalculate it
+------------
+
+### Analysis
+
+- Real time (data)
+- Correlation (data)
+- Historical (data)
+  + Hourly, daily, weekly, monthly
+- Anomaly Detection
+- Machine Learning
+
+#### Statistical Analysis
+
+- Mean
+- Median
+- Percentiles
+- Standard Deviation
+  + Takes the average, the mean, and then applies it against each element in a vector, and then takes the mean of that. It's kind of the average of the delta of the elements in the vector difference
+- Median Absolute Deviation
+
 ## Understanding Complexity
 
 ## By the end of this chapter, you should be able to:
