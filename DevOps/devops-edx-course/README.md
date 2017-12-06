@@ -1935,6 +1935,53 @@ ChatOps is a collaboration model that connects people, tools, process, and autom
 
 ## Understanding Monitoring
 
+--------------
+> It's not the upfront capital that kills you, it's the operations and maintenance on the back end. – Gene Kim
+--------------
+
+### Culture Causality
+Concept coined in The Visible Ops Handbook (Kim, Behr, Spafford).
+
+- 80% of all outages are caused by a change
+- 80% of restoration time is spent trying to figure out what changed
+- High performance organizations look for the most recent change first
+
+### Why monitor?
+
+- Alerting: using email, page, ticket...
+- Visualizing: using dashboard, graphs...
+- Collecting: how we collect and use data, post-hoc diagnostics, retrospective...
+- Trending: looking for direction, growing, shrinking
+- Anomalies
+- Learning
+
+**Google's Four Golden Signals:**
+- Latency
+- Traffic
+- Errors
+- Saturation
+
+### Looking at the Service Stack
+
+- Business indicators
+  + number of sales transactions, revenues, user sign ups, A/B testing results...
+- Application indicators
+  + transaction times, user response, application faults
+- Infrastructure indicators
+  + the database, networking, OS, CUP load, disk usage
+- User based indicators
+  + client side stuff, error and crash data...
+- Deployment indicators
+  + These are first-order metrics for high-performing organizations. e.g. deployment charts aligned with all the information above
+
+**Other Examples:**
+- Resolution times
+- Abandoned shopping carts
+- Churn rate
+- Deployment promotions
+- Lead time
+- Forum posts
+
 ## Understanding Complexity
 
 ## By the end of this chapter, you should be able to:
