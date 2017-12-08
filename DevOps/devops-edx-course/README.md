@@ -2041,18 +2041,19 @@ Concept coined in The Visible Ops Handbook (Kim, Behr, Spafford).
 - Median
   + The value that is in the middle of the data set (after sorting)
 - Percentiles
+  + The value below which a given percentage of elements in a group of elements fall.
 - Standard Deviation
   + Takes the average, the mean, and then applies it against each element in a vector, and then takes the mean of that. It's kind of the average of the delta of the elements in the vector
 - Median Absolute Deviation
-  + Takes the median, then takes the delta of the median (difference between the median and each element), and then, takes the median of that list.
+  + Takes the median, then takes the delta of the median (the difference between the median and each element), and then takes the median of that list.
   + It's a better representation of the variation between the elements
 
 **Example:** Let's take the vector X below as our data. Note that there is an anomaly in it, which is 99. See the statistics results in this situation:
 `Data: X = { 3 4 5 7 9 8 3 7 5 8 99 }`
-- Mean(X): 14.36364
-- SD(X): 28.14702
-- Median(X): 7
-- MAD(X): 2.9652
+- Mean(X): `14.36364`
+- SD(X): `28.14702`
+- Median(X): `7`
+- MAD(X): `2.9652`
 
 
 ## Understanding Complexity
