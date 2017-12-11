@@ -2055,6 +2055,24 @@ Concept coined in The Visible Ops Handbook (Kim, Behr, Spafford).
 - Median(X): `7`
 - MAD(X): `2.9652`
 
+### Anomaly Detection
+
+- Finding patterns in data that do not conform to expected behavior
+- Can be used for noise reduction
+
+#### Research Areas
+
+- Statistics
+- Machine Learning
+- Information Theory
+- Data Mining
+
+#### Characteristics
+
+- High Cardinality
+- Minimizing False Positives
+- Seasonality
+- Non Normally Distributions
 
 ## Understanding Complexity
 
