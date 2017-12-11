@@ -1887,7 +1887,192 @@ The idea of taking Operations people and embedding them into the Development tea
 - Operations in development
 - Development in operations
 
+### ChatOps
+
+ChatOps is a collaboration model that connects people, tools, process, and automation into a transparent workflow. This flow connects the work needed, the work happening, and the work done in a persistent location staffed by the people, bots, and related tools.
+
+#### Origins
+
+- Originally based on chat bots
+- Github's use of Hubot
+  + A kind of an automated robot in chat rooms
+- Jesse Newland - ChatOps at Github
+  + *Putting tools in the middle of the conversation*
+
+**ChatOps Engines**
+- Hubot: Node-based, you can use *coffee-scripts* with it
+- Lita: Ruby-based
+- Err: Python-based
+
+**ChatOps Chat Tools**
+- Slack: Hubot on Slack is a very popular combination for ChatOps
+- Campfile
+- Hipchat
+
+#### ChatOps Benefits
+
+- It's like a multiuser terminal where everyone can see the conversation and the commands interwoven
+- There is a historical record of the commands and the conversation
+- Provide a great training tools - teaching by doing
+  + People can watch in the channel and see what you're doing, see the results, interject a comment, etc.
+- Great for tactical incident resolution - everyone gets to see the conversation and commands
+  + It can be used for postmortems
+- Dynamically manage the on call rotation
+- Can manage all aspects of the "devops" practices from one central place
+- Mobile operations tool for free
+
+#### ChatOps Examples
+
+- Run a command
+- Deploy code
+- Check logs
+- Check status from Github or Jenkins
+- Change the on call rotation
+- Check Nagios alert
+- Graph monitoring or alert data
+- Take a system online or offline
+- Kill a job or process
+
 ## Understanding Monitoring
+
+--------------
+> It's not the upfront capital that kills you, it's the operations and maintenance on the back end. – Gene Kim
+--------------
+
+### Culture Causality
+Concept coined in The Visible Ops Handbook (Kim, Behr, Spafford).
+
+- 80% of all outages are caused by a change
+- 80% of restoration time is spent trying to figure out what changed
+- High performance organizations look for the most recent change first
+
+### Why monitor?
+
+- Alerting: using email, page, ticket...
+- Visualizing: using dashboard, graphs...
+- Collecting: how we collect and use data, post-hoc diagnostics, retrospective...
+- Trending: looking for direction, growing, shrinking
+- Anomalies
+- Learning
+
+**Google's Four Golden Signals:**
+- Latency
+- Traffic
+- Errors
+- Saturation
+
+### Looking at the Service Stack
+
+- Business indicators
+  + number of sales transactions, revenues, user sign ups, A/B testing results...
+- Application indicators
+  + transaction times, user response, application faults
+- Infrastructure indicators
+  + the database, networking, OS, CUP load, disk usage
+- User based indicators
+  + client side stuff, error and crash data...
+- Deployment indicators
+  + These are first-order metrics for high-performing organizations. e.g. deployment charts aligned with all the information above
+
+**Other Examples:**
+- Resolution times
+- Abandoned shopping carts
+- Churn rate
+- Deployment promotions
+- Lead time
+- Forum posts
+
+### Components of a monitoring system
+
+- Sensing/Measuring
+- Collecting
+- Analysis/Computation
+- Alerting
+- Escalation
+- Visualization
+
+### Black Box vs White Box
+
+- Black Box Monitoring
+  + Symptom based
+  + Active Problems
+  + User's experience
+  
+- White Box Monitoring
+  + Agent based
+  + Log based
+  + Instrumentation
+
+### Types of Metrics
+
+**Raw**
+- Gauges
+  + Basically numbers that measure speed, percentage or some data point
+- Counters
+  + Ever-increasing or resetting numbers, constantly going up until, at some point, resets to zero
+- Timers
+  + How long it took to do something (time-related)
+
+**Derived**
+- Delta
+  + Variation of a number/variable/function
+- Rates
+  + A comparison between two values of different types. e.g. trasactions per minute
+- Ratios
+  + A comparison between two values of the same type
+
+------------
+> Even if you're working with summarized/derived data it's interesting to keep the raw data and always calculate the derived data *post hoc*, because if you don't have that calculation or that source data, you'll cannot be able to recalculate it
+------------
+
+### Analysis
+
+- Real time (data)
+- Correlation (data)
+- Historical (data)
+  + Hourly, daily, weekly, monthly
+- Anomaly Detection
+- Machine Learning
+
+#### Statistical Analysis
+
+- Mean
+  + Sum of all elements divided by number of elements
+- Median
+  + The value that is in the middle of the data set (after sorting)
+- Percentiles
+  + The value below which a given percentage of elements in a group of elements fall.
+- Standard Deviation
+  + Takes the average, the mean, and then applies it against each element in a vector, and then takes the mean of that. It's kind of the average of the delta of the elements in the vector
+- Median Absolute Deviation
+  + Takes the median, then takes the delta of the median (the difference between the median and each element), and then takes the median of that list.
+  + It's a better representation of the variation between the elements
+
+**Example:** Let's take the vector X below as our data. Note that there is an anomaly in it, which is 99. See the statistics results in this situation:
+`Data: X = { 3 4 5 7 9 8 3 7 5 8 99 }`
+- Mean(X): `14.36364`
+- SD(X): `28.14702`
+- Median(X): `7`
+- MAD(X): `2.9652`
+
+### Anomaly Detection
+
+- Finding patterns in data that do not conform to expected behavior
+- Can be used for noise reduction
+
+#### Research Areas
+
+- Statistics
+- Machine Learning
+- Information Theory
+- Data Mining
+
+#### Characteristics
+
+- High Cardinality
+- Minimizing False Positives
+- Seasonality
+- Non Normally Distributions
 
 ## Understanding Complexity
 
