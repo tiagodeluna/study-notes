@@ -76,14 +76,14 @@ Add aliases in the .gitconfig file at `<user folder>` as the following examples:
 | git commit -m `mensagem` | Perform a commit with a message associated |
 | git commit --amend | Edit the last commit to include new added files and/or change the commit message |
 
-## Pushing changes remotely
+## Pushing changes
 
 | Command | Description |
 | ----- | ----- |
 | git push `repo` `branch` | Send commited changes to a remove *branch* of a *repository* |
 | git push --set-upstream `repo` `newbranch` | Push the current local branch and set the remote *newbranch* as upstream |
 
-## Merging files
+## Merging Branches ans Solving Conflicts
 
 This is a three-step operation:
 
@@ -97,7 +97,9 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 
 | Command | Description |
 | ----- | ----- |
-| git mergetool | Open the configured merge tool. Obs: use `:wq` to confirm the defult message in a automatic merge |
+| git log -p `file` | Displays the change history of a file in text format |
+| gitk `file` | Displays the commit history of a file in a graphic interface. If no file is specified, it shows the history of the merge |
+| git mergetool | Open the configured merge tool. Obs: use `:wq` to confirm the defult message in an automatic merge |
 
 ## Reverting changes
 
