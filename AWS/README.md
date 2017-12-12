@@ -75,6 +75,16 @@ The Security Groups section allows you to define specific security rules to the 
 - Inbound: in this tab, we define rules to allow traffic receipt
 - Outbound: in this guide, we define rules to allow server access to external connections
 
+### Creating and Using AMIs
+
+An AMI is a *server template* that has information about the operating system (and other software), permissions (associated account), and the *block device* mapping. The block device is like an HD that is available for an instance.
+
+To create an AMI from an instance that is already configured, you just need to right-click the chosen instance and select *Image > Create Image*.
+
+When creating a new EC2 instance, select the image you've created on the left side menu item "My AMIs". Choose the same .pem file for the new instance.
+
+To avoid managing multiple Security Groups for equal instances, you can set the same Security Group to the new one. Right-click your instance and select *Networking > Change Security Groups*.
+
 ## Amazon RDS
 
 ### Creation Steps
