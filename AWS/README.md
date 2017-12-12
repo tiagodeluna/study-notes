@@ -2,14 +2,14 @@
 
 ## Introduction
 
-There are different Ways of make your application available:
+There are different ways of make your application available:
 - Private Server
     + Buying and maintaining a server requires a high cost
     + The server may not meet the demand for access required on your system after some time
 - Hosting Service
     + Hiring a server also requires considerable costs and a contract
     + If there is a problem with your hosting provider's infrastructure, your application will be offline
-- Make it available using Cloud Computing
+- Cloud Computing
     + Allows you to balance costs
     + Offers high availability and flexibility
 
@@ -43,9 +43,11 @@ There are different Ways of make your application available:
 ## AWS Services Overview
 
 **CloudWatch**
+
 A tool that allows you to create **Billing Alarms** to avoid spending unexpected values while using your AWS account. CloudWatch also lets you collect and track metrics, monitor log files, and set other alert types. For example, we may be notified when the CPU is too busy for a certain time, writing or reading is slow, disk space is running out, among many other possibilities. Check the [Official Documentation](https://aws.amazon.com/pt/documentation/cloudwatch/) for more details.
 
 **EC2**
+
 The Amazon Elastic Cloud Computer is a service that allows you to create instances of machines from predefined images, the AMIs (Amazon Machine Images). These machines can be configured to be flexible, with resources allocated (and deallocated) on demand. The costs are proportional to the quantity of the resources allocated on the machine.
 Each instance type has its own characteristics and purposes. See the [Documentation](https://aws.amazon.com/pt/ec2/instance-types/) for more details.
 
@@ -79,9 +81,7 @@ The Security Groups section allows you to define specific security rules to the 
 
 An AMI is a *server template* that has information about the operating system (and other software), permissions (associated account), and the *block device* mapping. The block device is like an HD that is available for an instance.
 
-To create an AMI from an instance that is already configured, you just need to right-click the chosen instance and select *Image > Create Image*.
-
-When creating a new EC2 instance, select the image you've created on the left side menu item "My AMIs". Choose the same .pem file for the new instance.
+To create an AMI from an instance that is already configured, you just need to right-click the chosen instance and select *Image > Create Image*. When creating a new EC2 instance, select the image you've created on the left side menu item "My AMIs". Choose the same .pem file for the new instance.
 
 To avoid managing multiple Security Groups for equal instances, you can set the same Security Group to the new one. Right-click your instance and select *Networking > Change Security Groups*.
 
@@ -103,7 +103,7 @@ When creating a RDS instance, you can choose:
 
 After the RDS instance be available, you'll need to configure its default Security Group to enable access to the machines that will connect with it (modifying the *Inbound* rule).
 
-### Useful Commands
+## Useful Commands
 
 | Command | Description |
 | ----- | ----- |
