@@ -51,9 +51,15 @@ A tool that allows you to create **Billing Alarms** to avoid spending unexpected
 The Amazon Elastic Cloud Computer is a service that allows you to create instances of machines from predefined images, the AMIs (Amazon Machine Images). These machines can be configured to be flexible, with resources allocated (and deallocated) on demand. The costs are proportional to the quantity of the resources allocated on the machine.
 Each instance type has its own characteristics and purposes. See the [Documentation](https://aws.amazon.com/pt/ec2/instance-types/) for more details.
 
-**Amazon RDS**
+**RDS**
 
 The Amazon RDS (Relational Database Service) is a SaaS-based service that provides an EC2 instance with a relational database ready to use and available on the cloud with minimum configuration.
+
+**EBS**
+
+Elastic Block Device is where instances save their data (like an HD). It is a feature that guarantees high availability because it automatically replicates your instance data within the same Availability Zone.
+
+We can associate an EBS volume from an instance to another (but only an instance at a time), or create a new EBS volume separately and associate with an instance later.
 
 ## Amazon EC2
 
@@ -102,6 +108,17 @@ When creating a RDS instance, you can choose:
 ### Making it Available
 
 After the RDS instance be available, you'll need to configure its default Security Group to enable access to the machines that will connect with it (modifying the *Inbound* rule).
+
+### Using a new Elastic Block Device
+
+- Create a new EBS volume: go to the menu Elastic Block Store -> Volumes and press the button *Create Volume*.
+- Attach it to an instance: Right-click on the volume and "Attach Volume".
+- Format and mount the new volume:
+    + Discover the real name on the kernel, typing command `sudo fdisk -l`. It'll be something like "/dev/xvdf".
+    + Format volume: `sudo mkfs -t ext3 <volume name>`
+    + Create a directory to mount the volume: `sudo mkdir /dev/ebs`
+    + Mount volume using `sudo mount <volume name> <directory>`. e.g. `sudo mount /dev/xvdf /dev/ebs/`
+    + Check if is listed within the available disks: `df -h`
 
 ## Useful Commands
 
