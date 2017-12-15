@@ -1816,7 +1816,7 @@ SRE at Google don't:
   + Limits options
   + Increases processing effort
 
-**Different feedback loops:**
+**_Different feedback loops:_**
 - Accelerating Loop
   + Amplifies behavior (negative or positive)
 - Diminishing Loop
@@ -1828,7 +1828,7 @@ SRE at Google don't:
 
 #### Developer Managed Services 
 
-**Designing Delivery**:
+**_Designing Delivery:_**
 - Design for failure
 - Designing for service, not just software
 - Minimizing latency and maximizing feedback
@@ -1836,12 +1836,12 @@ SRE at Google don't:
 - Using operations as input to design
 - Seeking empathy
 
-**Developers Wear Pagers:**
+**_Developers Wear Pagers:_**
 - First on call is the dev rotation team
 - Second call is the VP of Engineering
 - Third call is CTO
 
-**Developers Operate the Service:**
+**_Developers Operate the Service:_**
 - Launch
 - Monitor
 - Guidance from operations
@@ -1899,12 +1899,12 @@ ChatOps is a collaboration model that connects people, tools, process, and autom
 - Jesse Newland - ChatOps at Github
   + *Putting tools in the middle of the conversation*
 
-**ChatOps Engines**
+**_ChatOps Engines_**
 - Hubot: Node-based, you can use *coffee-scripts* with it
 - Lita: Ruby-based
 - Err: Python-based
 
-**ChatOps Chat Tools**
+**_ChatOps Chat Tools_**
 - Slack: Hubot on Slack is a very popular combination for ChatOps
 - Campfile
 - Hipchat
@@ -2048,7 +2048,7 @@ Concept coined in The Visible Ops Handbook (Kim, Behr, Spafford).
   + Takes the median, then takes the delta of the median (the difference between the median and each element), and then takes the median of that list.
   + It's a better representation of the variation between the elements
 
-**Example:** Let's take the vector X below as our data. Note that there is an anomaly in it, which is 99. See the statistics results in this situation:
+**_Example:_** Let's take the vector X below as our data. Note that there is an anomaly in it, which is 99. See the statistics results in this situation:
 `Data: X = { 3 4 5 7 9 8 3 7 5 8 99 }`
 - Mean(X): `14.36364`
 - SD(X): `28.14702`
@@ -2075,6 +2075,10 @@ Concept coined in The Visible Ops Handbook (Kim, Behr, Spafford).
 - Non Normally Distributions
 
 ## Understanding Complexity
+
+------------
+> The meta goal here is to help you start thinking more like a physicist in terms of complexity in complex-adaptive systems.
+------------
 
 ## By the end of this chapter, you should be able to:
 
