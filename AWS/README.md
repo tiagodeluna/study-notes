@@ -61,6 +61,12 @@ Elastic Block Device is where instances save their data (like an HD). It is a fe
 
 We can associate an EBS volume from an instance to another (but only an instance at a time), or create a new EBS volume separately and associate with an instance later.
 
+**Load Balancer**
+
+A Load Balancer divides traffic between network interfaces on a network socket basis, improving the distribution of workloads across multiple computing resources.
+
+The Amazon *Elastic Load Balancing* is a solution that aims to optimize resource use, maximize throughput, minimize response time, and avoid overload of any single resource. It supports three types of load balancers: Application Load Balancers, Network Load Balancers, and Classic Load Balancers.
+
 ## Amazon EC2
 
 ### Instance Creation Steps
@@ -120,6 +126,35 @@ After the RDS instance be available, you'll need to configure its default Securi
     + Mount volume using `sudo mount <volume name> <directory>`. e.g. `sudo mount /dev/xvdf /dev/ebs/`
     + Check if is listed within the available disks: `df -h`
 
+## Elastic Load Balancing
+
+The Amazon *Elastic Load Balancing* supports three types of load balancers:
+
+- Application Load Balancers:
+    + Operates at the request level
+    + Indicated when you need a flexible feature set for your web applications with HTTP and HTTPS traffic
+- Network Load Balancers:
+    + Operates at the connection level
+    + Indicated when you need ultra-high performance and static IP addresses for your application
+- Classic Load Balancers:
+    + Indicated when you have an existing application running in the EC2-Classic network
+
+### Classic Load Balancer
+
+Creation steps:
+- **Define Load Balancer:**
+    + Define a listener from load balancer protocol/port `HTTP/80` to the instance's `HTTP/8080`
+    + Enable advanced VPC (Virtual Private Cloud) configuration: to provide higher availability by selecting multiple subnets for your Availability Zones
+    + Select Subnets according to your instances' Availability Zones
+- **Assign Security Groups:** Create a new Security Group to your load balancer (or use an existent if you already have) enabling access to port `80` from `Anywhere`.
+- **Configure Health Check:** Choose a path where your load balancer can perform a request to check availability. e.g. `Ping Protocol: HTTP | Ping Port: 8080 | Ping Path: /index.html`
+- **Add EC2 Instances**
+
+### Test Load Balancer
+
+To check if your load balancer is working, access your instances and listen to the external requests (via 8080), using the following command:
+`sudo tcpdump 'dst port 8080 and tcp[32:4] = 0x47455420'`
+
 ## Useful Commands
 
 | Command | Description |
@@ -127,3 +162,10 @@ After the RDS instance be available, you'll need to configure its default Securi
 | ssh -i `.pem file` `<instance user>@<instance public DNS>` | Starts the SSH client program that enables secure connection to the SSH server on a remote machine |
 | scp -i `.pem file` `file to copy` `<instance user>@<instance public DNS>`:~ | Secure Copy. Connects to the server using the SSH private key file (.pem) and copies the file which name is provided |
 | mysql -u `<db user>` -p`<db password>` -h `<db public DNS (without port>` | Mysql command to connect with a remote database |
+| `sudo tcpdump 'dst port 8080 and tcp[32:4] = 0x47455420'` | Listen to the requests made to an instance |
+
+## Structure Reminder
+
+| Item | Path | Note |
+| Tomcat8 Environment configuration | `/usr/share/tomcat8/bin/` | Create/Edit the setenv.sh file to set a environment variable |
+| Tomcat8 Logs folder | `/var/lib/tomcat8/logs` | |
