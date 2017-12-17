@@ -104,7 +104,7 @@ To avoid managing multiple Security Groups for equal instances, you can set the 
 When creating a RDS instance, you can choose:
 - **Engine type and version**: Amazon Aurora, MySQL, Postgresql, etc.
 - **DB instance class**: the EC2 instance type.
-- **Multi-AZ deployment**: creates replicas in a different Availability Zone to provide data redundancy, eliminate I/O freezez, and minimize latency spikes during system backups. Read the [documentation](https://aws.amazon.com/pt/rds/details/multi-az/) for more details.
+- **Multi-AZ deployment**: creates replicas in a different Availability Zone to provide data redundancy, eliminate I/O freezes, and minimize latency spikes during system backups. Read the [documentation](https://aws.amazon.com/pt/rds/details/multi-az/) for more details.
 - **Storage type**:
     + General Purpose: default. Suitable for a broad range of database workloads.
     + Provisioned IOPS: suitable for I/O-intensive database workloads.
@@ -141,7 +141,10 @@ The Amazon *Elastic Load Balancing* supports three types of load balancers:
 
 ### Classic Load Balancer
 
-Creation steps:
+This is the most basic implementation of a load balancer. The CLB just delegates to an instance requests received from a specific port and protocol. It has some limitations. For example, it's not possible to manage different versions of an application using different paths.
+
+**Creation steps:**
+
 - **Define Load Balancer:**
     + Define a listener from load balancer protocol/port `HTTP/80` to the instance's `HTTP/8080`
     + Enable advanced VPC (Virtual Private Cloud) configuration: to provide higher availability by selecting multiple subnets for your Availability Zones
@@ -150,9 +153,31 @@ Creation steps:
 - **Configure Health Check:** Choose a path where your load balancer can perform a request to check availability. e.g. `Ping Protocol: HTTP | Ping Port: 8080 | Ping Path: /index.html`
 - **Add EC2 Instances**
 
-### Test Load Balancer
+### Application Load Balancer
 
-To check if your load balancer is working, access your instances and listen to the external requests (via 8080), using the following command:
+This implementation works on the application layer, so it provides more resources at HTTP level. The ALB can perform routing based on the application path.
+
+**Creation steps:**
+
+The creation steps are quite similar to Classic Load Balancer's, excepting the Configure Routing and Register Targets steps.
+
+- **Configure Routing:**
+    + Target group: `Protocol: HTTP | Port: 8080 | Target type: instance`
+    + Health check: `Protocol: HTTP | Path: /index.html` (or other available path)
+    + Advanced health check settings - Success codes: The HTTP codes to use when checking for a successful response from a target.
+- **Register Targets:** select the instances that will be part of the default target group configured on the previous step. Other target groups can be defined later through the `LOAD BALANCING > Target Groups` menu.
+
+**How to configure different paths:**
+
+In order to manage different versions of an application or different paths, it's necessary to create specific listener rules:
+- Select load balancer, go to Listener tab and click the "View/Edit rule" link in the default rule.
+- Click "Add Rules" (+) button and then "Insert rule"
+- Define a rule by Host or Path. For example: `IF path-pattern: <path> | THEN forward: <target group>`
+    + Usually include an "*" at the end of the path to consider all pages within that path
+
+### See Load Balancer in action
+
+To check if your load balancer is working, access your instances and listen to the external requests, using the following command:
 `sudo tcpdump 'dst port 8080 and tcp[32:4] = 0x47455420'`
 
 ## Useful Commands
