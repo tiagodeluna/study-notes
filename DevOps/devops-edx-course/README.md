@@ -2080,6 +2080,103 @@ Concept coined in The Visible Ops Handbook (Kim, Behr, Spafford).
 > The meta goal here is to help you start thinking more like a physicist in terms of complexity in complex-adaptive systems.
 ------------
 
+### Cynefin
+
+- Defined by Dave Snowden
+- Designed to describe the evolutionary nature of complex systems
+- Draws on research from complex adaptive systems theory, cognitive science, ahthropology and psychology
+
+**Obvious:**
+- Known knowns
+  + Sense: See what's coming in
+  + Categorise: Make it fit predetermined categories
+  + Respond: Decide what to do
+- Good Practice
+
+**Complicated:**
+- Known unknowns
+  + Sense: See what's coming in
+  + Analyse: Investigate or analyse, using expert knowledge
+  + Respond: Decide what to do
+- Good Practice
+
+**Complex:**
+- Unknown unknowns
+  + Probe: Experimental input (hypothesis-driven)
+  + Sense: Failures or successes
+  + Respond: Decide what to do, amplify or dampen
+- Emergent Practice
+
+**Chaotic:**
+- Unknowable unknowns
+  + Act: Attempt tp stabilise (cause and effect is undetermined)
+  + Sense: Failures or successes
+  + Respond: Decide what to do next
+- Novel Practice
+
+### Circuit Breaker Patterns (by Nygard)
+
+- Wrap a protected function call in a circuit breaker object
+- Monitors for failures
+- When a threshold is met trip a circuit breaker
+- Calls are then returned with an error
+
+**Netflix Example:**
+- In Nexflix aplication, when something goes wrong, instead of just breaking the whole system, you just can't get movie recommendations, or centain subsets of things that you'd want to do on Netflix might just get turned off.
+
+**Netflix - Circuit Breaker - Hystrix project:**
+A open source project built completely on Nygard's circuit breaker pattern.
+
+- Give protection from and control over latency and failure from dependencies accessed
+- Stop cascading failures in a complex distributed system
+- Fail fast and rapidly recover
+- Fallback and gracefully degrade when possible
+- Enable near real-time monitoring, alerting, and operational control
+- Isolates access points between services
+- Can setup triggers (e.g. trip if 10 calls within 10 seconds take longer than 5 seconds)
+- Provides fall back options (error, default value, null value, or special error)
+
+### Promise Theory (by Mark Burgess)
+
+- Is a model of voluntary cooperation between individual, autonomous actors or agents
+- They publish their intentions to one another in the form of promises
+- It is non-deterministic, but there is a relationship
+- One of the strengths of this way of thinking is that it does not let you take things for granted
+- Decomposing into agents and promises allows us to see how a system works
+- Confronting detailed (atomic) expectation of behavior, not just the ones that we think are big and important
+- The entire chain of responsibility begins to appear as we start thinking n these terms
+
+#### Obligation vs Cooperation
+
+- Failure:
+  + O: It must not fail
+  + C: It will fail
+- Automation:
+  + O: It must look like this
+  + C: It should look like this
+- Visualization:
+  + O: Show me what it looks like
+  + C: Show me what you think it looks like
+  
+#### Obligations vs Promises
+
+- Obligation is not a promise
+- Obligations are a problematic ideal
+- Obligations oversimplify information
+- Obligation allows you to take things granted
+- Obligations can come from anywhere
+
+#### Example
+
+- Promise quality
+  + "I will feed your cat"
+- Promise quantity
+  + "on Monday & Friday mornings"
+Promisee
+  + "My neighbor"
+Promisor
+  + "Me"
+
 ## By the end of this chapter, you should be able to:
 
 - Discuss the concept and goals of the Second Way.
