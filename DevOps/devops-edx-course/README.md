@@ -14,6 +14,8 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
     - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources/README.md#chapter-4-the-first-way---accelerate-flow)
   * [Chapter 5 - The Second Way - Amplify Feedback Loops](#chapter-5-the-second-way---amplify-feedback-loops)
     - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources/README.md#chapter-5-the-second-way---amplify-feedback-loops)
+  * [Chapter 6 - The Third Way - Accelerate Learning](#chapter-6-the-third-way---accelerate-learning)
+    - [Resources](https://github.com/tiagodeluna/study-notes/blob/master/DevOps/devops-edx-course-resources/README.md#chapter-6-the-third-way---accelerate-learning)
 
 # Chapter 1 *Concepts*
 
@@ -1539,7 +1541,7 @@ The I should see the welcome message
 > "3% of the problems have figures, 97% of the problems do not." – Dr. Deming
 ----------------
 
-### Second Way Principles
+### Second Way Principles (Goals)
 
 - Right to Left flow
 - Find and Fix Fast
@@ -1559,6 +1561,8 @@ The I should see the welcome message
 - Can be MTTR or MTBF based
 - Not all services have an explicit SLA
 
+------------------
+> An SLA is based between the business and the customer and an SLO is based between the internal service team and the system in which it operates.
 ------------------
 > High-performing organizations don't set the SLAs. They tend to have their own SLA in the form of a SLO
 ------------------
@@ -1641,8 +1645,8 @@ The level of reliability/availability based on how many nines we want.
 
 #### Google Site Reliability Engineers (SRE)
 
-- Google defined this job title
-- Google SRE was created in 2003
+SRE is a conceptual job title created by Google in 2003.
+
 - No NOC
 - A team that focuses on reliability
   + Focus on service
@@ -2037,13 +2041,14 @@ Concept coined in The Visible Ops Handbook (Kim, Behr, Spafford).
 #### Statistical Analysis
 
 - Mean
-  + Sum of all elements divided by number of elements
+  + It's the average. The sum of all elements divided by number of elements
 - Median
   + The value that is in the middle of the data set (after sorting)
 - Percentiles
   + The value below which a given percentage of elements in a group of elements fall.
-- Standard Deviation
-  + Takes the average, the mean, and then applies it against each element in a vector, and then takes the mean of that. It's kind of the average of the delta of the elements in the vector
+- (Sample) Standard Deviation
+  + The standard deviation of a data set is the square root of its variance
+  + Calculation: Take the mean of a vector with N elements, then take the sum of the squared differences of each element, divide it by N-1, and then take the root of it. It's kind of the average of the delta of the elements in the vector.
 - Median Absolute Deviation
   + Takes the median, then takes the delta of the median (the difference between the median and each element), and then takes the median of that list.
   + It's a better representation of the variation between the elements
@@ -2177,15 +2182,28 @@ Promisee
 Promisor
   + "Me"
 
-## By the end of this chapter, you should be able to:
+ # Chapter 6 *The Third Way - Accelerate Learning*
 
-- Discuss the concept and goals of the Second Way.
-- Explain the meaning of creating a service reliability culture.
-- Decouple the definitions of service and their implications both for the external customers and internal objectives.
-- Discuss the balance between reliability and risk.
-- Discuss the origin and practice of Google’s Service Reliability Engineering team structure.
-- Explain the origins, definitions and aspects of feedback loops.
-- Discuss the meta-principles of monitoring via alerting, trending, and anomaly detection.
-- Monitor a service from all aspects of the service delivery.
-- Discuss complexity as it relates to the Second Way.
-- Outline how the use of ChatOps can help provide fast and effective feedback
+ ## Learning Organizations
+
+ ## Communication
+
+ ## Blameless Culture
+
+---------------
+
+ **By the end of this chapter, you should be able to:**
+
+- Discuss the concept and goals of the Third Way.
+- Explain Dr. Deming's influence on today's modern cultures described as learning organizations.
+- Discuss Systems Thinking, as seen by Peter Senge in his book, "The Fifth Discipline".
+- List the eight principles of Continuous Delivery.
+- Discuss the ladder of influence, as defined by Chris Argyris.
+- Analyze the Dimensions of Learning Organizations Quiz (DLOQ), to better understand the nature of a learning organization.
+- Define the patterns of learning of a successful web scale organization, as illustrated by the Netflix culture deck.
+- Discuss the ways a high performing organization uses to communicate and practice feedback skills.
+- Discuss the different tools, practices, and approaches to create good communication feedback loops.
+- Outline how to create a blameless culture.
+- Explain how blameless culture can be applied to organizations, as illustrated by the Human Factors and Safety study.
+- Use the cognitive bias to create a blameless culture.
+- Explain the concept of the blameless postmortem.
