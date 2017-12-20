@@ -156,3 +156,63 @@ Reference material from the DevOps edX course **Introduction to Devops**. These 
 * [Velocity 2011: Jon Jenkins, "Velocity Culture”](https://www.youtube.com/watch?v=dxk8b9rSKOo)
 
 ## Chapter 5 *The Second Way - Amplify Feedback Loops*
+
+### Articles
+
+* [Her Code got Humans on The Moon - And Invented Software Itself](http://www.wired.com/2015/10/margaret-hamilton-nasa-apollo/)
+* [Resilience Engineering: Learning to Embrace Failure](http://queue.acm.org/detail.cfm?id=2371297)
+* [Fault Injection in Production - Making the case for resilience testing](http://queue.acm.org/detail.cfm?id=2353017)
+* [FIT: Failure Injection Testing](http://techblog.netflix.com/2014/10/fit-failure-injection-testing.html)
+* [Tracking Every Release](https://codeascraft.com/2010/12/08/track-every-release/)
+* [The Flaw of Averages](http://www.flawofaverages.com/)
+* [Variation – The Root of All Process Evil](https://www.isixsigma.com/tools-templates/variation/variation-root-all-process-evil)
+* [Why Averages Suck and Percentiles are Great](http://apmblog.dynatrace.com/2012/11/14/why-averages-suck-and-percentiles-are-great/)
+* [RAD - Outlier Detection on Big Data](http://techblog.netflix.com/2015/02/rad-outlier-detection-on-big-data.html)
+* [Statistical Anomaly Detection](http://www.ebaytechblog.com/2015/08/19/statistical-anomaly-detection/)
+* [Anomaly Detection: A Survey](http://www-users.cs.umn.edu/~banerjee/papers/09/anomaly.pdf)
+* [Cynefin: A Leader's Framework for Decision Making - Harvard Business Review](https://hbr.org/2007/11/a-leaders-framework-for-decision-making/)
+* [Cognitive Edge](http://old.cognitive-edge.com/)
+* [CircuitBreaker](http://martinfowler.com/bliki/CircuitBreaker.html)
+* [Introducing Hystrix for Resilience Engineering](http://techblog.netflix.com/2012/11/hystrix.html)
+* [Github Hystrix](https://github.com/netflix/hystrix/wiki)
+* [Say Hello to Hubot](https://github.com/blog/968-say-hello-to-hubot)
+* [What is ChatOps? A guide to its evolution, adoption, and significance](http://blogs.atlassian.com/2016/01/what-is-chatops-adoption-guide/)
+
+### Books
+
+* Site Reliability Engineering How Google Runs Production Systems (*by Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy*)
+* The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Volume 2 (*by Thomas A. Limoncelli*)
+* Failure Is Not an Option: Mission Control From Mercury to Apollo 13 and Beyond (*by Gene Kranz*)
+* The Challenger Launch Decision: Risky Technology, Culture, and Deviance at NASA (*by Diane Vaughan*)
+* Thinking in Systems: A Primer (*by Donella H. Meadows*) [Amazon](https://www.amazon.com/Thinking-Systems-Donella-H-Meadows/dp/1603580557)
+* Designing Delivery: Rethinking IT in the Digital Service Economy 1st Edition (*by Sussna*)
+* The Art of Monitoring (*James Turnbull*)
+* Building Microservices 1st Edition (*by Sam Newman*)
+* In Search of Certainty: The science of our information infrastructure Paperback (*by Mark Burgess*)
+* Beyond the Goal: Eliyahu Goldratt Speaks on the Theory of Constraints (Your Coach in a Box) Audio CD – Audiobook, CD, Unabridged (*by Eliyahu Goldratt*)
+* Release It!: Design and Deploy Production-Ready Software (Pragmatic Programmers) (*by Michael T. Nygard*)
+* Thinking in Promises 1st Edition (*by Mark Burgess*)
+
+### Presentations 
+
+* [Keys to SRE](https://www.youtube.com/watch?v=n4Wf14e2jxQ)
+* [Incident Response: Trade-offs Under Pressure](https://www.infoq.com/presentations/incident-response)
+* [Making a Sandwich: Effective Feedback Techniques](https://www.infoq.com/presentations/feedback-models-techniques)
+* [Informally Codiﬁes “OK” Dev “We Go or No-Go: Operability and Contingency Planning at etsy.com](http://www.slideshare.net/jallspaw/go-or-nogo-operability-and-contingency-planning-at-etsycom/10-Informally_Codies_OK_Dev_We)
+* [Move Fast, Unbreak Things! - Petr Lapukhov, Facebook](https://www.youtube.com/watch?v=zs2Zn9rW3Ow)
+* [Adaptive Availability for Quality of Service](https://www.infoq.com/presentations/time-series-database)
+* [Adaptive availability](http://www.slideshare.net/postwait/adaptive-availability)
+* [The Importance of Features for Statistical Anomaly Detection (Ebay)](https://www.usenix.org/sites/default/files/conference/protected-files/hotcloud15_slides_goldberg.pdf)
+* [Talk: From Cybernetics To DevOps and Beyond - Jeff Sussna - DevOpsDays Belgium 2014](https://vimeo.com/114017635)
+* [DevOps Day LA: Promise Theory for Dummies - John Willis](https://www.youtube.com/watch?v=y3yplqTFywY)
+* [ChatOps at GitHub - Jesse Newland](https://www.youtube.com/watch?v=NST3u-GjjFw)
+* [Real World ChatOps](https://www.youtube.com/watch?v=X9FLsMup0A0)
+* [ChatOps Unplugged: A Beginner's Guide](https://www.youtube.com/watch?v=1srw4yjQcN0)
+
+## Chapter 6 *The Third Way - Accelerate Learning*
+
+### Articles
+
+### Books
+
+### Presentations
