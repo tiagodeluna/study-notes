@@ -42,13 +42,17 @@ There are different ways of make your application available:
 
 ## AWS Services Overview
 
+**AWS CLI**
+
+The AWS CLI (Command Line Interface) is a tool for managing your AWS services using command line. It allows you, for example, to automatize the creation and configuration of your EC2 instances via scripts. Check the [documentation](https://aws.amazon.com/pt/cli/) for more details.
+
 **Auto Scaling**
 
 The Auto Scaling Service allows you to automatically create and delete instances as needed to optimize resource usage, following predetermined scaling policies.
 
 **CodeDeploy**
 
-CodeDeploy is a deployment service that enables developers you to perform *Blue Green Deployments* automatically, implementing the *Immutable servers* concept. Check the [documentation](https://aws.amazon.com/pt/documentation/codedeploy/) for more details.
+CodeDeploy is a deployment service that enables developers to perform *Blue Green Deployments* automatically, implementing the *Immutable servers* concept. Check the [documentation](https://aws.amazon.com/pt/documentation/codedeploy/) for more details.
 
 **CloudWatch**
 
