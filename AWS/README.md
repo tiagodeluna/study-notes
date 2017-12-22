@@ -42,18 +42,13 @@ There are different ways of make your application available:
 
 ## AWS Services Overview
 
+**Auto Scaling**
+
+Allows you to automatically create and delete instances as needed to optimize resource usage, following predetermined scaling policies.
+
 **CloudWatch**
 
 A tool that allows you to create **Billing Alarms** to avoid spending unexpected values while using your AWS account. CloudWatch also lets you collect and track metrics, monitor log files, and set other alert types. For example, we may be notified when the CPU is too busy for a certain time, writing or reading is slow, disk space is running out, among many other possibilities. Check the [Official Documentation](https://aws.amazon.com/pt/documentation/cloudwatch/) for more details.
-
-**EC2**
-
-The Amazon Elastic Cloud Computer is a service that allows you to create instances of machines from predefined images, the AMIs (Amazon Machine Images). These machines can be configured to be flexible, with resources allocated (and deallocated) on demand. The costs are proportional to the quantity of the resources allocated on the machine.
-Each instance type has its own characteristics and purposes. See the [Documentation](https://aws.amazon.com/pt/ec2/instance-types/) for more details.
-
-**RDS**
-
-The Amazon RDS (Relational Database Service) is a SaaS-based service that provides an EC2 instance with a relational database ready to use and available on the cloud with minimum configuration.
 
 **EBS**
 
@@ -61,11 +56,20 @@ Elastic Block Device is where instances save their data (like an HD). It is a fe
 
 We can associate an EBS volume from an instance to another (but only an instance at a time), or create a new EBS volume separately and associate with an instance later.
 
+**EC2**
+
+The Amazon Elastic Cloud Computer is a service that allows you to create instances of machines from predefined images, the AMIs (Amazon Machine Images). These machines can be configured to be flexible, with resources allocated (and deallocated) on demand. The costs are proportional to the quantity of the resources allocated on the machine.
+Each instance type has its own characteristics and purposes. See the [Documentation](https://aws.amazon.com/pt/ec2/instance-types/) for more details.
+
 **Load Balancer**
 
 A Load Balancer divides traffic between network interfaces on a network socket basis, improving the distribution of workloads across multiple computing resources.
 
 The Amazon *Elastic Load Balancing* is a solution that aims to optimize resource use, maximize throughput, minimize response time, and avoid overload of any single resource. It supports three types of load balancers: Application Load Balancers, Network Load Balancers, and Classic Load Balancers.
+
+**RDS**
+
+The Amazon RDS (Relational Database Service) is a SaaS-based service that provides an EC2 instance with a relational database ready to use and available on the cloud with minimum configuration.
 
 ## Amazon EC2
 
@@ -172,13 +176,36 @@ The creation steps are quite similar to Classic Load Balancer's, excepting the C
 In order to manage different versions of an application or different paths, it's necessary to create specific listener rules:
 - Select load balancer, go to Listener tab and click the "View/Edit rule" link in the default rule.
 - Click "Add Rules" (+) button and then "Insert rule"
-- Define a rule by Host or Path. For example: `IF path-pattern: <path> | THEN forward: <target group>`
+- Define a rule by Host (or sub-domain) or Path. For example: `IF path-pattern: <path> | THEN forward: <target group>`
     + Usually include an "*" at the end of the path to consider all pages within that path
 
 ### See Load Balancer in action
 
 To check if your load balancer is working, access your instances and listen to the external requests, using the following command:
 `sudo tcpdump 'dst port 8080 and tcp[32:4] = 0x47455420'`
+
+### Authentication with Load Balancer
+
+In an application with a newly configured load balancer, the login does not work. This is because as the load balancer redirects the request to different machines, the application understands that it is always a new request and then it deletes the cookie and generates a new session ID.
+
+To solve this problem in AWS, we use a strategy called **Stick Session** (also known as **Session Affinity**), in which the load balancer itself creates an additional cookie on the first access and causes the browser to always make requests for the same instance.
+
+To active this resource in AWS in each Target Group:
+- Go to Description tab and click the "Edit Attributes" button
+- Change value of property "Stickiness" to "Enable load balancer generated cookie stickiness"
+    + Set stickiness duration: Provide a cookie expiration interval. Default value is `1 day`
+
+## Auto Scaling
+
+To use the Auto Scaling service, select "Auto Scaling Groups" in the left menu, then click "Create Auto Scaling Group" button and follow the creation steps:
+- **Create lauch configuration:** The steps are quite similar to the EC2 instance creation steps
+- **Configure Auto Scaling Group:**
+    + Subnets: Select at least two subnets
+    + Load Balancing: check "Receive traffic from one or more load balancers"
+    + Target Groups: select target group(s) to scale
+- **Configure scaling policies:** choose one of the two options...
+    + *Keep this group at its initial size:* to maintain a fixed number of active instances
+    + *Use scaling policies to adjust the capacity of this group:* to scale between a minimum and a maximum size, according to the policies defined. You'll need to setup alarms to increase and decrease the group size. 
 
 ## Useful Commands
 
@@ -192,5 +219,7 @@ To check if your load balancer is working, access your instances and listen to t
 ## Structure Reminder
 
 | Item | Path | Note |
+| ----- | ----- | ----- |
 | Tomcat8 Environment configuration | `/usr/share/tomcat8/bin/` | Create/Edit the setenv.sh file to set a environment variable |
 | Tomcat8 Logs folder | `/var/lib/tomcat8/logs` | |
+
