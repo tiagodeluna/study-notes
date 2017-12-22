@@ -306,6 +306,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
   - Dark Deploys
   - Inject Deployment Metrics in Monitoring
   - Developers Wear Pagers
+    + If something breaks in the code, make the developer be the person that gets the first notification
   - Pair Programming
   - Peer Reviews
 
@@ -2184,11 +2185,190 @@ Promisor
 
  # Chapter 6 *The Third Way - Accelerate Learning*
 
+---------
+> "You are either building a learning organization... or you will be losing to someone who is" – Andrew Shafer
+---------
+
  ## Learning Organizations
 
- ## Communication
+ It all starts with the Deming Cycle (Plan-Do-Check-Act), that is a scientific method.
 
- ## Blameless Culture
+ ### Demings's 14 Points
+
+In general, it's the poster for DevOps. But most of them will apply to how a learning organization thinks.
+
+**Point #1 - Create Constancy of Purpose**
+- Deming called this the "AIM"
+- Goldratt called it the "Goal"
+- Simon Sinek calls it the "Why"
+- Rother calls it "Vision"
+
+**Point #2 - Adopt The New Philosophy**
+- Lead not manage
+- Replace top down management
+- Replace command and control management
+- Create cooperative leadership models
+
+**Point #3 - Cease Dependence on Inspaction to Achieve Quality**
+- Don't wait till it's done to test it
+- Build quality from start to end (flow)
+- Make sure the door fits before it's built (SPC)
+- Core principles of Lean and DevOps
+
+**Point #4 - End the Practice of Awarding Business on the Basis of a Price Tag**
+- Top line ROI vs Bottom line ROI
+- It's not how much it costs to make
+- It's how much money you make once it's built
+- Work towards a mission not a budget
+- Lean Startup/MVP
+
+**Point #5 - Improve Constantly and Forever the System of Production and Service**
+- "The Second Way"
+- Create feedback loops (PDCA)
+- The Andon-Cord
+- Devs wearing pagers
+- Tests, TDD/BDD
+
+**Point #6 - Institute Training on the Job**
+- Create team and systems thinking
+- Create a learning organization
+- Peter Senge's (Fifth Discipline)
+- Core principle of Mike Rother's "Coaching Kata"
+
+**Point #7 - Help People, Machines and Gadgets do a Better Job**
+- Modern complex systems are based on humans and machines interacting
+  + Deming understood this 60 years ago
+- Human/machine relationships need to be non-deterministic
+  + Complex systems are autonomous actors
+- Deming, Goldratt and Burgess all started out as physicists
+
+**Point #8 - Drive Out Fear, so that Everyone May Work Effectively for the Company**
+- Fail fast, fail often
+- Learn from failing
+- Chaos Monkey, FIT, Gameday
+- Blameless Postmortem
+- Mean Time to Resolve (MTTR) focus
+- Embrace failure by normalizing fear
+
+**Point #9 - Break Down Barriers Between Departments**
+- Organization culture is the strongest predictor to IT performance - Devops Survey
+- High trust environments
+- Cross functional collaboration
+- Shared responsibilities
+
+**Point #10 - Stop Management by Slogans**
+- Stop slogan saying "Zero defects/Never fail"
+- Quotas are a form of local optimization
+- 100% Availability myth
+
+**Point #11 - Supervisors Must Change from Sheer Numbers to Quality**
+- Workers must feel pride in what they do
+- Need to intent, not demand-driven management
+- Quantity focus creates volume but not quality
+- Leader-Leader not Leader-Follower
+- Effort over outcomes (growth mindset)
+
+**Point #12 - Abolishment of the Annual or Merit Rating and MBO's**
+- Deming hated MBO's (Management by objectives)
+- He felt they created the wrong incentives
+- Management should not be driven by determinism
+- Another expression of management by intent
+
+**Point #13 - Institute a Vigorous Program of Education and Self-Improvement**
+- Kaizen (Self improvement)
+- Kata (Vigorous Self Improvement)
+  + Improvement Kata (Rother's book)
+- Moving form improvement to an art form
+
+**Point #14 - The Transformation is Everybody's Job**
+- Back to the AIM/Goal/Why
+- Transformation must be global
+- If only one group is optimized it is called local optima
+- Global optima eats local optima for breakfast
+
+### The Fifth Discipline
+
+-------------
+> "Our prevailing system of management has destroyed our people. People are born with intrinsic motivation, self-respect, dignity, curiosity to learn, joy in learning. The forces of destruction begin with toddlers – a prize for the best halloween costume, grades in school, gold stars – and on up through the university. On the job, people, teams, and divisions are ranked, rewarded for the top, punished for the bottom. Management by Objectives, quotas, incentive pay, business plans, put together separately, division by division, cause further loss, unknown and unknowable." – Deming's response to a comment on the "Fifth Discipline"
+-------------
+> "A learning organization is a place where people are continually discovering how they create their reality" – Peter Senge
+-------------
+
+Five Disciplines that must be adopted in order to become a learning organization:
+- Systems Thinking
+- Personal Mastery
+- Mental Models
+- Shared Vision
+- Team Learning
+
+### Learning Organizations Building Blocks
+
+- Psychological Safety
+- Appreciation of Differences
+- Openness to New Ideas
+- Time for Reflection
+- Systemic Knowledge Sharing
+- Education and Experimentation
+- Reinforced Learning
+
+### Ladder of Inference (by Chris Argyris)
+
+- Action
+  + I take Actions based on my Beliefs
+- Beliefs
+  + I adopt Beliefs about the world
+- Conclusions
+  + I draw Conclusions
+- Assumptions
+  + I make Assumptions based on the Meanings I added
+- Meanings
+  + I add Meanings (cultural and personal)
+- Select
+  + I Select "Data" from what I Observe
+- Observe
+  + Observable "data" and experiences
+
+**Concept:**
+- I'm processing output. My actions become input for somebody else's ladder of inference. So we're constantly interacting through our ladders of inference.
+//- **The reflexive loop:** our beliefs attest what data we select next time.
+
+**Problems:**
+- Can create bad judgement
+- Our assumptions can lead us to bad conclusions
+
+**Solutions:**
+- Question your assumptions and conclusions
+- Seek contrary data
+- Make your assumptions visible to others
+- Invite others to test your assumptions and conclusions
+- Inquire other people's assumptions and conclusions
+- Move down the ladder instead of up
+
+**Example:**
+Imagine I'm giving a presentation to a small group od people in my company.
+
+Path 1
+- Observe: I notice people in the first row
+- Select: Person in the front row keep looking at their phone
+- Meaning: Not listening to my presentation
+- Assumption: He is not interested
+- Conclusion: Doesn't like my new ideas
+- Beliefs: Their team always blocks new ideas
+- Action: I send a nasty email to their boss
+
+Path 2
+- Observe: I notice people in the first row
+- Select: Person in the front row keep looking at their phone
+- Meaning: Not listening to my presentation
+- Assumption: Try to engage with a question (safely)
+  + Break the ladder: instead of making that first assumption, I say "You know, maybe I'm wrong..."
+- Conclusion: Might find out that they are late for another meeting and they really don't want to miss this one... so they sent an email noticing the next meeting team that they will be late...
+- Beliefs: Their are very excited about this new idea
+- Action: Both teams setup another meeting to engage
+
+## Communication
+
+## Blameless Culture
 
 ---------------
 
