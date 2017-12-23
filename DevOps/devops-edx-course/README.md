@@ -2328,9 +2328,9 @@ Five Disciplines that must be adopted in order to become a learning organization
 - Observe
   + Observable "data" and experiences
 
-**Concept:**
+**Concepts:**
 - I'm processing output. My actions become input for somebody else's ladder of inference. So we're constantly interacting through our ladders of inference.
-//- **The reflexive loop:** our beliefs attest what data we select next time.
+- **The reflexive loop:** our beliefs attest what data we select next time.
 
 **Problems:**
 - Can create bad judgement
@@ -2365,6 +2365,47 @@ Path 2
 - Conclusion: Might find out that they are late for another meeting and they really don't want to miss this one... so they sent an email noticing the next meeting team that they will be late...
 - Beliefs: Their are very excited about this new idea
 - Action: Both teams setup another meeting to engage
+
+### The Dimensions of Learning Organization Questionnaire (DLOQ)
+
+- It's an approach created by Victoria J. Marsick and karen E. Watkins
+- Uses surveys or questionnaires to measure important shifts in an organization's climate, culture, systems, and Structures that influence whether individuals learn.
+- Two components (**People** in an organization and the **Structure** of the culture)
+
+**Four Levels of a Learning Organization (DLOQ)**
+
+The questions are grouped in four organizational levels:
+
+1. Individual Level
+  + Continuous learning, dialogue and inquiry questions
+2. Team or Group Level
+  + Team learning and collaboration
+3. Organization Level
+  + Organization learning and empowerment (leader-leader)
+4. Global Level
+  + Systems level and strategic level (leadership) questions
+
+**Seven Dimensions of a Learning Organization (DLOQ)**
+
+1. Create continuous learning opportunities
+  + Learning is designed into work so that people can learn on the job; opportunities are provided for ongoing education and growth
+2. Promote inquiry and dialogue
+  + People gain productive reasoning skills to express their views and the capacity to listen and inquire into the views of others; the culture is changed to support questioning, feedback, and experimentation
+3. Encourage collaboration and team learning
+  + Work is designed to use groups to access different modes of thinking; groups are expected to learn together and work together; collaboration is valued by the culture and rewarded
+4. Create systems to capture and share learning
+  + Both high- and low-technology systems to share learning are created and integrated with work; access is provided; systems are maintained
+5. Empower people toward a collective vision
+  + People are involved in setting, owning, and implementing a joint vision; responsibility is distributed close to decision making so that people are motivated to learn toward what they are held accountable to do
+6. Connect the organization to its environment
+  + People are helped to see the effect of their work on the entire enterprise; people scan the environment and use information to adjust work practices; the organization is linked to its communities
+7. Provide strategic leadership for learning
+  + Leaders model, champion, and support learning; leadership uses learning strategically for business results
+
+**Andrew Shafer asks:**
+
+- What if we turned these into statements instead of questions?
+- And we deliberately create incentives for these behaviors
 
 ## Communication
 
