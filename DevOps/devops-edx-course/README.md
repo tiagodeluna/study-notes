@@ -2407,6 +2407,62 @@ The questions are grouped in four organizational levels:
 - What if we turned these into statements instead of questions?
 - And we deliberately create incentives for these behaviors
 
+### Netflix Nine Behaviors
+
+----------------
+> The actual company values, as opposed to the nice-sounding values, are shown by who gets rewarded, promoted, or let go
+----------------
+
+The values that they look in people:
+
+- Judgement
+  + Think strategically, make hard decisions, rely on their judgement
+- Communication
+  + Be really good listeners, respectful
+- Impact
+  + Be reliable, do amazing impact on work
+- Curiosity
+  + Embrace learning, to be boundary spanners
+- Innovation
+  + Have new ideas, useful ideas, be innovative
+- Courage
+  + Make tough decisions, make really bold hypothesis at times
+- Passion
+  + inspire others, celebrate on the winds
+- Honesty
+  + directness, communicate honestly, know how to admit mistakes
+- Selflessness
+  + Eagerness, sharing openly, helping, being a mentor
+
+### Netflix Freedom and Responsibility
+
+- Self motivating
+- Self aware
+- Sel disciplined
+- Self improving
+- Acts like a leader
+- Doesn't wait to be told what to do
+- Picks up the trash lying on the floor
+
+### Netflix Context vs Control
+
+They look for the culture as a context-based versus control-based, and they tend to be a more of a context-based organization.
+
+**Context-based:**
+- Strategy
+- Metrics
+- Assumptions
+- Objectives
+- Clearly-defined roles
+- Knowledge of the stakes
+- Transparency around decision-making
+
+**Control-based:**
+- Top-down decision-making
+- Management approval
+- Committees
+- Planning and process valued more than results
+
 ## Communication
 
 ## Blameless Culture
