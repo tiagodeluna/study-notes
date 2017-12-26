@@ -2465,6 +2465,142 @@ They look for the culture as a context-based versus control-based, and they tend
 
 ## Communication
 
+------------
+> "People fail to get along because they fear each other; they fear each other because they don't know each other; they don't know each other because they have not communicated with each other." – Martin Luther King Jr.
+------------
+
+### Communication Feedback
+
+- Communication feedback is a system
+- Understanding how to give negative/critical feedback is very important
+- Positive feedback is also very important
+- People are motivated more by progress then accomplishments
+- Creating a cadence for feedback builds trust & safety
+- Ad-hoc feedback doesn't work without a regularly understood process
+- Feedback should be goal related
+- The goals should be for: learning, improvement and creating higher trust
+- Feedback should not be personal, it should be about behavior and be actionable
+
+**Giving feedback - Anti-patterns:**
+
+- "I'm right, you're wrong"
+  + Or the senior versus junior approach
+- Assigning blame
+- Sarcasm
+- Sugarcoating
+  + Not being totally honest or making it sentimental
+- Beating around the bush
+  + Being indirect, avoiding get to the point
+- Passive-aggression
+  + Using a passive form of hostility, being falsely gentle
+- One-way conversations
+  + One person driving the whole conversation
+
+**Giving feedback - Patterns:**
+
+- Honesty
+  + Being genuine
+- Being straightforward
+- Timely
+  + Being opportune, without delay
+
+**Receiving feedback:**
+
+- Good listening
+- Ask questions to understand
+- **Always reply with thank you**
+
+**Avoid:**
+
+- Email
+- Phone
+- Chat
+- Social media
+
+-------------
+> "Criticism may not be agreeable, but it is necessary. It fulfils the same function as pain in the human body. It calls attention to an unhealthy state of things." – Winston Churchill
+-------------
+
+### Feedback Techniques
+
+There are three Types of Feedback identified by Dan North (that is one of the original authors of behavior-driven development and was part of the original continuous delivery pipeline):
+
+- Porpoise Feedback
+- Sandwich Feedback
+- Atkins Feedback
+
+**Porpoise Feedback (Used in Low Trust)**
+
+- Only provide positive feedback
+- Assume everything else will self-correct
+- Everything else (magically) will self-correct
+
+**Sandwich Feedback (Used in Medium Trust)**
+
+- Offer positive feedback
+- Give constructive feedback (critical/safe)
+- Offer general positive summary
+
+Obs: It has a positive-negative-positive structure and it's behavior-based. Some people need three-to-one positives and some people need like ten-to-one...
+
+**Atkins Feedback (Used in High Trust)**
+
+- ~~Offer positive feedback~~
+- Give constructive feedback (critical/safe)
+- ~~Offer general positive summary~~
+
+### Frameworks for Feedback (by Rebecca Miller-Webster)
+
+- Mirror, Validate, Empathy
+- Start, Stop, Continue (SSC)
+- Power Dynamics
+- Microagressions
+- Non-Violent Communication
+
+**Mirror, Validate, Empathy:**
+
+- Mirror
+  + Repeat and confirm what was said
+- Validate
+  + Validate what makes sense or not
+- Empathy
+  + The receiver tries to assume what the sender is feeling (verbally)
+  + Empathy is a skill and we can get better at it
+  + You listen and summarize; recognize and point out your own emotions; shut off your inner narrator (day dreaming)
+
+**Start, Stop, Continue (SSC):**
+
+- Start
+  + What should I start doing
+- Stop
+  + What should I stop doing
+- Continue
+  + What should I continue doing
+
+**Power Dynamics:**
+
+- Power dynamics exist whether we acknowledge them or not
+- Power can be formal or informal
+- Words from a person of power have exponential impact
+- Consider the power dynamics when giving feedback
+
+**Microaggressions:**
+
+- A subtle but offensive comment or action directed at a minority or other non dominant group that is often unintentional or unconsciously reinforces a stereotype
+  + Tone policing
+  + Othering (not one of us)
+
+**Non-Violent Communication:**
+
+- Facts:
+  + What happened without commentary
+- Feelings:
+  + Emotion it made you feel
+- Needs:
+  + Human need that wasn't met
+- Requests:
+  + What you would like the person to do in the future
+
 ## Blameless Culture
 
 ---------------
