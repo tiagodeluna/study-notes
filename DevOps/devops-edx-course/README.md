@@ -2377,30 +2377,30 @@ Path 2
 The questions are grouped in four organizational levels:
 
 1. Individual Level
-  + Continuous learning, dialogue and inquiry questions
+   + Continuous learning, dialogue and inquiry questions
 2. Team or Group Level
-  + Team learning and collaboration
+   + Team learning and collaboration
 3. Organization Level
-  + Organization learning and empowerment (leader-leader)
+   + Organization learning and empowerment (leader-leader)
 4. Global Level
-  + Systems level and strategic level (leadership) questions
+   + Systems level and strategic level (leadership) questions
 
 **Seven Dimensions of a Learning Organization (DLOQ)**
 
 1. Create continuous learning opportunities
-  + Learning is designed into work so that people can learn on the job; opportunities are provided for ongoing education and growth
+   + Learning is designed into work so that people can learn on the job; opportunities are provided for ongoing education and growth
 2. Promote inquiry and dialogue
-  + People gain productive reasoning skills to express their views and the capacity to listen and inquire into the views of others; the culture is changed to support questioning, feedback, and experimentation
+   + People gain productive reasoning skills to express their views and the capacity to listen and inquire into the views of others; the culture is changed to support questioning, feedback, and experimentation
 3. Encourage collaboration and team learning
-  + Work is designed to use groups to access different modes of thinking; groups are expected to learn together and work together; collaboration is valued by the culture and rewarded
+   + Work is designed to use groups to access different modes of thinking; groups are expected to learn together and work together; collaboration is valued by the culture and rewarded
 4. Create systems to capture and share learning
-  + Both high- and low-technology systems to share learning are created and integrated with work; access is provided; systems are maintained
+   + Both high- and low-technology systems to share learning are created and integrated with work; access is provided; systems are maintained
 5. Empower people toward a collective vision
-  + People are involved in setting, owning, and implementing a joint vision; responsibility is distributed close to decision making so that people are motivated to learn toward what they are held accountable to do
+   + People are involved in setting, owning, and implementing a joint vision; responsibility is distributed close to decision making so that people are motivated to learn toward what they are held accountable to do
 6. Connect the organization to its environment
-  + People are helped to see the effect of their work on the entire enterprise; people scan the environment and use information to adjust work practices; the organization is linked to its communities
+   + People are helped to see the effect of their work on the entire enterprise; people scan the environment and use information to adjust work practices; the organization is linked to its communities
 7. Provide strategic leadership for learning
-  + Leaders model, champion, and support learning; leadership uses learning strategically for business results
+   + Leaders model, champion, and support learning; leadership uses learning strategically for business results
 
 **Andrew Shafer asks:**
 
@@ -2602,6 +2602,78 @@ Obs: It has a positive-negative-positive structure and it's behavior-based. Some
   + What you would like the person to do in the future
 
 ## Blameless Culture
+
+-------------
+> A blameless culture believes that systems are NOT inherently safe and humans do the best they can to keep them running
+-------------
+> "Underneath every simple, obvious story about 'human error', there is a deeper, more complex story about the organization" – Sidney Dekker, The Field Guide to Understanding Human Error
+-------------
+
+### Views on Human Error
+
+**The old view of human error (First Story)**
+
+- Human error is cause of accidents
+- To explain failure, you must seek failure
+- You must find people's: inaccurate assessments, wrong decisions, bad judgements
+
+**The new view of human error (Second Story)**
+
+- Human error is a symptom of trouble deeper inside a system (systems thinking)
+- To explain failure, do not try to find where people went wrong
+- Instead, find how people's assessments and actions made sense at the time, given the circumstances that surrounded them
+
+### Bad Apple Theory: Throw away the bad apples
+
+- Complex systems are basically safe, they need to be protected from unreliable people (bad apples)
+- Human errors cause accidents: humans are the dominant contributor to more than two-thirds of mishaps
+- Errors occur because of human loss of situation awareness / complacency / negligence
+- Errors are introduced to the system only through the inherent unreliability of people
+
+### Taylorism in the root of all evil... four principles
+
+1. Create efficiency models based on scientific method by studying work and specific tasks. Replace human instinct, behavior and rule of thumb
+1. Match workers based on work at maximum efficiency
+1. Control efficiency by monitoring and supervision
+1. Managers plan and workers work
+
+--------------
+> "Murphy's Law is wrong. What can go wrong usually goes right, but then we draw wrong conclusion." – Dekker, The Field Guide of Human Error
+--------------
+
+### Just Culture concept (by Sidney Dekker)
+
+- A culture of trust, learning and accountability. It's important to have when something goes wrong in your organization
+- *Just culture* means that you're making effort to balance safety and accountability
+
+**A retributive just culture asks:**
+
+- Which rule is broken?
+- Who did it?
+- How bad was the breach, and what should the consequences be?
+- Who gets to decide this?
+
+**A retributive just culture - Shades of culpability:**
+
+- Honest mistake, you can stay
+  + "Don't let it happen again"
+- Risk-taking, you get a warning
+  + "You took a risk... Oh yeah, that's probably not a great idea"
+- Negligence, you are get go
+  + "You made that mistake thrww times, we're going to have to let you go"
+
+**A restorative just culture asks:**
+
+- Who is hurt?
+- What do they need?
+- Whose obligation is it to meet that need?
+- How do you involve the community in this conversation?
+
+**A restorative just culture - Shades of culpability:**
+
+- Investigating mistakes that focuses on failure's mechanisms and decision-making processes
+- Allow individuals to give detailed accounts without fear of punishment or retribution
+  + People need to feel safe, to be able to explain a situation
 
 ---------------
 
