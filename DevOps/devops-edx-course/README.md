@@ -2675,6 +2675,22 @@ Obs: It has a positive-negative-positive structure and it's behavior-based. Some
 - Allow individuals to give detailed accounts without fear of punishment or retribution
   + People need to feel safe, to be able to explain a situation
 
+### The Human Side of Postmortems
+
+----------------
+> You organization must continually affirm that individuals are **NEVER** the 'root causes' of outages – Dave Zwieback
+----------------
+
+**The 3 R's**
+
+- Regret
+  + An acknowledgment of the impact ot the outage and an apology
+- Reason
+  + A linear outage timeline, from initial incident detection to resolution, including the so-called "root causes"
+- Remedy
+  + A list of remediation items to ensure that this particular outage won't repeat
+
+
 ---------------
 
  **By the end of this chapter, you should be able to:**
