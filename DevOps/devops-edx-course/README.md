@@ -2690,6 +2690,37 @@ Obs: It has a positive-negative-positive structure and it's behavior-based. Some
 - Remedy
   + A list of remediation items to ensure that this particular outage won't repeat
 
+**Awesome Postmortems**
+
+- In complex systems, there is no root clause, except...
+- there are (multiple) conditions, some of which are unknowable, unfixable, outside our control
+- poeple did what made sense at the time, given the information they had (no conterfactuals)
+- failure and success are both normal (in complex systems)
+- getting the full account* of what happened is more important than blame/punishment
+
+**Understanding Cognitive Biases**
+
+It's important to understand how those biases will play during an outage and an incident/anomaly resolution.
+
+- Hindsight bias:
+  + knew-it-all-along: It's the idea of seeing the event as having been predictable (*"Yes, we knew it all along"*)
+- Outcome bias:
+  + Evaluating the quality of a decision when the outcome of that decision is already known (*"Well, that happened because of XYZ... We've seen that before..."*)
+  + The concept of **Normalization of Deviance** (by Diane Vaughan): you get used to making mistakes, and, because it doesn't really break when you make those mistakes, in the future you'll say *"Oh, don't worry about that, we do that all the time..."*
+- Availability bias:
+  + Preference by decision makers to information and events that are more recent
+- Fundamental attribution error:
+  + Explain behavior in terms of internal disposition, such as personality traits, abilities, moties, etc. as opposed to external situational factors (*"Bill is aways sloppy with his code, so, surely, that's why the system went down"*)
+
+### Just Culture at Etsy
+
+- We encourage learning by having these **Blameless Postmortems** on outages and accidents
+- We understand how an accident happen, in order to better equip ourselves from it happening in the future
+- We gather details from multiple perspectives on failures, and we don't punish people for making mistakes
+- We enable and encourage people who do make mistakes to be the experts on educating the rest of the organization how not to make them in the future
+- We accept that there is always a discretionary space where humans can decide to make actions or not, and that the judgement of those decisions lie in hindsight
+- We accept that the **Hindsight Bias** will continue to cloud our assessment of past events, and work hard to eliminate it
+- We accept that the **Fundamental Attribution Error** is also difficult to escape, so we focus on the environment and circumstances people are working in when investigating accidents
 
 ---------------
 
