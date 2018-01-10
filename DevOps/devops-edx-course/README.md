@@ -2191,9 +2191,9 @@ Promisor
 
  ## Learning Organizations
 
- It all starts with the Deming Cycle (Plan-Do-Check-Act), that is a scientific method.
+ The scientific contributions of **Dr. W. Edwards Deming** have a great importance on what we call today DevOps. In continuous learning, particularly, everything starts with the Deming Cycle (Plan-Do-Check-Act) - that is essencially a scientific method -, the Deming's view on systems thinking, and the Deming's fourteen points, which is frequently called as the manifesto of DevOps.
 
- ### Demings's 14 Points
+ ### Demings's 14 Points (from **Out of the Crisis** book)
 
 In general, it's the poster for DevOps. But most of them will apply to how a learning organization thinks.
 
@@ -2313,6 +2313,8 @@ Five Disciplines that must be adopted in order to become a learning organization
 
 ### Ladder of Inference (by Chris Argyris)
 
+How you can make bad judgements and understand how to short circuit the process so that you don't wind up with wrong conclusions, and even worse, static beliefs systems that are ingrained as memory muscle.
+
 - Action
   + I take Actions based on my Beliefs
 - Beliefs
@@ -2413,7 +2415,7 @@ The questions are grouped in four organizational levels:
 > The actual company values, as opposed to the nice-sounding values, are shown by who gets rewarded, promoted, or let go
 ----------------
 
-The values that they look in people:
+At Netflix, the managers decide who should be compensated, promoted, or let go, based on these values:
 
 - Judgement
   + Think strategically, make hard decisions, rely on their judgement
@@ -2722,20 +2724,23 @@ It's important to understand how those biases will play during an outage and an 
 - We accept that the **Hindsight Bias** will continue to cloud our assessment of past events, and work hard to eliminate it
 - We accept that the **Fundamental Attribution Error** is also difficult to escape, so we focus on the environment and circumstances people are working in when investigating accidents
 
----------------
+### Postmortem Checklist (by Victor Ops)
 
- **By the end of this chapter, you should be able to:**
+- Document your timeline or log data
+- Document conversations
+- Leave room for notes
+- Mean Time to Resolution / other time calculations
+- Level of severity
+- Archive it for historical retrieval
+- Remediation - make it actionable
 
-- Discuss the concept and goals of the Third Way.
-- Explain Dr. Deming's influence on today's modern cultures described as learning organizations.
-- Discuss Systems Thinking, as seen by Peter Senge in his book, "The Fifth Discipline".
-- List the eight principles of Continuous Delivery.
-- Discuss the ladder of influence, as defined by Chris Argyris.
-- Analyze the Dimensions of Learning Organizations Quiz (DLOQ), to better understand the nature of a learning organization.
-- Define the patterns of learning of a successful web scale organization, as illustrated by the Netflix culture deck.
-- Discuss the ways a high performing organization uses to communicate and practice feedback skills.
-- Discuss the different tools, practices, and approaches to create good communication feedback loops.
-- Outline how to create a blameless culture.
-- Explain how blameless culture can be applied to organizations, as illustrated by the Human Factors and Safety study.
-- Use the cognitive bias to create a blameless culture.
-- Explain the concept of the blameless postmortem.
+### The Awesome Postmortem Framework (by Mindweather LLC)
+
+- Set the context
+  + The purpose of a postmortem is to learn, no one will be blamed, shamed, or punished for providing account
+  + Blame-free does not mean accountability-free, so you want to collect the full account (what happened)
+- Build a timeline
+  + Make sure you've got a good timeline by collecting data from different sources (e.g. chat logs, any correspondence, people's recent memory)
+- Determine and prioritize the remediation items
+- Publish the postmortem write-up as widely as possible
+
