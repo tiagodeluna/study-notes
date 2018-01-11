@@ -213,6 +213,37 @@ Reference material from the DevOps edX course **Introduction to Devops**. These 
 
 ### Articles
 
+* [Dr. W. Edwards Deming](https://en.wikipedia.org/wiki/W._Edwards_Deming)
+* [The Fifth Discipline](https://en.wikipedia.org/wiki/The_Fifth_Discipline)
+* [DLOQ Survey](http://www.partnersforlearning.com/instructions.html)
+* [The Dimensions of a Learning Organization Questionnaire (DLOQ)](http://adh.sagepub.com/content/15/2/127)
+* [Deming’s 14 Points](https://www.deming.org/theman/theories/fourteenpoints)
+* [Peter Senge and The Learning Organization](http://infed.org/mobi/peter-senge-and-the-learning-organization/)
+* [The Situation – Behavior – Impact Feedback Tool](https://calendar.google.com/calendar/render?tab=mc#main_7%7Cday)
+* [Applying Feedback Techniques (Dan Noth)](https://www.infoq.com/news/2016/03/feedback-techniques)
+* [Blameless PostMortems and a Just Culture](https://codeascraft.com/2012/05/22/blameless-postmortems/)
+* [Blameless Pos_Mortems (VictorOps)](https://victorops.com/wp-content/uploads/2014/09/Blameless-Post-Mortems.pdf)
+
 ### Books
 
+* Out of the Crisis (14 Points) (*by W. Edwards Deming*)
+* The New Economics for Industry, Government, Education (SoPK) (*by W. Edwards Deming*)
+* The Fifth Discipline (*by Peter Senge*)
+* The Field Guide to Understanding Human Error 1st Edition (*by Sidney Dekker*)
+* Just Culture: Balancing Safety and Accountability 2nd Edition (*by Sidney Dekker*)
+* The Human Side of Postmortems (*by Dave Zwieback*)
+* Beyond Blame: Learning From Failure and Success Paperback (*by Dave Zwieback*)
+
 ### Presentations
+
+* [John Willis' Ignite talk: "Devops and Dr Deming’s 14 Points" (Velocity NY 2014)](https://www.youtube.com/watch?v=7g3uqSzWVZs)
+* ["Deming to Devops: The Science Behind Devops", John Willis](https://www.youtube.com/watch?v=QcRWQIL5qus)
+* [Neo Taylorism or DevOps Anti Patterns](http://itrevolution.com/neo-taylorism-or-devops-anti-patterns/)
+* [DevOpsDays Brisbane 2014 - Sidney Dekker - System Failure, Human Error: Who’s to Blame?](https://vimeo.com/102167635)
+* [The Ladder of Inference Creates Bad Judgment](https://www.youtube.com/watch?v=K9nFhs5W8o8)
+* [Rethinking thinking - Trevor Maber](http://ed.ted.com/lessons/rethinking-thinking-trevor-maber)
+* [DevOps - What's Missing? What's Next?](http://www.slideshare.net/littleidea/devops-whats-missing-whats-next)
+* [Seven Aspects of Our Culture (Netflix Culture Deck)](http://www.slideshare.net/reed2001/culture-1798664/18-Seven_Aspects_of_our_Culture)
+* [Patty McCord: A Culture of Innovation](https://www.youtube.com/watch?v=o3e1lnixKBM)
+* [Rebecca Miller-Webster: Frameworks for Feedback, DevOpsDays, Atlanta 2016](https://youtu.be/WcdNAIoTjfU?list=PL5pdUnQbCX6sgW8SUD0yE7dWiL1SHTO1o)
+* [Making a Sandwich: Effective Feedback Techniques](https://qconlondon.com/speakers/dan-north)

@@ -262,7 +262,7 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
      + Open Source: Nagios, Sensu, Zenoss
      + SaaS: Datadog, NewRelic, SignalFX
  - Logging
-     + Splunk, ELK (Elastic Search, Logstash, Kibana), Loggly
+     + Splunk, ELK (Elasticsearch, Logstash, Kibana), Loggly
  - Analytics
      + Graphite, Riemann, Hadoop/Spark
 
@@ -2191,7 +2191,7 @@ Promisor
 
  ## Learning Organizations
 
- The scientific contributions of **Dr. W. Edwards Deming** have a great importance on what we call today DevOps. In continuous learning, particularly, everything starts with the Deming Cycle (Plan-Do-Check-Act) - that is essencially a scientific method -, the Deming's view on systems thinking, and the Deming's fourteen points, which is frequently called as the manifesto of DevOps.
+ The scientific contributions of **Dr. W. Edwards Deming** have a great importance on what we call today DevOps. In continuous learning, particularly, everything starts with the Deming Cycle (Plan-Do-Check-Act) – that is essencially a scientific method –, the Deming's view on systems thinking, and the Deming's fourteen points, which is frequently called as the manifesto of DevOps.
 
  ### Demings's 14 Points (from **Out of the Crisis** book)
 
@@ -2711,7 +2711,7 @@ It's important to understand how those biases will play during an outage and an 
   + The concept of **Normalization of Deviance** (by Diane Vaughan): you get used to making mistakes, and, because it doesn't really break when you make those mistakes, in the future you'll say *"Oh, don't worry about that, we do that all the time..."*
 - Availability bias:
   + Preference by decision makers to information and events that are more recent
-- Fundamental attribution error:
+- Fundamental attribution bias:
   + Explain behavior in terms of internal disposition, such as personality traits, abilities, moties, etc. as opposed to external situational factors (*"Bill is aways sloppy with his code, so, surely, that's why the system went down"*)
 
 ### Just Culture at Etsy
@@ -2743,4 +2743,3 @@ It's important to understand how those biases will play during an outage and an 
   + Make sure you've got a good timeline by collecting data from different sources (e.g. chat logs, any correspondence, people's recent memory)
 - Determine and prioritize the remediation items
 - Publish the postmortem write-up as widely as possible
-
