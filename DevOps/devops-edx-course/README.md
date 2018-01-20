@@ -113,12 +113,13 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
    - The waste (Muda) of the work
    - The evenness (Mura) of the work
  + Lead Time
-   - The time it takes one piece to move all the way through a process of the e stream from start to finish.
+   - The time it takes one piece to move all the way through a process of the value stream from start to finish.
    - Lead time clock starts when the request is made and ends at delivery.
    - Lead time is what the customer sees.
  + Cycle Time
    - How often a part or product actually is completed by a process, as timed   bservation.
    - Cycle time clock starts when the work begins on the request and ends when the item is ready for delivery.
+   - Cycle time is a more mechanical measure of process capability
     
 -------------------------
 > **Lead Time** is the overall time and the **Cycle Time** is the time we actually start processing the request.
@@ -135,15 +136,15 @@ Notes about **Introduction to DevOps: Transforming and Improving Operations** ed
 
 ### DevOps Value Stream
 
-| | LEAD TIME | CYCLE TIME |
+| STEPS | LEAD TIME | CYCLE TIME |
 | ----- | ----- | ----- |
-| Create an idea  | Design | |
-| Add work to the backlog | Design | |
-| Create a user story | Design | |
-| Implement as code | Design | |
-| Check into version control | Deployment | X |
-| Deploy into production | Deployment  | X |
-| Validate the customer experience | Deployment | X |
+| Create an idea  | Design L.T. | |
+| Add work to the backlog | Design L.T. | |
+| Create a user story | Design L.T. | |
+| Implement as code | Design L.T. | |
+| Check into version control | Deployment L.T. | X |
+| Deploy into production | Deployment L.T.  | X |
+| Validate the customer experience | Deployment L.T. | X |
 
 ### Understanding The Value Stream
 
@@ -741,7 +742,11 @@ Four areas arount the individual level:
 
 ### Continuous Integration
 
- - The build phase
+----------------
+> In software engineering, Continuous Integration (CI) is the practice of merging all developer working copies to a shared mainline several times a day – Wikipedia
+----------------
+
+**The build phase:**
  - Typically triggered by a code commit
  - Typically builds are done from trunk
  - The process happens every time someone commits code
