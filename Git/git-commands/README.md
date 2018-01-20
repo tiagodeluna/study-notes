@@ -14,7 +14,7 @@ Git commands that I frequently use.
 | git remote add origin `repo` | Set a remote *repository* as the default origin |
 | git remote set-url `branch` `repo` | Change the *repository* URL of a *branch* or *tag* |
 
-**Setting merge and diff tool:**
+### Setting merge and diff tool:
 In the .gitconfig file at <user folder>, add properties:
 ```
 [merge]
@@ -29,7 +29,7 @@ In the .gitconfig file at <user folder>, add properties:
      keepBackup = false
 ```
 
-**Setting aliases to commands:**
+### Setting aliases to commands:
 Add aliases in the .gitconfig file at `<user folder>` as the following examples:
 ```
 [alias]
@@ -111,6 +111,7 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 | git reset HEAD `filename` | Remove a *file* from the staging area |
 | git checkout -- `filename` | Discard changes in a *file* in working directory |
 | git merge --abort | Undo a merge, reverting the branch to its previous situation (usually after a merge the generated conflicts) |
+| git update-index --assume-unchanged `file` | Forces git to ignore local changes in a file by setting its state to "unchanged" |
 	
 ## Using tags
 
