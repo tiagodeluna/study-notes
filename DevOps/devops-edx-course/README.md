@@ -746,14 +746,26 @@ Four areas arount the individual level:
 > In software engineering, Continuous Integration (CI) is the practice of merging all developer working copies to a shared mainline several times a day – Wikipedia
 ----------------
 
-**The build phase:**
+**The build Phase:**
+
  - Typically triggered by a code commit
  - Typically builds are done from trunk
  - The process happens every time someone commits code
  - Code is compiled and libraries are built
  - Build trigger package, artifact and image creation
 
-### 8 Principles of Continuous Delivery
+### Continuous Delivery
+
+-------------
+> The Continuous Delivery means the code can be released. It is tested, it is reliable, and it has been through CI process.
+-------------
+
+- Code can be released
+- Includes Continuous Integration (CI)
+- After automated tests
+- Changes are able to be deployed
+
+**8 Principles of Continuous Delivery:**
 
  1. Create a repeatable, reliable process for releasing software
  2. Automate almost everything
@@ -763,6 +775,26 @@ Four areas arount the individual level:
  6. Done means released
  7. Everybody is responsible for the delivery process
  8. Continuous improvement
+
+### Continuous Deployment
+
+---------------
+> Continuous Deployment means that every change is automatically deployed to production.
+---------------
+
+- Code is deployed
+- Includes Continuous Integration
+- Includes Continuous Delivery
+
+**It considers that all these steps are automated:**
+
+- Unit test
+- Platform test
+- Deliver to Staging
+- Application Acceptance tests
+- Deploy to production
+- Post deploy tests
+
 
 ## The Deployment Pipeline
 
