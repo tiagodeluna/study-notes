@@ -776,6 +776,15 @@ Four areas arount the individual level:
  7. Everybody is responsible for the delivery process
  8. Continuous improvement
 
+**Practices of Continuous Delivery:**
+
+- Build binaries once
+- Same process for deployment at every stage
+- Smoke test your deployments
+- If anything fails stop the line
+- Peer reviews (pull requests)
+- Code is committed to trunk
+
 ### Continuous Deployment
 
 ---------------
@@ -822,7 +831,8 @@ Four areas arount the individual level:
 ### Most Popular Tools
 
 Source Control:
- - Git, Team Foundation Server, Perforce, **Github**, Bitbucket, GitLab
+ - On premise: Git, Team Foundation Server, Perforce, SVN, CVS
+ - SaaS-based: **Github**, Bitbucket, GitLab
 
 Build Console:
  - on-prem: **Jenkins**, Bamboo, Team City
@@ -832,7 +842,7 @@ Repository Managers:
  - Nexus, Artifactory, Docker Trusted Registry, Docker Hub, Google Container Registry
 
 Operations Console:
- - **Rundeck**, Marathon, Asgard, Spinaker, Weave Scope
+ - **Rundeck**, Marathon, Asgard (Netflix), Spinnaker (Netflix), Weave Scope
 
 Automation:
  - CFEngine, Chef, Puppet, Ansible, Docker Compose, Cloud Formation, Terraform
