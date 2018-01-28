@@ -74,6 +74,7 @@ Add aliases in the .gitconfig file at `<user folder>` as the following examples:
 | git add . -A | Add all untracked files in the working tree to the staging area |
 | git add -u :/ | Update or remove previously tracked files from the entire working tree but not add new files |
 | git commit -m `mensagem` | Perform a commit with a message associated |
+| git commit -am `mensagem` | Add anything that was changed and commit with a message |
 | git commit --amend | Edit the last commit to include new added files and/or change the commit message |
 
 ## Pushing changes

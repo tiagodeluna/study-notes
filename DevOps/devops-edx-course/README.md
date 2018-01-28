@@ -884,6 +884,15 @@ Infrastructure Management:
 - hakt
 - ssh
 
+### Git
+
+Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files. As a distributed revision control system it is aimed at speed, data integrity and support for distributed, non-linear workflows.
+
+- Everything is local
+- Every local environment is a backup (clone)
+- No network connectivity needed
+- Works offline
+
 ### Build Phase
 
 - Update your code from source control (if existing)
