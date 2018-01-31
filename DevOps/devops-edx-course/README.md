@@ -893,6 +893,20 @@ Git is a version control system for tracking changes in computer files and coord
 - No network connectivity needed
 - Works offline
 
+**GitHub**
+
+GitHub is a SaaS-based Git and an Internet hosting service. It offers all of the distributed version control and source code management (SCM) functionality of Git as well as adding its own features.
+
+- Public and private repositories
+- Markdown for documentation
+- Issue tracking
+- Pull Requests (code review)
+- Commits history
+- Statistics and graphs
+- Robust notifications
+- Github pages
+- Wiki's
+
 ### Build Phase
 
 - Update your code from source control (if existing)
