@@ -893,7 +893,7 @@ Git is a version control system for tracking changes in computer files and coord
 - No network connectivity needed
 - Works offline
 
-**GitHub**
+### GitHub
 
 GitHub is a SaaS-based Git and an Internet hosting service. It offers all of the distributed version control and source code management (SCM) functionality of Git as well as adding its own features.
 
@@ -906,6 +906,30 @@ GitHub is a SaaS-based Git and an Internet hosting service. It offers all of the
 - Robust notifications
 - Github pages
 - Wiki's
+
+### Jenkins
+
+Jenkins is an open source automation server written in Java. The project was forked from Hudson after a dispute with Oracle. Jenkins helps to automate the non-human part of the whole software development process, with now common things like continuous integration, but by further empowering teams to implement the technical part of a Continuous Delivery.
+
+- Can automatically build and test
+- Supports distributed workloads accross multiple machines
+- Supports triggers (build, polling, scheduling, IRC, manually)
+- Customized tasks
+- Extensive plugins
+- Works with VCS's (Git, SVN, etc...)
+- User interface
+- Monitors status of jobs
+- LDAP and RBAC
+
+### Static Analysis
+
+Static program analysis is the analysis of computer software that is performed without actually executing programs (analysis performed on executing programs is known as dynamic analysis). In most cases the analysis is performed on some version of the source code, and in the other cases, some form of the object code.
+
+- Typically done in the first step of the pipeline
+- Looking for coding errors
+- Style conventions
+- Formating conventions
+- Check for meta information
 
 ### Build Phase
 
