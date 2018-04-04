@@ -838,8 +838,13 @@ Build Console:
  - on-prem: **Jenkins**, Bamboo, Team City
  - SaaS-based: **Travis CI**, Circle CI, Shippable
 
+Build Packaging Tools:
+ - Procedural: Ant, Gradle
+ - Declarative: Maven, Debian Packages
+
 Repository Managers:
  - Nexus, Artifactory, Docker Trusted Registry, Docker Hub, Google Container Registry
+
 
 Operations Console:
  - **Rundeck**, Marathon, Asgard (Netflix), Spinnaker (Netflix), Weave Scope
@@ -876,7 +881,7 @@ Infrastructure Management:
 #### Vagrant Commands
 
 - up
-  + Take a vagrantfile and fire up the VM, invoke any provisining scripts
+  + Take a Vagrantfile and fire up the VM, invoke any provisining scripts
 - reload
 - suspend
 - resume
@@ -920,6 +925,25 @@ Jenkins is an open source automation server written in Java. The project was for
 - User interface
 - Monitors status of jobs
 - LDAP and RBAC
+
+#### Jenkins Pipeline
+
+- It is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins.
+- The definition of a Pipeline is written via the *Pipeline domain-specific language (DSL) syntax* into a text file (called a **Jenkinsfile**)
+  + It can be committed to a project’s source control repository
+  + This is the foundation of "Pipeline-as-code": treating the CD pipeline a part of the application to be versioned and reviewed like any other code.
+
+### Maven
+
+- A software project management tool that manages a project's build, reporting and documentation
+- Generate deployable artifacts from source to repository
+- Manages project dependencies
+- Can generate jar, war, ear, test results, metrics, javadoc
+- Supports plugins
+- Works best with Sonatype Nexus or Jfrog Artifactory
+- User interface and Jenkins integration
+
+Read more about Maven [here](https://maven.apache.org/what-is-maven.html).
 
 ### Static Analysis
 
