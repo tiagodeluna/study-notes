@@ -935,7 +935,7 @@ Jenkins is an open source automation server written in Java. The project was for
 
 ### Maven
 
-- A software project management tool that manages a project's build, reporting and documentation
+- A declarative software project management tool that manages a project's build, reporting and documentation
 - Generate deployable artifacts from source to repository
 - Manages project dependencies
 - Can generate jar, war, ear, test results, metrics, javadoc
@@ -944,6 +944,15 @@ Jenkins is an open source automation server written in Java. The project was for
 - User interface and Jenkins integration
 
 Read more about Maven [here](https://maven.apache.org/what-is-maven.html).
+
+### Artifactory
+
+- Stores artifacts in a repository
+- Supports retrieval and deploy for unit tests, smoke tests, integration and production
+- Integrates with Jenkins
+- Provides checksum and locking support
+- Designed to scale enterprise
+- UI and Search interface
 
 ### Static Analysis
 
@@ -1056,6 +1065,37 @@ All things that you can find in the artifact or package repository:
 - Desired state configuration
 - Convergence
 - CFEngine, Chef, Puppet, Ansible
+
+### Promotion: Code Library Version Tagging
+
+#### Why is it important to have a good standard versioning system?
+
+- Dependency hell
+- Releases the "make sense" and have semantic meaning
+
+#### Version numbers
+
+- MAJOR.MINOR.PATCH
+- Patch: Backwards-compatible bug fixes
+- Minor: Introduce new functionality that is backwards-compatible
+- Major: Incompatible API changes
+
+**Example version release history:**
+- 1.2.3 (current version)
+- 1.2.4 (bugfix)
+- 1.3.0 (new methods)
+- 1.3.1 (bugfix)
+- 2.0.0 (API redesign)
+
+#### Release Strategies
+
+- Manual:
+  + Developers manually tag and increment version release
+- Automated (Controlled):
+  + CI server parses commit message to trigger a major/minor/patch version release
+- Automated (Continuous):
+  + Every commit triggers a patch release on CI server (or minor/major if specified in commit message)
+
 
 ## Creating consistency in the pipeline
 
