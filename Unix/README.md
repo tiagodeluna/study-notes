@@ -23,7 +23,7 @@
 | export <VARIABLE>=<location> | Sets an environment variable. |
 | set | Displays the environment variables and their functions. |
 | set grep '<user>' | Displays environment variables of an especific user. |
-| source ~/.bashrc | Applies changes in the environment variables file (in this case, .bashrc). |
+| source ~/.bashrc | Executes the content of the file passed as argument (in this case, .bashrc), in the current shell. |
 | echo <variable name> | Displays the value of an especific variable. |
 
 ---
@@ -40,7 +40,8 @@
 | apt-get -f install | This command fix broken packages. Do this if you get complaints about packages with "unmet dependencies". |
 | apt-get autoclean | Removes .deb files for packages that are no longer installed on your system, in order to liberate diskspace. |
 | apt-get remove <package_name> | Removes an installed package, leaving configuration files intact. |
-| apt-get purge <package_name> | Completely removes a package and the associated configuration files |
+| apt-get purge <package_name> | Completely removes a package and the associated configuration files. |
+| update-alternatives --config <link group> | It updates the links in /etc/alternatives to point to the program for this purpose. It will list all of the choices for the link group of which given name is the master link. You will then be prompted for which of the choices to use for the link group. |
 
 ## STATUS
 
