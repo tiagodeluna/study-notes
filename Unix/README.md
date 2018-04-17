@@ -9,8 +9,6 @@
 | mv <origin> <destiny> | Moves files or directories. It also can rename a directory from <origin> to <destiny>, if it doesn't yet exist. |
 | rm -rf <foldername> | Remove folder |
 | tar xzf <file> | Extracts a tar.gz file |
-| nano <file> | Edits file with 'Nano' editor. |
-| vi <file> | Edits file with 'Vi' editor. |
 
 ---
 
@@ -22,9 +20,11 @@
 | df -h | Displays the amount of free disk space |
 | export <VARIABLE>=<location> | Sets an environment variable. |
 | set | Displays the environment variables and their functions. |
+| printenv | The same as above command. |
 | set grep '<user>' | Displays environment variables of an especific user. |
+| echo $<variable name> | Displays the value of an especific variable. |
+| printenv|grep <variable name> | The same as above command. |
 | source ~/.bashrc | Executes the content of the file passed as argument (in this case, .bashrc), in the current shell. |
-| echo <variable name> | Displays the value of an especific variable. |
 
 ---
 
@@ -43,8 +43,20 @@
 | apt-get purge <package_name> | Completely removes a package and the associated configuration files. |
 | update-alternatives --config <link group> | It updates the links in /etc/alternatives to point to the program for this purpose. It will list all of the choices for the link group of which given name is the master link. You will then be prompted for which of the choices to use for the link group. |
 
+---
+
 ## STATUS
 
 | Command | Description |
 | ----- | ----- |
 | jps | Shows JVM processes status. |
+
+---
+
+## SERVICES
+
+| Command | Description |
+| ----- | ----- |
+| systemctl [start|stop|restart|status|kill] <service name> | Manage services in a Linux distribution that supports systemd |
+| service <service name> [start|stop] | Manage services installed using init.d |
+
