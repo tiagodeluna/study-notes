@@ -827,6 +827,7 @@ Four areas arount the individual level:
  - Deployment Phase
    + Pre-Production
    + Production
+   + *Obs: In the delivery model, the Deployment Phase consists of the **Install** and **Configure** steps*
 
 ### Most Popular Tools
 
@@ -844,7 +845,6 @@ Build Packaging Tools:
 
 Repository Managers:
  - Nexus, Artifactory, Docker Trusted Registry, Docker Hub, Google Container Registry
-
 
 Operations Console:
  - **Rundeck**, Marathon, Asgard (Netflix), Spinnaker (Netflix), Weave Scope
@@ -1164,6 +1164,10 @@ To avoid the following issues:
 
 ### Consistent Infrastructure (Providers)
 
+-----
+> You'll find in most baseline infrastructures today a mixture of different pieces: bare metal, virtual, Cloud, container - you can have all four in a single data center.
+-----
+
 #### Provisioning: Bare Metal (BM)
 
 - All BM scripts or DSL should also be kept in version control.
@@ -1220,7 +1224,7 @@ Private Cloud Tools (IaaS):
 
 Tools:
 - Docker, Rocket, LXD, LXC (Native Linux Containers), Amazon (ECS), Microsoft (ACS), Google (GCS)
-  + Obs: Amazon ECS and Microsoft ACS are Docker implementations
+  + Obs: Amazon ECS, Microsoft ACS and Google GCS are Docker implementations
 
 ### Infrastructure Image Portability
 
@@ -1249,7 +1253,7 @@ Tools:
 > Even if you have to use different infrastructure frameworks, at least have your operating system be the same
 -----
 
-#### Consistent Operating System Environment Patterns
+#### Consistently Operating System Environment Patterns
 
 - Scripted environments
 - Infrastructure as Code
