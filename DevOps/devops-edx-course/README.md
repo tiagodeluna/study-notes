@@ -1280,7 +1280,11 @@ Con's:
 
 #### Infrastructure as Code
 
-- Infrastructure primitives defined as DSL
+--------
+> What if you could basically throw your server out the window? How we do things for programming, why couldn't we just make servers? – Kief Morris
+--------
+
+- Infrastructure primitives defined as DSL (Domain Specific Language)
 - Highly parameterized
 - Desired state-based model
 - Principles:
@@ -1360,6 +1364,10 @@ Con's:
 - Mesos
 - Kubernetes
 
+-----
+> The thing people love about Docker is you get one service, one container, one port, one immutable file system. – John Willis
+-----
+
 Pro's:
 - Least variation pattern
   + It's the most congruent
@@ -1384,6 +1392,28 @@ Con's:
 - Infrastructure as Code is in general better than scripted environment builds
 - Hybrid environments where immutability doesn't make sense still need Infrastructure as Code
 - In environments where immutability makes sense Immutable Infrastructure and/or Immutable Delivery is the most consistent way to build a delivery pipeline
+
+#### Rundeck
+
+- Rundeck is an open source software that helps you automate routine operational procedures in data center or cloud environments. We're talking about things post-deployment, it is in production.
+- Rundeck provides a number of features that will alleviate time-consuming grunt work and make it easy for you to scale up your automation efforts and create self-service for others.
+- Teams can collaborate to share how processes are automated while others are given trust to view operational activity or execute tasks.
+- Rundeck allows you to run tasks on any number of nodes from a web-based or command-line interface.
+- Rundeck also include other features that make it easy to scale up your automation efforts including: access control, workflow building, scheduling, logging, and integration with external sources for node and option data.
+
+**Rundeck Features:**
+- Web API
+- Distributed command execution
+- Pluggable execution system (SSH by default)
+- Multi-step workflows
+- Job execution with on demand or scheduled runs
+- Graphical web console for command and job execution
+- Role-based access control policy with support for LDAP/ActiveDirectory
+- History and auditing logs
+- Open integration to external host inventory tools
+- Command line interface tools
+
+**Take a look at [Rundeck.com](http://rundeck.com) to get a tutorial and a quick start.**
 
 ## Automated Testing
 
