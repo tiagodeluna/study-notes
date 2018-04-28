@@ -816,6 +816,7 @@ Four areas arount the individual level:
  - Continually Deploy
    + The design of the pipeline is such that any patch, update or new feature can be automated for delivery, deploy and release
 
+
 ### The Deployment Pipeline (Service Delivery Platform Design Patterns)
 
  - Build Phase
@@ -828,6 +829,7 @@ Four areas arount the individual level:
    + Pre-Production
    + Production
    + *Obs: In the delivery model, the Deployment Phase consists of the **Install** and **Configure** steps*
+
 
 ### Most Popular Tools
 
@@ -859,6 +861,7 @@ Infrastructure Management:
  - Containers (Docker, LXC, Rocket)
  - Orchestration (Swarm, Mesos, Kubernetes)
 
+
 ### Vagrant
 
 - Originally provided as a wrapper for Virtual Desktop
@@ -889,6 +892,7 @@ Infrastructure Management:
 - hakt
 - ssh
 
+
 ### Git
 
 Git is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files. As a distributed revision control system it is aimed at speed, data integrity and support for distributed, non-linear workflows.
@@ -897,6 +901,7 @@ Git is a version control system for tracking changes in computer files and coord
 - Every local environment is a backup (clone)
 - No network connectivity needed
 - Works offline
+
 
 ### GitHub
 
@@ -911,6 +916,7 @@ GitHub is a SaaS-based Git and an Internet hosting service. It offers all of the
 - Robust notifications
 - Github pages
 - Wiki's
+
 
 ### Jenkins
 
@@ -933,6 +939,7 @@ Jenkins is an open source automation server written in Java. The project was for
   + It can be committed to a project’s source control repository
   + This is the foundation of "Pipeline-as-code": treating the CD pipeline a part of the application to be versioned and reviewed like any other code.
 
+
 ### Maven
 
 - A declarative software project management tool that manages a project's build, reporting and documentation
@@ -945,6 +952,7 @@ Jenkins is an open source automation server written in Java. The project was for
 
 Read more about Maven [here](https://maven.apache.org/what-is-maven.html).
 
+
 ### Artifactory
 
 - Stores artifacts in a repository
@@ -953,6 +961,21 @@ Read more about Maven [here](https://maven.apache.org/what-is-maven.html).
 - Provides checksum and locking support
 - Designed to scale enterprise
 - UI and Search interface
+
+
+### Chef
+
+Chef is a development framework for configuration management that falls into the category of **Infrastructure as Code** solutions. Like most web frameworks, the code needs to be structured in a very particular way.
+
+**Chef elements and resources:**
+- *ChefDK*: Chef Development Kit, which comes with the code generators and easy-of-life tools to help maintain Chef repositories
+- *Cookbooks*: This is as Chef stores things - it's like a JAR file for configuration management. It is packaged and includes *Recipes* and *Roles*.
+- *Recipes*: a DSL file – based on Ruby syntax – that describe and create things
+- *knife CLI*: a set of tools that help with the use of "canned" code from the Chef Supermarket.
+- *Chef Supermarket*: an online repository of community-distributed "cookbooks".
+
+To learn more about Chef, take a look at [Chef's tutorials page](https://learn.chef.io/tutorials)
+
 
 ### Static Analysis
 
@@ -1395,11 +1418,11 @@ Con's:
 
 #### Rundeck
 
-- Rundeck is an open source software that helps you automate routine operational procedures in data center or cloud environments. We're talking about things post-deployment, it is in production.
+- Rundeck is an open source software that helps you automate routine operational procedures in data center or cloud environments. We're talking about things post-deployment, in production.
 - Rundeck provides a number of features that will alleviate time-consuming grunt work and make it easy for you to scale up your automation efforts and create self-service for others.
 - Teams can collaborate to share how processes are automated while others are given trust to view operational activity or execute tasks.
-- Rundeck allows you to run tasks on any number of nodes from a web-based or command-line interface.
-- Rundeck also include other features that make it easy to scale up your automation efforts including: access control, workflow building, scheduling, logging, and integration with external sources for node and option data.
+- Allows you to run tasks on any number of nodes from a web-based or command-line interface.
+- Also include other features that make it easy to scale up your automation efforts including: access control, workflow building, scheduling, logging, and integration with external sources for node and option data.
 
 **Rundeck Features:**
 - Web API

@@ -130,3 +130,11 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
    2. git mergetool //Just in case of conflicts occurring, to solve them
    3. git commit //idem
 3. git push
+
+## Working with submodules
+
+| Command | Description |
+| ----- | ----- |
+| git submodule add `repo url` `folder name` | Add a remote repo as a submodule in the current repo |
+| git submodule update --init --recursive | Tells git to download the contents of submodule when downloading current repository |
+

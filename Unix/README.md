@@ -42,6 +42,7 @@
 | apt-get remove <package_name> | Removes an installed package, leaving configuration files intact. |
 | apt-get purge <package_name> | Completely removes a package and the associated configuration files. |
 | update-alternatives --config <link group> | It updates the links in /etc/alternatives to point to the program for this purpose. It will list all of the choices for the link group of which given name is the master link. You will then be prompted for which of the choices to use for the link group. |
+| dpkg -i <package name> | dpkg queries, installs, removes, and maintains **Debian software packages** and their dependencies. This command, specifically, installs a Debian package. Find more information [here](https://www.computerhope.com/unix/dpkg.htm) |
 
 ---
 
