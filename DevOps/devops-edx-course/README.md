@@ -970,7 +970,9 @@ Chef is a development framework for configuration management that falls into the
 **Chef elements and resources:**
 - *ChefDK*: Chef Development Kit, which comes with the code generators and easy-of-life tools to help maintain Chef repositories
 - *Cookbooks*: This is as Chef stores things - it's like a JAR file for configuration management. It is packaged and includes *Recipes* and *Roles*.
-- *Recipes*: a DSL file – based on Ruby syntax – that describe and create things
+- *Nodes*: a machine — physical, virtual, cloud, network device, etc. — that is under management by Chef.
+- *Recipes*: a DSL file – based on Ruby syntax – that describe and create things.
+- *Roles*: a JSON file that define a run-list (of recipes) and zero or more attributes. When a role is run against a node, the configuration of that node is compared against the attributes of the role, and then its run-list is applied to the node’s configuration details.
 - *knife CLI*: a set of tools that help with the use of "canned" code from the Chef Supermarket.
 - *Chef Supermarket*: an online repository of community-distributed "cookbooks".
 
