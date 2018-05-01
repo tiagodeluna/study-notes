@@ -979,6 +979,30 @@ Chef is a development framework for configuration management that falls into the
 To learn more about Chef, take a look at [Chef's tutorials page](https://learn.chef.io/tutorials)
 
 
+### Puppet
+
+Puppet, like Chef, is a client-server based configuration management system.
+
+- Uses a language called *Puppet* as the DSL
+- Uses the *Puppet* language as the DSL to create *manifests*.
+- The *manifests* can do a lot of things: run commands, handle files and directories, install packages, execute services and deploy applications.
+
+Lear more about Puppet at [Digital Ocean Puppet Tutorials](https://www.digitalocean.com/community/tutorials/getting-started-with-puppet-code-manifests-and-modules).
+
+**Example of script to deploy an application stored in Github with Puppet:**
+```
+#!/bin/bash
+
+apt-get update
+apt-get install -y update
+cd /etc
+rm -rf puppet
+git clone https://github.com/your/puppetrepo
+mv puppetrepo puppet
+puppet apply /etc/puppet/manifests/site.pp
+```
+
+
 ### Static Analysis
 
 Static program analysis is the analysis of computer software that is performed without actually executing programs (analysis performed on executing programs is known as dynamic analysis). In most cases the analysis is performed on some version of the source code, and in the other cases, some form of the object code.
@@ -1327,7 +1351,7 @@ Pro's:
 
 Con's:
 - Abstractions DSL's have a higher learning curve
-  + You need to learn the DSL language (Ruby for Chef, Puppet language for Puppet)
+  + You need to learn the DSL language (Ruby for Chef,Puppet language for Puppet)
 - Complex edge case scenarios/failures
 - Script/Shell primitives are used often
 - Point and time divergent
