@@ -22,4 +22,5 @@
 | vagrant halt | Shut down the running |
 | vagrant suspend | Suspend the VM, saving its state |
 | vagrant resume | Resumes a previously suspended VM |
+| vagrant reload --provision | Reload VM - to apply changes made to Vagrantfile, for example |
 | vagrant destroy | Stop the running VM and destroy all resources created during the machine creation process |

@@ -32,6 +32,7 @@
 
 | Command | Description |
 | ----- | ----- |
+| apt-add-repository <repository name> | Adds an external APT repository or removes an already existing repository. You must install the **software-properties-common** package to use this command. Find more information [here](http://manpages.ubuntu.com/manpages/xenial/man1/add-apt-repository.1.html) |
 | apt-get install <package name> | Installs a new package. |
 | apt-get -s install <package name> | Simulates installing the package, showing you what packages will be installed and configured. |
 | apt-get update | Run this command periodically to make sure your source list is up-to-date. |
@@ -42,7 +43,7 @@
 | apt-get remove <package_name> | Removes an installed package, leaving configuration files intact. |
 | apt-get purge <package_name> | Completely removes a package and the associated configuration files. |
 | update-alternatives --config <link group> | It updates the links in /etc/alternatives to point to the program for this purpose. It will list all of the choices for the link group of which given name is the master link. You will then be prompted for which of the choices to use for the link group. |
-| dpkg -i <package name> | dpkg queries, installs, removes, and maintains **Debian software packages** and their dependencies. This command, specifically, installs a Debian package. Find more information [here](https://www.computerhope.com/unix/dpkg.htm) |
+| dpkg -i <package name> | Queries, installs, removes, and maintains **Debian software packages** and their dependencies. This command, specifically, installs a Debian package. Find more information [here](https://www.computerhope.com/unix/dpkg.htm) |
 
 ---
 

@@ -1003,6 +1003,17 @@ puppet apply /etc/puppet/manifests/site.pp
 ```
 
 
+## Ansible
+
+Ansible is a configuration management tool with a different concept than Puppet or Chef:
+
+- With Ansible, you work from a management node, which then uses SSH to log into your managed nodes to make the configuration changes.
+- Other than SSH keys, Ansible requires no configuration in the client nodes - it is agentless.
+- Ansible is run as close to the deployed system as possible.
+- Ansible configuration scripts are called *Playbooks* - similar to Puppet's *manifests* and Chef's *cookbooks* and *recipes*.
+- *ansible-galaxy* is a community and a hub for finding, reusing and sharing Ansible content.
+
+
 ### Static Analysis
 
 Static program analysis is the analysis of computer software that is performed without actually executing programs (analysis performed on executing programs is known as dynamic analysis). In most cases the analysis is performed on some version of the source code, and in the other cases, some form of the object code.
