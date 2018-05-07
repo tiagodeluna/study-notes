@@ -1011,7 +1011,7 @@ Ansible is a configuration management tool with a different concept than Puppet 
 - Other than SSH keys, Ansible requires no configuration in the client nodes - it is agentless.
 - Ansible is run as close to the deployed system as possible.
 - Ansible configuration scripts are called *Playbooks* - similar to Puppet's *manifests* and Chef's *cookbooks* and *recipes*.
-- *ansible-galaxy* is a community and a hub for finding, reusing and sharing Ansible content.
+- [*ansible-galaxy*](https://galaxy.ansible.com/) is a community and a hub for finding, reusing and sharing Ansible content.
 
 
 ### Static Analysis
