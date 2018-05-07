@@ -1481,7 +1481,7 @@ Con's:
 > Continuous testing ensures continuous improvement
 ------------
 
-### The 9 Principles of Testing (by Elisabeth Hendrickson)
+### The Nine Principles of Testing (by Elisabeth Hendrickson)
 
 1. Change the adversarial mindset to a collaboration mindset
 2. Change the *dev then test* mindset to *test and dev* mindset (TDD)
@@ -1492,15 +1492,15 @@ Con's:
    - "Stop the line" (the andon cord)
 7. Reduce test documentation, automate the expectation
 8. *Done* means *released* (and tested)
-9. Test implement vs Implement test
+9. Test implement vs Implement test (TDD)
 
 ### Test-Driven Development (TDD)
 
 #### Concept: Red, Green, Refactor (loop)
 
-- Write a test based on the requirements. Make it fail
-- Write a small piece of code to make it pass
-- Refactor the code by improving it without changing the behavior and Repeat
+- Write a test based on the requirements. Make it fail *(Red)*
+- Write a small piece of code to make it pass *(Green)*
+- *Refactor* the code by improving it without changing the behavior and Repeat
 
 #### Benefits
 
@@ -1594,17 +1594,19 @@ The I should see the welcome message
 
 #### Integration Tests
 
-- Testing integratino with other applications and services
+- Testing integration with other applications and services
 - All code and modules are tested as a group
 - Tests are a system wide view of the service
 - Tests real interfaces not "mocks"
+  + You call real databases, interfaces and services
 - Integratino tests are typically more expensive (more time-consuming)
 - Run after the build, all unit tests and acceptance tests
 
 #### User Acceptance Tests (Manual)
 
 - Testing done by customers
-- Ensure the applicatinos or service meets the requirements
+- Ensure the applications or service meets the requirements
+  + It's a final gate to ensure that the customer's expectations have been met
 - Catch defects from a customer's perspective
 
 ### Automated Testing: Deploy Phase
@@ -1637,11 +1639,11 @@ The I should see the welcome message
 #### Security Testing
 
 - SQL Injection
-- Cross Site Scripting
+- Cross-Site Scripting
 - Unprotected Redirects
 - Unsafe File Access
-- Version-Specific Inssues (CVEs)
-- Symbol Dos
+- Version-Specific Issues (CVEs - Common Vulnerabilities and Exposures)
+- Symbol DOS
 - Remote Code Execution
 
 --------------
