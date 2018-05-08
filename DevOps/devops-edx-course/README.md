@@ -1546,11 +1546,11 @@ The I should see the welcome message
 
 ### Agile Testing Pyramid
 
-- Developer Level (Basis):
+1. Developer Level (Basis):
   + Automated Unit Tests
-- System Level (Middle):
+2. System Level (Middle):
   + Integration Tests
-- UI (Top):
+3. UI (Top):
   + UI/UX tests (Manual tests)
 
 ### Automated Testing: Build Phase
@@ -1706,6 +1706,28 @@ The I should see the welcome message
   + Test Kitchen (Integration)
   + Beaker (Integration)
   + Puppet-lint (Lint)
+
+#### Cucumber
+
+- Cucumber is a BDD tool that serves as both a testing framework and documentation for software.
+- It works with Java, JavaScript, Ruby, selected frameworks, and more.
+- In Cucumber, each feature is written into a *.feature* file using Gherkin - a plain-text English DSL with some keywords thrown in.
+- This makes it very easy for non-programmers to understand the software and make sure it matches the specification.
+- The Gherkin code in the *.feature* files needs to be accompanied by step definitions in order to run actual tests.
+
+Below is an example of a .feature Gherkin file:
+```
+Feature: User can choose from 5 colors
+As a user
+I want to be able to choose from 5 colors
+So there is a better chance my favorite color is an option
+
+Scenario: A fifth color is clicked
+  Given there are 5 colors
+  When I click the color
+  Then the color updates the value
+```
+
 
 ## Deployment Strategies (Zero Downtime Release)
 
