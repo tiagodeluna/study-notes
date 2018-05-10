@@ -1707,9 +1707,10 @@ The I should see the welcome message
   + Beaker (Integration)
   + Puppet-lint (Lint)
 
-#### Cucumber
+#### BDD testing with **Cucumber**
 
-- Cucumber is a BDD tool that serves as both a testing framework and documentation for software.
+Cucumber is a BDD tool that serves as both a testing framework and documentation for software.
+
 - It works with Java, JavaScript, Ruby, selected frameworks, and more.
 - In Cucumber, each feature is written into a *.feature* file using Gherkin - a plain-text English DSL with some keywords thrown in.
 - This makes it very easy for non-programmers to understand the software and make sure it matches the specification.
@@ -1727,6 +1728,30 @@ Scenario: A fifth color is clicked
   When I click the color
   Then the color updates the value
 ```
+
+#### Load testing with **Artillery**
+
+Artillery is a modern, powerful & easy-to-use load testing toolkit.
+
+- HTTP, Socket.io, and WebSockets are supported out of the box, and custom engines can be added easily.
+- It provides multiple perfomance metrics, such as: latency, requests per second, concurrency, and throughput.
+- It has a *quick test* mode for ad-hoc testing that requires a single command to execute:
+  + e.g. `artillery quick --duration 60 --rate 20 http://localhost:8080`
+- You can customize load tests by writing scripts in JavaScript, JSON and other file types.
+- It's possible to define separate tests or *phases* (e.g. low load, waiting period, high load) and specify *scenarios​* and *flow​* sections to control what is actually being executed.
+- You can write custom reporters, protocol engines, and plugins.
+
+Find more info at Artillery [official page](https://artillery.io/).
+
+#### Security testing with **Gauntlt**
+
+Gauntlt is a security testing framework that provides hooks to a variety of security tools and puts them within reach of security, dev and ops teams to collaborate to build rugged software.
+
+- It facilitates testing and communication between groups
+- It creates actionable tests that can be hooked into your deploy and testing processes.
+- 
+
+Find more info at Gauntlt [official page](http://gauntlt.org/)
 
 
 ## Deployment Strategies (Zero Downtime Release)

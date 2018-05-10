@@ -15,7 +15,7 @@ Git commands that I frequently use.
 | git remote set-url `branch` `repo` | Change the *repository* URL of a *branch* or *tag* |
 
 ### Setting merge and diff tool:
-In the .gitconfig file at <user folder>, add properties:
+In the .gitconfig file at `user folder`, add properties:
 ```
 [merge]
      tool = meld
@@ -30,7 +30,7 @@ In the .gitconfig file at <user folder>, add properties:
 ```
 
 ### Setting aliases to commands:
-Add aliases in the .gitconfig file at `<user folder>` as the following examples:
+Add aliases in the .gitconfig file at `user folder` as the following examples:
 ```
 [alias]
      diff-meld = difftool --tool=meld -y 
