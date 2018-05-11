@@ -1586,7 +1586,7 @@ The I should see the welcome message
 
  - Testing multiple classes or functions
  - Should verify a user story
- - Should be written vefore code
+ - Should be written before code
  - Checks for regressions
  - Tests what the customer expects
  - Specification is written in a domain-specific language
@@ -1770,10 +1770,11 @@ See Gauntlt [official page](http://gauntlt.org/) and ["Attack Adapters" section]
 
 - Changing **data or schemas** in the release can be more difficult
 - Orchestrated release rollbacks can be difficult
-- Best time to reply is during production (not at 3am)
+- Best time to reply is during production (not at 3am)...
+  + ... because you are better equipped, you're fully staffed, you're fresh, as opposed to 3am, when you're tired and are not as alert.
 - Log all deployment activities
 - Don't delete old files
-- Use warmup methodologies
+- Use warmup methodologies:
   + Strategies that you can implement to let things run in a warm mode for a while, before you turn them on
 
 ### Upgrading Live Services
@@ -1791,20 +1792,25 @@ See Gauntlt [official page](http://gauntlt.org/) and ["Attack Adapters" section]
 - Apply smoke, performance and load test
   + To make sure that you are not having any bed regression reactions
 - If no problems arise add more subsets
+  + It is like the canary in a coal mine. The canary dies from the gas before the coal miners do.
 - Server is first drained by removing from the load balancer
 - Can also be done by percentage of servers
 - Canary'ing can be combined with other rollout strategies
   + e.g. Canary and A/B testing is a good combination
-- Designed to find a defective release
+- Designed to find a defective release (early defects)
 
 #### Phased Roll-Outs
 
 - Roll-outs partitioned by subsets based on users or groups
-- Groups are categorized ny risk tolerance
+- Groups are categorized by risk tolerance
   + You start off with a very low risk profile group, and then you increase by some risk categorization
 - If no problems arise add more subsets
 - Sometimes internal employees can be first roll-out group
 - Power user or meta communities roll-outs
+
+**Examples:**
+- A lot of companies use some of their own services that they provide to the customers as an internal service. So, they can use its own employees as the first rollout.
+- Power users, some of your users that are very aggressive and are okay with things breaking can be your early adopters.
 
 #### Proportional Shedding
 
@@ -1814,21 +1820,24 @@ See Gauntlt [official page](http://gauntlt.org/) and ["Attack Adapters" section]
 - The old service is turned off when all traffic is moved to the new service with no erros
 - With bare metal this can be expensive. Cloud makes this more economical
 
-#### Blue-Green Deployment
+#### Blue-Green Deploy
 
 - Similar to proportional shedding except you duplicate the application not the servers
-  + You have the new and the old applications running on the same server
+  + You have the new and the old applications running on the same server (in different clusters)
 - Green is the live service
 - Blue is dormant and requires limited resources
 - When the release goes live the two are swapped
-- Rolling back is easier to do
+  + Using some form of load balancer to swap them
+- Rolling back is easier to do...
+  + ... because you are really just taking the other cluster. The old application is still there if something goes wrong
 - Very popular technique
 
 #### Toggling Features
 
-- Also known as feature flags
+- Also known as **feature flags**
 - Flags are set in the code that can turn on or off a feature
-- Allows developers to continuously deploy new code decoupled from a release
+- Allows developers to continuously deploy new code decoupled from a release...
+  + ... because developers can decide when is the right time to turn the feature flags on/off
 - Distrusted key value stores like Zookeeper, Etcd and Consul can be used for feature toggling
 - Features can be gradually introduced or be point and time released
 
