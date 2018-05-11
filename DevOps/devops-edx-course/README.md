@@ -1749,9 +1749,15 @@ Gauntlt is a security testing framework that provides hooks to a variety of secu
 
 - It facilitates testing and communication between groups
 - It creates actionable tests that can be hooked into your deploy and testing processes.
-- 
+- Gauntlt uses *.attack* files, written in Gherkin, to configure security tool adapters to apply different tests on your application
+- Gauntlt includes attack adapters for many tools:
+  + **Arachni**:​ a feature-full, modular, high-performance Ruby framework aimed towards helping penetration testers and administrators evaluate the security of modern web applications. e.g. identify cross-site scripting.
+  + **SSLyze**: a Python tool that can analyze the SSL configuration of a server by connecting to it. e.g. prevent anonymous certificates.
+  + **DIRB**: aids in professional web auditing. Gauntlt can use DIRB to scan for basic security requirements.
+  + **nmap (Network Mapper)**: a security auditing utility tool. Gauntlt can use​ nmap​ to confirm that an application is available on the correct ports.
+  + curl, sqlmap, Garmr, generic command line and others.
 
-Find more info at Gauntlt [official page](http://gauntlt.org/)
+See Gauntlt [official page](http://gauntlt.org/) and ["Attack Adapters" section](https://github.com/gauntlt/gauntlt#attack-adapters) to learn about further uses of Gauntlt.
 
 
 ## Deployment Strategies (Zero Downtime Release)
