@@ -1801,7 +1801,7 @@ See Gauntlt [official page](http://gauntlt.org/) and ["Attack Adapters" section]
 
 #### Phased Roll-Outs
 
-- Roll-outs partitioned by subsets based on users or groups
+- Roll-outs partitioned by subsets based on users or groups (instead of servers)
 - Groups are categorized by risk tolerance
   + You start off with a very low risk profile group, and then you increase by some risk categorization
 - If no problems arise add more subsets
@@ -1841,7 +1841,22 @@ See Gauntlt [official page](http://gauntlt.org/) and ["Attack Adapters" section]
 - Distrusted key value stores like Zookeeper, Etcd and Consul can be used for feature toggling
 - Features can be gradually introduced or be point and time released
 
-#### A Case Study: Dark Launch at Facebook (Facebook Chat)
+#### Case Study: Cloud Deploy's at Amazon
+
+- In 2013 Amazon started using their own cloud for the first time, particularly for deployment strategies.
+- Proposed case study: What if you didn't have any restrictions on the number of servers you can host?
+  + Make an entire copy of your running fleet (10's of thousands of cloud instances)
+  + Just flip the load balancers to the new fleet
+  + Deploys that flip in seconds
+  + Rollback in seconds
+- Results on using the cloud as your deployment strategy:
+  + 75% reduction in outages triggered by software deploys
+  + 90% reduction in autage minutes triggered by software deploys
+  + ~0.001% of software deployments cause an outage
+  + Instantaneous automated rollbacks
+  + Complexity reduction
+
+#### Case Study: Dark Launch at Facebook (Facebook Chat)
 
 --------------------
 > The secret for going from zero to seventy million users overnight is to avoid doing it all in one fell swoop. We chose to simulate the impact of many real users hitting many machines by means of a "dark launch" period in which Facebook pages would make connections to the chat servers, query for presence information and simulate message sends without a single UI element drawn on the page. With the "dark launch" bugs fixed, we hope that you enjoy Facebook Chat now that the UI lights have been turned on.
@@ -1849,6 +1864,7 @@ See Gauntlt [official page](http://gauntlt.org/) and ["Attack Adapters" section]
 
 - In the backend, they were actually invoking a Javascript that would invoke the new feature of chat, to do things like, make connections, query chat servers, and simulate message sends.
 - It was a real production testing, but the users didn't know it was happening
+
 
 # Chapter 5 *The Second Way - Amplify Feedback Loops*
 
