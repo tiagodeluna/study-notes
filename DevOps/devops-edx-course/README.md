@@ -1841,6 +1841,21 @@ See Gauntlt [official page](http://gauntlt.org/) and ["Attack Adapters" section]
 - Distrusted key value stores like Zookeeper, Etcd and Consul can be used for feature toggling
 - Features can be gradually introduced or be point and time released
 
+**Ways to implement Feature Toggles:**
+
+The simplest way to enable/disable features is to read from a configuration file. But there are many other ways to use feature toggles to assist the development process in a CI/CD pipeline.
+
+- **Toggle Router**: is a more sophisticated/secure way to dynamically control features. For more information about this function and feature toggles in general, please visit [this article](http://martinfowler.com/articles/feature-toggles.html​).
+- **Release Toggles**: it eliminates the need to create a new branch for every feature under development. Instead,
+features can be actively developed on the master branch, so long as they are kept disabled until they are
+production-ready.
+- **Canary Releasing**: before fully releasing a new feature, it is often a good idea to perform a ​canary release​ by enabling the feature to only a small percentage of users. This allows developers to gauge the users' reception of a feature before publishing it to all users.
+- **Permissioning Toggles**: when a feature should be limited to a subset of users who have permission to access that feature (e.g. a feature that requires a subscription), permission toggles can be used to restrict access to that feature.
+
+**Tool: LaunchDarkly**
+[LaunchDarkly](https://launchdarkly.com/) is a platform with a lot of features to facilitate the management of feature flags​. You can create, activate/deactivate, define prerequisites (including controls by user), and see logs of your feature flags.
+
+
 #### Case Study: Cloud Deploy's at Amazon
 
 - In 2013 Amazon started using their own cloud for the first time, particularly for deployment strategies.
