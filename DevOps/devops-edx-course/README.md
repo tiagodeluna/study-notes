@@ -1160,7 +1160,7 @@ All things that you can find in the artifact or package repository:
 ## Creating consistency in the pipeline
 
 -------------------
-> "A butterfly flaps its wings in the Amazonian jungle, and subsequently a storm ravages half of Europe" – Neil Gaiman and Terry Pratchett
+> "The things that really change the world, according to Chaos Theory, are the tiny things. A butterfly flaps its wings in the Amazonian jungle, and subsequently a storm ravages half of Europe" – Neil Gaiman and Terry Pratchett
 -------------------
 
 ### Pets vs Cattle (concept)
@@ -1207,20 +1207,37 @@ All things that you can find in the artifact or package repository:
 - Network definitions (Switch configurations)
 - Basically everything
 
+
 ### Why Order Matters
 
+-------
+> "The least-cost way to ensure that the behavior of any two hosts will remain completely identical is always to implement the same changes in the same order on both hosts." – Steve Traugott
+-------
+
 To avoid the following issues:
-- Circular Dependancies
+- Circular Dependencies
 - Right Command Wrong Order
 - Right Package Wrong Order
 
+#### The Three (Delivery) Modes
+
+* Divergence
+  - The *actual* system is always diverging form the *target* and at some point, you rebuild it, and then you start it all over again. This was the case of our industry as pre-Chef, Puppet, CFEngine.
+* Convergence
+  - You continually runs on a cycle of divergence-convergence. You define a convergent desired state and run an agent on some cycle time that looks for the things you described and makes it converge.
+* Congruence
+  - Tighter variation without any drift. The capability of building your infrastructure in a binary way, where everything is included in the binary and you can even set it up as a read-only structure that gets delivered through the pipeline to production. It is possible using containers.
+
 #### The Difference a Byte Makes
 
-- Lean Enterprise story (from the Humble-Farley book):
+Study cases:
+- Lean Enterprise story (from the Humble-Farley's book):
   + A dependent library with only a couple of byte difference created a bug that could not be recreated in test
   + It is because there was just an out-of-sync
 - Large Financial institution
-  + Applied 5 seconds desired state configuration monitoring and saw 1 billion unplanned changes per day
+  + They were running a large-scale application with CFEngine and decided to apply a five-second desired state configuration monitoring.
+  + They found out that the organization was making one billion unplanned changes per day.
+
 
 ### Consistent Infrastructure (Providers)
 
@@ -1452,6 +1469,10 @@ Con's:
 - Infrastructure as Code is in general better than scripted environment builds
 - Hybrid environments where immutability doesn't make sense still need Infrastructure as Code
 - In environments where immutability makes sense Immutable Infrastructure and/or Immutable Delivery is the most consistent way to build a delivery pipeline
+
+**The difference between Immutable Infrastructure and Immutable Delivery is:**
+- In the first, you still build up the structure in your laptop and the CI loop and then you create an immutable (maybe Amazon) image for delivery. Netflix invented that model.
+- In the second, all of the infrastructure is immutable at development time. We see people do this with Docker.
 
 #### Rundeck
 
