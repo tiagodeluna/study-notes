@@ -1309,6 +1309,7 @@ Tools:
 
 - Provision in milliseconds
   + Near bare metal runtime performance
+  + Because it runs like a linux process
 - VM-like agility - it's still "virtualization"
   + Most things you can do in a VM, you can do in a container
 - Lightweight - Just enough Operating System (JeOS)
@@ -1325,9 +1326,30 @@ Tools:
 - Speed of instantiation
 - Greater portability
 
+
+### Docker (Provisioning: Containers)
+
 #### Why Docker
 
-...
+- Isolation
+- Lightweight
+  + Images much lighter and faster to instantiate than VMs
+- Simplicity
+  + It's incredibly simple to install and run
+- Workflow
+  + Easy to use
+- Community
+  + Easy for the community to aggregate and get behind
+  + Almost every popular product had a Docker image in the Docker Hub
+
+#### Core Docker Components
+
+- Docker Engine
+- Docker Hub
+- Docker Trusted Registry
+- Docker Machine
+- Docker Swarm
+- Docker Compose
 
 
 ### Infrastructure Image Portability
