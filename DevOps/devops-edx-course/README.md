@@ -1295,13 +1295,40 @@ Private Cloud Tools (IaaS):
 
 - Container image build scripts, meta and templates should be kept in version control
 - All container images should be reproducible from source (version control)
-- Typically CM tools are not used inside of a running container
-- Configuration files and meta are typically shared by the container host
+- Typically code management tools are not used inside of a running container
+- Kernel, OS resources, configuration files and meta are typically shared by the container host
+  + So, you don't have to put everything in the container
+  + Also uses Linux namespaces (ipc, uts, mount, pid, network and user) and CGroups (countrol groups)
 - Containers work well with Immutable Delivery models
 
 Tools:
-- Docker, Rocket, LXD, LXC (Native Linux Containers), Amazon (ECS), Microsoft (ACS), Google (GCS)
+- Docker, Rocket, LXD, LXC (Native Linux Containers), Amazon (ECS), Microsoft (ACS), Google (GCS), OpenVZ
   + Obs: Amazon ECS, Microsoft ACS and Google GCS are Docker implementations
+
+#### Why Containers
+
+- Provision in milliseconds
+  + Near bare metal runtime performance
+- VM-like agility - it's still "virtualization"
+  + Most things you can do in a VM, you can do in a container
+- Lightweight - Just enough Operating System (JeOS)
+  + It fits well with microservice architectures
+- Supported with modern Linux kernel
+- Growing in popularity
+
+#### Containers vs VM's
+
+- Containers are more lightweight
+- No need to install guest OS
+- Less CPU, RAM, storage space required
+- More containers per machine than MVs
+- Speed of instantiation
+- Greater portability
+
+#### Why Docker
+
+...
+
 
 ### Infrastructure Image Portability
 
@@ -1470,7 +1497,7 @@ Con's:
 - Hybrid environments where immutability doesn't make sense still need Infrastructure as Code
 - In environments where immutability makes sense Immutable Infrastructure and/or Immutable Delivery is the most consistent way to build a delivery pipeline
 
-**The difference between Immutable Infrastructure and Immutable Delivery is:**
+**The difference between Immutable Infrastructure and Immutable Delivery:**
 - In the first, you still build up the structure in your laptop and the CI loop and then you create an immutable (maybe Amazon) image for delivery. Netflix invented that model.
 - In the second, all of the infrastructure is immutable at development time. We see people do this with Docker.
 
