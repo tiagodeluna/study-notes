@@ -1327,7 +1327,7 @@ Tools:
 - Greater portability
 
 
-### Docker (Provisioning: Containers)
+### Docker
 
 #### Why Docker
 
@@ -1344,12 +1344,26 @@ Tools:
 
 #### Core Docker Components
 
-- Docker Engine
-- Docker Hub
+- **Docker Engine**: controls the process of creating containers, the client, and the interface between the registry
+- **Docker Hub**: a SaaS-based Docker registry.
+- **Docker Trusted Registry**: an on-premise solution, similar to Docker Hub, but with a whole bunch of integration with enterprise stuff. It is not open source.
+- **Docker Machine**: allows you to manage all Docker instances and switch between environments.
+- **Docker Swarm**: it is an orchestration tool that allows you to run containers across multiple Docker Engines, multiple hosts.
+- **Docker Compose**: it allows you to build a YAML definition
+
+#### Docker Tools
+
+- **Docker Toolbox**: installs necessary stuff for you automatically
+- **Docker for Mac**: uses a native hypervisor on Mac
+- **Docker for Windows**: it is a native Docker for Windows
+
+#### Docker Datacenter
+
+It is the commercial offering, which includes:
+
+- Commercial Docker Engine
+- Universal Control Plane
 - Docker Trusted Registry
-- Docker Machine
-- Docker Swarm
-- Docker Compose
 
 
 ### Infrastructure Image Portability
