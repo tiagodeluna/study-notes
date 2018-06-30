@@ -1346,7 +1346,7 @@ Tools:
 
 - **Docker Engine**: controls the process of creating containers, the client, and the interface between the registry
 - **Docker Hub**: a SaaS-based Docker registry.
-- **Docker Trusted Registry**: an on-premise solution, similar to Docker Hub, but with a whole bunch of integration with enterprise stuff. It is not open source.
+- **Docker Trusted Registry**: an [on-premise](https://en.wikipedia.org/wiki/On-premises_software) solution, similar to Docker Hub, but with a whole bunch of integration with enterprise stuff. It is not open source.
 - **Docker Machine**: allows you to manage all Docker instances and switch between environments.
 - **Docker Swarm**: it is an orchestration tool that allows you to run containers across multiple Docker Engines, multiple hosts.
 - **Docker Compose**: it allows you to build a YAML definition
@@ -1356,14 +1356,27 @@ Tools:
 - **Docker Toolbox**: installs necessary stuff for you automatically
 - **Docker for Mac**: uses a native hypervisor on Mac
 - **Docker for Windows**: it is a native Docker for Windows
+- **Docker Datacenter**: it is the commercial offering, which includes:
+  + Commercial Docker Engine
+  + Universal Control Plane
+  + Docker Trusted Registry
 
-#### Docker Datacenter
+#### How Docker images are defined
 
-It is the commercial offering, which includes:
+- Docker images are defined by default on something called Union Filesystems, which are basically copy-on-write structures.
+- The image itself is stored like a TAR file, and it has layers.
+- Every time you install something, it creates a new layer' (see table below)
+- When the image is started, it starts up all the layers already stored as read-only, and then creates a writable top layer, wich is your copy-on-write layer.
+- If you wind up removing the container that is running, you will lose all unsaved information.
 
-- Commercial Docker Engine
-- Universal Control Plane
-- Docker Trusted Registry
+| # | Layer | Level |
+| ----- | ----- | ----- |
+| #1 | bootfs (Boot File System) | Kernel |
+| #2 | OS (e.g. Ubuntu, Debian, CentOS, Fedora, Red Hat) | Base image |
+| #3 | e.g. `add emacs` | Image |
+| #4 | e.g. `add Apache` | Image |
+| ... | ... | Image |
+| #N | writable | Container |
 
 
 ### Infrastructure Image Portability
