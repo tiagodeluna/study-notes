@@ -1365,8 +1365,8 @@ Tools:
 
 - Docker images are defined by default on something called Union Filesystems, which are basically copy-on-write structures.
 - The image itself is stored like a TAR file, and it has layers.
-- Every time you install something, it creates a new layer' (see table below)
-- When the image is started, it starts up all the layers already stored as read-only, and then creates a writable top layer, wich is your copy-on-write layer.
+- Every time you install something, it creates a new layer (see table below)
+- When the image starts up, it starts up all the layers already stored as read-only, and then creates a writable top layer, wich is your copy-on-write layer.
 - If you wind up removing the container that is running, you will lose all unsaved information.
 
 | # | Layer | Level |
@@ -1376,7 +1376,35 @@ Tools:
 | #3 | e.g. `add emacs` | Image |
 | #4 | e.g. `add Apache` | Image |
 | ... | ... | Image |
-| #N | writable | Container |
+| #n | writable | Container |
+
+#### Orchestration Solutions
+
+- **Docker Swarm**
+  + It's integrated into Docker Engine, so you have everything in one product.
+  + It's a plug-and-play tool that manages multiple Docker hosts
+  + They removed the requirement to have a separate distributed file system. They actually have a "mesh protocol", an in-memory rounting structure.
+  + Terminology/Structure:
+    * Manager: have *discovery backend* and a *scheduler*. Manages multiple *nodes*.
+    * Nodes: contains a *Docker daemon* and one or more *containers*.
+- **Kubernetes**
+  + It requires an external distributed file system or distributed key value, a separate daemon product (e.g. ZooKeeper or etcd).
+  + There are *minions* and *kubelets*. You set up your commands with kubelets, that run containers very much like a Docker Engine.
+  + Terminology/Structure:
+    * Manager: *API server*, *replication controller* and *scheduler*.
+    * Minions: a *kuberlet* and one or more *containers*.
+- **Mesos**
+  + It has a master-slave architecture, so it has multiple standby masters.
+  + It also requires a distributed file system. So, basically, you have to deal with three products – Mesos, ZooKeeper and Docker.
+  + Terminology/Structure:
+    * Masters: has a *master daemon*. You can have multiple standby masters.
+    * Slaves: a *slave daemon* and one or more *containers*.
+
+**Other**:
+- *Amazon ECS*: Amazon took a version of Docker and created a cloud-based orchestration solution that is built in.
+- *Azure Container Service*: it's also built on Docker.
+- *Google Container Engine*: it's actually not Docker.
+- *Openshift / Cloud Foundry / Heroku / Engine Yeard*: all Plataform-as-a-Service orchestration tools that have support for Docker.
 
 
 ### Infrastructure Image Portability
