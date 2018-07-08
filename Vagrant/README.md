@@ -19,7 +19,7 @@
 | ----- | ----- |
 | vagrant up | Boot the VM |
 | vagrant ssh | Shell into the VM |
-| vagrant halt | Shut down the running |
+| vagrant halt | Shut down the running VM |
 | vagrant suspend | Suspend the VM, saving its state |
 | vagrant resume | Resumes a previously suspended VM |
 | vagrant reload --provision | Reload VM - to apply changes made to Vagrantfile, for example |

@@ -35,7 +35,7 @@
 | apt-add-repository <repository name> | Adds an external APT repository or removes an already existing repository. You must install the **software-properties-common** package to use this command. Find more information [here](http://manpages.ubuntu.com/manpages/xenial/man1/add-apt-repository.1.html) |
 | apt-get install <package name> | Installs a new package. |
 | apt-get -s install <package name> | Simulates installing the package, showing you what packages will be installed and configured. |
-| apt-get update | Run this command periodically to make sure your source list is up-to-date. |
+| apt-get update | Updates the package list. Run this command periodically to make sure your source list is up-to-date. |
 | apt-get upgrade | Upgrades all installed packages |
 | apt-get check | This command is a diagnostic tool. It does an update of the package lists and checks for broken dependencies. |
 | apt-get -f install | This command fix broken packages. Do this if you get complaints about packages with "unmet dependencies". |
