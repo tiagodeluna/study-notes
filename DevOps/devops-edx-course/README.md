@@ -1399,12 +1399,11 @@ Tools:
   + Terminology/Structure:
     * Masters: has a *master daemon*. You can have multiple standby masters.
     * Slaves: a *slave daemon* and one or more *containers*.
-
-**Other**:
-- *Amazon ECS*: Amazon took a version of Docker and created a cloud-based orchestration solution that is built in.
-- *Azure Container Service*: it's also built on Docker.
-- *Google Container Engine*: it's actually not Docker.
-- *Openshift / Cloud Foundry / Heroku / Engine Yeard*: all Plataform-as-a-Service orchestration tools that have support for Docker.
+- **Other**:
+  + *Amazon ECS*: Amazon took a version of Docker and created a cloud-based orchestration solution that is built in.
+  + *Azure Container Service*: it's also built on Docker.
+  + *Google Container Engine*: it's actually not Docker.
+  + *Openshift / Cloud Foundry / Heroku / Engine Yeard*: all Plataform-as-a-Service orchestration tools that have support for Docker
 
 
 ### Infrastructure Image Portability
