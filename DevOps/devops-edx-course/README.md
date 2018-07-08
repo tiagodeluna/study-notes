@@ -1162,7 +1162,7 @@ All things that you can find in the artifact or package repository:
 ## Creating consistency in the pipeline
 
 -------------------
-> "A butterfly flaps its wings in the Amazonian jungle, and subsequently a storm ravages half of Europe" – Neil Gaiman and Terry Pratchett
+> "The things that really change the world, according to Chaos Theory, are the tiny things. A butterfly flaps its wings in the Amazonian jungle, and subsequently a storm ravages half of Europe" – Neil Gaiman and Terry Pratchett
 -------------------
 
 ### Pets vs Cattle (concept)
@@ -1209,20 +1209,37 @@ All things that you can find in the artifact or package repository:
 - Network definitions (Switch configurations)
 - Basically everything
 
+
 ### Why Order Matters
 
+-------
+> "The least-cost way to ensure that the behavior of any two hosts will remain completely identical is always to implement the same changes in the same order on both hosts." – Steve Traugott
+-------
+
 To avoid the following issues:
-- Circular Dependancies
+- Circular Dependencies
 - Right Command Wrong Order
 - Right Package Wrong Order
 
+#### The Three (Delivery) Modes
+
+* Divergence
+  - The *actual* system is always diverging form the *target* and at some point, you rebuild it, and then you start it all over again. This was the case of our industry as pre-Chef, Puppet, CFEngine.
+* Convergence
+  - You continually runs on a cycle of divergence-convergence. You define a convergent desired state and run an agent on some cycle time that looks for the things you described and makes it converge.
+* Congruence
+  - Tighter variation without any drift. The capability of building your infrastructure in a binary way, where everything is included in the binary and you can even set it up as a read-only structure that gets delivered through the pipeline to production. It is possible using containers.
+
 #### The Difference a Byte Makes
 
-- Lean Enterprise story (from the Humble-Farley book):
+Study cases:
+- Lean Enterprise story (from the Humble-Farley's book):
   + A dependent library with only a couple of byte difference created a bug that could not be recreated in test
   + It is because there was just an out-of-sync
 - Large Financial institution
-  + Applied 5 seconds desired state configuration monitoring and saw 1 billion unplanned changes per day
+  + They were running a large-scale application with CFEngine and decided to apply a five-second desired state configuration monitoring.
+  + They found out that the organization was making one billion unplanned changes per day.
+
 
 ### Consistent Infrastructure (Providers)
 
@@ -1280,13 +1297,117 @@ Private Cloud Tools (IaaS):
 
 - Container image build scripts, meta and templates should be kept in version control
 - All container images should be reproducible from source (version control)
-- Typically CM tools are not used inside of a running container
-- Configuration files and meta are typically shared by the container host
+- Typically code management tools are not used inside of a running container
+- Kernel, OS resources, configuration files and meta are typically shared by the container host
+  + So, you don't have to put everything in the container
+  + Also uses Linux namespaces (ipc, uts, mount, pid, network and user) and CGroups (countrol groups)
 - Containers work well with Immutable Delivery models
 
 Tools:
-- Docker, Rocket, LXD, LXC (Native Linux Containers), Amazon (ECS), Microsoft (ACS), Google (GCS)
+- Docker, Rocket, LXD, LXC (Native Linux Containers), Amazon (ECS), Microsoft (ACS), Google (GCS), OpenVZ
   + Obs: Amazon ECS, Microsoft ACS and Google GCS are Docker implementations
+
+#### Why Containers
+
+- Provision in milliseconds
+  + Near bare metal runtime performance
+  + Because it runs like a linux process
+- VM-like agility - it's still "virtualization"
+  + Most things you can do in a VM, you can do in a container
+- Lightweight - Just enough Operating System (JeOS)
+  + It fits well with microservice architectures
+- Supported with modern Linux kernel
+- Growing in popularity
+
+#### Containers vs VM's
+
+- Containers are more lightweight
+- No need to install guest OS
+- Less CPU, RAM, storage space required
+- More containers per machine than MVs
+- Speed of instantiation
+- Greater portability
+
+
+### Docker
+
+#### Why Docker
+
+- Isolation
+- Lightweight
+  + Images much lighter and faster to instantiate than VMs
+- Simplicity
+  + It's incredibly simple to install and run
+- Workflow
+  + Easy to use
+- Community
+  + Easy for the community to aggregate and get behind
+  + Almost every popular product had a Docker image in the Docker Hub
+
+#### Core Docker Components
+
+- **Docker Engine**: controls the process of creating containers, the client, and the interface between the registry
+- **Docker Hub**: a SaaS-based Docker registry.
+- **Docker Trusted Registry**: an [on-premise](https://en.wikipedia.org/wiki/On-premises_software) solution, similar to Docker Hub, but with a whole bunch of integration with enterprise stuff. It is not open source.
+- **Docker Machine**: allows you to manage all Docker instances and switch between environments.
+- **Docker Swarm**: it is an orchestration tool that allows you to run containers across multiple Docker Engines, multiple hosts.
+- **Docker Compose**: it allows you to build a YAML definition
+
+#### Docker Tools
+
+- **Docker Toolbox**: installs necessary stuff for you automatically
+- **Docker for Mac**: uses a native hypervisor on Mac
+- **Docker for Windows**: it is a native Docker for Windows
+- **Docker Datacenter**: it is the commercial offering, which includes:
+  + Commercial Docker Engine
+  + Universal Control Plane
+  + Docker Trusted Registry
+
+#### How Docker images are defined
+
+- Docker images are defined by default on something called Union Filesystems, which are basically copy-on-write structures.
+- The image itself is stored like a TAR file, and it has layers.
+- Every time you install something, it creates a new layer (see table below)
+- When the image starts up, it starts up all the layers already stored as read-only, and then creates a writable top layer, wich is your copy-on-write layer.
+- If you wind up removing the container that is running, you will lose all unsaved information.
+
+| # | Layer | Level |
+| ----- | ----- | ----- |
+| #1 | bootfs (Boot File System) | Kernel |
+| #2 | OS (e.g. Ubuntu, Debian, CentOS, Fedora, Red Hat) | Base image |
+| #3 | e.g. `add emacs` | Image |
+| #4 | e.g. `add Apache` | Image |
+| ... | ... | Image |
+| #n | writable | Container |
+
+#### Orchestration Solutions
+
+- **Docker Swarm**
+  + It's integrated into Docker Engine, so you have everything in one product.
+  + It's a plug-and-play tool that manages multiple Docker hosts
+  + They removed the requirement to have a separate distributed file system. They actually have a "mesh protocol", an in-memory rounting structure.
+  + Terminology/Structure:
+    * Manager: have *discovery backend* and a *scheduler*. Manages multiple *nodes*.
+    * Nodes: contains a *Docker daemon* and one or more *containers*.
+- **Kubernetes**
+  + It requires an external distributed file system or distributed key value, a separate daemon product (e.g. ZooKeeper or etcd).
+  + There are *minions* and *kubelets*. You set up your commands with kubelets, that run containers very much like a Docker Engine.
+  + Terminology/Structure:
+    * Manager: *API server*, *replication controller* and *scheduler*.
+    * Minions: a *kuberlet* and one or more *containers*.
+- **Mesos**
+  + It has a master-slave architecture, so it has multiple standby masters.
+  + It also requires a distributed file system. So, basically, you have to deal with three products – Mesos, ZooKeeper and Docker.
+  + Terminology/Structure:
+    * Masters: has a *master daemon*. You can have multiple standby masters.
+    * Slaves: a *slave daemon* and one or more *containers*.
+
+**Other**:
+- *Amazon ECS*: Amazon took a version of Docker and created a cloud-based orchestration solution that is built in.
+- *Azure Container Service*: it's also built on Docker.
+- *Google Container Engine*: it's actually not Docker.
+- *Openshift / Cloud Foundry / Heroku / Engine Yeard*: all Plataform-as-a-Service orchestration tools that have support for Docker.
+
 
 ### Infrastructure Image Portability
 
@@ -1454,6 +1575,10 @@ Con's:
 - Infrastructure as Code is in general better than scripted environment builds
 - Hybrid environments where immutability doesn't make sense still need Infrastructure as Code
 - In environments where immutability makes sense Immutable Infrastructure and/or Immutable Delivery is the most consistent way to build a delivery pipeline
+
+**The difference between Immutable Infrastructure and Immutable Delivery:**
+- In the first, you still build up the structure in your laptop and the CI loop and then you create an immutable (maybe Amazon) image for delivery. Netflix invented that model.
+- In the second, all of the infrastructure is immutable at development time. We see people do this with Docker.
 
 #### Rundeck
 
