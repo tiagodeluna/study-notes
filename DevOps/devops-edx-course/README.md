@@ -1008,7 +1008,9 @@ puppet apply /etc/puppet/manifests/site.pp
 Ansible is a configuration management tool with a different concept than Puppet or Chef:
 
 - With Ansible, you work from a management node, which then uses SSH to log into your managed nodes to make the configuration changes.
-- Other than SSH keys, Ansible requires no configuration in the client nodes - it is agentless.
+- Other than SSH keys, Ansible requires no configuration in the client nodes.
+  + It's "just SSH": It uses SSH to connect to servers and run the configured Tasks.
+- Ansible is "agentless" - there's no central agent(s) running.
 - Ansible is run as close to the deployed system as possible.
 - Ansible configuration scripts are called *Playbooks* - similar to Puppet's *manifests* and Chef's *cookbooks* and *recipes*.
 - [*ansible-galaxy*](https://galaxy.ansible.com/) is a community and a hub for finding, reusing and sharing Ansible content.
