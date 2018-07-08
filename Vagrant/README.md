@@ -1,6 +1,5 @@
 # Vagrant VM Managing
 
-
 ## Creation Steps (example)
 
 1. Create VM config file
@@ -11,7 +10,6 @@
    * `vagrant up`
 4. Shell into it
    * `vagrant ssh`
-
 
 ## Commands
 
@@ -27,4 +25,3 @@
 | vagrant destroy | Stop the running VM and destroy all resources created during the machine creation process. |
 | vagrant box list | List all base boxes already installed in your computer. These base boxes live in your `%userprofile%/.vagrant.d/boxes` folder. |
 | vagrant box remove `box/name` | Delete boxes installed in your machine. |
-
