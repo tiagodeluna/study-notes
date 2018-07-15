@@ -5,9 +5,10 @@
 | Command | Description |
 | ----- | ----- |
 | ls -al | Displays a directory content with extended info, including hidden files. |
-| cp <origin> <destiny> | Copies files or directories. |
+| ls -sh <filename> | Displays the size of a given file. The -s is for "size", the -h is for "human readable". |
+| cp -r <origin> <destiny> | Copies files or directories. Use -r for recursive copy. |
 | mv <origin> <destiny> | Moves files or directories. It also can rename a directory from <origin> to <destiny>, if it doesn't yet exist. |
-| rm -rf <foldername> | Remove folder |
+| rm -rf <foldername> | Remove folder. -r: recursive, -f: force. |
 | tar xzf <file> | Extracts a tar.gz file |
 
 ---
