@@ -83,6 +83,10 @@ The Amazon *Elastic Load Balancing* is a solution that aims to optimize resource
 
 The Amazon RDS (Relational Database Service) is a SaaS-based service that provides an EC2 instance with a relational database ready to use and available on the cloud with minimum configuration.
 
+**S3**
+
+The Amazon S3 (Simple Cloud Storage Service) is a highly-scalable cloud object storage that provides a way to store and retrieve data on the web. To upload your data (photos, videos, documents etc.), you create a *bucket* in one of the AWS Regions that will serve as a container to your objects.
+
 ## Amazon EC2
 
 ### Instance Creation Steps
@@ -270,6 +274,32 @@ Now associate this policy to the balancer with:
 
 `aws elb set-load-balancer-policies-of-listener --load-balancer-name "aws-cli-lb" --load-balancer-port 80 --policy-names "aws-cli-csp"`
 
+## AWS S3
+
+Example of a Bucket Policy:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AddPerm",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:PutObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::[bucket name]",
+                "arn:aws:s3:::[bucket name]/*"
+            ]
+        }
+    ]
+}
+```
+
 ## Useful Commands
 
 ### Server Admin
@@ -292,6 +322,7 @@ Now associate this policy to the balancer with:
 | `aws elb register-instances-with-load-balancer --load-balancer-name <name> --instances <instances ids>` | Register instances to be managed by a laod balancer |
 | `aws elb create-lb-cookie-stickiness-policy --load-balancer-name <lb name> --policy-name <policy name> --cookie-expiration-period <seconds>` | Create a cookie stickiness policy |
 | `aws elb set-load-balancer-policies-of-listener --load-balancer-name "aws-cli-lb" --load-balancer-port 80 --policy-names "aws-cli-csp"` | Apply a cookie stickiness policy to a load balancer |
+| `aws s3 sync [local folder] s3://[bucket name]` | Upload files from a local folder to a specified S3 bucket. You can use this command as your deploy script in a React project, for example, to send the output source to the cloud |
 
 ## Structure Reminder
 
@@ -299,4 +330,5 @@ Now associate this policy to the balancer with:
 | ----- | ----- | ----- |
 | Tomcat8 Environment configuration | `/usr/share/tomcat8/bin/` | Create/Edit the setenv.sh file to set a environment variable |
 | Tomcat8 Logs folder | `/var/lib/tomcat8/logs` | |
+
 
