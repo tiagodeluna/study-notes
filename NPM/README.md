@@ -2,8 +2,6 @@
 
 A list of useful NPM commands.
 
-## NPM
-
 | Command | Description |
 | ----- | ----- |
 | npm install [-g] `package name` [--save] | Installs a package. Use `-g` to install globally. Use `--save` to include the package as a dependency in your project |
@@ -17,11 +15,13 @@ A list of useful NPM commands.
 | npm update [-g] [`package`] | Updates the dependencies of a project to the latest version (default), or you can specify one or more packages to be updated. |
 | npm shrinkwrap | Repurposes package-lock.json into a publishable npm-shrinkwrap.json or simply creates a new one. |
 
-## HOW TO UPDATE YOUR PROJECT DEPENDENCIES
+
+## How to Update your Project Dependencies
 
 1. `npm outdated`
 2. `npm update`
 3. `npm shrinkwrap`
+
 
 ## Angular CLI
 
