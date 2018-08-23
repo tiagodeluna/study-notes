@@ -1003,7 +1003,7 @@ puppet apply /etc/puppet/manifests/site.pp
 ```
 
 
-## Ansible
+### Ansible
 
 Ansible is a configuration management tool with a different concept than Puppet or Chef:
 
@@ -1673,12 +1673,12 @@ The I should see the welcome message
 
 ### Agile Testing Pyramid
 
-1. Developer Level (Basis):
-  + Automated Unit Tests
-2. System Level (Middle):
-  + Integration Tests
-3. UI (Top):
-  + UI/UX tests (Manual tests)
+ 1. Developer Level (Basis):
+   + Automated Unit Tests
+ 2. System Level (Middle):
+   + Integration Tests
+ 3. UI (Top):
+   + UI/UX tests (Manual tests)
 
 ### Automated Testing: Build Phase
 
@@ -1726,7 +1726,7 @@ The I should see the welcome message
 - Tests are a system wide view of the service
 - Tests real interfaces not "mocks"
   + You call real databases, interfaces and services
-- Integratino tests are typically more expensive (more time-consuming)
+- Integration tests are typically more expensive (more time-consuming)
 - Run after the build, all unit tests and acceptance tests
 
 #### User Acceptance Tests (Manual)
@@ -1742,7 +1742,7 @@ The I should see the welcome message
 - Performance Testing
 - Load Testing
 - Security Testing
-- COnfiguration Management Testing
+- Configuration Management Testing
 
 #### System Testing
 
