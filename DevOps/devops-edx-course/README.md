@@ -1357,7 +1357,7 @@ Tools:
 
 - **Docker Toolbox**: installs necessary stuff for you automatically
 - **Docker for Mac**: uses a native hypervisor on Mac
-- **Docker for Windows**: it is a native Docker for Windows
+- **Docker for Windows**: it is a native Docker for Windows. Uses Microsoft Hyper-V to run.
 - **Docker Datacenter**: it is the commercial offering, which includes:
   + Commercial Docker Engine
   + Universal Control Plane
@@ -1384,7 +1384,7 @@ Tools:
 
 - **Docker Swarm**
   + It's integrated into Docker Engine, so you have everything in one product.
-  + It's a plug-and-play tool that manages multiple Docker hosts
+  + A plug-and-play tool that manages multiple Docker hosts
   + They removed the requirement to have a separate distributed file system. They actually have a "mesh protocol", an in-memory rounting structure.
   + Terminology/Structure:
     * Manager: have *discovery backend* and a *scheduler*. Manages multiple *nodes*.
