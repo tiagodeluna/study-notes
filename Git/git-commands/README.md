@@ -47,7 +47,8 @@ Add aliases in the .gitconfig file at `user folder` as the following examples:
 
 | Command | Description |
 | ----- | ----- |
-| git clone `repo` | Clone a remote repository into a new local folder |
+| git clone `repo` [`folder name`] | Clone a remote repository into a new local folder |
+| git clone `repo` \\\\ git reset --hard `SHA1` | Clone a specific commit |
 
 ## Managing branches
 
@@ -66,10 +67,11 @@ Add aliases in the .gitconfig file at `user folder` as the following examples:
 | git checkout --theirs . | Pull changes in branch, overwriting the local files when a conflict happens |
 | git checkout --ours . | Pull changes in branch, maintaining local files when a conflict happens |
 
-## Adding and Commiting
+## Reviewing, Adding and Commiting
 
 | Command | Description |
 | ----- | ----- |
+| git diff [--cached] `filename` | See the differences between local and remote branches. Use `--cached` to see a file already in the staging area |
 | git add `filename` | Add file |
 | git add . -A | Add all untracked files in the working tree to the staging area |
 | git add -u :/ | Update or remove previously tracked files from the entire working tree but not add new files |
