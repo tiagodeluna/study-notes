@@ -56,8 +56,7 @@ Add aliases in the .gitconfig file at `user folder` as the following examples:
 | ----- | ----- |
 | git branch `branch` | Create new *branch* |
 | git branch `branch` -d | Delete a *branch* |
-| git checkout -b `branch` `repo or branch` | Create local *branch* from a remote *repository* or *branch* and checkout it |
-| git checkout -b `branch` `tag` | Create a new *branch* from a specific *tag* |
+| git checkout -b `branch` `repo, branch or tag` | Create local *branch* from a remote *repository*, *branch* or *tag* and switch (checkout) to it |
 
 ## Pulling files
 
