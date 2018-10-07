@@ -70,6 +70,7 @@ Add aliases in the .gitconfig file at `user folder` as the following examples:
 
 | Command | Description |
 | ----- | ----- |
+| git log [--oneline] | Display the commit history. Use `--oneline` to see just commit messages. |
 | git diff [--cached] `filename` | See the differences between local and remote branches. Use `--cached` to see a file already in the staging area |
 | git add `filename` | Add file |
 | git add . -A | Add all untracked files in the working tree to the staging area |
@@ -123,13 +124,24 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 | git tag `tagname` | Create a simple *tag* |
 | git tag -a `tagname` -m `message` | Create an annotated, complete *tag* |
 
-## Integrating branches
+## Integrating branches/commits
+
+### Merging branches
 
 1. git checkout `target branch`
 2. git merge `source branch`
-   1. git diff `filename` //Just in case of conflicts occurring, to check it
-   2. git mergetool //Just in case of conflicts occurring, to solve them
-   3. git commit //idem
+   1. git diff `filename` *//Just in case of conflicts occurring, to check it*
+   2. git mergetool *//Just in case of conflicts occurring, to resolve them*
+   3. git commit *//idem*
+3. git push
+
+### Cherry picking commits
+
+1. git checkout `target branch`
+2. git cherry-pick `one or more commit hashes` *//This will copy the commits of another branch and add them as new commits on the target branch*
+   + *If the cherry picking gets halted because of conflicts, resolve them (see step 2 on Merging Branches above) and...*
+      - git cherry-pick --continue *//if you want to finish the process, OR*
+      - git cherry-pick --abort *//if you want to abort the process*
 3. git push
 
 ## Working with submodules
