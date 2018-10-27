@@ -87,6 +87,20 @@ The Amazon RDS (Relational Database Service) is a SaaS-based service that provid
 
 The Amazon S3 (Simple Cloud Storage Service) is a highly-scalable cloud object storage that provides a way to store and retrieve data on the web. To upload your data (photos, videos, documents etc.), you create a *bucket* in one of the AWS Regions that will serve as a container to your objects.
 
+Characteristics:
+ * Managed cloud storage service
+ * Store virtually unlimited number of objects
+ * Access any time, from anywhere
+ * Rich security control
+
+Common use cases:
+ * Storing Application Assets
+ * Static Web Hosting
+ * Backup & Disaster Recovery
+ * Staging area for Big Data
+ * Many more...
+
+
 ## Amazon EC2
 
 ### Instance Creation Steps
