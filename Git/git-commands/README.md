@@ -47,7 +47,8 @@ Add aliases in the .gitconfig file at `user folder` as the following examples:
 
 | Command | Description |
 | ----- | ----- |
-| git clone `repo` | Clone a remote repository into a new local folder |
+| git clone `repo` [`folder name`] | Clone a remote repository into a new local folder |
+| git clone `repo` \\\\ git reset --hard `SHA1` | Clone a specific commit |
 
 ## Managing branches
 
@@ -55,8 +56,7 @@ Add aliases in the .gitconfig file at `user folder` as the following examples:
 | ----- | ----- |
 | git branch `branch` | Create new *branch* |
 | git branch `branch` -d | Delete a *branch* |
-| git checkout -b `branch` `repo or branch` | Create local *branch* from a remote *repository* or *branch* and checkout it |
-| git checkout -b `branch` `tag` | Create a new *branch* from a specific *tag* |
+| git checkout -b `branch` `repo, branch or tag` | Create local *branch* from a remote *repository*, *branch* or *tag* and switch (checkout) to it |
 
 ## Pulling files
 
@@ -66,10 +66,12 @@ Add aliases in the .gitconfig file at `user folder` as the following examples:
 | git checkout --theirs . | Pull changes in branch, overwriting the local files when a conflict happens |
 | git checkout --ours . | Pull changes in branch, maintaining local files when a conflict happens |
 
-## Adding and Commiting
+## Reviewing, Adding and Commiting
 
 | Command | Description |
 | ----- | ----- |
+| git log [--oneline] | Display the commit history. Use `--oneline` to see just commit messages. |
+| git diff [--cached] `filename` | See the differences between local and remote branches. Use `--cached` to see a file already in the staging area |
 | git add `filename` | Add file |
 | git add . -A | Add all untracked files in the working tree to the staging area |
 | git add -u :/ | Update or remove previously tracked files from the entire working tree but not add new files |
@@ -122,13 +124,24 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 | git tag `tagname` | Create a simple *tag* |
 | git tag -a `tagname` -m `message` | Create an annotated, complete *tag* |
 
-## Integrating branches
+## Integrating branches/commits
+
+### Merging branches
 
 1. git checkout `target branch`
 2. git merge `source branch`
-   1. git diff `filename` //Just in case of conflicts occurring, to check it
-   2. git mergetool //Just in case of conflicts occurring, to solve them
-   3. git commit //idem
+   1. git diff `filename` *//Just in case of conflicts occurring, to check it*
+   2. git mergetool *//Just in case of conflicts occurring, to resolve them*
+   3. git commit *//idem*
+3. git push
+
+### Cherry picking commits
+
+1. git checkout `target branch`
+2. git cherry-pick `one or more commit hashes` *//This will copy the commits of another branch and add them as new commits on the target branch*
+   + *If the cherry picking gets halted because of conflicts, resolve them (see step 2 on Merging Branches above) and...*
+      - git cherry-pick --continue *//if you want to finish the process, OR*
+      - git cherry-pick --abort *//if you want to abort the process*
 3. git push
 
 ## Working with submodules
