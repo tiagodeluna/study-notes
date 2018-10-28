@@ -58,6 +58,10 @@ CodeDeploy is a deployment service that enables developers to perform *Blue Gree
 
 A tool that allows you to create **Billing Alarms** to avoid spending unexpected values while using your AWS account. CloudWatch also lets you collect and track metrics, monitor log files, and set other alert types. For example, we may be notified when the CPU is too busy for a certain time, writing or reading is slow, disk space is running out, among many other possibilities. Check the [documentation](https://aws.amazon.com/pt/documentation/cloudwatch/) for more details.
 
+**DynamoDB**
+
+Amazon DynamoDB provides **NoSQL** database **tables** as a service, with unlimited number of items per table, low-latency queries and scalable read/write throughput. Amazon DynamoDB is a good fit for structured data from the Web, Mobile and Internet of Things Apps, as well as Ad Tech and Gaming.
+
 **EBS**
 
 Elastic Block Device is where instances save their data (like an HD). It is a feature that guarantees high availability because it automatically replicates your instance data within the same Availability Zone.
@@ -83,22 +87,17 @@ The Amazon *Elastic Load Balancing* is a solution that aims to optimize resource
 
 The Amazon RDS (Relational Database Service) is a SaaS-based service that provides an EC2 instance with a relational database ready to use and available on the cloud with minimum configuration.
 
+The DB Engines currently supported by RDS are: MySQL, Amazon Aurora, MS SQL Server, PostgreSQL, MariaDB and Oracle DB.
+
+**Redshift**
+
+Amazon Redshift is a fast fully-managed data warehouse. Redshift is compatible with the tools we already know and use, supporting standard SQL, JDBC and ODBC connectors and business inteligence tools.
+
 **S3**
 
 The Amazon S3 (Simple Cloud Storage Service) is a highly-scalable cloud object storage that provides a way to store and retrieve data on the web. To upload your data (photos, videos, documents etc.), you create a *bucket* in one of the AWS Regions that will serve as a container to your objects.
 
-Characteristics:
- * Managed cloud storage service
- * Store virtually unlimited number of objects
- * Access any time, from anywhere
- * Rich security control
-
-Common use cases:
- * Storing Application Assets
- * Static Web Hosting
- * Backup & Disaster Recovery
- * Staging area for Big Data
- * Many more...
+With Amazon S3, you can store virtually unlimited number of objects with a rich security control, and access them any time, from anywhere. Common use cases of S3 include: Storing application assets, static web hosting, backup & disaster recovery, staging area for Big Data, and many more...
 
 
 ## Amazon EC2
