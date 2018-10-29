@@ -46,6 +46,10 @@ There are different ways of make your application available:
 
 The AWS CLI (Command Line Interface) is a tool for managing your AWS services using command line. It allows you, for example, to automatize the creation and configuration of your EC2 instances via scripts. Check the [documentation](https://aws.amazon.com/pt/cli/) for more details.
 
+**Aurora**
+
+Amazon Aurora is a MySQL database engine that combine the speed and availability of high-end commercial databases with the simplicity and cost-effectiveness of open-source databases. It offers aproximately 5 times the performance of MySQL. You use Amazon Aurora by selecting it when creating a RDS instance. 
+
 **Auto Scaling**
 
 The Auto Scaling Service allows you to automatically create and delete instances as needed to optimize resource usage, following predetermined scaling policies.
@@ -98,6 +102,10 @@ Amazon Redshift is a fast fully-managed data warehouse. Redshift is compatible w
 The Amazon S3 (Simple Cloud Storage Service) is a highly-scalable cloud object storage that provides a way to store and retrieve data on the web. To upload your data (photos, videos, documents etc.), you create a *bucket* in one of the AWS Regions that will serve as a container to your objects.
 
 With Amazon S3, you can store virtually unlimited number of objects with a rich security control, and access them any time, from anywhere. Common use cases of S3 include: Storing application assets, static web hosting, backup & disaster recovery, staging area for Big Data, and many more...
+
+**Trusted Advisor**
+
+Trusted Advisor provides best practices and checks if all services in your account are in accordance to that practices. It checks the best practices in four categories: Cost Optimization, Performance, Security and Fault Tolerance.
 
 
 ## Amazon EC2
