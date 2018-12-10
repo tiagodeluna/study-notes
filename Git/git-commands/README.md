@@ -54,6 +54,7 @@ Add aliases in the .gitconfig file at `user folder` as the following examples:
 
 | Command | Description |
 | ----- | ----- |
+| git branch [-r] | Display all local or remote (with `-r`) existing branches. |
 | git branch `branch` | Create new *branch* |
 | git branch `branch` -d | Delete a *branch* |
 | git checkout -b `branch` `repo, branch or tag` | Create local *branch* from a remote *repository*, *branch* or *tag* and switch (checkout) to it |
@@ -150,4 +151,3 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 | ----- | ----- |
 | git submodule add `repo url` `folder name` | Add a remote repo as a submodule in the current repo |
 | git submodule update --init --recursive | Tells git to download the contents of submodule when downloading current repository |
-

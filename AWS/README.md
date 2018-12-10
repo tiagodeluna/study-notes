@@ -46,6 +46,10 @@ There are different ways of make your application available:
 
 The AWS CLI (Command Line Interface) is a tool for managing your AWS services using command line. It allows you, for example, to automatize the creation and configuration of your EC2 instances via scripts. Check the [documentation](https://aws.amazon.com/pt/cli/) for more details.
 
+**Aurora**
+
+Amazon Aurora is a MySQL database engine that combine the speed and availability of high-end commercial databases with the simplicity and cost-effectiveness of open-source databases. It offers aproximately 5 times the performance of MySQL. You use Amazon Aurora by selecting it when creating a RDS instance. 
+
 **Auto Scaling**
 
 The Auto Scaling Service allows you to automatically create and delete instances as needed to optimize resource usage, following predetermined scaling policies.
@@ -57,6 +61,10 @@ CodeDeploy is a deployment service that enables developers to perform *Blue Gree
 **CloudWatch**
 
 A tool that allows you to create **Billing Alarms** to avoid spending unexpected values while using your AWS account. CloudWatch also lets you collect and track metrics, monitor log files, and set other alert types. For example, we may be notified when the CPU is too busy for a certain time, writing or reading is slow, disk space is running out, among many other possibilities. Check the [documentation](https://aws.amazon.com/pt/documentation/cloudwatch/) for more details.
+
+**DynamoDB**
+
+Amazon DynamoDB provides **NoSQL** database **tables** as a service, with unlimited number of items per table, low-latency queries and scalable read/write throughput. Amazon DynamoDB is a good fit for structured data from the Web, Mobile and Internet of Things Apps, as well as Ad Tech and Gaming.
 
 **EBS**
 
@@ -83,9 +91,22 @@ The Amazon *Elastic Load Balancing* is a solution that aims to optimize resource
 
 The Amazon RDS (Relational Database Service) is a SaaS-based service that provides an EC2 instance with a relational database ready to use and available on the cloud with minimum configuration.
 
+The DB Engines currently supported by RDS are: MySQL, Amazon Aurora, MS SQL Server, PostgreSQL, MariaDB and Oracle DB.
+
+**Redshift**
+
+Amazon Redshift is a fast fully-managed data warehouse. Redshift is compatible with the tools we already know and use, supporting standard SQL, JDBC and ODBC connectors and business inteligence tools.
+
 **S3**
 
 The Amazon S3 (Simple Cloud Storage Service) is a highly-scalable cloud object storage that provides a way to store and retrieve data on the web. To upload your data (photos, videos, documents etc.), you create a *bucket* in one of the AWS Regions that will serve as a container to your objects.
+
+With Amazon S3, you can store virtually unlimited number of objects with a rich security control, and access them any time, from anywhere. Common use cases of S3 include: Storing application assets, static web hosting, backup & disaster recovery, staging area for Big Data, and many more...
+
+**Trusted Advisor**
+
+Trusted Advisor provides best practices and checks if all services in your account are in accordance to that practices. It checks the best practices in four categories: Cost Optimization, Performance, Security and Fault Tolerance.
+
 
 ## Amazon EC2
 
