@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  WorkshopInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: ami-0a5e707736615003c
+      InstanceType: t2.micro
+      KeyName: aws_workshop
+      SecurityGroups:
+        - MySecurityGroup
+  MySecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Base Security Group
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          CidrIp: 0.0.0.0/0
+          FromPort: 22
+          ToPort: 22
+        - IpProtocol: tcp
+          CidrIp: 0.0.0.0/0
+          FromPort: 8080
+          ToPort: 8080
