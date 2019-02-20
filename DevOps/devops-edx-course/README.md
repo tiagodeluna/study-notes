@@ -1267,12 +1267,12 @@ Tools:
   + The bake image is bigger, but is faster in deploy.
   + The fry image is smaller, but it takes longer to deploy, because you are literally installing, instead of having all the installed components in the backed image
 
-Type 1 Hypervisors:
+**Type 1 Hypervisors:**
 - Bare metal installation over the hardware to control and monitor hardware and guest OS.
 - Tools:
   + VMWare ESX/vSphere, XEN, HyperV
 
-Type 2 Hypervisors:
+**Type 2 Hypervisors:**
 - Software applications that run inside of a traditional OS
 - Tools:
   + KVM, VMWare Workstation, Oracle VirtualBox, Xhyve (Hyperkit - Docker)
