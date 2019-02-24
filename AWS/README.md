@@ -77,6 +77,12 @@ We can associate an EBS volume from an instance to another (but only an instance
 The Amazon Elastic Cloud Computer is a service that allows you to create instances of machines from predefined images, the AMIs (Amazon Machine Images). These machines can be configured to be flexible, with resources allocated (and deallocated) on demand. The costs are proportional to the quantity of the resources allocated on the machine.
 Each instance type has its own characteristics and purposes. See the [Documentation](https://aws.amazon.com/pt/ec2/instance-types/) for more details.
 
+EC2 instances are launched from Amazon Machine Images (AMIs). Public AMIs can only be used to launch EC2 instances in the same AWS region as the AMI is stored.
+
+Regarding data storage, there are two types of EC2 images:
+* Amazon EBS-backed: instances of this type of image can be stopped and restarted without losing data.
+* instance-store backed: images use "ephemeral" storage (temporary). The storage is only available during the life of an instance. Rebooting an instance will allow ephemeral data stay persistent. However, stopping and starting an instance will remove all ephemeral storage.
+
 **IAM**
 
 Identity and Access Management is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
@@ -106,6 +112,16 @@ With Amazon S3, you can store virtually unlimited number of objects with a rich 
 **Trusted Advisor**
 
 Trusted Advisor provides best practices and checks if all services in your account are in accordance to that practices. It checks the best practices in four categories: Cost Optimization, Performance, Security and Fault Tolerance.
+
+**VPC**
+
+Virtual Private Cloud (VPC) enables you to launch AWS resources into a virtual network that you've defined. A VPC is designed to resemble private on-premise data centers or private corporate networks, with the benefits of using the scalable infrastructure of AWS.
+
+A VPC is housed within a chosen AWS region, and spans multiple availability zones within a region. AWS provides a DNS server for your VPC so each instance has a hostname. It's possible to configure and attach a Internet Gateway to allow communication between instances in your VPC and the internet.
+
+The security of VPC is performed by two services:
+* Network Access Control Lists (ACLs): operate at the network/subnet level. Defines a list of rules to allow/deny traffic. These rules are applied in number order and are **stateless**: so return traffic must be allowed through an outbound rule.
+* Security Groups: operate at the instance level. They support only "allow" rules and are **stateful**: so return traffic requests are allowed regardless of rules.
 
 
 ## Amazon EC2
@@ -137,6 +153,12 @@ An AMI is a *server template* that has information about the operating system (a
 To create an AMI from an instance that is already configured, you just need to right-click the chosen instance and select *Image > Create Image*. When creating a new EC2 instance, select the image you've created on the left side menu item "My AMIs". Choose the same .pem file for the new instance.
 
 To avoid managing multiple Security Groups for equal instances, you can set the same Security Group to the new one. Right-click your instance and select *Networking > Change Security Groups*.
+
+### Dealing with Session State
+
+When dealing with session state in EC2-based applications using Elastic Load Balancers, the best practice for managing user sessions is:
+1. Having the ELB distribute traffic to all EC2 instances and then...
+2. Having the instance check a caching solution like ElastiCache running Redis or Memcached for session information.
 
 ## Amazon RDS
 
@@ -172,10 +194,10 @@ After the RDS instance be available, you'll need to configure its default Securi
 The Amazon *Elastic Load Balancing* supports three types of load balancers:
 
 - Application Load Balancers:
-    + Operates at the request level
+    + Operates at the request level, with focus on HTTP/HTTPS connections.
     + Indicated when you need a flexible feature set for your web applications with HTTP and HTTPS traffic
 - Network Load Balancers:
-    + Operates at the connection level
+    + Operates at the connection level, it is focused on TCP connections.
     + Indicated when you need ultra-high performance and static IP addresses for your application
 - Classic Load Balancers:
     + Indicated when you have an existing application running in the EC2-Classic network
