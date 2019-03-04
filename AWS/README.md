@@ -66,6 +66,14 @@ A tool that allows you to create **Billing Alarms** to avoid spending unexpected
 
 Amazon DynamoDB provides **NoSQL** database **tables** as a service, with unlimited number of items per table, low-latency queries and scalable read/write throughput. Amazon DynamoDB is a good fit for structured data from the Web, Mobile and Internet of Things Apps, as well as Ad Tech and Gaming.
 
+**Elastic Beanstalk**
+
+Elastic Beanstalk is designed to make it easy to deploy and scale less complex (single-tier) applications. It takes advantage of core services such as EC2, Auto Scaling, ELB, RDS, SQL and CloudFront, to help reduce the management required for provisioning applications.
+
+When using Elastic Beanstalk you will have to pay for only the costs of resources deployed by Elastic Beanstalk. The following platforms are supported: Docker, Packer, Java, Windows .NET, Node.js, PHP, Python, Ruby and Go.
+
+You can deploy your web applications by configuring a git repository with Elastic Beanstalk – so that changes will be detected and your application will be updated –, or uploading code files to the Elastic Beanstalk service.
+
 **EBS**
 
 Elastic Block Device is where instances save their data (like an HD). It is a feature that guarantees high availability because it automatically replicates your instance data within the same Availability Zone.
@@ -82,6 +90,12 @@ EC2 instances are launched from Amazon Machine Images (AMIs). Public AMIs can on
 Regarding data storage, there are two types of EC2 images:
 * Amazon EBS-backed: instances of this type of image can be stopped and restarted without losing data.
 * instance-store backed: images use "ephemeral" storage (temporary). The storage is only available during the life of an instance. Rebooting an instance will allow ephemeral data stay persistent. However, stopping and starting an instance will remove all ephemeral storage.
+
+**ECS**
+
+Elastic Container Service is a container management service that supports Docker. It allows you to easily create and manage a fleet of Docker containers on a cluster of EC2 instances. It uses **Fargate**, an AWS service that allows you to use containers as the fundamental building blocks of your application while AWS manages the EC2 instances for you.
+
+The containers can be created from images stored in a container registry located on AWS via the ECR service (Elastic Container Registry), a 3rd-party repository like DockerHub or a self-hosted registry.
 
 **IAM**
 
