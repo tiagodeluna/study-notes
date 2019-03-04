@@ -12,7 +12,8 @@ A list of basic Docker commands.
 | docker rm `name` / docker container rm `name` | Remove one or more **containers** by their names. |
 | docker rmi `name or ID` / docker image rm `name or ID` | Remove one or more **images** by their names or IDs. |
 | docker login --username=`username` --password="`password`" | Log in to a Docker registry (Docker Hub). |
-| docker push `docker repo` | Push an image or a repository to a registry. |
+| docker tag `image name`:`tag` `url` | Associate the image with a given version tag with a particular url repository. |
+| docker push `docker repo` | Push an image or a repository to a registry (e.g. DockerHub, Amazon ECR, etc.) |
 
 ## Docker Swarm
 
