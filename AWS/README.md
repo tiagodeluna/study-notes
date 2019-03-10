@@ -66,6 +66,20 @@ A tool that allows you to create **Billing Alarms** to avoid spending unexpected
 
 Amazon DynamoDB provides **NoSQL** database **tables** as a service, with unlimited number of items per table, low-latency queries and scalable read/write throughput. Amazon DynamoDB is a good fit for structured data from the Web, Mobile and Internet of Things Apps, as well as Ad Tech and Gaming.
 
+Primary key:
+
+Primary key attributes must have the data type of string, number, or binary. There are two types of primary key:
+* Simple PK: partition key only. In this model, no two items can have the same partition key.
+* Composite PK: partition key + sort key. Items must have a unique combination of partition key and sort key.
+
+Partition keys:
+
+Every DynamoDB table requires a partition key -- also known as **hash attribute**. DynamoDB uses partition keys in an internal hash function to determine where the partition data will be stored.
+
+Sort keys:
+
+After DynamoDB uses the partition key to determine the partition data will be stored in, the sort key -- or **range attribute** -- is used to sort the data inside of that partition.
+
 **Elastic Beanstalk**
 
 Elastic Beanstalk is designed to make it easy to deploy and scale less complex (single-tier) applications. It takes advantage of core services such as EC2, Auto Scaling, ELB, RDS, SQL and CloudFront, to help reduce the management required for provisioning applications.
@@ -88,6 +102,7 @@ Each instance type has its own characteristics and purposes. See the [Documentat
 EC2 instances are launched from Amazon Machine Images (AMIs). Public AMIs can only be used to launch EC2 instances in the same AWS region as the AMI is stored.
 
 Regarding data storage, there are two types of EC2 images:
+
 * Amazon EBS-backed: instances of this type of image can be stopped and restarted without losing data.
 * instance-store backed: images use "ephemeral" storage (temporary). The storage is only available during the life of an instance. Rebooting an instance will allow ephemeral data stay persistent. However, stopping and starting an instance will remove all ephemeral storage.
 
@@ -120,6 +135,8 @@ Amazon Redshift is a fast fully-managed data warehouse. Redshift is compatible w
 **S3**
 
 The Amazon S3 (Simple Cloud Storage Service) is a highly-scalable cloud object storage that provides a way to store and retrieve data on the web. To upload your data (photos, videos, documents etc.), you create a *bucket* in one of the AWS Regions that will serve as a container to your objects.
+
+Objects stay within an AWS region and are synced across all AZ's for extremely high availability and durability.
 
 With Amazon S3, you can store virtually unlimited number of objects with a rich security control, and access them any time, from anywhere. Common use cases of S3 include: Storing application assets, static web hosting, backup & disaster recovery, staging area for Big Data, and many more...
 
@@ -333,6 +350,10 @@ Now associate this policy to the balancer with:
 
 ## AWS S3
 
+### Access granting
+
+Both ACLs and Bucket Policies can be used to grant access to S3 buckets. Bucket Policies are written in JSON and are only attached to S3 buckets. ACLs are written in XML and ACLs can be attached to S3 objects or S3 Buckets
+
 Example of a Bucket Policy:
 
 ```
@@ -356,6 +377,23 @@ Example of a Bucket Policy:
     ]
 }
 ```
+
+### Multipart Upload API
+
+In S3, to upload large objects (bigger than that), it is necessary to use the Multipart Upload API. The Multipart upload API enables you to upload new large objects or make a copy of an existing object in parts. [Read more...](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html)
+
+### Reading Performance
+
+When you have significantly high numbers of GET requests there are two measures to improve S3 performance: 
+* Setup CloudFront for S3 objects
+* Introduce random prefixes to S3 objects: The first few characters of S3 objects are used to determine the allocation of object keys behind the scenes to S3 partitions.
+
+### Versioning and Lifecycle policies
+
+Use versioning to keep multiple versions of an object in one bucket. You can enable versioning either when you create a new bucket or edit an existing bucket. But once enabled, you cannot disable this feature, just suspend it.
+
+Everytime you upload a new version of a file, a new version ID is created. Files uploaded before versioning is enabled have a null version ID. When you DELETE an object, all versions remain in the bucket and Amazon S3 inserts a delete marker, that becomes the current version of the object. So you still can GET a noncurrent version of a "deleted" object by specifying its version ID. [Read more...](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html)
+
 
 ## Useful Commands
 
