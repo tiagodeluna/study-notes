@@ -66,6 +66,8 @@ A tool that allows you to create **Billing Alarms** to avoid spending unexpected
 
 Amazon DynamoDB provides **NoSQL** database **tables** as a service, with unlimited number of items per table, low-latency queries and scalable read/write throughput. Amazon DynamoDB is a good fit for structured data from the Web, Mobile and Internet of Things Apps, as well as Ad Tech and Gaming.
 
+DynamoDB stores data in partitions. Partitions are SSD allocations of storage for the table and automatically replicated accross multiple AZs. 
+
 Primary key:
 
 Primary key attributes must have the data type of string, number, or binary. There are two types of primary key:
