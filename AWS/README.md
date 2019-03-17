@@ -132,6 +132,15 @@ Elastic Container Service is a container management service that supports Docker
 
 The containers can be created from images stored in a container registry located on AWS via the ECR service (Elastic Container Registry), a 3rd-party repository like DockerHub or a self-hosted registry.
 
+**ElastiCache**
+
+ElastiCache is a fully managed, in-memory cache engine used to improve database performance by caching results of queries that are made to a database. It is great for large, high-performance or high-taxing queries - and can store them inside of a cache cluster that can be accessed later.
+
+Available engines to power ElastiCache are **Memcached** and **Redis**. Some of the caching strategies that can be used in ElastiCache are:
+* *Lazy Loading*: you write data to the cache only when a cache miss occurs.
+* *Write Through*: the cache is updated whenever a new write or update is made to the underlying database.
+* *Adding Time To Live (TTL)*: a TTL is the length of time before a key expires. It can be used together with Lazy Loading or Write Through techniques to avoid its drawbacks.
+
 **IAM**
 
 Identity and Access Management is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
@@ -150,7 +159,7 @@ The DB Engines currently supported by RDS are: MySQL, Amazon Aurora, MS SQL Serv
 
 **Redshift**
 
-Amazon Redshift is a fast fully-managed data warehouse. Redshift is compatible with the tools we already know and use, supporting standard SQL, JDBC and ODBC connectors and business inteligence tools.
+Amazon Redshift is a fast fully-managed petabyte-scale data warehousing service, generally used for BigData analytics. It is compatible with the tools we already know and use, supporting standard SQL, JDBC and ODBC connectors and business inteligence tools (e.g Jaspersoft, Microstrategy, Cognos...).
 
 **S3**
 
