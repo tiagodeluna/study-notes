@@ -82,6 +82,24 @@ Sort keys:
 
 After DynamoDB uses the partition key to determine the partition data will be stored in, the sort key -- or **range attribute** -- is used to sort the data inside of that partition.
 
+Indexes:
+
+DynamoDB has two types of indexes:
+* *Local secondary indexes* must have the same partition key and the same hash key as the table. They also must be created at the same time as the table itself. The point is that it has a different range key. Every partition of the index is scoped to a table partition with the same hash key.
+* A *Global secondary index* is an index with: a hash and range key. The hash and range key can be different from what's on the table. It is thought of as "global" because queries on the index can span all of the table data across partitions.
+
+Queries:
+
+In DynamoDB, a query efficiently searches using the partition key and an optional sort key. You have to supply a partition key when creating a query in DynamoDB. A query returns only the items matching the primary key. By default, a query is an *eventually consistent read* only. You have to explicitly request it to be a *strongly consistent read*.
+
+As the read (and write) throughput in DynamoDB is scalable and charged accordingly, it is important to determine beforehand how much read capacity throughput you should provision to your table. It can be done by using the formula: `( N x (S/K))`, where `N` is the number of items you want to read per second, `S` is the item size (in KB) and `K` is the throughput capacity size per read capacity unit (RCU), which is 4KB. For *eventually consistent reads*, which require half the throughput necessary for *strongly consistent reads*, divide the result by 2.
+
+Other important facts about DynamoDB:
+* The limit of tables an AWS account can have per region is 256. You can increase DynamoDB table limit by contacting AWS and requesting a limit increase.
+* You can define up to 5 *local secondary indexes* and 20 *global secondary indexes* per table (by default), i.e 25 in total.
+* One *read capacity unit* (RCU) represents one strongly consistent read per second, or two eventually consistent reads per second, for an item up to 4 KB in size.
+* One *write capacity unit* (WCU) represents one write per second for an item up to 1 KB in size.
+
 **Elastic Beanstalk**
 
 Elastic Beanstalk is designed to make it easy to deploy and scale less complex (single-tier) applications. It takes advantage of core services such as EC2, Auto Scaling, ELB, RDS, SQL and CloudFront, to help reduce the management required for provisioning applications.
