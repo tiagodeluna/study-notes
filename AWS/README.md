@@ -155,6 +155,8 @@ The Amazon *Elastic Load Balancing* is a solution that aims to optimize resource
 
 The Amazon RDS (Relational Database Service) is a SaaS-based service that provides an EC2 instance with a relational database ready to use and available on the cloud with minimum configuration.
 
+RDS provides *read replicas* that allows you to creates elasticity by adding/removing replicas based on demand, and improves performance of the primary database by taking workload from it.
+
 The DB Engines currently supported by RDS are: MySQL, Amazon Aurora, MS SQL Server, PostgreSQL, MariaDB and Oracle DB.
 
 **Redshift**
@@ -168,6 +170,19 @@ The Amazon S3 (Simple Cloud Storage Service) is a highly-scalable cloud object s
 Objects stay within an AWS region and are synced across all AZ's for extremely high availability and durability.
 
 With Amazon S3, you can store virtually unlimited number of objects with a rich security control, and access them any time, from anywhere. Common use cases of S3 include: Storing application assets, static web hosting, backup & disaster recovery, staging area for Big Data, and many more...
+
+**SNS**
+
+Simple Notification Service is a Pub/Sub service for messaging and mobile notifications. SNS allows you to fan-out messages to a large number of subscribers and makes it easier to send push notifications and SMS to a variety of devices.
+
+The two main benefits of using SNS are that it's scalable and highly reliable, and it's usable through the AWS Console, APIs, CLI and multiple SDKs.
+
+SNS has Access Control Policies that grant access to your SNS topics to other AWS accounts and to some AWS services. You can use IAM Policies and Access Control Policies at the same time.
+
+The three main components when working with SNS are:
+* Topic: the group of subscriptions that you send a message to.
+* Subscription: an endpoint that a message is sent to, which may include: HTTP, HTTPS, Email, Email-JSON, SQS, mobile apps (IOS/Android/Amazon/Microsoft), Lambda and SMS
+* Publisher: the "entity" that triggers the sending of a message. Examples include: AWS CLI, SDKs (e.g. boto3) and services (e.g S3 events, Cloudwatch alarms, code in Lambda).
 
 **Trusted Advisor**
 
