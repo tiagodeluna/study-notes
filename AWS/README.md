@@ -184,6 +184,18 @@ The three main components when working with SNS are:
 * Subscription: an endpoint that a message is sent to, which may include: HTTP, HTTPS, Email, Email-JSON, SQS, mobile apps (IOS/Android/Amazon/Microsoft), Lambda and SMS
 * Publisher: the "entity" that triggers the sending of a message. Examples include: AWS CLI, SDKs (e.g. boto3) and services (e.g S3 events, Cloudwatch alarms, code in Lambda).
 
+**SQS**
+
+Simple Queue Service provides the ability to have hosted/highly available queues that can be used to send and receive messages between producers and consumers, allowing for the creation of distributed/decoupled components. Messages between servers are retrieved through *polling*.
+
+There are two types of polling:
+* Long polling (1-20 seconds): Reduces API requests by allowing the SQS service to wait until a message is available in a queue before sending a response.
+* Short polling: queries a subset of the SQS servers to determine if there are messages available for a response -- not necessarily sending all possible messages in a poll. It increases API requestes, which increases costs.
+
+Other important SQS facts:
+* Each SQL Message can contain up to 256KB of text (in any format).
+* Amazon SQS offer two different types of queues: Standard Queues and FIFO Queues.
+
 **Trusted Advisor**
 
 Trusted Advisor provides best practices and checks if all services in your account are in accordance to that practices. It checks the best practices in four categories: Cost Optimization, Performance, Security and Fault Tolerance.
