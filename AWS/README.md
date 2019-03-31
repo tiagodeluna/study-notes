@@ -46,6 +46,14 @@ There are different ways of make your application available:
 
 The AWS CLI (Command Line Interface) is a tool for managing your AWS services using command line. It allows you, for example, to automatize the creation and configuration of your EC2 instances via scripts. Check the [documentation](https://aws.amazon.com/pt/cli/) for more details.
 
+**API Gateway**
+
+Amazon API Gateway is a fully-managed service that allows you to create and maintain your own APIs for your application. It acts as a "front-door" for your application, allowing access to data/logic/functionality from your back-end services.
+
+API Gateway uses Stages, that are snapshots of your API (e.g. dev, prod, beta...) containing specific settings - it stores configuration for deployments.
+
+There are also Gateway Methods that are associated with an API Gateway Resource. They include the allowed HTTP methods (DELETE, GET, HEAD, OPTIONS, PATCH, POST, and PUT) and the AWS-provided ANY method as a catch-all. API Gateway methods can be configured to respond to requests to AWS Lambda functions, integrated with other AWS Services, and to existing HTTP endpoints.
+
 **Aurora**
 
 Amazon Aurora is a MySQL database engine that combine the speed and availability of high-end commercial databases with the simplicity and cost-effectiveness of open-source databases. It offers aproximately 5 times the performance of MySQL. You use Amazon Aurora by selecting it when creating a RDS instance. 
@@ -194,7 +202,16 @@ There are two types of polling:
 
 Other important SQS facts:
 * Each SQL Message can contain up to 256KB of text (in any format).
-* Amazon SQS offer two different types of queues: Standard Queues and FIFO Queues.
+* In order to send more than 256KB, a possible solution is to store the data in S3 or DynamoDB and attach message instructions to the message for the worker to retrieve the data.
+* Amazon SQS offer two different types of queues:
+    - Standard Queues: message order can be indeterminate and messages can be delivered one or more times.
+    - FIFO Queues: messages will be delivered exactly once and in First in, First out order.
+
+**Step Functions**
+
+AWS Step Functions lets you coordinate multiple AWS services into serverless workflows. Using Step Functions, you can design and run visual workflows that stitch together services such as AWS Lambda and Amazon ECS into feature-rich applications.
+
+Workflows are made up of a series of steps defined via JSON, with the output of one step acting as input into the next. It translates your workflow into a state machine diagram that is easy to understand, easy to explain to others, and easy to change.
 
 **Trusted Advisor**
 
