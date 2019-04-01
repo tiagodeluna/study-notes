@@ -66,9 +66,15 @@ The Auto Scaling Service allows you to automatically create and delete instances
 
 CodeDeploy is a deployment service that enables developers to perform *Blue Green Deployments* automatically, implementing the *Immutable servers* concept. Check the [documentation](https://aws.amazon.com/pt/documentation/codedeploy/) for more details.
 
+**CloudFormation**
+
+CloudFormation is the pure embodiment of infrastructure as code, because you can describe your application's architecture in a CloudFormation template as either JSON or YAML. It makes possible to, for example, version control your infrastructure, and reuse the same template to deploy copies of that architecture to other AWS regions or accounts.
+
+
+
 **CloudWatch**
 
-A tool that allows you to create **Billing Alarms** to avoid spending unexpected values while using your AWS account. CloudWatch also lets you collect and track metrics, monitor log files, and set other alert types. For example, we may be notified when the CPU is too busy for a certain time, writing or reading is slow, disk space is running out, among many other possibilities. Check the [documentation](https://aws.amazon.com/pt/documentation/cloudwatch/) for more details.
+Amazon CloudWatch is a tool used to monitor AWS services, such as EC2, ELB and S3. It lets you collect and track metrics, monitor log files, and set other alert types. For example, we may be notified when the CPU is too busy for a certain time, writing or reading is slow, disk space is running out, among many other possibilities. CloudWatch also allows you to create **Billing Alarms** to avoid spending unexpected values while using your AWS account. Check the [documentation](https://aws.amazon.com/pt/documentation/cloudwatch/) for more details.
 
 **DynamoDB**
 
