@@ -70,7 +70,7 @@ CodeDeploy is a deployment service that enables developers to perform *Blue Gree
 
 CloudFormation is the pure embodiment of infrastructure as code, because you can describe your application's architecture in a CloudFormation template as either JSON or YAML. It makes possible to, for example, version control your infrastructure, and reuse the same template to deploy copies of that architecture to other AWS regions or accounts.
 
-
+A Cloudformation Stack is a group of AWS resources that you can manage together, as they are treated as one single unit. CloudFormation also provides built-in *Intrinsic Functions* that can be used to assign values to different properties that are only available at or after runtime (e.g Fn::GetAtt, Fn::Join, Ref...).
 
 **CloudWatch**
 
