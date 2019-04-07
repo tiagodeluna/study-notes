@@ -70,7 +70,9 @@ CodeDeploy is a deployment service that enables developers to perform *Blue Gree
 
 CloudFormation is the pure embodiment of infrastructure as code, because you can describe your application's architecture in a CloudFormation template as either JSON or YAML. It makes possible to, for example, version control your infrastructure, and reuse the same template to deploy copies of that architecture to other AWS regions or accounts.
 
-A Cloudformation Stack is a group of AWS resources that you can manage together, as they are treated as one single unit. CloudFormation also provides built-in *Intrinsic Functions* that can be used to assign values to different properties that are only available at or after runtime (e.g Fn::GetAtt, Fn::Join, Ref...).
+A Cloudformation Stack is a group of AWS resources that you can manage together, as they are treated as one single unit. If the creation of one resource fails, the default behavior is a *RollBack* in the whole Stack.
+
+CloudFormation provides built-in *Intrinsic Functions* that can be used in the template to assign values to different properties that are only available at or after runtime (e.g Fn::GetAtt, Fn::Join, Ref...). You can also use API calls to interact with CloudFormation to retrieve information, e.g. *ListStackResources* (to list all resources that belong to a Stack) and *DescribeStacks* (that returns descriptions of a list of all current Stacks), as well as AWS CLI commands, such as `aws cloudformation describe-stacks`.
 
 **CloudWatch**
 
@@ -212,6 +214,15 @@ Other important SQS facts:
 * Amazon SQS offer two different types of queues:
     - Standard Queues: message order can be indeterminate and messages can be delivered one or more times.
     - FIFO Queues: messages will be delivered exactly once and in First in, First out order.
+
+**SSM Parameter Store**
+
+The Parameter Store – available inside the Systems Manager (SSM) section – allows you to centralize your operational data and automate tasks in AWS, providing secure storage for configuration and secrets such as passwords, database strings, API keys, and license codes.
+
+You can make use of API Actions – through AWS Console, AWS SDKs, or the AWS CLI – to access and manipulate the parameter store. Some como API actions:
+* PutParameter: adds a parameter to Parameter Store, either a String, StringList or SecureString (KMS-encrypted).
+* GetParameter: returns a parameter from SSM either encrypted or decrypted.
+* DeleteParameter: deletes a parameter from SSM.
 
 **Step Functions**
 
