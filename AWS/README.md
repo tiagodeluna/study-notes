@@ -244,6 +244,12 @@ The security of VPC is performed by two services:
 * Network Access Control Lists (ACLs): operate at the network/subnet level. Defines a list of rules to allow/deny traffic. These rules are applied in number order and are **stateless**: so return traffic must be allowed through an outbound rule.
 * Security Groups: operate at the instance level. They support only "allow" rules and are **stateful**: so return traffic requests are allowed regardless of rules.
 
+**X-Ray**
+
+AWS X-Ray traces requests as they move through your applications. It collects data and makes it available to view, filter, and sort. You can then use the data to gain insights and identify potential optimizations to make inside your application.
+
+X-Ray concepts include *Segments* (data about your application, including data on the request, response, and issues), *Subsegments* (more granular than segments), *Service graph* (JSON report containing information about how your services and resources interact), *Traces*, *Samplings*, *Annotations*, *Metadata*, *Errors* (4xx - client errors), *Faults* (5xx - server errors) *Exceptions*(throttling erros, e.g. 429 too many requests), and more.
+
 
 ## Amazon EC2
 
