@@ -250,6 +250,15 @@ AWS X-Ray traces requests as they move through your applications. It collects da
 
 X-Ray concepts include *Segments* (data about your application, including data on the request, response, and issues), *Subsegments* (more granular than segments), *Service graph* (JSON report containing information about how your services and resources interact), *Traces*, *Samplings*, *Annotations*, *Metadata*, *Errors* (4xx - client errors), *Faults* (5xx - server errors) *Exceptions*(throttling erros, e.g. 429 too many requests), and more.
 
+### Other Development Services
+
+- **CodeCommit:** a fully-managed source control service that hosts secure Git-based repositories.
+- **CodeBuild:** A managed build service that can compile your source code, run unit tests, and produce deployment artifacts. 
+- **CodeDeploy:** automates deployments of your applications to EC2 Lambda, and even on-premises environments. It has three deployment types:
+    + *In-place deployments:* deploys to the existing servers.
+    + *Blue/green deployments on EC2:* new application versions are deployed on a new set of instances. Traffic is routed from old to new instances. If there are failures, then rollback to the older deployment version.
+    + *Blue/green deployment on Lambda:* traffic is shifted from one Lambda version to another in three ways: Canary, Linear or All at once.
+
 
 ## Amazon EC2
 
