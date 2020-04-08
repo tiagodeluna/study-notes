@@ -79,3 +79,42 @@ Cloud providers are large businesses leveraging the benefits of economies of sca
 * Follows demand fluctuation (auto-scaling)
 * Agile, due to its ability to rapidly change an IT infra to adapt to the evolving needs of the business
 * You can manage your costs dynamically, optimizing spending as requirements change
+
+## Cloud Deployment Models
+
+**Public cloud**
+
+Everything runs on your cloud provider's hardware.
+* Advantages:
+    - High scalability/agility
+    - Pay-as-you-go pricing
+    - You're not responsible for maintenance or hardware updates, so it also requires minimal technical knowledge to set up and use
+* Disadvantages:
+    - There may be specific security or legal requirements (overnment policies, industry standards...) that cannot be met
+    - If you don't own the hardware/services and cannot manage them as you may want to
+    - Unique business requirements, such as having to maintain a legacy application might be hard to meet
+
+**Private cloud**
+
+You create a cloud environment in your own datacenter and provide self-service access to compute resources to users in your organization.
+* Advantages:
+    - You can ensure the configuration can support any scenario or legacy application
+    - You have control (and responsibility) over security
+    - You can meet strict security, compliance, or legal requirements
+* Disadvantages:
+    - You have initial CapEx costs and must purchase the hardware for startup and maintenance
+    - Limited agility: to scale you must buy, install, and setup new hardware
+    - Private clouds require IT skills and expertise that's hard to come by
+
+**Hybrid**
+
+A combination of public and private clouds, allowing you to run your applications in the most appropriate location.
+* Advantages:
+    - You can keep any systems that use out-of-date hardware or OS running and accessible
+    - You have flexibility with what you run locally versus in the cloud
+    - You can take advantage of economies of scale from public cloud providers where it's cheaper, and then supplement with your own equipment when it's not
+    - You can use your own equipment to meet security, compliance, or legacy scenarios where you need to completely control the environment
+* Disadvantages:
+    - It can be more expensive than selecting one deployment model (CapEx + OpEx)
+    - It can be more complicated to set up and manage
+
