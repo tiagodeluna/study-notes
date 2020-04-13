@@ -118,3 +118,9 @@ A combination of public and private clouds, allowing you to run your application
     - It can be more expensive than selecting one deployment model (CapEx + OpEx)
     - It can be more complicated to set up and manage
 
+## Types of Cloud Services
+
+* **Infrastructure as a Service (IaaS)**: It's an instant computing infrastructure (hardware), provisioned and managed over the internet. IaaS is commonly used for: migrating workloads, test and development, storage, backup and recovery.
+* **Platform as a Service (PaaS):** It's a complete development and deployment environment in the cloud. It helps you create an application quickly without managing the underlying infrastructure. PaaS is commonly used in the following scenarios: Development framework, Analytics or business intelligence.
+* **Software as a Service (SaaS):** SaaS is software that is centrally hosted and managed for the end customer. Office 365, Skype, and Dynamics CRM Online are examples of SaaS software.
+
