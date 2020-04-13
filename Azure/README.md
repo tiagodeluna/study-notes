@@ -12,7 +12,7 @@ Typically, the computing services offered by a cloud provider are:
 
 ## Benefits of Cloud Computing
 
-* **It's cost effective**: Cloud computing provides a pay-as-you-go or consumption-based pricing model.
+* **It's cost effective**: Cloud computing provides a **pay-as-you-go** or consumption-based pricing model.
 * **It's scalable**: You can increase or decrease the resources and services used based on the demand or workload at any given time, doing both vertical and horizontal scaling.
     - *Vertical scaling*: adding resources to increase the power of an existing server (adding more CPUs or memory...).
     - *Horizontal scaling*: adding more servers that function together as one unit.
@@ -124,3 +124,116 @@ A combination of public and private clouds, allowing you to run your application
 * **Platform as a Service (PaaS):** It's a complete development and deployment environment in the cloud. It helps you create an application quickly without managing the underlying infrastructure. PaaS is commonly used in the following scenarios: Development framework, Analytics or business intelligence.
 * **Software as a Service (SaaS):** SaaS is software that is centrally hosted and managed for the end customer. Office 365, Skype, and Dynamics CRM Online are examples of SaaS software.
 
+# Azure subscription
+
+An Azure subscription is a logical container used to provision resources in Azure. It holds the details of all your resources like virtual machines (VMs), databases, and more.
+
+It is possible to create additional subscriptions to separate: Environments (e.g development, testing, security), Organizational structures (e.g team, department, project), and Billing (e.g production workloads, development and testing workloads).
+
+If you have multiple subscriptions, you can organize them into invoice sections. You can also set up multiple invoices within the same billing account, by creating additional billing profiles. Each billing profile has its own monthly invoice and payment method.
+
+# Azure Services
+
+The most commonly used categories are:
+
+## Compute
+
+A range of options for hosting applications and services, including:
+
+* Azure Virtual Machines: Windows or Linux virtual machines (VMs)
+* Azure Virtual Machine Scale Sets: Scaling for VMs hosted in Azure
+* Azure Kubernetes Service: Management of a cluster of VMs that run containerized services
+* Azure Service Fabric: Distributed systems platform
+* Azure Batch: Managed service for parallel and high-performance computing applications
+* Azure Container Instances: Run containerized apps on Azure without provisioning servers or VMs
+Azure Functions: An event-driven, serverless compute service
+
+## Networking
+
+Includes a range of options to connect the outside world to services and features in the global Microsoft Azure datacenters.
+
+* Azure Virtual Network: Connects VMs to incoming Virtual Private Network (VPN) connections
+* Azure Load Balancer: Balances inbound and outbound connections to applications or service endpoints
+* Azure Application Gateway: Optimizes app server farm delivery while increasing application security
+* Azure VPN Gateway: Accesses Azure Virtual Networks through high-performance VPN gateways
+* Azure DNS: Provides ultra-fast DNS responses and ultra-high domain availability
+* Azure Content Delivery Network: Delivers high-bandwidth content to customers globally
+* Azure DDoS Protection: Protects Azure-hosted applications from distributed denial of service (DDOS) attacks
+* Azure Traffic Manager: Distributes network traffic across Azure regions worldwide
+* Azure ExpressRoute: Connects to Azure over high-bandwidth dedicated secure connections
+* Azure Network Watcher: Monitors and diagnoses network issues using scenario-based analysis
+* Azure Firewall: Implements high-security, high-availability firewall with unlimited scalability
+* Azure Virtual WAN: Creates a unified wide area network (WAN), connecting local and remote sites
+
+## Storage
+
+Azure provides four main types of storage services:
+
+* Azure Blob storage: Storage service for very large objects, such as video files or bitmaps
+* Azure File storage: File shares that you can access/manage like a file server
+* Azure Queue storage: A data store for queuing and reliably delivering messages between applications
+* Azure Table storage: A NoSQL store that hosts unstructured data independent of any schema
+
+## Mobile
+
+Azure enables developers to create mobile backend services for iOS, Android, and Windows apps quickly and easily. Features include: Corporate sign-in, Offline data synchronization, Connectivity to on-premises data, Broadcasting push notifications, Autoscaling.
+
+## Databases
+
+Azure provides multiple database services to store a wide variety of data types and volumes:
+
+* Azure Cosmos DB: Globally distributed database that supports NoSQL options
+* Azure SQL Database: Fully managed relational database with auto-scale, integral intelligence, and robust security
+* Azure Database for MySQL: Fully managed and scalable MySQL relational database with high availability and security
+* Azure Database for PostgreSQL
+* SQL Server on VMs
+* Azure SQL Data Warehouse
+* Azure Database Migration Service: Migrates your databases to the cloud with no application code changes
+* Azure Cache for Redis: Caches frequently used and static data to reduce data and application latency
+* Azure Database for MariaDB
+
+## Web
+
+First-class support to build and host web apps and HTTP-based web services.
+
+* Azure App Service: Quickly create powerful cloud web-based apps
+* Azure Notification Hubs: Send push notifications to any platform from any back end.
+* Azure API Management: Publish APIs to developers, partners, and employees.
+* Azure Cognitive Search: Fully managed search as a service.
+* Web Apps feature of Azure App Service: Create and deploy mission-critical web apps at scale.
+* Azure SignalR Service: Add real-time web functionalities easily.
+
+## Internet of Things
+
+There are a number of services that can assist and drive end-to-end solutions for IoT on Azure:
+
+* IoT Central: Fully-managed global IoT SaaS solution that makes it easy to connect, monitor, and manage your IoT assets at scale
+* Azure IoT Hub: Messaging hub that provides secure communications between and monitoring of millions of IoT devices
+* IoT Edge: Push your data analysis models directly onto your IoT devices, allowing them to react quickly to state changes without needing to consult cloud-based AI models.
+
+## Big Data
+
+Microsoft Azure supports a broad range of technologies and services to provide big data and analytic solutions:
+
+* Azure SQL Data Warehouse: Run analytics at a massive scale using a cloud-based Enterprise Data Warehouse (EDW) that leverages massive parallel processing (MPP) to run complex queries quickly across petabytes of data
+* Azure HDInsight: Process massive amounts of data with managed clusters of Hadoop clusters in the cloud
+* Azure Databricks: Collaborative Apache Spark–based analytics service that can be integrated with other Big Data services in Azure.
+
+## Artificial Intelligence
+
+Some of the most common Artificial Intelligence and Machine Learning service types in Azure are listed below, along with cognitive services (pre-built APIs that solve complex problems):
+
+* Azure Machine Learning Service: Cloud-based environment you can use to develop, train, test, deploy, manage, and track machine learning models. It can auto-generate a model and auto-tune it for you
+* Azure Machine Learning Studio: Collaborative, drag-and-drop visual workspace where you can build, test, and deploy machine learning solutions using pre-built machine learning algorithms and data-handling modules
+* Vision: Image-processing algorithms to smartly identify, caption, index, and moderate your pictures and videos
+* Speech: Convert spoken audio into text, use voice for verification, or add speaker recognition to your app
+* Knowledge mapping: Map complex information and data in order to solve tasks such as intelligent recommendations and semantic search
+* Bing Search: Add Bing Search APIs to your apps and harness the ability to comb billions of webpages, images, videos, and news with a single API call
+* Natural Language processing: Allow your apps to process natural language with pre-built scripts, evaluate sentiment and learn how to recognize what users want.
+
+## DevOps
+
+Azure DevOps Services allows you to create build and release pipelines that provide continuous integration, delivery, and deployment for your applications.
+
+* Azure DevOps: Azure DevOps Services provides development collaboration tools including high-performance pipelines, free private Git repositories, configurable Kanban boards, and automated and cloud-based load testing
+* Azure DevTest Labs: Quickly create on-demand Windows and Linux environments to test or demo applications directly from your deployment pipelines
