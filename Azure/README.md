@@ -237,3 +237,40 @@ Azure DevOps Services allows you to create build and release pipelines that prov
 
 * Azure DevOps: Azure DevOps Services provides development collaboration tools including high-performance pipelines, free private Git repositories, configurable Kanban boards, and automated and cloud-based load testing
 * Azure DevTest Labs: Quickly create on-demand Windows and Linux environments to test or demo applications directly from your deployment pipelines
+
+# Basic concepts for creating websites hosted in Azure
+
+Let's review some basic terms required if you want to have a website up and running in Azure:
+
+## What is an App Service?
+
+Azure App Service is an HTTP-based service that enables you to build and host many types of web-based solutions (including web apps, mobile back ends, and RESTful APIs) without managing infrastructure. Applications developed in .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python can run in and scale with ease on both Windows and Linux-based environments.
+
+## App Service Plans
+
+When you create an application using App Service or want to *scale up* an existing application, you have to select an App Service plan. There are three categories to make it easier to decide the type of workload (plan) you need:
+
+* **Dev/Test:** ideal for less demanding workloads and focused on providing shared infrastructure. In this category, you have additional features that become available to the App Service application. e.g. Custom domains/SSL and manual scale.
+* **Production:** ideal for more demanding workloads. In this category there are added features such as staging slots, daily backups, and a traffic manager.
+* **Isolated**: ideal for workloads that require advanced networking and fine-grained scaling.
+
+Within each category, there are pricing tiers that will allow you to scale the resources available and give you access to additional features.
+
+## What is the Microsoft Azure Marketplace?
+
+The Microsoft Azure Marketplace is an online store that hosts applications that are certified and optimized to run in Azure.
+
+## Resource Groups in Azure
+
+Typically, the first for hosting a web application in Azure is to create a resource group to hold all the things needed. The resource group allows us to administer all the services, disks, network interfaces, and other elements that potentially make up our solution as a unit. Resource groups can be created and managed via Azure portal or via command line using the *Azure CLI*.
+
+Unused resources left running still can cost you money. You can delete resources individually or delete the resource group to delete the entire set of resources.
+
+## What is Azure Cloud Shell?
+
+A browser-based command-line console for managing and developing Azure resources. Cloud Shell provides two experiences to choose from, Bash and PowerShell. Both include access to the Azure command-line interface called *Azure CLI* and to *Azure PowerShell*.
+
+In this exercise, you'll use the Cloud Shell window shown side by side with the exercise instructions. When normally accessing the Cloud Shell from within the Azure portal, you'll click the Cloud Shell icon from the top navigation bar. This icon is sometimes within the ellipsis (...) menu icon next to your profile.
+
+
+
