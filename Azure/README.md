@@ -124,6 +124,8 @@ A combination of public and private clouds, allowing you to run your application
 * **Platform as a Service (PaaS):** It's a complete development and deployment environment in the cloud. It helps you create an application quickly without managing the underlying infrastructure. PaaS is commonly used in the following scenarios: Development framework, Analytics or business intelligence.
 * **Software as a Service (SaaS):** SaaS is software that is centrally hosted and managed for the end customer. Office 365, Skype, and Dynamics CRM Online are examples of SaaS software.
 
+---
+
 # Azure subscription
 
 An Azure subscription is a logical container used to provision resources in Azure. It holds the details of all your resources like virtual machines (VMs), databases, and more.
@@ -131,6 +133,8 @@ An Azure subscription is a logical container used to provision resources in Azur
 It is possible to create additional subscriptions to separate: Environments (e.g development, testing, security), Organizational structures (e.g team, department, project), and Billing (e.g production workloads, development and testing workloads).
 
 If you have multiple subscriptions, you can organize them into invoice sections. You can also set up multiple invoices within the same billing account, by creating additional billing profiles. Each billing profile has its own monthly invoice and payment method.
+
+---
 
 # Azure Services
 
@@ -238,39 +242,99 @@ Azure DevOps Services allows you to create build and release pipelines that prov
 * Azure DevOps: Azure DevOps Services provides development collaboration tools including high-performance pipelines, free private Git repositories, configurable Kanban boards, and automated and cloud-based load testing
 * Azure DevTest Labs: Quickly create on-demand Windows and Linux environments to test or demo applications directly from your deployment pipelines
 
+---
+
 # Basic concepts for creating websites hosted in Azure
 
 Let's review some basic terms required if you want to have a website up and running in Azure:
 
 ## What is an App Service?
 
-Azure App Service is an HTTP-based service that enables you to build and host many types of web-based solutions (including web apps, mobile back ends, and RESTful APIs) without managing infrastructure. Applications developed in .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python can run in and scale with ease on both Windows and Linux-based environments.
+Azure App Service is an HTTP-based service that enables you to build and host many types of web-based solutions (web apps, mobile backends, and RESTful APIs...) without managing infrastructure. Applications developed in .NET, .NET Core, Java, Ruby, Node.js, PHP, or Python can run in and scale with ease on both Windows and Linux-based environments.
 
 ## App Service Plans
 
-When you create an application using App Service or want to *scale up* an existing application, you have to select an App Service plan. There are three categories to make it easier to decide the type of workload (plan) you need:
+When you create an application using App Service or want to *scale up* an existing application, you have to select an App Service plan. There are three categories for different types of workload (plan):
 
-* **Dev/Test:** ideal for less demanding workloads and focused on providing shared infrastructure. In this category, you have additional features that become available to the App Service application. e.g. Custom domains/SSL and manual scale.
-* **Production:** ideal for more demanding workloads. In this category there are added features such as staging slots, daily backups, and a traffic manager.
-* **Isolated**: ideal for workloads that require advanced networking and fine-grained scaling.
+* **Dev/Test:** for less demanding workloads. Focused on providing shared infrastructure. This category has additional features that become available to the App Service application. e.g. Custom domains/SSL and manual scale.
+* **Production:** for more demanding workloads. There are added features such as staging slots, daily backups, and a traffic manager.
+* **Isolated**: for workloads that require advanced networking and fine-grained scaling.
 
 Within each category, there are pricing tiers that will allow you to scale the resources available and give you access to additional features.
 
-## What is the Microsoft Azure Marketplace?
+## Microsoft Azure Marketplace
 
 The Microsoft Azure Marketplace is an online store that hosts applications that are certified and optimized to run in Azure.
 
 ## Resource Groups in Azure
 
-Typically, the first for hosting a web application in Azure is to create a resource group to hold all the things needed. The resource group allows us to administer all the services, disks, network interfaces, and other elements that potentially make up our solution as a unit. Resource groups can be created and managed via Azure portal or via command line using the *Azure CLI*.
+Typically, the first step for hosting a web application in Azure is to create a resource group to hold all the things needed. The resource group allows us to administer all the services, disks, network interfaces, and other elements that potentially make up our solution as a unit. Resource groups can be created and managed via Azure portal or via command line using the *Azure CLI*.
 
-Unused resources left running still can cost you money. You can delete resources individually or delete the resource group to delete the entire set of resources.
+```
+Tip: Unused resources left running still can cost you money. You can delete resources individually or delete the resource group to delete the entire set of resources.
+```
 
-## What is Azure Cloud Shell?
+## Azure Cloud Shell
 
 A browser-based command-line console for managing and developing Azure resources. Cloud Shell provides two experiences to choose from, Bash and PowerShell. Both include access to the Azure command-line interface called *Azure CLI* and to *Azure PowerShell*.
 
-In this exercise, you'll use the Cloud Shell window shown side by side with the exercise instructions. When normally accessing the Cloud Shell from within the Azure portal, you'll click the Cloud Shell icon from the top navigation bar. This icon is sometimes within the ellipsis (...) menu icon next to your profile.
+---
 
+# Datacenters and Regions in Azure
 
+## What is a region?
+
+Microsoft Azure is made up of datacenters located around the globe. The specific datacenters aren't exposed to end users directly; instead, Azure organizes them into *regions*.
+
+A region is a geographical area on the planet containing at least one, but potentially multiple datacenters that are nearby and networked together with a low-latency network. When you deploy a resource in Azure, you will often need to choose the region where you want your resource deployed.
+
+Regions are important to give you flexibility to bring applications closer to your users, and also to provide better scalability, redundancy, and ensure data residency for your services.
+
+## Geographies
+
+Azure divides the world into *geographies* (typically containing two or more regions) that are defined by geopolitical boundaries or country borders. This division has several benefits:
+* Ensure that data residency, sovereignty, compliance, and resiliency requirements are honored within geographical boundaries.
+* Geographies are fault-tolerant to withstand complete region failure through their connection to dedicated high-capacity networking infrastructure.
+
+Geographies are broken up into the following areas:
+* Americas
+* Europe
+* Asia Pacific
+* Middle East and Africa
+
+## Availability Zones
+
+Azure ensures high availability and redundancy through Availability Zones, which are physically separate datacenters within an Azure region. Each AZ is made up of one or more datacenters equipped with independent power, cooling, and networking. They are isolation boundaries connected through high-speed, private fiber-optic networks.
+
+Obs: Not every region has support for Availability Zones.
+
+### Using Availability Zones in your apps
+
+You can use AZs to run mission-critical (highly-available) applications by co-locating your compute, storage, networking, and data resources within a zone and replicating in other zones. There could be a cost to duplicating your services and transferring data between zones.
+
+Azure services that support AZs fall into two categories:
+* **Zonal services** – you pin the resource to a specific zone (e.g. VMs, managed disks, IP addresses)
+* **Zone-redundant services** – platform replicates automatically across zones (zone-redundant storage, SQL Database).
+
+## Region Pairs
+
+Each Azure region is always paired with another region within the same geography (such as US, Europe, or Asia) at least 300 miles away. This approach allows for the replication of resources across a geography that helps reduce the likelihood of interruptions due to events such as natural disasters, civil unrest, power outages, or physical network outages affecting both regions at once. If a region in a pair was affected by a natural disaster, for instance, services would automatically fail over to the other region in its region pair.
+
+## Service-Level Agreements (SLA)
+
+SLAs are formal documents that capture the specific terms (operational policies, standards, and practices) that define the performance standards that apply to Azure services. SLAs also specify what happens if a service or product fails to perform to a governing SLA's specification.
+
+There are three key characteristics of SLAs for Azure products and services:
+
+1. Performance Targets - usually expressed as uptime guarantees or connectivity rates.
+2. Uptime and Connectivity Guarantees - for example, the SLA for Azure Cosmos DB offers **99.999%** uptime, which includes low-latency commitments of less than 10 milliseconds on DB read and write operations.
+3. Service credits - customers may have a discount applied to their Azure bill, as compensation for an under-performing Azure service (for example, 10 service credit percentage for a monthly uptime percentage below 99.9).
+
+### Composite SLAs
+
+The resulting composite SLA can provide higher or lower uptime values, depending on your application architecture. For instance, consider an App Service (99.95%) web app that writes to Azure SQL Database (99.99%). If either service fails the whole application will fail. The composite SLA value for this application is:
+
+`99.95% × 99.99% = 99.94%`
+
+This means the combined probability of failure is higher than the individual SLA values.
 
