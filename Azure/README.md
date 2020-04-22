@@ -274,9 +274,17 @@ Typically, the first step for hosting a web application in Azure is to create a 
 Tip: Unused resources left running still can cost you money. You can delete resources individually or delete the resource group to delete the entire set of resources.
 ```
 
-## Azure Cloud Shell
+## Azure Cloud Shell, CLI, and PowerShell 
 
-A browser-based command-line console for managing and developing Azure resources. Cloud Shell provides two experiences to choose from, Bash and PowerShell. Both include access to the Azure command-line interface called *Azure CLI* and to *Azure PowerShell*.
+**Azure Cloud Shell**: A *browser-based command-line console* for managing and developing Azure resources. Cloud Shell provides two experiences to choose from, Bash and PowerShell. Both include access to the Azure command-line interface called *Azure CLI* and to *Azure PowerShell*.
+
+**Azure PowerShell**: A *module that you can install* for Windows PowerShell or PowerShell Core, which is a cross-platform version of PowerShell that runs on Windows, Linux, or macOS. It enables you to connect to your Azure subscription and manage resources. You can create administration scripts and use automation tools to automate repetitive tasks and optimize your workflow.
+
+    New-AzVM ` -ResourceGroupName "MyResourceGroup" ` -Name "TestVm" ` -Image "UbuntuLTS" `
+
+**Azure CLI**: A cross-platform *command-line program* (Bash) that connects to Azure and executes administrative commands on Azure resources. Cross-platform means that it can be run on Windows, Linux, or macOS.
+
+    az vm create --resource-group MyResourceGroup --name TestVm --image UbuntuLTS --generate-ssh-keys
 
 ---
 
