@@ -346,3 +346,11 @@ The resulting composite SLA can provide higher or lower uptime values, depending
 
 This means the combined probability of failure is higher than the individual SLA values.
 
+---
+
+# Azure Portal
+
+## Azure Portal dashboards
+
+A dashboard is a customizable collection of UI tiles displayed in the Azure portal. You add, remove, and position tiles to create the exact view you want, and then save that view as a dashboard. Dashboards are stored as JSON files, which you can download, edit manually and upload. You can create dashboards for specific roles within the organization, and then use role-based access control (RBAC) to control who can access that dashboard.
+
