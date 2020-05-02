@@ -348,9 +348,64 @@ This means the combined probability of failure is higher than the individual SLA
 
 ---
 
+# Azure Compute
+
+Azure compute is an on-demand computing service for running cloud-based applications. There are four common techniques for performing compute in Azure:
+
+## Virtual machines
+
+Software emulations of physical computers, where you're able to install and run software. You can run single VMs for testing, development, or minor tasks; or you can group VMs together to provide high availability, scalability, and redundancy. Azure has several features such that:
+
+### Availability sets
+
+A logical grouping of two or more VMs that help keep your application available during planned or unplanned maintenance.
+
+A *planned maintenance event* is when the underlying Azure fabric that hosts VMs is updated by Microsoft. When the VMs are part of an availability set, they're put into different *update domains*, which indicate groups of VMs and underlying physical hardware that can be rebooted at the same time.
+
+*Unplanned maintenance events* involve a hardware failure in the data center, such as a power outage or disk failure. The group of VMs that share common hardware are in the same *fault domain*, which is essentially a rack of servers, with power, cooling, and network hardware. In the event the hardware that supports a server rack becomes unavailable, only that rack of servers is affected by the outage.
+
+### Virtual Machine Scale Sets
+
+Virtual Machine Scale Sets let you create and manage a group of identical, load balanced VMs. They allow you to centrally manage, configure, and update a large number of VMs in minutes to provide highly available applications. The number of VM instances can automatically increase or decrease in response to demand or a defined schedule.
+
+### Azure Batch
+
+Azure Batch enables large-scale job scheduling and compute management with the ability to scale to tens, hundreds, or thousands of VMs.
+
+## Containers
+
+Virtualization environment for running applications. Unlike VMs, containers don't include an OS. Instead, they bundle the libraries and components needed to run the application and use the existing host OS. Azure supports Docker containers, and there are several ways to manage containers in Azure:
+
+### Azure Container Instances (ACI)
+
+It offers the fastest and simplest way to run a container in Azure. You don't have to manage any VMs or configure any additional services. It is a PaaS offering that allows you to upload your containers and execute them directly with automatic elastic scale.
+
+### Azure Kubernetes Service (AKS)
+
+The task of automating, managing, and interacting with a large number of containers is known as *orchestration*. AKS is a complete orchestration service for containers with distributed architectures with multiple containers.
+
+## Azure App Service
+
+A platform-as-a-service (PaaS) offering designed to host enterprise web-oriented applications without need of managing infrastructure. It offers automatic scaling and high availability. App Service supports both Windows and Linux, and enables automated deployments from GitHub, Azure DevOps, or any Git repo to support a continuous deployment model.
+
+## Serverless computing
+
+A cloud-hosted execution environment that runs your code but completely abstracts the underlying hosting environment. Serverless computing encompasses three ideas: the abstraction of servers, an event-driven scale, and micro-billing.
+
+*Micro-billing*: with serverless computing, you pay only for the time your code runs. If no active function executions occur, they're not charged. For example, if the code runs once a day for two minutes, they're charged for one execution and two minutes of computing time.
+
+Azure has two implementations of serverless compute:
+* **Azure Functions**, which can execute code in almost any modern language. They're commonly used when you need to perform work in response to an event, often via a REST request, timer, or message from another Azure service and when that work can be completed quickly, within seconds or less. They can be either stateless (the default) or stateful (called *Durable Functions*), where a context is passed through the function to track prior activity.
+* **Azure Logic Apps**, which are designed in a web-based designer and can execute logic triggered by Azure services without writing any code. Where Functions execute code, Logic Apps execute workflows designed to automate business scenarios from predefined logic blocks.
+
+---
+
+/*
 # Azure Portal
 
 ## Azure Portal dashboards
 
 A dashboard is a customizable collection of UI tiles displayed in the Azure portal. You add, remove, and position tiles to create the exact view you want, and then save that view as a dashboard. Dashboards are stored as JSON files, which you can download, edit manually and upload. You can create dashboards for specific roles within the organization, and then use role-based access control (RBAC) to control who can access that dashboard.
+*/
 
+---
