@@ -400,6 +400,101 @@ Azure has two implementations of serverless compute:
 
 ---
 
+# Azure Data Storage
+
+## Benefits
+
+* **Automated backup and recovery**
+* **Replication across the globe**: copies your data to protect it against any planned or unplanned events (scheduled maintenance, hardware failures, etc)
+* **Support for data analytics**: supports performing analytics on your data consumption.
+* **Encryption capabilities**
+* **Multiple data types**: Azure can store video files, text files, and even large binary files like virtual hard disks. It also has many options for your relational and NoSQL data.
+* **Data storage in virtual disks**: Azure also has the capability of storing up to 32 TB of data in its virtual disks.
+* **Storage tiers**: storage tiers to prioritize access to data based on frequently used versus rarely used information.
+
+## Types of data
+
+1. **Structured data**. Structured data is data that adheres to a schema, can be stored in a database table with rows and columns, and relies on keys to indicate identity and relationship (relational data)
+2. **Semi-structured data**. Semi-structured data (also referred to as non-relational or NoSQL data) doesn't fit neatly into tables, rows, and columns. Instead, it uses tags or keys that organize and provide a hierarchy for the data.
+3. **Unstructured data**. Unstructured data encompasses data that has no designated structure to it. There are no restrictions on the kinds of data it can hold. For example, a blob can hold a PDF document, a JPG image, a JSON file, video content, etc.
+
+## Azure Data Storage options
+
+**Azure SQL Database**
+A relational database as a service (DaaS) based on the latest stable version of the Microsoft SQL Server database engine.
+
+**Azure Cosmos DB**
+A globally distributed database service. It supports schema-less data that lets you build highly responsive and **Always On** applications to support constantly changing data.
+
+**Azure Blob storage**
+Azure Blob Storage is unstructured, meaning that there are no restrictions on the kinds of data it can hold. Blobs are highly scalable and apps work with blobs in much the same way as they would work with files on a disk.
+
+**Azure Data Lake Storage**
+The Data Lake feature allows you to perform analytics on your data usage and prepare reports. Data Lake is a large repository that stores both structured and unstructured data. It combines the scalability and cost benefits of object storage with the reliability and performance of the Big Data file systems.
+
+**Azure Files**
+It offers fully managed file shares in the cloud that are accessible via the industry standard Server Message Block (SMB) protocol.
+
+**Azure Queue**
+Azure Queue storage is a service for storing large numbers of messages that can be accessed from anywhere in the world. It provides asynchronous message queueing for communication between application components, whether they are running in the cloud, on the desktop, on-premises, or on mobile devices.
+
+
+**Disk Storage**
+It provides disks for virtual machines, applications, and other services to access and use as they need.
+
+**Storage tiers**
+Azure offers three storage tiers for blob object storage:
+1. **Hot storage tier**: optimized for storing data that is accessed frequently.
+2. **Cool storage tier**: optimized for data that are infrequently accessed and stored for at least 30 days.
+3. **Archive storage tier**: for data that are rarely accessed and stored for at least 180 days with flexible latency requirements.
+
+**Encryption**
+1. **Azure Storage Service Encryption (SSE)** for data at rest encrypts the data before storing it and decrypts the data before retrieving it. The encryption and decryption are transparent to the user.
+2. **Client-side encryption** is where the data is already encrypted by the client libraries. Azure stores the data in the encrypted state at rest, which is then decrypted during retrieval.
+
+**Replication**
+Azure provides regional and geographic replications to protect your data, which is set up when you create a storage account. The replication feature ensures that your data is durable and always available.
+
+# Azure Networking
+
+## Using a Loosely Coupled Architecture (N-tier)
+
+**N-tier** is an architectural pattern that can be used to build loosely coupled systems. It divides an application into two or more logical tiers. Architecturally, a higher tier can access services from a lower tier, but a lower tier should never access a higher tier.
+
+Tiers help separate concerns and are ideally designed to be reusable. Using a tiered architecture also simplifies maintenance. Tiers can be updated or replaced independently, and new tiers can be inserted if needed.
+
+## Virtual Network
+
+A virtual network is a logically isolated network on Azure. It allows Azure resources to securely communicate with each other, the internet, and on-premises networks. A virtual network is scoped to a single region; however, multiple virtual networks from different regions can be connected together using virtual network peering.
+
+Virtual networks can be segmented into one or more *subnets*. Subnets help you organize and secure your resources in discrete sections. For example, in a three-tier solution using VMs, the Web, App, and Data tiers/VMs are in the same virtual network but are in separate subnets.
+
+Users interact with the Web tier directly, so that VM has a *public IP address* along with a *private IP address*. Users don't interact with the App or Data tiers, so these VMs each have a private IP address only.
+
+## Network Security Group
+
+A network security group, or NSG, allows or denies inbound network traffic to your Azure resources. Think of a network security group as a cloud-level firewall for your network.
+
+For example, notice that the VM in the web tier allows inbound traffic on ports 22 (SSH) and 80 (HTTP). This VM's network security group allows inbound traffic over these ports from all sources. You can configure a network security group to accept traffic only from known sources, such as IP addresses that you trust.
+
+## Azure Load Balancer
+
+A *load balancer* distributes traffic evenly among each system in a pool. It can help you achieve both *high availability* (ability to stay up and running for a long period of time) and *resiliency* (ability to stay operational during abnormal conditions).
+
+Azure Load Balancer supports inbound and outbound scenarios, provides low latency and high throughput, and scales up to millions of flows for all Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) applications. You can use Load Balancer with incoming internet traffic, internal traffic across Azure services, port forwarding for specific traffic, or outbound connectivity for VMs in your virtual network.
+
+Also, there's no infrastructure or software for you to maintain. You define the forwarding rules based on the source IP and port to a set of destination IP/ports.
+
+## Azure Application Gateway
+
+If all your traffic is HTTP, a potentially better option is to use Azure Application Gateway, which is a load balancer designed for web applications. It uses Azure Load Balancer at the transport level (TCP) and applies sophisticated URL-based routing rules to support several advanced scenarios.
+
+Some of the benefits of using Azure Application Gateway over a simple load balancer are: cookie affinity, SSL termination (SSL certificates management and encryption), Web application firewall (WAF), URL rule-based routes, and rewrite HTTP headers.
+
+## Azure DNS
+
+DNS, or Domain Name System, is a way to map user-friendly names to their IP addresses. You can think of DNS as the phonebook of the internet. You can bring your own DNS server or use Azure DNS, a hosting service for DNS domains that runs on Azure infrastructure.
+
 /*
 # Azure Portal
 
