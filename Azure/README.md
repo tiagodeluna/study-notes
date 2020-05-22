@@ -495,6 +495,16 @@ Some of the benefits of using Azure Application Gateway over a simple load balan
 
 DNS, or Domain Name System, is a way to map user-friendly names to their IP addresses. You can think of DNS as the phonebook of the internet. You can bring your own DNS server or use Azure DNS, a hosting service for DNS domains that runs on Azure infrastructure.
 
+## Azure Traffic Manager
+
+Factors such as the type of connection you use and how your application is designed can affect *latency*. But perhaps the biggest factor is distance (between the application server and the client's physical location).
+
+```
+Latency refers to the time it takes for data to travel over the network and reach its destination. Bandwidth refers to the amount of data that can fit on the connection.
+```
+
+One way to reduce latency is to provide exact copies of your service in more than one region, but in this case each region will have a different DNS name. *Azure Traffic Manager*, instead, uses the DNS server that's closest to the user to direct user traffic to a globally distributed endpoint, including both Azure and on-premise deployments.
+
 /*
 # Azure Portal
 
