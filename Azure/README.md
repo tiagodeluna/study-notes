@@ -455,6 +455,8 @@ Azure offers three storage tiers for blob object storage:
 **Replication**
 Azure provides regional and geographic replications to protect your data, which is set up when you create a storage account. The replication feature ensures that your data is durable and always available.
 
+---
+
 # Azure Networking
 
 ## Using a Loosely Coupled Architecture (N-tier)
@@ -500,10 +502,37 @@ DNS, or Domain Name System, is a way to map user-friendly names to their IP addr
 Factors such as the type of connection you use and how your application is designed can affect *latency*. But perhaps the biggest factor is distance (between the application server and the client's physical location).
 
 ```
-Latency refers to the time it takes for data to travel over the network and reach its destination. Bandwidth refers to the amount of data that can fit on the connection.
+Network Latency refers to the time it takes for data to travel over the network and reach its destination. Bandwidth refers to the amount of data that can fit on the connection.
 ```
 
 One way to reduce latency is to provide exact copies of your service in more than one region, but in this case each region will have a different DNS name. *Azure Traffic Manager*, instead, uses the DNS server that's closest to the user to direct user traffic to a globally distributed endpoint, including both Azure and on-premise deployments.
+
+---
+
+# Cloud Security
+
+Azure helps alleviate your security concerns. But *security is a shared responsibility*. How much of that responsibility falls on us depends on which model we use with Azure:
+
+When using *on-premises data centers*, you are fully responsible for the security of your applications. But with *IaaS* (e.g. using Azure VMs), the responsibility for the lowest-level service – i.e. physical datacenter, network and hosts – is outsourced.
+
+Moving to *PaaS* outsources several security concerns, as Azure is taking care of the operating system and of most foundational software like database management systems.
+
+With *SaaS* (e.g. Office 360), you outsource almost everything, as it is software that runs with an internet infrastructure. But regardless of the deployment type, you always retain responsibility for the following items:
+* Data
+* Endpoints
+* Accounts
+* Access management
+
+## Defense in Depth
+
+Microsoft applies a layered approach to security, both in physical data centers and across Azure services. Defense in Depth is a strategy that employs a series of mechanisms to slow the advance of an attack aimed at acquiring unauthorized access to information. Each layer provides protection so that if one layer is breached, a subsequent layer is already in place to prevent further exposure:
+* **Data:** In almost all cases, attackers are after data stored in a DB, disk, etc.
+* **Application:** Integrating security into the application development life cycle to ensure that they are secure and free of vulnerabilities.
+* **Compute:** Implement endpoint protection and keep systems patched and current, and secure access to virtual machines.
+* **Networking:** limit the network connectivity across all your resources to allow only what is required, including, adopting "deny" by default, restricting inbound internet access and limiting outbound, where appropriate.
+* **Perimeter:** protect from network-based attacks against your resources by using distributed denial of service (DDoS) protection, and perimeter firewalls.
+* **Identity and access:** all about ensuring identities are secure, access granted is only what is needed, and changes are logged. Measures include using single sign-on and multi-factor authentication, and audit events and changes.
+* **Physical security:** Physical building security and access control to computing hardware to provide physical safeguards against access to assets.
 
 /*
 # Azure Portal
