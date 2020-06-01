@@ -534,6 +534,30 @@ Microsoft applies a layered approach to security, both in physical data centers 
 * **Identity and access:** all about ensuring identities are secure, access granted is only what is needed, and changes are logged. Measures include using single sign-on and multi-factor authentication, and audit events and changes.
 * **Physical security:** Physical building security and access control to computing hardware to provide physical safeguards against access to assets.
 
+## Azure Active Directory
+
+Azure AD is a cloud-based identity service, which provides both *Authentication* and *Authorization*. All your applications, whether on-premises, in the cloud, or even mobile can share the same credentials, allowing administrators and developers to control access to internal and external data and applications using centralized rules and policies.
+
+Azure AD provides services such as:
+
+* Single-Sign-On
+* Multi-factor Authentication. Provides additional security by requiring two or more elements for full authentication: Something you know, Something you possess, and Something you are.
+* Application management. Manage your cloud and on-premises apps using Azure AD Application Proxy, SSO, the My apps portal, and SaaS apps.
+* Business to business (B2B) identity services
+* Business-to-Customer (B2C) identity services
+* Device Management
+
+## Encryption on Azure
+
+* **Azure Storage Service Encryption** for data at rest is used to encrypt *raw storage*. The Azure storage platform automatically encrypts your data before persisting it to Azure Managed Disks, Azure Blob storage, Azure Files, or Azure Queue storage, and decrypts the data before retrieval.
+
+* **Azure Disk Encryption** helps you encrypt your Windows and Linux IaaS *virtual machine disks*. The solution uses BitLocker feature of Windows and the dm-crypt feature of Linux and is integrated with **Azure Key Vault** to help you control and manage the disk encryption keys and secrets.
+
+* **Transparent data encryption (TDE)** helps protect Azure *SQL Database and Azure Data Warehouse* against the threat of malicious activity. By default, TDE is enabled for all newly deployed Azure SQL Database instances.
+
+* **Azure Key Vault** ensures that the encryption keys are secure, as long as corporate passwords, connection strings, certificates, or other *sensitive pieces of information (secrets)* that you need to securely store.
+
+
 /*
 # Azure Portal
 
