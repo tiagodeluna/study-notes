@@ -534,6 +534,14 @@ Microsoft applies a layered approach to security, both in physical data centers 
 * **Identity and access:** all about ensuring identities are secure, access granted is only what is needed, and changes are logged. Measures include using single sign-on and multi-factor authentication, and audit events and changes.
 * **Physical security:** Physical building security and access control to computing hardware to provide physical safeguards against access to assets.
 
+### Firewalls (Perimeter and Network Layers)
+
+A firewall is a service that grants server access based on the originating IP address of each request. Firewall rules specify ranges of IP addresses that will be allowed to access the server. Usually, they also include specific network protocol and port information. To provide inbound protection at the perimeter, you have several choices:
+
+* **Azure Firewall**: a managed, cloud-based, network security service that protects your resources. It provides inbound protection for non-HTTP/S protocols (e.g. Remote Desktop Protocol, SSH, and FTP). It also provides outbound, network-level protection for all ports and protocols, and application-level protection for outbound HTTP/S.
+* **Azure Application Gateway** is a load balancer that includes a Web Application Firewall (WAF) that provides protection from common, known vulnerabilities in websites. It is designed to protect HTTP traffic.
+* **Network virtual appliances (NVAs)**: ideal options for non-HTTP services or advanced configurations, and similar to hardware firewall appliances.
+
 ## Azure Active Directory
 
 Azure AD is a cloud-based identity service, which provides both *Authentication* and *Authorization*. All your applications, whether on-premises, in the cloud, or even mobile can share the same credentials, allowing administrators and developers to control access to internal and external data and applications using centralized rules and policies.
@@ -557,6 +565,7 @@ Azure AD provides services such as:
 
 * **Azure Key Vault** ensures that the encryption keys are secure, as long as corporate passwords, connection strings, certificates, or other *sensitive pieces of information (secrets)* that you need to securely store.
 
+---
 
 /*
 # Azure Portal
