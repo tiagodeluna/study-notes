@@ -567,6 +567,30 @@ Azure AD provides services such as:
 
 ---
 
+# Azure Policy
+
+Azure Policy is a service you use to create, assign and, manage policies. These policies enforce different rules and effects over your resources so that those resources stay compliant with your corporate standards and service level agreements (SLAs). Azure Policy meets this need by evaluating your resources for noncompliance with assigned policies.
+
+Unlike role-based access control (RBAC), Azure Policy focuses on *resource properties during deployment* and for already-existing resources. Azure Policy controls properties such as the types or locations of resources. Unlike RBAC, Azure Policy is a **default-allow-and-explicit-deny system**.
+
+*Example: Imagine we allow anyone in our organization to create virtual machines (VMs). We want to control costs, so the administrator defines a policy that prohibits the creation of any VM with more than 4 CPUs. Once the policy is implemented, Azure Policy will stop anyone from creating a new (or updating an existing) VM outside the list of allowed stock keeping units (SKUs).*
+
+## Creating a policy
+
+1. **Create a policy definition**: The process of creating and implementing an Azure Policy begins with creating a *policy definition*. A policy definition is represented as a JSON file and expresses what to evaluate and what action to take (e.g *Allowed Storage Account SKUs*, *Allowed Locations*, *Not allowed resource types*). After creating a policy definition, you can apply it using the Azure portal, or one of the command-line tools.
+2. **Assign a definition to a scope of resources**: A *policy assignment* is a policy definition that has been assigned to take place within a specific scope. This scope could range from a full subscription down to a resource group. Policy assignments are inherited by all child resources. However, you can exclude a subscope from the policy assignment.
+3. **View policy evaluation results**: Azure Policy can trigger an audit event that can be viewed in the Azure Policy portal, so that you can spot resources that are not compliant and take action to correct them.
+
+## Organize policies using Initiatives
+
+In order to organize your policies, you need to specify *initiatives*. An initiative definition is a set or group of policy definitions to help track your compliance state for a larger goal. Like a policy assignment, an initiative assignment is an initiative definition assigned to a specific scope.
+
+## Manage subscriptions by using Management Groups
+
+Azure Management Groups are containers for managing access, policies, and compliance across multiple Azure subscriptions. Management groups allow you to order your resources hierarchically into collections, which provide a further level of classification that is above the level of subscriptions.
+
+Using management groups you can create an hierarchy that allow you to apply a policy that, for example, limits VM locations to the US West Region for the "Geo Region 1" group. This policy will inherit onto all the Enterprise Agreement (EA) subscriptions under that management group and will apply to all VMs under those subscriptions.
+
 /*
 # Azure Portal
 
