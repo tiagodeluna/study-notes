@@ -569,16 +569,18 @@ Azure AD provides services such as:
 
 # Azure Policy
 
-Azure Policy is a service you use to create, assign and, manage policies. These policies enforce different rules and effects over your resources so that those resources stay compliant with your corporate standards and service level agreements (SLAs). Azure Policy meets this need by evaluating your resources for noncompliance with assigned policies.
+Azure Policy is a service you use to create, assign, and manage policies. These policies enforce different rules and effects over your resources so that those resources stay compliant with your corporate standards and service level agreements (SLAs). Azure Policy meets this need by evaluating your resources for noncompliance with assigned policies.
 
-Unlike role-based access control (RBAC), Azure Policy focuses on *resource properties during deployment* and for already-existing resources. Azure Policy controls properties such as the types or locations of resources. Unlike RBAC, Azure Policy is a **default-allow-and-explicit-deny system**.
+Different from role-based access control (RBAC), Azure Policy focuses on *resource properties during deployment* and for already-existing resources. Azure Policy controls properties such as the types or locations of resources. Unlike RBAC, Azure Policy is a **default-allow-and-explicit-deny system**.
 
 *Example: Imagine we allow anyone in our organization to create virtual machines (VMs). We want to control costs, so the administrator defines a policy that prohibits the creation of any VM with more than 4 CPUs. Once the policy is implemented, Azure Policy will stop anyone from creating a new (or updating an existing) VM outside the list of allowed stock keeping units (SKUs).*
 
 ## Creating a policy
 
 1. **Create a policy definition**: The process of creating and implementing an Azure Policy begins with creating a *policy definition*. A policy definition is represented as a JSON file and expresses what to evaluate and what action to take (e.g *Allowed Storage Account SKUs*, *Allowed Locations*, *Not allowed resource types*). After creating a policy definition, you can apply it using the Azure portal, or one of the command-line tools.
+
 2. **Assign a definition to a scope of resources**: A *policy assignment* is a policy definition that has been assigned to take place within a specific scope. This scope could range from a full subscription down to a resource group. Policy assignments are inherited by all child resources. However, you can exclude a subscope from the policy assignment.
+
 3. **View policy evaluation results**: Azure Policy can trigger an audit event that can be viewed in the Azure Policy portal, so that you can spot resources that are not compliant and take action to correct them.
 
 ## Organize policies using Initiatives
@@ -590,6 +592,37 @@ In order to organize your policies, you need to specify *initiatives*. An initia
 Azure Management Groups are containers for managing access, policies, and compliance across multiple Azure subscriptions. Management groups allow you to order your resources hierarchically into collections, which provide a further level of classification that is above the level of subscriptions.
 
 Using management groups you can create an hierarchy that allow you to apply a policy that, for example, limits VM locations to the US West Region for the "Geo Region 1" group. This policy will inherit onto all the Enterprise Agreement (EA) subscriptions under that management group and will apply to all VMs under those subscriptions.
+
+## Compliance Manager
+
+In addition to governing your own resources, you also have to understand how the cloud provider manages the underlying resources you are building on. Microsoft provides full transparency with four sources:
+
+**Microsoft Privacy Statement**: explains what personal data Microsoft processes, how Microsoft processes it, and for what purposes. The statement applies to the interactions Microsoft has with you and Microsoft products such as Microsoft services, websites, apps, software, servers, and devices.
+
+**Microsoft Trust Center**: a website resource containing information and details about how Microsoft implements and supports security, privacy, compliance, and transparency in all Microsoft cloud products and services.
+
+**Service Trust Portal**: hosts the Compliance Manager service, and is the Microsoft public site for publishing audit reports and other compliance-related information relevant to Microsoft's cloud services. STP also includes information about how Microsoft online services can help your organization maintain and track compliance with standards, laws, and regulations, such as: ISO, SOC, NIST, FedRAMP, GDPR.
+
+**Compliance Manager**: a workflow-based risk assessment dashboard within the Service Trust Portal that enables you to track, assign, and verify your organization's regulatory compliance activities related to Microsoft professional services and Microsoft cloud services such as Office 365, Dynamics 365, and Azure.
+
+## Monitoring your service health
+
+Azure provides two primary services to monitor the health of your apps and resources.
+
+### Azure Monitor
+
+Azure Monitor maximizes the availability and performance of your applications by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. It helps you understand how your applications are performing and proactively identifies issues affecting them and the resources they depend on.
+
+Azure Monitor can collect monitoring data from a variety of sources, such as: application, guest OS, Azure resource, Azure subscription, and Azure tenant. It also allows you to respond proactively to any critical conditions that are identified within the data it collects by sending **Alerts** or activating **Autoscale** rules.
+
+Azure Monitor includes several features and tools that provide valuable insights into your applications, and the other resources they may depend on:
+* **Application Insights** is a service that monitors the availability, performance, and usage of your web applications, whether they're hosted in the cloud or on-premises.
+* **Azure Monitor for containers** monitors the performance of container workloads, which are deployed to managed Kubernetes clusters, hosted on Azure Kubernetes Service (AKS).
+* **Azure Monitor for VMs** monitors your Azure VMs at scale, by analyzing the performance and health of your Windows and Linux VMs.
+
+### Azure Service Health
+
+Azure Service Health is a suite of experiences that provide personalized guidance and support when issues with Azure services affect you. It can notify you, help you understand the impact of issues, and keep you updated as the issue is resolved. Azure Service Health can also help you prepare for planned maintenance and changes that could affect the availability of your resources. It is composed by the following services: Azure Status, Service Health and Resource Health.
 
 /*
 # Azure Portal
