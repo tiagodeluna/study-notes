@@ -244,6 +244,14 @@ Azure DevOps Services allows you to create build and release pipelines that prov
 
 ---
 
+# Azure Portal
+
+## Azure Portal Dashboards
+
+A dashboard is a customizable collection of UI tiles displayed in the Azure portal. You add, remove, and position tiles to create the exact view you want, and then save that view as a dashboard. Dashboards are stored as JSON files, which you can download, edit manually and upload. You can create dashboards for specific roles within the organization, and then use *role-based access control* (RBAC) to control who can access that dashboard.
+
+---
+
 # Basic concepts for creating websites hosted in Azure
 
 Let's review some basic terms required if you want to have a website up and running in Azure:
@@ -268,11 +276,17 @@ The Microsoft Azure Marketplace is an online store that hosts applications that 
 
 ## Resource Groups in Azure
 
-Typically, the first step for hosting a web application in Azure is to create a resource group to hold all the things needed. The resource group allows us to administer all the services, disks, network interfaces, and other elements that potentially make up our solution as a unit. Resource groups can be created and managed via Azure portal or via command line using the *Azure CLI*.
+Typically, the first step for hosting a web application in Azure is to create a resource group to hold all the things needed. The resource group allows us to administer all the services, disks, network interfaces, and other elements that potentially make up our solution as a unit.
+
+Resource groups also serve as the life cycle for the resources within it. If you delete a resource group, you delete all the resources in it. Resource groups can be created and managed via Azure portal or via command line using the *Azure CLI*.
 
 ```
 Tip: Unused resources left running still can cost you money. You can delete resources individually or delete the resource group to delete the entire set of resources.
 ```
+
+### Using Tags
+
+Tags are name/value pairs of text data that you can apply to resources and resource groups to add contextual information and improve organization. You can use tags to group your billing data, to use in automation, to make filtering easier in Azure Portal, and also to help in monitoring to track down impacted resources in alert messages. A resource can have up to 50 tags.
 
 ## Azure Cloud Shell, CLI, and PowerShell 
 
@@ -623,13 +637,5 @@ Azure Monitor includes several features and tools that provide valuable insights
 ### Azure Service Health
 
 Azure Service Health is a suite of experiences that provide personalized guidance and support when issues with Azure services affect you. It can notify you, help you understand the impact of issues, and keep you updated as the issue is resolved. Azure Service Health can also help you prepare for planned maintenance and changes that could affect the availability of your resources. It is composed by the following services: Azure Status, Service Health and Resource Health.
-
-/*
-# Azure Portal
-
-## Azure Portal dashboards
-
-A dashboard is a customizable collection of UI tiles displayed in the Azure portal. You add, remove, and position tiles to create the exact view you want, and then save that view as a dashboard. Dashboards are stored as JSON files, which you can download, edit manually and upload. You can create dashboards for specific roles within the organization, and then use role-based access control (RBAC) to control who can access that dashboard.
-*/
 
 ---
