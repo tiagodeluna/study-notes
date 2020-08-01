@@ -657,3 +657,32 @@ Azure Monitor includes several features and tools that provide valuable insights
 Azure Service Health is a suite of experiences that provide personalized guidance and support when issues with Azure services affect you. It can notify you, help you understand the impact of issues, and keep you updated as the issue is resolved. Azure Service Health can also help you prepare for planned maintenance and changes that could affect the availability of your resources. It is composed by the following services: Azure Status, Service Health and Resource Health.
 
 ---
+
+# Costs in Azure
+
+## Usage Meters
+
+When you provision an Azure resource, Azure creates one or more meter instances for that resource. The meters track the resources' usage, and generate a usage record that is used to calculate your bill.
+
+For example, a single virtual machine that you provision in Azure might have the following meters tracking its usage: Compute Hours, IP Address Hours, Data Transfer In, Data Transfer Out, Standard Managed Disk, Standard Managed Disk Operations, etc.
+
+The key takeaway is that resources are always charged based on usage. For example, if you de-allocate a VM (instead of deleting it) then you will not be billed for compute hours, I/O reads or writes or the private IP address since the VM is not running and has no allocated compute resources. However you will incur storage costs for the disks.
+
+## Factors affecting costs
+
+**Resource Type:** Costs are resource-specific, so the usage that a meter tracks and the number of meters associated with a resource depend on the resource type. *The usage that a meter tracks correlates to a number of billable units. The rate per billable unit depends on the resource type you are using.*
+
+**Services:** usage rates and billing periods can differ between Enterprise, Web Direct, and Cloud Solution Provider (CSP) customers. The Azure team offers first-party products and services, while products and services from third-party vendors are available in the Azure Marketplace. Different billing structures apply to each of these categories.
+
+**Location:** Usage costs vary between locations that offer particular Azure products, services, and resources based on popularity, demand, and local infrastructure costs.
+
+**Azure billing zones:** Bandwidth refers to data moving in and out of Azure datacenters. Most of the time inbound data transfers are free. For outbound data transfers, the pricing is based on Billing Zones. The Billing zones are:
+
+| Zone | Areas |
+| --- | --- |
+| Zone 1 | United States, US Government, Europe, Canada, UK, France, Switzerland |
+| Zone 2 | East Asia, Southeast Asia, Japan, Australia, India, Korea |
+| Zone 3 | Brazil, South Africa, UAE |
+| DE Zone 1 | Germany |
+
+---
