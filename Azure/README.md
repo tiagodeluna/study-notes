@@ -284,9 +284,13 @@ Resource groups also serve as the life cycle for the resources within it. If you
 Tip: Unused resources left running still can cost you money. You can delete resources individually or delete the resource group to delete the entire set of resources.
 ```
 
-### Using Tags
+## Using Tags
 
-Tags are name/value pairs of text data that you can apply to resources and resource groups to add contextual information and improve organization. You can use tags to group your billing data, to use in automation, to make filtering easier in Azure Portal, and also to help in monitoring to track down impacted resources in alert messages. A resource can have up to 50 tags.
+Tags are name/value pairs of text data that you can apply to resources and resource groups to add contextual information and improve organization. You can use tags to group your billing data, to use in automation, to make filtering easier in Azure Portal, and also to help in monitoring to track down impacted resources in alert messages. 
+
+```
+Obs: A resource can have up to 50 tags. Tags can be applied to almost all types of resource on Azure. Tags applied at a resource group level are NOT propagated to resources within the resource group.
+```
 
 ## Azure Cloud Shell, CLI, and PowerShell 
 
@@ -581,7 +585,21 @@ Azure AD provides services such as:
 
 ---
 
-# Azure Policy
+# Resource Manager
+
+Azure Resource Manager is a set of tools and features that are available for you to manage your resources. In Azure Portal, they are available in the left panel of any resource page. 
+
+## Role-based Access Control (RBAC)
+
+RBAC provides access management for Azure resources, enabling you to grant users the specific rights they need to perform their jobs. RBAC is considered a core service and is included with all subscription levels at no cost. RBAC uses an **allow model** for access. When you are assigned to a role, RBAC allows you to perform specific actions, such as read, write, or delete.
+
+## Using Resource Locks to protect resources
+
+Resource locks are a setting that can be applied to any resource to block modification or deletion. Resource locks can set to either **Delete** or **Read-only** (only allow read activities, blocking any modification or deletion of the resource). Resource locks can be applied to subscriptions, resource groups, and to individual resources, and are inherited when applied at higher levels.
+
+When there is a resource lock applied, you must first remove the lock in order to perform that activity. This additional step helps protect resources from inadvertent actions, and helps protect your administrators from doing something they may not have intended to do. Resource locks apply regardless of RBAC permissions. Even if you are an owner of the resource, you must still remove the lock before performing the blocked activity.
+
+## Azure Policy
 
 Azure Policy is a service you use to create, assign, and manage policies. These policies enforce different rules and effects over your resources so that those resources stay compliant with your corporate standards and service level agreements (SLAs). Azure Policy meets this need by evaluating your resources for noncompliance with assigned policies.
 
@@ -589,7 +607,7 @@ Different from role-based access control (RBAC), Azure Policy focuses on *resour
 
 *Example: Imagine we allow anyone in our organization to create virtual machines (VMs). We want to control costs, so the administrator defines a policy that prohibits the creation of any VM with more than 4 CPUs. Once the policy is implemented, Azure Policy will stop anyone from creating a new (or updating an existing) VM outside the list of allowed stock keeping units (SKUs).*
 
-## Creating a policy
+### Creating a policy
 
 1. **Create a policy definition**: The process of creating and implementing an Azure Policy begins with creating a *policy definition*. A policy definition is represented as a JSON file and expresses what to evaluate and what action to take (e.g *Allowed Storage Account SKUs*, *Allowed Locations*, *Not allowed resource types*). After creating a policy definition, you can apply it using the Azure portal, or one of the command-line tools.
 
@@ -619,11 +637,11 @@ In addition to governing your own resources, you also have to understand how the
 
 **Compliance Manager**: a workflow-based risk assessment dashboard within the Service Trust Portal that enables you to track, assign, and verify your organization's regulatory compliance activities related to Microsoft professional services and Microsoft cloud services such as Office 365, Dynamics 365, and Azure.
 
-## Monitoring your service health
+### Monitoring your service health
 
 Azure provides two primary services to monitor the health of your apps and resources.
 
-### Azure Monitor
+**Azure Monitor**:
 
 Azure Monitor maximizes the availability and performance of your applications by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. It helps you understand how your applications are performing and proactively identifies issues affecting them and the resources they depend on.
 
@@ -634,7 +652,7 @@ Azure Monitor includes several features and tools that provide valuable insights
 * **Azure Monitor for containers** monitors the performance of container workloads, which are deployed to managed Kubernetes clusters, hosted on Azure Kubernetes Service (AKS).
 * **Azure Monitor for VMs** monitors your Azure VMs at scale, by analyzing the performance and health of your Windows and Linux VMs.
 
-### Azure Service Health
+**Azure Service Health**:
 
 Azure Service Health is a suite of experiences that provide personalized guidance and support when issues with Azure services affect you. It can notify you, help you understand the impact of issues, and keep you updated as the issue is resolved. Azure Service Health can also help you prepare for planned maintenance and changes that could affect the availability of your resources. It is composed by the following services: Azure Status, Service Health and Resource Health.
 
