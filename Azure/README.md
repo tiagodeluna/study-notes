@@ -695,4 +695,14 @@ The Azure Pricing Calculator is [here](https://azure.microsoft.com/en-us/pricing
 Tip: If you have resources that are not location-sensitive, you can save a lot of money by locating them in less expensive regions. Checking the pricing calculator can help you determine the most cost-effective place to put these services.
 ```
 
+## Azure Advisor
+
+Azure Advisor is a free service that provides recommendations on cost, but also  high availability, security, performance, and operational excellence. Advisor analyzes your deployed services and looks for ways to improve your environment across each of these areas.
+
+It can be found in the Azure Portal in the *left-side menu > All Services > Management + governance*.
+
+## Azure Cost Management
+
+Azure Cost Management is another free, built-in Azure tool that can be used to gain greater insights into where your cloud money is going. You can see historical breakdowns of what services you are spending your money on and how it is tracking against budgets that you have set. You can set budgets, schedule reports, and analyze your cost areas.
+
 ---
