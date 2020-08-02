@@ -658,7 +658,7 @@ Azure Service Health is a suite of experiences that provide personalized guidanc
 
 ---
 
-# Costs in Azure
+# Estimating Costs in Azure
 
 ## Usage Meters
 
@@ -670,13 +670,13 @@ The key takeaway is that resources are always charged based on usage. For exampl
 
 ## Factors affecting costs
 
-**Resource Type:** Costs are resource-specific, so the usage that a meter tracks and the number of meters associated with a resource depend on the resource type. *The usage that a meter tracks correlates to a number of billable units. The rate per billable unit depends on the resource type you are using.*
+**Resource Type:** the usage that a meter tracks and the number of meters associated with a resource depend on the resource type. *The tracked usage correlates to a number of billable units. The rate per billable unit depends on the resource type you are using.*
 
-**Services:** usage rates and billing periods can differ between Enterprise, Web Direct, and Cloud Solution Provider (CSP) customers. The Azure team offers first-party products and services, while products and services from third-party vendors are available in the Azure Marketplace. Different billing structures apply to each of these categories.
+**Services:** usage rates and billing periods can differ between customer categories (Enterprise, Web Direct, and Cloud Solution Provider), and between first-party services (offered by Azure team) and third-party products/services (available in the Azure Marketplace).
 
-**Location:** Usage costs vary between locations that offer particular Azure products, services, and resources based on popularity, demand, and local infrastructure costs.
+**Location:** usage costs vary between locations that offer particular Azure products, services, and resources based on popularity, demand, and local infrastructure costs.
 
-**Azure billing zones:** Bandwidth refers to data moving in and out of Azure datacenters. Most of the time inbound data transfers are free. For outbound data transfers, the pricing is based on Billing Zones. The Billing zones are:
+**Azure billing zones:** Bandwidth refers to data moving in and out of Azure datacenters. *Most of the time inbound data transfers are free. For outbound data transfers, the pricing is based on Billing Zones*. The Billing zones are:
 
 | Zone | Areas |
 | --- | --- |
@@ -684,5 +684,15 @@ The key takeaway is that resources are always charged based on usage. For exampl
 | Zone 2 | East Asia, Southeast Asia, Japan, Australia, India, Korea |
 | Zone 3 | Brazil, South Africa, UAE |
 | DE Zone 1 | Germany |
+
+## Azure Pricing Calculator
+
+The Azure pricing calculator is a free web-based tool that allows you to input Azure services and modify properties and options of the services. It outputs the costs per service (based on Region, Tier, Billing Options, Programs and Offers, and Azure Dev/Test Pricing) and total cost for the full estimate.
+
+The Azure Pricing Calculator is [here](https://azure.microsoft.com/en-us/pricing/calculator/). 
+
+```
+Tip: If you have resources that are not location-sensitive, you can save a lot of money by locating them in less expensive regions. Checking the pricing calculator can help you determine the most cost-effective place to put these services.
+```
 
 ---
