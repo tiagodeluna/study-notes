@@ -364,6 +364,14 @@ The resulting composite SLA can provide higher or lower uptime values, depending
 
 This means the combined probability of failure is higher than the individual SLA values.
 
+## Azure Support Levels
+
+* BASIC: Free and available to all accounts. No support.
+* DEVELOPER: Support only for Azure trial and non-production environments.
+* STANDARD: Basic support for Azure production workload environments.
+* PROFESSIONAL DIRECT: Support for Azure business-critical dependence.
+* PREMIER: Support for all environments and Microsoft products, including Azure. Relevant specially in case of substantial dependence across multiple products.
+
 ---
 
 # Azure Compute
@@ -564,6 +572,8 @@ A firewall is a service that grants server access based on the originating IP ad
 
 Azure AD is a cloud-based identity service, which provides both *Authentication* and *Authorization*. All your applications, whether on-premises, in the cloud, or even mobile can share the same credentials, allowing administrators and developers to control access to internal and external data and applications using centralized rules and policies.
 
+It is possible to have multiple Subscriptions connected to a single Active Directory, but each subscription can be trusted to only one AD at a time.
+
 ```
 Azure also has a service called Azure AD B2C (Active Directory Business-to-Consumer) which can be used to manage the access for your customers, allowing them to have access to services and parts of Azure portal using Multi-Factor Authentication, Facebook, Google account, etc.
 ```
@@ -711,9 +721,9 @@ It can be found in the Azure Portal in the *left-side menu > All Services > Mana
 
 ## Azure Cost Management
 
-Azure Cost Management is another free, built-in Azure tool that can be used to gain greater insights into where your cloud money is going. You can see historical breakdowns of what services you are spending your money on and how it is tracking against budgets that you have set. You can set budgets, schedule reports, and analyze your cost areas.
+Azure Cost Management is another free, built-in Azure tool that can be used to gain greater insights into where your cloud money is going. It started as a third-party solution called Cloudyn that was bought by Microsoft and gradually replaced by Azure Cost Management. There you can see historical breakdowns of what services you are spending your money on and how it is tracking against budgets that you have set. You can set budgets, schedule reports, and analyze your cost areas.
 
-## Azure TCO calculator
+## Azure TCO: Tocal Cost Calculator
 
 If you are starting to migrate to the cloud, a useful tool you can use to predict your cost savings is the **Total Cost of Ownership (TCO) calculator**, available [here](https://azure.microsoft.com/pricing/tco/).
 
