@@ -164,17 +164,17 @@ Includes a range of options to connect the outside world to services and feature
 * Azure Content Delivery Network: Delivers high-bandwidth content to customers globally
 * Azure DDoS Protection: Protects Azure-hosted applications from distributed denial of service (DDOS) attacks
 * Azure Traffic Manager: Distributes network traffic across Azure regions worldwide
-* Azure ExpressRoute: Connects to Azure over high-bandwidth dedicated secure connections
+* Azure Express Route: Connects to Azure over high-bandwidth dedicated secure connections
 * Azure Network Watcher: Monitors and diagnoses network issues using scenario-based analysis
 * Azure Firewall: Implements high-security, high-availability firewall with unlimited scalability
 * Azure Virtual WAN: Creates a unified wide area network (WAN), connecting local and remote sites
 
 ## Storage
 
-Azure provides four main types of storage services:
+Under Storage Accounts, a unique account you need to create in order to create and manage storage services, Azure provides four main types of services:
 
-* Azure Blob storage: Storage service for very large objects, such as video files or bitmaps
-* Azure File storage: File shares that you can access/manage like a file server
+* Azure Blob storage: Storage service for very large objects, such as video files, bitmaps, VM images, etc.
+* Azure File storage: File shares that you can access/manage like a file server. It can be used, for instance, to store images and files of a website.
 * Azure Queue storage: A data store for queuing and reliably delivering messages between applications
 * Azure Table storage: A NoSQL store that hosts unstructured data independent of any schema
 
@@ -704,5 +704,15 @@ It can be found in the Azure Portal in the *left-side menu > All Services > Mana
 ## Azure Cost Management
 
 Azure Cost Management is another free, built-in Azure tool that can be used to gain greater insights into where your cloud money is going. You can see historical breakdowns of what services you are spending your money on and how it is tracking against budgets that you have set. You can set budgets, schedule reports, and analyze your cost areas.
+
+## Azure TCO calculator
+
+If you are starting to migrate to the cloud, a useful tool you can use to predict your cost savings is the **Total Cost of Ownership (TCO) calculator**, available [here](https://azure.microsoft.com/pricing/tco/).
+
+There you can estimate your costs by executing three simple steps:
+1. **Define your workloads:** enter details about your on-premises infrastructure according to four groups: Servers, Databases, Storage, and Networking.
+2. **Adjust assumptions:** Adjust the values of assumptions that the TCO calculator makes to improve the accuracy of the prediction.
+3. **View the report:** The TCO calculator generates a detailed report based on the details you enter, allowing you to compare the costs of your on-premises infra with the costs of using Azure products and services.
+
 
 ---
