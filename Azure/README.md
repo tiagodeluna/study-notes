@@ -564,6 +564,10 @@ A firewall is a service that grants server access based on the originating IP ad
 
 Azure AD is a cloud-based identity service, which provides both *Authentication* and *Authorization*. All your applications, whether on-premises, in the cloud, or even mobile can share the same credentials, allowing administrators and developers to control access to internal and external data and applications using centralized rules and policies.
 
+```
+Azure also has a service called Azure AD B2C (Active Directory Business-to-Consumer) which can be used to manage the access for your customers, allowing them to have access to services and parts of Azure portal using Multi-Factor Authentication, Facebook, Google account, etc.
+```
+
 Azure AD provides services such as:
 
 * Single-Sign-On
@@ -582,6 +586,10 @@ Azure AD provides services such as:
 * **Transparent data encryption (TDE)** helps protect Azure *SQL Database and Azure Data Warehouse* against the threat of malicious activity. By default, TDE is enabled for all newly deployed Azure SQL Database instances.
 
 * **Azure Key Vault** ensures that the encryption keys are secure, as long as corporate passwords, connection strings, certificates, or other *sensitive pieces of information (secrets)* that you need to securely store.
+
+```
+Azure recommends regenerating your Azure Storage Accounts access keys regularly. But every time you do that, your Azure resources and applications that access your storage account (e.g. to read files) have to be updated accordingly. To avoid that, you can store your access keys securely in Azure Key Vault and make your application retrieve it from there, so that you don't need to refactor your code when the key is regenerated.
+```
 
 ---
 
