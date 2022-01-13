@@ -105,7 +105,7 @@ With Amazon S3, you can store virtually unlimited number of objects with a rich 
 
 **Trusted Advisor**
 
-Trusted Advisor provides best practices and checks if all services in your account are in accordance to that practices. It checks the best practices in four categories: Cost Optimization, Performance, Security and Fault Tolerance.
+Trusted Advisor provides best practices and checks if all services in your account are in accordance to that practices. It checks the best practices in four categories: Cost Optimization, Performance, Security and Fault Tolerance. It helps highlighting, for example, underutilized EC2 instances and EBS volumes.
 
 
 ## Amazon EC2
