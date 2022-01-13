@@ -43,6 +43,8 @@ Add aliases in the .gitconfig file at `user folder` as the following examples:
 | ----- | ----- |
 | ssh-keygen | Generate SSH Key |
 
+Please check [this article](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to find more info on how to generate and use SSH keys in GitHub.
+
 ## Cloning a project
 
 | Command | Description |
