@@ -158,6 +158,8 @@ If you need to remove all items from the Git index (not from the working directo
 
 ## Working with submodules
 
+Submodules allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another repository into your project and keep your commits separate. More information can be found [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
 | Command | Description |
 | ----- | ----- |
 | git submodule add `repo url` `folder name` | Add a remote repo as a submodule in the current repo |
