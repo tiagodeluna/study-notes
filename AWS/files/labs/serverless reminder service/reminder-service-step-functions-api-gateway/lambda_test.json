@@ -1,0 +1,1 @@
+{"body": "{\"waitSeconds\":100, \"preference\":\"sms\", \"phone\":\"+15555555555\", \"message\":\"yo, from Lambda\"}"}

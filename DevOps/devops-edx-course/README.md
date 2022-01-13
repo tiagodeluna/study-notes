@@ -1261,15 +1261,21 @@ Tools:
 - VM image build scripts, meta and templates should be kept in version control
 - All VM images should be reproductible from source (version control)
 - Most configuration management tools can automate VM provisioning then kickoff the CM process
+- Uses a *Hypervisor* application that provides a software abstraction of the hardware
+- It allows for multiple operating systems to share resources (CPU, RAM, networking, storage...)
 - Image strategies (Bake vs Fry)
   + The bake image is bigger, but is faster in deploy.
   + The fry image is smaller, but it takes longer to deploy, because you are literally installing, instead of having all the installed components in the backed image
 
-Tools of Type 1 Hypervisors:
-- VMWare ESX/vSphere, XEN, HyperV
+**Type 1 Hypervisors:**
+- Bare metal installation over the hardware to control and monitor hardware and guest OS.
+- Tools:
+  + VMWare ESX/vSphere, XEN, HyperV
 
-Tools of Type 2 Hypervisors:
-- KVM, VMWare Workstation, Oracle VirtualBox, Xhyve (Hyperkit - Docker)
+**Type 2 Hypervisors:**
+- Software applications that run inside of a traditional OS
+- Tools:
+  + KVM, VMWare Workstation, Oracle VirtualBox, Xhyve (Hyperkit - Docker)
 
 #### Provisioning: Desktop Virtualization (VM)
 
@@ -1315,7 +1321,13 @@ Tools:
 - VM-like agility - it's still "virtualization"
   + Most things you can do in a VM, you can do in a container
 - Lightweight - Just enough Operating System (JeOS)
+  + Generally, they do not contain an entire operating system
   + It fits well with microservice architectures
+  + Rapid boot time - since the underlying OS kernel is already running
+- It's an application sandboxing solution
+  + Not tied to the host
+  + A reference image can be used for many application containers
+- Versioning - Only incremental changes are uploaded/downloaded
 - Supported with modern Linux kernel
 - Growing in popularity
 
@@ -1351,7 +1363,27 @@ Tools:
 - **Docker Trusted Registry**: an [on-premise](https://en.wikipedia.org/wiki/On-premises_software) solution, similar to Docker Hub, but with a whole bunch of integration with enterprise stuff. It is not open source.
 - **Docker Machine**: allows you to manage all Docker instances and switch between environments.
 - **Docker Swarm**: it is an orchestration tool that allows you to run containers across multiple Docker Engines, multiple hosts.
-- **Docker Compose**: it allows you to build a YAML definition
+- **Docker Compose**: it allows us to build containers from a YAML file.
+
+#### Dockerfiles
+
+- Dockerfiles are used to build custom docker images using **docker build** command within a *Context*
+- A Context is a set of files within the local file system or a repository out on the web (e.g. in a Git repo)
+  + Do not use root (`C:\` or `/`) as your context
+- It's a text file, normally named "Dockerfile", that contains *directives* for how images should be created
+  + Each directive creates a "layer" within the image
+  + Rebuilding an image applies only to changed layers
+- There is also a *.dockerignore* file, optional, used to exclude files and directories within the context.
+
+#### Docker Compose
+
+- it's a tool used to configure and run multi-container applications.
+- It allows us to build containers from a service configuration (YAML) file.
+
+**Usage Steps:**
+1. Configure a Dockerfile
+2. Configure docker-compose.yml
+3. Run `docker-compose up` command
 
 #### Docker Tools
 

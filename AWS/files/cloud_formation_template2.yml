@@ -1,0 +1,47 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  WorkshopLaunchConfiguration:
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties:
+      ImageId: ami-0a5e707736615003c
+      InstanceType: t2.micro
+      KeyName: aws_workshop
+      SecurityGroups:
+        - !Ref MySecurityGroup
+      UserData: !Base64
+        'Fn::Sub': |-
+          #!/bin/bash -xe
+          yum update -y
+          cd /home/ec2-user
+          curl -o- https://rpm.nodesource.com/setup_10.x | bash -
+          yum install -y nodejs
+          exit
+          yum install -y git
+          git clone https://shiouen@bitbucket.org/shiouen/cap-example-nodejs-app.git -b release/without-lambda
+          cd cap-example-nodejs-app
+          npm install
+          sh -c 'PORT=8080 nohup npm start > nohup.log' &
+          tail -f nohup.log
+  MySecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Base Security Group
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          CidrIp: 0.0.0.0/0
+          FromPort: 22
+          ToPort: 22
+        - IpProtocol: tcp
+          CidrIp: 0.0.0.0/0
+          FromPort: 8080
+          ToPort: 8080
+  MyAutoScalingGroup:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties: 
+      AvailabilityZones: !GetAZs
+        Ref: 'AWS::Region'
+      DesiredCapacity: "3"
+      LaunchConfigurationName: !Ref WorkshopLaunchConfiguration
+      MaxSize: "3"
+      MinSize: "1"
+      Cooldown: "10"

@@ -54,9 +54,11 @@ Add aliases in the .gitconfig file at `user folder` as the following examples:
 
 | Command | Description |
 | ----- | ----- |
+| git branch [-r] | Display all local or remote (with `-r`) existing branches. |
 | git branch `branch` | Create new *branch* |
 | git branch `branch` -d | Delete a *branch* |
-| git checkout -b `branch` `repo, branch or tag` | Create local *branch* from a remote *repository*, *branch* or *tag* and switch (checkout) to it |
+| git fetch | Downloads references to all the remote branches and/or tags. |
+| git checkout -b `branch` `repo, branch or tag` | Switch branches. With `-b` it creates a local *branch* from a remote *branch* or *tag* and switch to it |
 
 ## Pulling files
 
@@ -115,6 +117,16 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 | git checkout -- `filename` | Discard changes in a *file* in working directory |
 | git merge --abort | Undo a merge, reverting the branch to its previous situation (usually after a merge the generated conflicts) |
 | git update-index --assume-unchanged `file` | Forces git to ignore local changes in a file by setting its state to "unchanged" |
+
+## Untracking/Removing files
+
+If you need to remove all items from the Git index (not from the working directory or local repository), and then update the Git index, you can use the series of commands below (f.e. in case you updated your `.gitignore` file and want to exclude the undesirable files from your repo).
+
+| Step | Command | Description |
+| ----- | ----- | ----- |
+| 1 | git rm -r --cached . | Remove all files from the Git index (or cache) |
+| 2 | git add . | Add all files again, respecting the new .gitignore definitions |
+| 3 | git commit -m "Remove ignored files" | Commit the changes |
 	
 ## Using tags
 
@@ -150,4 +162,3 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 | ----- | ----- |
 | git submodule add `repo url` `folder name` | Add a remote repo as a submodule in the current repo |
 | git submodule update --init --recursive | Tells git to download the contents of submodule when downloading current repository |
-

@@ -46,6 +46,14 @@ There are different ways of make your application available:
 
 The AWS CLI (Command Line Interface) is a tool for managing your AWS services using command line. It allows you, for example, to automatize the creation and configuration of your EC2 instances via scripts. Check the [documentation](https://aws.amazon.com/pt/cli/) for more details.
 
+**API Gateway**
+
+Amazon API Gateway is a fully-managed service that allows you to create and maintain your own APIs for your application. It acts as a "front-door" for your application, allowing access to data/logic/functionality from your back-end services.
+
+API Gateway uses Stages, that are snapshots of your API (e.g. dev, prod, beta...) containing specific settings - it stores configuration for deployments.
+
+There are also Gateway Methods that are associated with an API Gateway Resource. They include the allowed HTTP methods (DELETE, GET, HEAD, OPTIONS, PATCH, POST, and PUT) and the AWS-provided ANY method as a catch-all. API Gateway methods can be configured to respond to requests to AWS Lambda functions, integrated with other AWS Services, and to existing HTTP endpoints.
+
 **Aurora**
 
 Amazon Aurora is a MySQL database engine that combine the speed and availability of high-end commercial databases with the simplicity and cost-effectiveness of open-source databases. It offers aproximately 5 times the performance of MySQL. You use Amazon Aurora by selecting it when creating a RDS instance. 
@@ -58,13 +66,63 @@ The Auto Scaling Service allows you to automatically create and delete instances
 
 CodeDeploy is a deployment service that enables developers to perform *Blue Green Deployments* automatically, implementing the *Immutable servers* concept. Check the [documentation](https://aws.amazon.com/pt/documentation/codedeploy/) for more details.
 
+**CloudFormation**
+
+CloudFormation is the pure embodiment of infrastructure as code, because you can describe your application's architecture in a CloudFormation template as either JSON or YAML. It makes possible to, for example, version control your infrastructure, and reuse the same template to deploy copies of that architecture to other AWS regions or accounts.
+
+A Cloudformation Stack is a group of AWS resources that you can manage together, as they are treated as one single unit. If the creation of one resource fails, the default behavior is a *RollBack* in the whole Stack.
+
+CloudFormation provides built-in *Intrinsic Functions* that can be used in the template to assign values to different properties that are only available at or after runtime (e.g Fn::GetAtt, Fn::Join, Ref...). You can also use API calls to interact with CloudFormation to retrieve information, e.g. *ListStackResources* (to list all resources that belong to a Stack) and *DescribeStacks* (that returns descriptions of a list of all current Stacks), as well as AWS CLI commands, such as `aws cloudformation describe-stacks`.
+
 **CloudWatch**
 
-A tool that allows you to create **Billing Alarms** to avoid spending unexpected values while using your AWS account. CloudWatch also lets you collect and track metrics, monitor log files, and set other alert types. For example, we may be notified when the CPU is too busy for a certain time, writing or reading is slow, disk space is running out, among many other possibilities. Check the [documentation](https://aws.amazon.com/pt/documentation/cloudwatch/) for more details.
+Amazon CloudWatch is a tool used to monitor AWS services, such as EC2, ELB and S3. It lets you collect and track metrics, monitor log files, and set other alert types. For example, we may be notified when the CPU is too busy for a certain time, writing or reading is slow, disk space is running out, among many other possibilities. CloudWatch also allows you to create **Billing Alarms** to avoid spending unexpected values while using your AWS account. Check the [documentation](https://aws.amazon.com/pt/documentation/cloudwatch/) for more details.
 
 **DynamoDB**
 
 Amazon DynamoDB provides **NoSQL** database **tables** as a service, with unlimited number of items per table, low-latency queries and scalable read/write throughput. Amazon DynamoDB is a good fit for structured data from the Web, Mobile and Internet of Things Apps, as well as Ad Tech and Gaming.
+
+DynamoDB stores data in partitions. Partitions are SSD allocations of storage for the table and automatically replicated accross multiple AZs. 
+
+Primary key:
+
+Primary key attributes must have the data type of string, number, or binary. There are two types of primary key:
+* Simple PK: partition key only. In this model, no two items can have the same partition key.
+* Composite PK: partition key + sort key. Items must have a unique combination of partition key and sort key.
+
+Partition keys:
+
+Every DynamoDB table requires a partition key -- also known as **hash attribute**. DynamoDB uses partition keys in an internal hash function to determine where the partition data will be stored.
+
+Sort keys:
+
+After DynamoDB uses the partition key to determine the partition data will be stored in, the sort key -- or **range attribute** -- is used to sort the data inside of that partition.
+
+Indexes:
+
+DynamoDB has two types of indexes:
+* *Local secondary indexes* must have the same partition key and the same hash key as the table. They also must be created at the same time as the table itself. The point is that it has a different range key. Every partition of the index is scoped to a table partition with the same hash key.
+* A *Global secondary index* is an index with: a hash and range key. The hash and range key can be different from what's on the table. It is thought of as "global" because queries on the index can span all of the table data across partitions.
+
+Queries:
+
+In DynamoDB, a query efficiently searches using the partition key and an optional sort key. You have to supply a partition key when creating a query in DynamoDB. A query returns only the items matching the primary key. By default, a query is an *eventually consistent read* only. You have to explicitly request it to be a *strongly consistent read*.
+
+As the read (and write) throughput in DynamoDB is scalable and charged accordingly, it is important to determine beforehand how much read capacity throughput you should provision to your table. It can be done by using the formula: `( N x (S/K))`, where `N` is the number of items you want to read per second, `S` is the item size (in KB) and `K` is the throughput capacity size per read capacity unit (RCU), which is 4KB. For *eventually consistent reads*, which require half the throughput necessary for *strongly consistent reads*, divide the result by 2.
+
+Other important facts about DynamoDB:
+* The limit of tables an AWS account can have per region is 256. You can increase DynamoDB table limit by contacting AWS and requesting a limit increase.
+* You can define up to 5 *local secondary indexes* and 20 *global secondary indexes* per table (by default), i.e 25 in total.
+* One *read capacity unit* (RCU) represents one strongly consistent read per second, or two eventually consistent reads per second, for an item up to 4 KB in size.
+* One *write capacity unit* (WCU) represents one write per second for an item up to 1 KB in size.
+
+**Elastic Beanstalk**
+
+Elastic Beanstalk is designed to make it easy to deploy and scale less complex (single-tier) applications. It takes advantage of core services such as EC2, Auto Scaling, ELB, RDS, SQL and CloudFront, to help reduce the management required for provisioning applications.
+
+When using Elastic Beanstalk you will have to pay for only the costs of resources deployed by Elastic Beanstalk. The following platforms are supported: Docker, Packer, Java, Windows .NET, Node.js, PHP, Python, Ruby and Go.
+
+You can deploy your web applications by configuring a git repository with Elastic Beanstalk – so that changes will be detected and your application will be updated –, or uploading code files to the Elastic Beanstalk service.
 
 **EBS**
 
@@ -76,6 +134,28 @@ We can associate an EBS volume from an instance to another (but only an instance
 
 The Amazon Elastic Cloud Computer is a service that allows you to create instances of machines from predefined images, the AMIs (Amazon Machine Images). These machines can be configured to be flexible, with resources allocated (and deallocated) on demand. The costs are proportional to the quantity of the resources allocated on the machine.
 Each instance type has its own characteristics and purposes. See the [Documentation](https://aws.amazon.com/pt/ec2/instance-types/) for more details.
+
+EC2 instances are launched from Amazon Machine Images (AMIs). Public AMIs can only be used to launch EC2 instances in the same AWS region as the AMI is stored.
+
+Regarding data storage, there are two types of EC2 images:
+
+* Amazon EBS-backed: instances of this type of image can be stopped and restarted without losing data.
+* instance-store backed: images use "ephemeral" storage (temporary). The storage is only available during the life of an instance. Rebooting an instance will allow ephemeral data stay persistent. However, stopping and starting an instance will remove all ephemeral storage.
+
+**ECS**
+
+Elastic Container Service is a container management service that supports Docker. It allows you to easily create and manage a fleet of Docker containers on a cluster of EC2 instances. It uses **Fargate**, an AWS service that allows you to use containers as the fundamental building blocks of your application while AWS manages the EC2 instances for you.
+
+The containers can be created from images stored in a container registry located on AWS via the ECR service (Elastic Container Registry), a 3rd-party repository like DockerHub or a self-hosted registry.
+
+**ElastiCache**
+
+ElastiCache is a fully managed, in-memory cache engine used to improve database performance by caching results of queries that are made to a database. It is great for large, high-performance or high-taxing queries - and can store them inside of a cache cluster that can be accessed later.
+
+Available engines to power ElastiCache are **Memcached** and **Redis**. Some of the caching strategies that can be used in ElastiCache are:
+* *Lazy Loading*: you write data to the cache only when a cache miss occurs.
+* *Write Through*: the cache is updated whenever a new write or update is made to the underlying database.
+* *Adding Time To Live (TTL)*: a TTL is the length of time before a key expires. It can be used together with Lazy Loading or Write Through techniques to avoid its drawbacks.
 
 **IAM**
 
@@ -91,21 +171,98 @@ The Amazon *Elastic Load Balancing* is a solution that aims to optimize resource
 
 The Amazon RDS (Relational Database Service) is a SaaS-based service that provides an EC2 instance with a relational database ready to use and available on the cloud with minimum configuration.
 
+RDS provides *read replicas* that allows you to creates elasticity by adding/removing replicas based on demand, and improves performance of the primary database by taking workload from it.
+
 The DB Engines currently supported by RDS are: MySQL, Amazon Aurora, MS SQL Server, PostgreSQL, MariaDB and Oracle DB.
 
 **Redshift**
 
-Amazon Redshift is a fast fully-managed data warehouse. Redshift is compatible with the tools we already know and use, supporting standard SQL, JDBC and ODBC connectors and business inteligence tools.
+Amazon Redshift is a fast fully-managed petabyte-scale data warehousing service, generally used for BigData analytics. It is compatible with the tools we already know and use, supporting standard SQL, JDBC and ODBC connectors and business inteligence tools (e.g Jaspersoft, Microstrategy, Cognos...).
 
 **S3**
 
 The Amazon S3 (Simple Cloud Storage Service) is a highly-scalable cloud object storage that provides a way to store and retrieve data on the web. To upload your data (photos, videos, documents etc.), you create a *bucket* in one of the AWS Regions that will serve as a container to your objects.
 
+Objects stay within an AWS region and are synced across all AZ's for extremely high availability and durability.
+
 With Amazon S3, you can store virtually unlimited number of objects with a rich security control, and access them any time, from anywhere. Common use cases of S3 include: Storing application assets, static web hosting, backup & disaster recovery, staging area for Big Data, and many more...
+
+**SNS**
+
+Simple Notification Service is a Pub/Sub service for messaging and mobile notifications. SNS allows you to fan-out messages to a large number of subscribers and makes it easier to send push notifications and SMS to a variety of devices.
+
+The two main benefits of using SNS are that it's scalable and highly reliable, and it's usable through the AWS Console, APIs, CLI and multiple SDKs.
+
+SNS has Access Control Policies that grant access to your SNS topics to other AWS accounts and to some AWS services. You can use IAM Policies and Access Control Policies at the same time.
+
+The three main components when working with SNS are:
+* Topic: the group of subscriptions that you send a message to.
+* Subscription: an endpoint that a message is sent to, which may include: HTTP, HTTPS, Email, Email-JSON, SQS, mobile apps (IOS/Android/Amazon/Microsoft), Lambda and SMS
+* Publisher: the "entity" that triggers the sending of a message. Examples include: AWS CLI, SDKs (e.g. boto3) and services (e.g S3 events, Cloudwatch alarms, code in Lambda).
+
+**SQS**
+
+Simple Queue Service provides the ability to have hosted/highly available queues that can be used to send and receive messages between producers and consumers, allowing for the creation of distributed/decoupled components. Messages between servers are retrieved through *polling*.
+
+There are two types of polling:
+* Long polling (1-20 seconds): Reduces API requests by allowing the SQS service to wait until a message is available in a queue before sending a response.
+* Short polling: queries a subset of the SQS servers to determine if there are messages available for a response -- not necessarily sending all possible messages in a poll. It increases API requestes, which increases costs.
+
+Other important SQS facts:
+* Each SQL Message can contain up to 256KB of text (in any format).
+* In order to send more than 256KB, a possible solution is to store the data in S3 or DynamoDB and attach message instructions to the message for the worker to retrieve the data.
+* Amazon SQS offer two different types of queues:
+    - Standard Queues: message order can be indeterminate and messages can be delivered one or more times.
+    - FIFO Queues: messages will be delivered exactly once and in First in, First out order.
+
+**SSM Parameter Store**
+
+The Parameter Store – available inside the Systems Manager (SSM) section – allows you to centralize your operational data and automate tasks in AWS, providing secure storage for configuration and secrets such as passwords, database strings, API keys, and license codes.
+
+You can make use of API Actions – through AWS Console, AWS SDKs, or the AWS CLI – to access and manipulate the parameter store. Some como API actions:
+* PutParameter: adds a parameter to Parameter Store, either a String, StringList or SecureString (KMS-encrypted).
+* GetParameter: returns a parameter from SSM either encrypted or decrypted.
+* DeleteParameter: deletes a parameter from SSM.
+
+**Step Functions**
+
+AWS Step Functions lets you coordinate multiple AWS services into serverless workflows. Using Step Functions, you can design and run visual workflows that stitch together services such as AWS Lambda and Amazon ECS into feature-rich applications.
+
+Workflows are made up of a series of steps defined via JSON, with the output of one step acting as input into the next. It translates your workflow into a state machine diagram that is easy to understand, easy to explain to others, and easy to change.
 
 **Trusted Advisor**
 
 Trusted Advisor provides best practices and checks if all services in your account are in accordance to that practices. It checks the best practices in four categories: Cost Optimization, Performance, Security and Fault Tolerance. It helps highlighting, for example, underutilized EC2 instances and EBS volumes.
+
+**VPC**
+
+Virtual Private Cloud (VPC) enables you to launch AWS resources into a virtual network that you've defined. A VPC is designed to resemble private on-premise data centers or private corporate networks, with the benefits of using the scalable infrastructure of AWS.
+
+A VPC is housed within a chosen AWS region, and spans multiple availability zones within a region. AWS provides a DNS server for your VPC so each instance has a hostname. It's possible to configure and attach a Internet Gateway to allow communication between instances in your VPC and the internet.
+
+The security of VPC is performed by two services:
+* Network Access Control Lists (ACLs): operate at the network/subnet level. Defines a list of rules to allow/deny traffic. These rules are applied in number order and are **stateless**: so return traffic must be allowed through an outbound rule.
+* Security Groups: operate at the instance level. They support only "allow" rules and are **stateful**: so return traffic requests are allowed regardless of rules.
+
+**X-Ray**
+
+AWS X-Ray traces requests as they move through your applications. It collects data and makes it available to view, filter, and sort. You can then use the data to gain insights and identify potential optimizations to make inside your application.
+
+X-Ray concepts include *Segments* (data about your application, including data on the request, response, and issues), *Subsegments* (more granular than segments), *Service graph* (JSON report containing information about how your services and resources interact), *Traces*, *Samplings*, *Annotations*, *Metadata*, *Errors* (4xx - client errors), *Faults* (5xx - server errors) *Exceptions*(throttling erros, e.g. 429 too many requests), and more.
+
+To determine what data to collect you can apply a sampling algorithm generated by X-Ray or implement your own sampling frequencies. X-Ray *Filter Expressions* allow you to search through request information using characteristics like URL paths, Trace ID and Annotations. Trace IDs are added as custom HTTP headers to be used to track requests and collect data on them.
+
+
+### Other Development Services
+
+- **CodeCommit:** a fully-managed source control service that hosts secure Git-based repositories.
+- **CodeBuild:** A managed build service that can compile your source code, run unit tests, and produce deployment artifacts. In order to effectively build and test your code, you can use some 3rd party (test) providers, select a pre-configured environment or provide your own custom container (Docker) image.
+- **CodeDeploy:** automates deployments of your (existing) applications to EC2 Lambda, and even on-premises environments. It has three deployment types:
+    + *In-place deployments:* deploys to the existing servers.
+    + *Blue/green deployments on EC2:* new application versions are deployed on a new set of instances. Traffic is routed from old to new instances. If there are failures, then rollback to the older deployment version.
+    + *Blue/green deployment on Lambda:* traffic is shifted from one Lambda version to another in three ways: Canary, Linear or All-at-once.
+- **CodePipeline:** A continuous delivery service that can model, visualize and automate your software release process.
+- **CodeStar**: An AWS service for creating, managing and working with AWS projects. CodeStar integrates with other AWS services (e.g. CodeCommit, CodeBuild, CodePipeline), providing templates for various projects and programming languages.
 
 
 ## Amazon EC2
@@ -137,6 +294,12 @@ An AMI is a *server template* that has information about the operating system (a
 To create an AMI from an instance that is already configured, you just need to right-click the chosen instance and select *Image > Create Image*. When creating a new EC2 instance, select the image you've created on the left side menu item "My AMIs". Choose the same .pem file for the new instance.
 
 To avoid managing multiple Security Groups for equal instances, you can set the same Security Group to the new one. Right-click your instance and select *Networking > Change Security Groups*.
+
+### Dealing with Session State
+
+When dealing with session state in EC2-based applications using Elastic Load Balancers, the best practice for managing user sessions is:
+1. Having the ELB distribute traffic to all EC2 instances and then...
+2. Having the instance check a caching solution like ElastiCache running Redis or Memcached for session information.
 
 ## Amazon RDS
 
@@ -172,10 +335,10 @@ After the RDS instance be available, you'll need to configure its default Securi
 The Amazon *Elastic Load Balancing* supports three types of load balancers:
 
 - Application Load Balancers:
-    + Operates at the request level
+    + Operates at the request level, with focus on HTTP/HTTPS connections.
     + Indicated when you need a flexible feature set for your web applications with HTTP and HTTPS traffic
 - Network Load Balancers:
-    + Operates at the connection level
+    + Operates at the connection level, it is focused on TCP connections.
     + Indicated when you need ultra-high performance and static IP addresses for your application
 - Classic Load Balancers:
     + Indicated when you have an existing application running in the EC2-Classic network
@@ -297,6 +460,10 @@ Now associate this policy to the balancer with:
 
 ## AWS S3
 
+### Access granting
+
+Both ACLs and Bucket Policies can be used to grant access to S3 buckets. Bucket Policies are written in JSON and are only attached to S3 buckets. ACLs are written in XML and ACLs can be attached to S3 objects or S3 Buckets
+
 Example of a Bucket Policy:
 
 ```
@@ -320,6 +487,23 @@ Example of a Bucket Policy:
     ]
 }
 ```
+
+### Multipart Upload API
+
+In S3, to upload large objects (bigger than that), it is necessary to use the Multipart Upload API. The Multipart upload API enables you to upload new large objects or make a copy of an existing object in parts. [Read more...](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html)
+
+### Reading Performance
+
+When you have significantly high numbers of GET requests there are two measures to improve S3 performance: 
+* Setup CloudFront for S3 objects
+* Introduce random prefixes to S3 objects: The first few characters of S3 objects are used to determine the allocation of object keys behind the scenes to S3 partitions.
+
+### Versioning and Lifecycle policies
+
+Use versioning to keep multiple versions of an object in one bucket. You can enable versioning either when you create a new bucket or edit an existing bucket. But once enabled, you cannot disable this feature, just suspend it.
+
+Everytime you upload a new version of a file, a new version ID is created. Files uploaded before versioning is enabled have a null version ID. When you DELETE an object, all versions remain in the bucket and Amazon S3 inserts a delete marker, that becomes the current version of the object. So you still can GET a noncurrent version of a "deleted" object by specifying its version ID. [Read more...](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html)
+
 
 ## Useful Commands
 
