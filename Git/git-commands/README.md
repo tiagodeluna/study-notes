@@ -129,6 +129,12 @@ If you need to remove all items from the Git index (not from the working directo
 | 1 | git rm -r --cached . | Remove all files from the Git index (or cache) |
 | 2 | git add . | Add all files again, respecting the new .gitignore definitions |
 | 3 | git commit -m "Remove ignored files" | Commit the changes |
+
+An alternative when you need a fresh start is the `git clean` command, as it excludes each and every file in your git directory which is NOT part of your repository. Usually it is used in conjunction with `git reset --hard` (see **Reverting changes** section above).
+
+| Command | Description |
+| ----- | ----- |
+| git clean -Xdf -e <exclude_pattern> | Erases all the files in your git directory that are NOT part of your repo. The `-e` option allows you to ignore files from the "exclusion list" based on the given pattern (f.e. `git clean -Xdf -e \!.idea/\*\*`) |
 	
 ## Using tags
 
