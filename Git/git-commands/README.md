@@ -90,8 +90,9 @@ Check out [this article](https://docs.github.com/en/authentication/connecting-to
 | ----- | ----- |
 | git push `repo` `branch` | Send commited changes to a remove *branch* of a *repository* |
 | git push --set-upstream `repo` `newbranch` | Push the current local branch and set the remote *newbranch* as upstream |
+| git push --force-with-lease | Overwrites a remote branch with your local branch, unless there are more commits added to the remote branch (f.e. by another team-member). `--force`is a more brute approach, because it ignores other commits in the remote. |
 
-## Merging Branches ans Solving Conflicts
+## Merging Branches and Solving Conflicts
 
 This is a three-step operation:
 
@@ -164,6 +165,14 @@ An alternative when you need a fresh start is the `git clean` command, as it exc
       - git cherry-pick --continue *//if you want to finish the process, OR*
       - git cherry-pick --abort *//if you want to abort the process*
 3. git push
+
+### Squashing commits
+
+1. git log *//To see which commits you want to combine*
+2. git rebase -i <multiple_options> *//This command will perform a rebase in Interactive Mode (`-i`). Basically, you have two options here: (1) Inform the SHA1 hash of the last commit you want to keep intact, so the rebase will select all commits after that one to combine (f.e. `git rebase -i 4e476d1e10d2`); (2) Inform the number of commits behind the current HEAD that you want to select (f.e. `git rebase -i HEAD~5`)*
+3. An editor will open with the list of selected commits in chronological order (ignoring merge commits). You can reorder, remove or adjust them as you wish. There are several actions available such as 'pick', 'squash', 'edit', etc. To squash them in one single commit, keep the first line as 'pick', and change the consecutive lines to 'squash'. Salve and exit.
+4. Enter a commit message for the new, combining commit. Save and exit.
+5. git push
 
 ## Working with submodules
 
