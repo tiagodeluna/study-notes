@@ -59,6 +59,7 @@ Check out [this article](https://docs.github.com/en/authentication/connecting-to
 | git branch [-r] | Display all local or remote (with `-r`) existing branches. |
 | git branch `branch` | Create new *branch* |
 | git branch `branch` -d | Delete a *branch* |
+| git branch --unset-upstream | Detach/unset remote branch (upstream) currently associated with the local branch |
 | git fetch | Downloads references to all the remote branches and/or tags. |
 | git checkout -b `branch` `repo, branch or tag` | Switch branches. With `-b` it creates a local *branch* from a remote *branch* or *tag* and switch to it |
 
