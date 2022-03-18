@@ -142,9 +142,11 @@ An alternative when you need a fresh start is the `git clean` command, as it exc
 
 | Command | Description |
 | ----- | ----- |
-| git tag | List the existing tags by alphabetical order |
+| git fetch --tags | Fetch tags from remote repository |
+| git tag -l `pattern`| `git tag` lists existing tags (on your local). By adding `-l` option you get all tags that match the pattern (e.g. `git tag -l "V1_*"`) |
 | git tag `tagname` | Create a simple *tag* |
 | git tag -a `tagname` -m `message` | Create an annotated, complete *tag* |
+| git checkout tags/`tagname` -b `branch`| Checkout the given tagname and the branch to be checked out |
 
 ## Integrating branches/commits
 
@@ -169,7 +171,7 @@ An alternative when you need a fresh start is the `git clean` command, as it exc
 ### Squashing commits
 
 1. git log *//To see which commits you want to combine*
-2. git rebase -i <multiple_options> *//This command will perform a rebase in Interactive Mode (`-i`). Basically, you have two options here: (1) Inform the SHA1 hash of the last commit you want to keep intact, so the rebase will select all commits after that one to combine (f.e. `git rebase -i 4e476d1e10d2`); (2) Inform the number of commits behind the current HEAD that you want to select (f.e. `git rebase -i HEAD~5`)*
+2. git rebase -i `multiple_options` *//This command will perform a rebase in Interactive Mode (`-i`). Basically, you have two options here: (1) Inform the SHA1 hash of the last commit you want to keep intact, so the rebase will select all commits after that one to combine (f.e. `git rebase -i 4e476d1e10d2`); (2) Inform the number of commits behind the current HEAD that you want to select (f.e. `git rebase -i HEAD~5`)*
 3. An editor will open with the list of selected commits in chronological order (ignoring merge commits). You can reorder, remove or adjust them as you wish. There are several actions available such as 'pick', 'squash', 'edit', etc. To squash them in one single commit, keep the first line as 'pick', and change the consecutive lines to 'squash'. Salve and exit.
 4. Enter a commit message for the new, combining commit. Save and exit.
 5. git push
