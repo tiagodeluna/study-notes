@@ -82,7 +82,7 @@ Check out [this article](https://docs.github.com/en/authentication/connecting-to
 | git add -u :/ | Update or remove previously tracked files from the entire working tree but not add new files |
 | git commit -m `mensagem` | Perform a commit with a message associated |
 | git commit -am `mensagem` | Add anything that was changed and commit with a message |
-| git commit --amend | Edit the last commit to include new added files and/or change the commit message |
+| git commit --amend [--no-edit] | Edit the last commit to include new added files and/or change the commit message. The `--no-edit` option allows to add staged changes to previous commit without changing commit message. |
 
 ## Pushing changes
 
