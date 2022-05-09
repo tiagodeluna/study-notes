@@ -59,7 +59,7 @@ Check out [this article](https://docs.github.com/en/authentication/connecting-to
 | git branch [-r] | Display all local or remote (with `-r`) existing branches. |
 | git branch `branch` | Create new *branch* |
 | git branch `branch` -d | Delete a *branch* |
-| git branch --unset-upstream | Detach/unset remote branch (upstream) currently associated with the local branch |
+| git branch --unset-upstream | Detach/unset/remove remote branch (upstream) currently associated with the local branch |
 | git fetch | Downloads references to all the remote branches and/or tags. |
 | git checkout -b `branch` `repo, branch or tag` | Switch branches. With `-b` it creates a local *branch* from a remote *branch* or *tag* and switch to it |
 
@@ -75,7 +75,7 @@ Check out [this article](https://docs.github.com/en/authentication/connecting-to
 
 | Command | Description |
 | ----- | ----- |
-| git log [--oneline] | Display the commit history. Use `--oneline` to see just commit messages. |
+| git log [--oneline] [--author="<username>"] | Display the commit history. Use `--oneline` to see just commit messages. Use `--author` to filter by user. |
 | git diff [--cached] `filename` | See the differences between local and remote branches. Use `--cached` to see a file already in the staging area |
 | git add `filename` | Add file |
 | git add . -A | Add all untracked files in the working tree to the staging area |
@@ -88,7 +88,7 @@ Check out [this article](https://docs.github.com/en/authentication/connecting-to
 
 | Command | Description |
 | ----- | ----- |
-| git push `repo` `branch` | Send commited changes to a remove *branch* of a *repository* |
+| git push `repo` `branch` | Send commited changes to a remote *branch* of a *repository* |
 | git push --set-upstream `repo` `newbranch` | Push the current local branch and set the remote *newbranch* as upstream |
 | git push --force-with-lease | Overwrites a remote branch with your local branch, unless there are more commits added to the remote branch (f.e. by another team-member). `--force`is a more brute approach, because it ignores other commits in the remote. |
 
