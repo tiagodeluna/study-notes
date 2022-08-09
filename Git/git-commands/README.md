@@ -114,13 +114,12 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 
 | Command | Description |
 | ----- | ----- |
-| git reset --hard | Reset the local branch to its original state |
-| git fetch \\\\ git reset --hard `repo or branch` | Fetch from the default remote (origin) \\\\ Reset your current branch to remote branch |
+| git fetch \\\\ git reset --hard [`branch`] | Fetch updated info from the remote (origin) \\\\ Reset local branch to its original state (default) or to another remote *branch* (if provided) |
 | git reset HEAD~`number` | Reset a *number* of commits (but it doesn't delete the commits, they still continue to exist) |
 | git reset HEAD `filename` | Remove a *file* from the staging area |
-| git checkout -- `filename` | Discard changes in a *file* in working directory |
-| git merge --abort | Undo a merge, reverting the branch to its previous situation (usually after a merge the generated conflicts) |
+| git restore --staged `filename` | Similar to the one above,  remove a *file* from the staging area |
 | git update-index --assume-unchanged `file` | Forces git to ignore local changes in a file by setting its state to "unchanged" |
+| git merge --abort | Undo a merge, reverting the branch to its previous situation (usually after a merge the generated conflicts) |
 
 ## Untracking/Removing files
 
