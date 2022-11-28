@@ -78,8 +78,8 @@ Check out [this article](https://docs.github.com/en/authentication/connecting-to
 | git log [--oneline] [--author="<username>"] | Display the commit history. Use `--oneline` to see just commit messages. Use `--author` to filter by user. |
 | git diff [--cached] `filename` | See the differences between local and remote branches. Use `--cached` to see a file already in the staging area |
 | git add `filename` | Add file |
-| git add . -A | Add all untracked files in the working tree to the staging area |
-| git add -u :/ | Update or remove previously tracked files from the entire working tree but not add new files |
+| git add . -A | Add all untracked files  in the working tree to the staging area |
+| git add -u :/ | Update or remove previously tracked files from the entire working tree but don't add new files |
 | git commit -m `mensagem` | Perform a commit with a message associated |
 | git commit -am `mensagem` | Add anything that was changed and commit with a message |
 | git commit --amend [--no-edit] | Edit the last commit to include new added files and/or change the commit message. The `--no-edit` option allows to add staged changes to previous commit without changing commit message. |
@@ -183,3 +183,11 @@ Submodules allow you to keep a Git repository as a subdirectory of another Git r
 | ----- | ----- |
 | git submodule add `repo url` `folder name` | Add a remote repo as a submodule in the current repo |
 | git submodule update --init --recursive | Tells git to download the contents of submodule when downloading current repository |
+
+---
+
+## Glossary
+
+* **Staging area**: a.k.a _index_, is essentially a “holding area” for changes that will be committed. It helps in reviewing changes and allows you to control what parts of the working tree go into the repository on the next “commit” operation. Files in the index are called _staged files_.
+* **Tracked/untracked files**: tracked files are files in the _working tree_ that are versioned in the git repository. Therefore, _untracked_ files are new files, not yet versioned.
+* **Working Tree**: is a directory (and its files and subdirectories) on your file system that is associated with a git repository.
