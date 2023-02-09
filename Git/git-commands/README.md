@@ -114,8 +114,8 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 
 | Command | Description |
 | ----- | ----- |
-| git fetch \\\\ git reset --hard [`branch`] | Fetch updated info from the remote (origin) \\\\ Reset local branch to its original state (default) or to another remote *branch* (if provided) |
-| git reset HEAD~`number` | Reset a *number* of commits (but it doesn't delete the commits, they still continue to exist) |
+| git fetch \\\\ git reset --hard [`branch`] | Fetch updated info from the remote (origin) \\\\ Reset local branch to its original state (default) or to another remote *branch* (if provided). **ATTENTION**: this will wipe off any local changes |
+| git reset [--soft] HEAD~`number` | Reset a *number* of commits. With the `--soft` option git re-adds commited changes as staged, ready to be committed again. It's the best option when you want to "undo" a commit, but keep the changes. |
 | git reset HEAD `filename` | Remove a *file* from the staging area |
 | git restore --staged `filename` | Similar to the one above,  remove a *file* from the staging area |
 | git update-index --assume-unchanged `file` | Forces git to ignore local changes in a file by setting its state to "unchanged" |
