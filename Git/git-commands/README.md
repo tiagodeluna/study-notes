@@ -60,6 +60,7 @@ Check out [this article](https://docs.github.com/en/authentication/connecting-to
 | git branch `branch` | Create new *branch* |
 | git branch `branch` -d | Delete a *branch* |
 | git branch --unset-upstream | Detach/unset/remove remote branch (upstream) currently associated with the local branch |
+| git branch `local branch` -u `remote branch` | Sets upstream branch of the *local branch* to the *remote branch* provided, replacing whatever was there. `-u` is a shortened version of `--set-upstream-to` |
 | git fetch | Downloads references to all the remote branches and/or tags. |
 | git checkout -b `local_branch_name` `remote branch or tag` | Switch branches. With `-b` it creates a local branch from a remote *branch* or *tag* and switches to it |
 
