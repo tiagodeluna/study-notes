@@ -61,8 +61,9 @@ Check out [this article](https://docs.github.com/en/authentication/connecting-to
 | git branch `branch` -d | Delete a *branch* |
 | git branch --unset-upstream | Detach/unset/remove remote branch (upstream) currently associated with the local branch |
 | git branch `local branch` -u `remote branch` | Sets upstream branch of the *local branch* to the *remote branch* provided, replacing whatever was there. `-u` is a shortened version of `--set-upstream-to` |
-| git fetch | Downloads references to all the remote branches and/or tags. |
-| git checkout -b `local_branch_name` `remote branch or tag` | Switch branches. With `-b` it creates a local branch from a remote *branch* or *tag* and switches to it |
+| git fetch | Downloads references to all the remote branches and/or tags |
+| git checkout -b `local branch name` `remote branch or tag` | (Old) Switch branches. Use `-b` to choose the name of the local branch. |
+| git switch [-c `local branch name`] `branch name` | (Since Git v2.23) Switch to a local branch with the given *branch name*, if it exists, or to a remote branch. With `-c` you can explicitly set the local branch name. |
 
 ## Pulling files
 
