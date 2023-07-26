@@ -116,10 +116,10 @@ In case of conflicts after step 2, you'll need to perform the merge manually:
 
 | Command | Description |
 | ----- | ----- |
+| git restore --staged `filename` | Remove a *file* from the staging area, reverting it to *untracked* or *unstaged* state. If you want to do this for all staged files, use `.` instead |
+| git reset HEAD `filename` | (for Git version prior to 2.23) Similar to the above command. Remove a *file* from the staging area |
 | git fetch \\\\ git reset --hard [`branch`] | Fetch updated info from the remote (origin) \\\\ Reset local branch to its original state (default) or to another remote *branch* (if provided). **ATTENTION**: this will wipe off any local changes |
-| git reset [--soft] HEAD~`number` | Reset a *number* of commits. With the `--soft` option git re-adds commited changes as staged, ready to be committed again. It's the best option when you want to "undo" a commit, but keep the changes. |
-| git reset HEAD `filename` | Remove a *file* from the staging area |
-| git restore --staged `filename` | Similar to the one above,  remove a *file* from the staging area |
+| git reset [--soft] HEAD~`number` | Reset a *number* of commits. With the `--soft` option git re-adds commited changes as staged, ready to be committed again. This is the best option when you want to "undo" a commit, but keep the changes. |
 | git update-index --assume-unchanged `file` | Forces git to ignore local changes in a file by setting its state to "unchanged" |
 | git merge --abort | Undo a merge, reverting the branch to its previous situation (usually after a merge the generated conflicts) |
 
