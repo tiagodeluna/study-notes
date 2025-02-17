@@ -177,6 +177,13 @@ An alternative when you need a fresh start is the `git clean` command, as it exc
 4. Enter a commit message for the new, combining commit. Save and exit.
 5. git push
 
+### Remove Commits from a Pull Request
+
+1. `git rebase -i HEAD~n` // Where n is the number of last commits you want to include in interactive rebase.
+2. Replace `pick` with `drop` for commits you want to discard.
+3. Save and exit.
+4. `git push -f`
+
 ## Working with submodules
 
 Submodules allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another repository into your project and keep your commits separate. More information can be found [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
